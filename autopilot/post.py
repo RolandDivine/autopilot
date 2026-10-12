@@ -78,6 +78,8 @@ def run(dry_run=False, now_utc=None):
                 notes.append(f"{platform}: **failed**: {str(e)[:400]}")
                 print(f"::error title={platform} failed::{str(e)[:400]}".replace("\n", " "))
         print(f"{s.key}:", *notes, sep="\n  ")
+        for n in notes:
+            print(f"::notice title={s.key}::{n}".replace("\n", " "))
         if issue and notes and not dry_run:
             github.comment(issue["number"], f"**{s.slot[:2]}:{s.slot[2:]} result**\n\n" + "\n".join(f"- {n}" for n in notes))
     return 1 if errors else 0

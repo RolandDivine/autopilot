@@ -91,6 +91,15 @@ class InstagramClient:
             time.sleep(4)
         raise InstagramError(f"container {container_id} not ready after 2 minutes")
 
+    def publish_story(self, image_url):
+        """One image story (disappears after 24h; add it to a highlight in the app). Returns media_id."""
+        if self.dry_run:
+            print("[dry-run] Instagram story:", image_url)
+            return "DRYRUN"
+        cid = self._req("post", f"{self.user_id}/media", data={"image_url": image_url, "media_type": "STORIES"})["id"]
+        self._wait(cid)
+        return self._req("post", f"{self.user_id}/media_publish", data={"creation_id": cid})["id"]
+
     def publish(self, image_urls, caption):
         """1 URL = single image post; 2-10 = carousel. Returns (media_id, permalink)."""
         if self.dry_run:

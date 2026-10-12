@@ -1,0 +1,26 @@
+{
+  "title": "AI lesson 2: how AI chat assistants work",
+  "kind": "lesson",
+  "x": {
+    "enabled": false
+  },
+  "linkedin": {
+    "enabled": true,
+    "media": "media/ai2.pdf",
+    "media_title": "AI lesson 2: how chat assistants work",
+    "text": "Most people use AI chat every day without knowing what is happening behind the box. Lesson 2 of 100 in AI from zero.\n\nThree steps, no jargon:\n\n1. It read a huge library. Books, websites, code. From that it learned patterns in how language fits together.\n\n2. Your words become tokens. Your question is cut into small pieces, a word or part of a word each.\n\n3. It predicts the reply one piece at a time. Each step, it picks the most likely next piece, until the answer is done.\n\nThat third step explains the thing that trips everyone up: AI predicts likely words, not checked facts. So it can sound completely sure and still be wrong, or invent a source that doesn't exist.\n\nThat doesn't make it useless. It makes you the editor. Let it draft, then you check.\n\nYour 2-minute task: ask an AI something you already know the answer to. Then ask it how sure it is and where the information comes from. Notice what it admits.\n\nLesson 3 drops Thursday."
+  },
+  "instagram": {
+    "enabled": true,
+    "media": [
+      "instagram/ai2-1.jpg",
+      "instagram/ai2-2.jpg",
+      "instagram/ai2-3.jpg",
+      "instagram/ai2-4.jpg",
+      "instagram/ai2-5.jpg",
+      "instagram/ai2-6.jpg",
+      "instagram/ai2-7.jpg"
+    ],
+    "caption": "AI chat feels like magic. It's actually 3 simple steps.\n\n1. It read a huge library and learned patterns.\n2. Your words get cut into small pieces called tokens.\n3. It predicts the reply one piece at a time.\n\nThat's why it can sound sure and still be wrong. You're the editor.\n\nTry the 2-minute task on slide 6.\nSave this for later.\n\n#ai #chatgpt #learnai #aitools #productivity"
+  }
+}

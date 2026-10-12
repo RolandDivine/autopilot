@@ -35,15 +35,21 @@ def collect_x_metrics():
 
 
 def check_linkedin_token():
-    exp = os.environ.get("LINKEDIN_TOKEN_EXPIRES")  # YYYY-MM-DD, printed by scripts/linkedin_auth.py
+    from . import li_token
+    try:
+        tok = li_token.load()
+    except Exception:
+        tok = None
+    exp = (tok or {}).get("expires")
     if not exp:
         return None
     days = (dt.date.fromisoformat(exp) - dt.date.today()).days
     if days <= 7 and github.available():
         title = f"LinkedIn sign-in expires in {days} days"
-        body = ("Autopilot will stop posting to LinkedIn when it expires.\n\n"
-                "Fix (2 minutes): on your computer run `python scripts/linkedin_auth.py`, then update the "
-                "`LINKEDIN_ACCESS_TOKEN` and `LINKEDIN_TOKEN_EXPIRES` secrets in Settings → Secrets and variables → Actions.")
+        body = ("Autopilot will stop posting to LinkedIn when it expires. Renew in 1 minute:\n\n"
+                f"1. Open this link and click Allow: {li_token.sign_in_link()}\n"
+                "2. You land back on this repo. Copy the whole address-bar URL.\n"
+                "3. Actions → linkedin-connect → Run workflow → paste it → Run.")
         github.ensure_label("action-needed", "D73A4A")
         # one warning per week is enough
         r = github.find_day_issue(f"token-{exp}")

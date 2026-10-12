@@ -1,7 +1,11 @@
 {
   "timezone": "Africa/Lagos",
   "utc_offset_hours": 1,
-  "slots": ["0800", "1300", "1900"],
+  "slots": [
+    "0800",
+    "1300",
+    "1900"
+  ],
   "slot_grace_minutes": 150,
   "handles": {
     "x": "RolandDivine2",
@@ -15,10 +19,32 @@
   "linkedin_max_chars": 3000,
   "prune_media_after_days": 14,
   "banned": [
-    "guaranteed returns", "risk-free", "risk free", "100x", "passive income",
-    "great post", "agree?", "thoughts?", "let that sink in", "read that again",
-    "game-changer", "game changer", "delve", "excited to announce", "thrilled to",
-    "synergy", "deep dive", "in today's fast-paced", "not financial advice?"
+    "guaranteed returns",
+    "risk-free",
+    "risk free",
+    "100x",
+    "passive income",
+    "great post",
+    "agree?",
+    "thoughts?",
+    "let that sink in",
+    "read that again",
+    "game-changer",
+    "game changer",
+    "delve",
+    "excited to announce",
+    "thrilled to",
+    "synergy",
+    "deep dive",
+    "in today's fast-paced",
+    "not financial advice?"
   ],
-  "banned_ok_if_explaining": ["guaranteed returns", "risk-free", "risk free", "100x", "passive income"]
+  "banned_ok_if_explaining": [
+    "guaranteed returns",
+    "risk-free",
+    "risk free",
+    "100x",
+    "passive income"
+  ],
+  "linkedin_client_id": "78hozpq7114k7y"
 }

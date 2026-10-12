@@ -37,13 +37,16 @@ class LinkedInClient:
         self.cfg = load_config()
         self.base = self.cfg["linkedin_api_base"].rstrip("/")
         self.dry_run = dry_run
-        self.author = os.environ.get("LINKEDIN_PERSON_URN", "urn:li:person:DRYRUN")
+        self.author = "urn:li:person:DRYRUN"
         if not dry_run:
-            if not os.environ.get("LINKEDIN_ACCESS_TOKEN") or not os.environ.get("LINKEDIN_PERSON_URN"):
-                raise LinkedInError("missing secrets: LINKEDIN_ACCESS_TOKEN / LINKEDIN_PERSON_URN")
+            from . import li_token
+            tok = li_token.load()
+            if not tok:
+                raise LinkedInError("LinkedIn not connected yet: run Actions -> linkedin-connect")
+            self.author = tok["person_urn"]
             self.s = requests.Session()
             self.s.headers.update({
-                "Authorization": f"Bearer {os.environ['LINKEDIN_ACCESS_TOKEN']}",
+                "Authorization": f"Bearer {tok['access_token']}",
                 "LinkedIn-Version": self.cfg["linkedin_api_version"],
                 "X-Restli-Protocol-Version": "2.0.0",
                 "Content-Type": "application/json",
@@ -53,7 +56,7 @@ class LinkedInClient:
         if r.status_code >= 300:
             hint = ""
             if r.status_code == 401:
-                hint = " (token expired or revoked: re-run scripts/linkedin_auth.py)"
+                hint = " (LinkedIn sign-in expired: renew it with the linkedin-connect workflow)"
             if "VERSION" in r.text.upper():
                 hint = " (update linkedin_api_version in config.json to a current YYYYMM)"
             raise LinkedInError(f"{what} failed: HTTP {r.status_code} {r.text[:500]}{hint}")

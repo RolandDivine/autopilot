@@ -113,3 +113,14 @@ def test_linkedin_escaping():
     assert escape_commentary("Step (1): read [this]") == r"Step \(1\): read \[this\]"
     assert escape_commentary("#crypto rocks") == "#crypto rocks"
     assert escape_commentary("@me") == r"\@me"
+
+
+def test_linkedin_token_roundtrip(tmp_path, monkeypatch):
+    from autopilot import li_token
+    monkeypatch.setattr(li_token, "FILE", tmp_path / "li.enc")
+    monkeypatch.setenv("LINKEDIN_CLIENT_SECRET", "s3cret")
+    monkeypatch.delenv("LINKEDIN_ACCESS_TOKEN", raising=False)
+    li_token.save({"access_token": "abc", "person_urn": "urn:li:person:1", "expires": "2026-12-11"})
+    assert b"abc" not in (tmp_path / "li.enc").read_bytes()
+    assert li_token.load()["access_token"] == "abc"
+    assert "client_id=78hozpq7114k7y" in li_token.sign_in_link()

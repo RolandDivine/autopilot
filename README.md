@@ -27,20 +27,21 @@ To change wording, tap **edit this post** in the issue, then the pencil icon. Ed
 ### X: about $5–10 a month
 1. Go to https://console.x.com and sign in as @RolandDivine2. Create a Project and an App.
 2. Add credit under **Billing**. $10 lasts months: each post costs about $0.015.
-3. In App **Settings → User authentication**, set permissions to **Read and write** (type: Web App or Automated bot; any callback URL, e.g. `http://localhost`).
+3. In App **Settings → User authentication**, set permissions to **Read and write** (type: Web App or Automated bot; callback and website URL: `https://x.com/RolandDivine2`).
 4. In **Keys and tokens**, copy the API Key and Secret, then generate an Access Token and Secret. Generate them *after* step 3 so they have write access.
 
-### LinkedIn: free
-1. https://www.linkedin.com/developers/apps → **Create app**. It needs a Company Page; any page you admin will do.
-2. **Products** tab: add **Sign In with LinkedIn using OpenID Connect** and **Share on LinkedIn**.
-3. **Auth** tab: add redirect URL `http://localhost:8765/callback`. Copy the Client ID and Client Secret.
-4. On your computer, download this repo and run `python scripts/linkedin_auth.py`. Paste the ID and secret, then approve in the browser. It prints three values.
+### LinkedIn: free, no computer needed
+1. In the LinkedIn developer app's **Auth** tab, add the redirect URL `https://github.com/RolandDivine/autopilot`. In the **Products** tab, add **Sign In with LinkedIn using OpenID Connect** and **Share on LinkedIn**.
+2. Add the GitHub secret `LINKEDIN_CLIENT_SECRET` (the app's Client Secret).
+3. Open the [LinkedIn sign-in link](https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=78hozpq7114k7y&redirect_uri=https%3A%2F%2Fgithub.com%2FRolandDivine%2Fautopilot&scope=openid+profile+w_member_social&state=autopilot) and click **Allow**. You land back on this repo, with a long address in the browser bar.
+4. Copy that whole address. Go to **Actions → linkedin-connect → Run workflow**, paste it and click Run. Do this within 5 minutes, because the code expires.
+
+The sign-in lasts about 60 days. A week before it ends, Autopilot opens an issue with the same 1-minute steps.
 
 ### Add them to GitHub
 Repo → **Settings → Secrets and variables → Actions → New repository secret**. Add:
 
-`X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET`,
-`LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_PERSON_URN`, `LINKEDIN_TOKEN_EXPIRES`
+`X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET`, `LINKEDIN_CLIENT_SECRET`
 
 ### Test
 **Actions → post → Run workflow** (leave "dry run" ticked). This shows what would be posted without posting anything.

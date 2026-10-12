@@ -1,0 +1,40 @@
+name: linkedin-connect
+
+# Connect (or renew) LinkedIn. Click the sign-in link from the README, approve,
+# then paste the address-bar URL you land on into "redirect_url" below.
+on:
+  workflow_dispatch:
+    inputs:
+      redirect_url:
+        description: "The full URL you landed on after clicking Allow (starts with https://github.com/RolandDivine/autopilot?code=)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autopilot-post
+
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Exchange code for a LinkedIn sign-in
+        env:
+          REDIRECT_URL: ${{ inputs.redirect_url }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+        run: python scripts/linkedin_connect.py
+      - name: Save (encrypted)
+        run: |
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add secrets/linkedin.enc
+          git commit -m "LinkedIn connected" && git pull --rebase && git push

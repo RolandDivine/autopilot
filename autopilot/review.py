@@ -20,7 +20,7 @@ def render(date):
     d = dt.date.fromisoformat(date)
     lines = [f"Autopilot posts these on **{d:%a %d %b}** unless you say otherwise.",
              "",
-             "Reply with a comment to control it: `skip 1pm` · `skip 7pm x` · `skip all` · `pause` · `resume`.",
+             "Reply with a comment to control it: `skip 1pm` · `skip 7pm instagram` · `skip all` · `pause` · `resume`.",
              "To change wording, tap the file link, then the pencil icon, edit, and commit before the slot time.",
              ""]
     for slot in cfg["slots"]:
@@ -46,6 +46,10 @@ def render(date):
             lines.append("> " + li.get("text", "").replace("\n", "\n> "))
             if li.get("first_comment"):
                 lines.append(f"\nFirst comment: {li['first_comment']}")
+        ig = data.get("instagram", {})
+        if ig.get("enabled"):
+            lines.append(f"\n**Instagram** _[{len(ig.get('media', []))} slides]_")
+            lines.append("> " + ig.get("caption", "").replace("\n", "\n> "))
         if issues:
             lines.append("")
             for lvl, plat, rule, detail in issues:

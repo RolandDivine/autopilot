@@ -46,5 +46,9 @@
     "100x",
     "passive income"
   ],
-  "linkedin_client_id": "78hozpq7114k7y"
+  "linkedin_client_id": "78hozpq7114k7y",
+  "instagram_api_version": "v24.0",
+  "instagram_max_chars": 2200,
+  "instagram_max_hashtags": 5,
+  "instagram_autopost": false
 }

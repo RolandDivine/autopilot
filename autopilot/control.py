@@ -14,7 +14,7 @@ from . import ROOT
 SLOT_WORDS = {"8am": "0800", "8": "0800", "0800": "0800", "morning": "0800", "news": "0800",
               "1pm": "1300", "13": "1300", "1300": "1300", "afternoon": "1300",
               "7pm": "1900", "19": "1900", "1900": "1900", "evening": "1900"}
-PLATFORMS = {"x": "x", "twitter": "x", "linkedin": "linkedin", "li": "linkedin"}
+PLATFORMS = {"x": "x", "twitter": "x", "linkedin": "linkedin", "li": "linkedin", "instagram": "instagram", "ig": "instagram", "insta": "instagram"}
 CONTROL = ROOT / "control.json"
 
 

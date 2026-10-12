@@ -19,6 +19,11 @@ Slot file format:
     "media": "media/crypto1.pdf",          # optional: .pdf (document) or .png/.jpg (image)
     "media_title": "Crypto from zero 1",    # shown on LinkedIn document posts
     "first_comment": "Sources: ..."         # optional
+  },
+  "instagram": {
+    "enabled": true,
+    "caption": "...",                        # up to 2,200 chars, max 5 hashtags
+    "media": ["instagram/crypto2-1.jpg", "instagram/crypto2-2.jpg"]   # JPEG only, 1-10 images
   }
 }
 """
@@ -100,8 +105,9 @@ def due_slots(now_utc=None):
             if when <= now <= when + grace:
                 s = Slot(day, slot, p)
                 data = s.load()
-                pending = [pl for pl in ("x", "linkedin")
-                           if data.get(pl, {}).get("enabled") and (s.key, pl) not in done]
+                auto = {"x", "linkedin"} | ({"instagram"} if cfg.get("instagram_autopost") else set())
+                pending = [pl for pl in ("x", "linkedin", "instagram")
+                           if pl in auto and data.get(pl, {}).get("enabled") and (s.key, pl) not in done]
                 if pending:
                     out.append(s)
     return sorted(out, key=lambda s: (s.date, s.slot))

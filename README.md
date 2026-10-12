@@ -1,6 +1,6 @@
 # Autopilot
 
-Posts Roland's content to **X (@RolandDivine2)** and **LinkedIn** three times a day: 8 AM, 1 PM and 7 PM Lagos time. It runs on GitHub's servers, so Roland's laptop can be off.
+Posts Roland's content to **LinkedIn (RolandDivine2)** and **Instagram (@defi_ring_master)** three times a day: 8 AM, 1 PM and 7 PM Lagos time. It runs on GitHub's servers, so Roland's laptop can be off.
 
 ## How a day works
 
@@ -38,10 +38,18 @@ To change wording, tap **edit this post** in the issue, then the pencil icon. Ed
 
 The sign-in lasts about 60 days. A week before it ends, Autopilot opens an issue with the same 1-minute steps.
 
+### Instagram: free (Creator or Business account)
+1. Go to https://developers.facebook.com/apps and choose **Create app**. Pick the use case **Manage messaging & content on Instagram**.
+2. In the app, open **Instagram → API setup with Instagram login**. Under **Generate access tokens**, click **Add account** and log in as @defi_ring_master. Then click **Generate token** and copy it.
+3. Add it as the GitHub secret `INSTAGRAM_TOKEN`. Autopilot refreshes it every week on its own, so you only do this once.
+4. Run **Actions → instagram-check**. A green tick means it can see @defi_ring_master.
+5. Instagram downloads the images from a public link, so this repo must be **public**. That makes the code and upcoming posts visible. Keys stay hidden in Secrets, and the LinkedIn sign-in is stored encrypted. Only your own comments control posting.
+6. Set `"instagram_autopost": true` in `config.json`.
+
 ### Add them to GitHub
 Repo → **Settings → Secrets and variables → Actions → New repository secret**. Add:
 
-`X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET`, `LINKEDIN_CLIENT_SECRET`
+`LINKEDIN_CLIENT_SECRET`, `INSTAGRAM_TOKEN` (X is off; its four keys are optional)
 
 ### Test
 **Actions → post → Run workflow** (leave "dry run" ticked). This shows what would be posted without posting anything.

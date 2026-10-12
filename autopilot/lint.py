@@ -71,6 +71,28 @@ def lint_slot(data, slot=None):
         m = li.get("media")
         if m and slot and not slot.media_path(m).exists():
             issues.append(("FAIL", "linkedin", "missing-media", m))
+    ig = data.get("instagram", {})
+    if ig.get("enabled"):
+        cap = ig.get("caption", "")
+        media = ig.get("media") or []
+        if not cap.strip():
+            issues.append(("FAIL", "instagram", "empty", "no caption"))
+        if len(cap) > cfg.get("instagram_max_chars", 2200):
+            issues.append(("FAIL", "instagram", "too-long", f"{len(cap)} chars"))
+        tags = re.findall(r"(?<!\w)#\w+", cap)
+        if len(tags) > cfg.get("instagram_max_hashtags", 5):
+            issues.append(("FAIL", "instagram", "too-many-hashtags", f"{len(tags)}"))
+        for h in _banned_hits(cap, cfg):
+            issues.append(("FAIL", "instagram", "banned", f"'{h}'"))
+        if "@RolandDivine2" in cap:
+            issues.append(("FAIL", "instagram", "wrong-handle", "Instagram uses @defi_ring_master"))
+        if not 1 <= len(media) <= 10:
+            issues.append(("FAIL", "instagram", "media-count", f"{len(media)} images (1-10)"))
+        for m in media:
+            if not m.lower().endswith((".jpg", ".jpeg")):
+                issues.append(("FAIL", "instagram", "not-jpeg", m))
+            elif slot and not slot.media_path(m).exists():
+                issues.append(("FAIL", "instagram", "missing-media", m))
     return issues
 
 

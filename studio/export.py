@@ -4,6 +4,7 @@
     from export import export
     export(slides, caption, "queue/2026-10-13/media", "crypto2")
     -> crypto2-1.png ... crypto2-N.png and crypto2.pdf
+    With RD_PLATFORM=instagram it writes crypto2-1.jpg ... (JPEG, what Instagram needs) and no PDF.
 """
 import asyncio
 from pathlib import Path
@@ -43,6 +44,12 @@ def export(slides, caption, outdir, name, frame=".ig-frame"):
     html = rd_terminal.page("".join(slides), len(slides), caption)
     pngs = asyncio.run(_shoot(html, len(slides), out, name, frame))
     imgs = [Image.open(p).convert("RGB") for p in pngs]
+    if rd_terminal.PLATFORM == "instagram":
+        # Instagram's API accepts JPEG only
+        jpgs = []
+        for p, im in zip(pngs, imgs):
+            j = p.with_suffix(".jpg"); im.save(j, quality=92); jpgs.append(str(j))
+        return jpgs, None
     pdf = out / f"{name}.pdf"
     imgs[0].save(pdf, save_all=True, append_images=imgs[1:], resolution=150)
     return [str(p) for p in pngs], str(pdf)

@@ -7,11 +7,12 @@ import argparse
 import sys
 import traceback
 
-from . import control, github
+from . import control, github, load_config
 from .lint import blocked_platforms, lint_slot
 from .linkedin_client import LinkedInClient
 from .queue import due_slots, posted_keys, record
 from .x_client import XClient
+from .ig_client import InstagramClient, public_url
 
 
 def run(dry_run=False, now_utc=None):
@@ -24,7 +25,7 @@ def run(dry_run=False, now_utc=None):
 
     def client(platform):
         if platform not in clients:
-            clients[platform] = XClient(dry_run) if platform == "x" else LinkedInClient(dry_run)
+            clients[platform] = {"x": XClient, "linkedin": LinkedInClient, "instagram": InstagramClient}[platform](dry_run)
         return clients[platform]
 
     for s in slots:
@@ -40,10 +41,12 @@ def run(dry_run=False, now_utc=None):
         issues = lint_slot(data, s)
         blocked = blocked_platforms(issues)
         done = posted_keys()
-        for platform in ("x", "linkedin"):
+        for platform in ("x", "linkedin", "instagram"):
             cfgp = data.get(platform, {})
             if not cfgp.get("enabled") or (s.key, platform) in done:
                 continue
+            if platform == "instagram" and not load_config().get("instagram_autopost"):
+                continue  # Roland posts Instagram by hand until autopost is switched on
             if control.is_skipped(cmds, s.slot, platform):
                 record(s.key, platform, {"status": "skipped"})
                 notes.append(f"{platform}: skipped as you asked")
@@ -60,6 +63,12 @@ def run(dry_run=False, now_utc=None):
                     if not dry_run:
                         record(s.key, "x", {"status": "posted", "ids": ids, "url": url})
                     notes.append(f"X posted: {url}")
+                elif platform == "instagram":
+                    urls = [public_url(s.path, m) for m in cfgp["media"]]
+                    mid, link = client("instagram").publish(urls, cfgp["caption"])
+                    if not dry_run:
+                        record(s.key, "instagram", {"status": "posted", "id": mid, "url": link})
+                    notes.append(f"Instagram posted: {link}")
                 else:
                     media = str(s.media_path(cfgp["media"])) if cfgp.get("media") else None
                     urn = client("linkedin").create_post(cfgp["text"], media, cfgp.get("media_title"))

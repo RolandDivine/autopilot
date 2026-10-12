@@ -72,7 +72,26 @@ def prune_media():
     return removed
 
 
+def refresh_instagram():
+    if not (os.environ.get("INSTAGRAM_TOKEN") or (ROOT / "secrets" / "instagram.enc").exists()):
+        return None
+    from .ig_client import refresh_token
+    try:
+        return refresh_token()
+    except Exception as e:
+        print(f"::warning title=instagram token::{e}")
+        if github.available():
+            github.ensure_label("action-needed", "D73A4A")
+            if not github.find_day_issue(f"ig-token-{dt.date.today():%Y-%W}"):
+                github.create_issue("Instagram sign-in needs attention",
+                                    f"Autopilot could not refresh the Instagram token: {str(e)[:300]}\n\n"
+                                    "Generate a new token in the Meta app dashboard and update the INSTAGRAM_TOKEN secret.",
+                                    [f"day:ig-token-{dt.date.today():%Y-%W}", "action-needed"])
+        return None
+
+
 def main():
+    print("instagram token valid until:", refresh_instagram())
     print("x metrics rows:", collect_x_metrics())
     print("linkedin token days left:", check_linkedin_token())
     print("media folders pruned:", prune_media())

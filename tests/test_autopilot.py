@@ -124,3 +124,32 @@ def test_linkedin_token_roundtrip(tmp_path, monkeypatch):
     assert b"abc" not in (tmp_path / "li.enc").read_bytes()
     assert li_token.load()["access_token"] == "abc"
     assert "client_id=78hozpq7114k7y" in li_token.sign_in_link()
+
+
+def test_instagram_lint_and_url(q, tmp_path):
+    from autopilot.ig_client import public_url
+    good = slot_json(instagram={"enabled": True, "caption": "Lesson 2. Save this for later. #crypto #learn",
+                                "media": ["instagram/a-1.jpg"]})
+    p = q("2026-10-13", "1300", good)
+    (p.parent / "instagram").mkdir()
+    (p.parent / "instagram" / "a-1.jpg").write_bytes(b"x")
+    s = queue.Slot("2026-10-13", "1300", p)
+    assert not [i for i in lint.lint_slot(good, s) if i[2] in ("not-jpeg", "missing-media", "media-count")]
+    bad = slot_json(instagram={"enabled": True, "caption": "#a #b #c #d #e #f by @RolandDivine2", "media": ["instagram/a.png"]})
+    rules = {r for lvl, pl, r, d in lint.lint_slot(bad) if pl == "instagram"}
+    assert {"too-many-hashtags", "wrong-handle", "not-jpeg"} <= rules
+    assert public_url(p, "instagram/a-1.jpg").endswith("/main/queue/2026-10-13/instagram/a-1.jpg")
+
+
+def test_instagram_dry_run(q, capsys, monkeypatch):
+    import autopilot
+    real = autopilot.load_config
+    monkeypatch.setattr(post, "load_config", lambda: {**real(), "instagram_autopost": True})
+    monkeypatch.setattr(queue, "load_config", lambda: {**real(), "instagram_autopost": True})
+    d = slot_json(instagram={"enabled": True, "caption": "hi", "media": ["instagram/a-1.jpg"]})
+    p = q("2026-10-13", "1900", d)
+    (p.parent / "instagram").mkdir(exist_ok=True)
+    (p.parent / "instagram" / "a-1.jpg").write_bytes(b"x")
+    post.run(dry_run=True, now_utc=at_lagos("2026-10-13", "1901"))
+    assert "[dry-run] Instagram" in capsys.readouterr().out
+    assert control.parse(["skip 7pm ig"])["skip"] == {("1900", "instagram")}

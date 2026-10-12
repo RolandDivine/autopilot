@@ -78,7 +78,7 @@ class LinkedInClient:
         # images and documents are processed asynchronously; wait until LinkedIn says AVAILABLE
         if True:
             for _ in range(24):
-                st = self.s.get(f"{self.base}/rest/documents/{urllib.parse.quote(urn)}", timeout=30)
+                st = self.s.get(f"{self.base}/rest/{kind}/{urllib.parse.quote(urn)}", timeout=30)
                 if st.ok and st.json().get("status") == "AVAILABLE":
                     break
                 time.sleep(5)

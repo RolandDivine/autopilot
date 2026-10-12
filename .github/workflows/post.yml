@@ -1,0 +1,57 @@
+name: post
+
+on:
+  schedule:
+    # Lagos is UTC+1. Main runs at 8 AM / 1 PM / 7 PM Lagos, plus sweeps in case GitHub starts a run late or one fails.
+    - cron: "2 7 * * *"
+    - cron: "2 12 * * *"
+    - cron: "2 18 * * *"
+    - cron: "40 7,8,12,13,18,19 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print what would be posted, post nothing"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: autopilot-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Post due slots
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python -m autopilot.post --dry-run
+          else
+            python -m autopilot.post
+          fi
+      - name: Save log
+        if: always()
+        run: |
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add log control.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "log: posted $(date -u +%FT%TZ)" && git pull --rebase && git push)

@@ -10,7 +10,7 @@
     ]
   },
   "linkedin": {
-    "enabled": true,
+    "enabled": false,
     "text": "For the next 150 days I'm teaching three things from zero, one lesson a day:\n\n- Crypto, for people who have never bought any\n- AI, for getting work and getting it done\n- Building, until you ship a product\n\nNo jargon, no hype. If you've ever felt late to any of these, this is your starting line.\n\nDay 1 starts now."
   }
 }

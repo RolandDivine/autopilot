@@ -20,7 +20,7 @@ def render(date):
     d = dt.date.fromisoformat(date)
     lines = [f"Autopilot posts these on **{d:%a %d %b}** unless you say otherwise.",
              "",
-             "Reply with a comment to control it: `skip 1pm` · `skip 7pm instagram` · `skip all` · `pause` · `resume`.",
+             "Reply with a comment to control it: `skip 1pm` · `skip 7pm instagram` · `skip stories` · `skip all` · `pause` · `resume`.",
              "To change wording, tap the file link, then the pencil icon, edit, and commit before the slot time.",
              ""]
     for slot in cfg["slots"]:
@@ -56,6 +56,11 @@ def render(date):
                 mark = "BLOCKED" if lvl == "FAIL" else "check"
                 lines.append(f"- **{mark}** · {plat} · {rule} · {detail}")
         lines.append("")
+    sf = folder / "stories.json"
+    if sf.exists():
+        sts = json.loads(sf.read_text(encoding="utf-8"))
+        lines += ["---", f"### Instagram stories ({len(sts)})",
+                  " · ".join(f"{st['at'][:2]}:{st['at'][2:]}" for st in sts), "Comment `skip stories` to skip them all.", ""]
     title = f"Day {day_no} · {d:%a %d %b} · review"
     return title, "\n".join(lines)
 

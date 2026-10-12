@@ -27,6 +27,9 @@ def parse(comments):
             m = re.match(r"^skip\s+(\S+)(?:\s+(\S+))?", line)
             if m:
                 target, plat = m.group(1), PLATFORMS.get(m.group(2) or "", None)
+                if target == "stories":
+                    skip.add(("stories", None))
+                    continue
                 slots = ["0800", "1300", "1900"] if target == "all" else [SLOT_WORDS.get(target)]
                 for s in slots:
                     if s:

@@ -153,3 +153,19 @@ def test_instagram_dry_run(q, capsys, monkeypatch):
     post.run(dry_run=True, now_utc=at_lagos("2026-10-13", "1901"))
     assert "[dry-run] Instagram" in capsys.readouterr().out
     assert control.parse(["skip 7pm ig"])["skip"] == {("1900", "instagram")}
+
+
+def test_stories_due_and_skip(q, capsys, monkeypatch):
+    import autopilot
+    real = autopilot.load_config
+    monkeypatch.setattr(post, "load_config", lambda: {**real(), "instagram_autopost": True})
+    p = q("2026-10-13", "0800", slot_json())
+    (p.parent / "stories").mkdir()
+    (p.parent / "stories" / "s0900.jpg").write_bytes(b"x")
+    (p.parent / "stories.json").write_text(json.dumps([{"at": "0900", "media": "stories/s0900.jpg"}]))
+    post.run_stories(dry_run=True, now_utc=at_lagos("2026-10-13", "0915"))
+    assert "[dry-run] Instagram story" in capsys.readouterr().out
+    post.run_stories(dry_run=True, now_utc=at_lagos("2026-10-13", "1100"))  # outside 90 min window
+    assert "story" not in capsys.readouterr().out
+    assert ("stories", None) in control.parse(["skip stories"])["skip"]
+    assert lint.lint_stories(p.parent) == []

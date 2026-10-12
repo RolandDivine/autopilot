@@ -13,9 +13,11 @@
   },
   "instagram": {
     "enabled": true,
+    "caption": "Tomorrow, one US number could move crypto more than any crypto headline 👀\n\nThe US inflation number (CPI) comes out Wed 14 Oct, 1:30 PM Lagos. Swipe to see why it matters, explained like a chat with a friend.\n\nYou don't need to trade it. Just understand why prices might swing.\n\n📌 Save this for tomorrow\n📤 Send it to a friend who holds crypto\n\nEducation, not financial advice.\n\n#crypto #bitcoin #inflation #learncrypto",
     "media": [
-      "instagram/news2-1.jpg"
-    ],
-    "caption": "Tomorrow, one US number could move crypto more than any crypto headline.\n\nUS inflation (CPI) drops Wed 14 Oct, 1:30 PM Lagos. Forecast: 3.6% a year.\n\nHigh inflation → rates stay high → safe bonds pay more → less money for risky assets like crypto.\n\nYou don't need to trade it. Just understand why prices might swing tomorrow.\n\nSave this for later.\nEducation, not financial advice.\n\n#crypto #bitcoin #inflation #learncrypto"
+      "instagram/news2-1.jpg",
+      "instagram/news2-2.jpg",
+      "instagram/news2-3.jpg"
+    ]
   }
 }

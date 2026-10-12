@@ -50,5 +50,6 @@
   "instagram_api_version": "v24.0",
   "instagram_max_chars": 2200,
   "instagram_max_hashtags": 5,
-  "instagram_autopost": false
+  "instagram_autopost": true,
+  "story_grace_minutes": 90
 }

@@ -15,12 +15,51 @@ from .x_client import XClient
 from .ig_client import InstagramClient, public_url
 
 
+def run_stories(dry_run=False, now_utc=None):
+    """queue/<date>/stories.json: [{"at": "0900", "media": "stories/s0900.jpg"}, ...]. Instagram only."""
+    import datetime as dt
+    import json
+    from .queue import QUEUE, lagos_now, slot_datetime
+    from .ig_client import InstagramClient, public_url
+    if not load_config().get("instagram_autopost"):
+        return 0
+    now = lagos_now(now_utc)
+    grace = dt.timedelta(minutes=load_config().get("story_grace_minutes", 90))
+    done = posted_keys()
+    errors, client = 0, None
+    for day in sorted({(now - dt.timedelta(days=1)).date().isoformat(), now.date().isoformat()}):
+        f = QUEUE / day / "stories.json"
+        if not f.exists():
+            continue
+        issue = github.find_day_issue(day) if github.available() else None
+        cmds = control.parse(github.owner_comments(issue["number"]) if issue else [])
+        for st in json.loads(f.read_text(encoding="utf-8")):
+            key = f"{day}/story-{st['at']}"
+            when = slot_datetime(day, st["at"])
+            if (key, "instagram") in done or not (when <= now <= when + grace):
+                continue
+            if control.paused() or ("stories", None) in cmds["skip"]:
+                record(key, "instagram", {"status": "skipped"}) if not dry_run else None
+                continue
+            try:
+                client = client or InstagramClient(dry_run)
+                mid = client.publish_story(public_url(f, st["media"]))
+                if not dry_run:
+                    record(key, "instagram", {"status": "posted", "id": mid, "kind": "story"})
+                print(f"::notice title=story {st['at']}::posted {mid}")
+            except Exception as e:
+                errors += 1
+                print(f"::error title=story {st['at']} failed::{str(e)[:400]}".replace("\n", " "))
+    return errors
+
+
 def run(dry_run=False, now_utc=None):
+    story_errors = run_stories(dry_run, now_utc)
     slots = due_slots(now_utc)
     if not slots:
         print("nothing due")
-        return 0
-    errors = 0
+        return 1 if story_errors else 0
+    errors = story_errors
     clients = {}
 
     def client(platform):

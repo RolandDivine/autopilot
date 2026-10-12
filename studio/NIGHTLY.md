@@ -1,6 +1,6 @@
 # Nightly build (runs in Roland's Claude conversation at 7:10 PM Lagos)
 
-Platforms: LinkedIn (RolandDivine2) posts automatically from the queue. Instagram (@defi_ring_master) posts automatically only when `config.json` has `"instagram_autopost": true`; otherwise Roland posts it by hand. X is off: always set `"x": {"enabled": false}`. Never post anything directly.
+Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post automatically from the queue (`instagram_autopost` is true). X is off: always set `"x": {"enabled": false}`. Never post anything directly.
 
 ## Steps
 1. **Repo:** if `/home/claude/autopilot` is missing, call add_repo (RolandDivine/autopilot, push), clone it there, and call register_repo_root. Run `git pull`.
@@ -14,13 +14,19 @@ Platforms: LinkedIn (RolandDivine2) posts automatically from the queue. Instagra
    - **1 PM and 7 PM:** two 7-slide lessons taught from zero. Each has a homework slide and ends with the signoff slide.
    - **Tags:** only fact, interpretation, scenario or thesis.
    - Keep monospace lines ≤ 34 characters.
-   - Run `python days/dayN.py`. It builds the LinkedIn PNGs and PDF in `media/` and the Instagram JPEGs in `instagram/`.
+   - Run `python days/dayN.py`. It builds the LinkedIn PNGs and PDF in `media/` (terminal style, LinkedIn only).
+   - **Instagram uses the Chat Bubbles style, permanently (Roland's choice, 12 Oct 2026). Never use the terminal style on Instagram.** Copy `studio/days/day2_ig.py` to `dayN_ig.py` and write the same lessons as a chat between a curious friend ("q") and Roland ("r"), using `studio/ig_chat.py`.
+     - Use plain words and no tech jargon. Each slide has 2–4 bubbles, and slide 2 has its own hook.
+     - The last slide asks people to save the post, send it to a named kind of friend, and follow.
+     - The script makes the feed carousels in `instagram/` (JPEG) plus **5 stories** in `stories/`: 09:00 new-post teaser, 11:00 quiz ("reply A or B"), 14:00 the answer, 17:00 builders check-in or one of Roland's stories, 21:00 tomorrow preview with "turn on notifications".
+     - Story text must be true. Use Roland's own experiences only from `studio/story_bank.md`; never invent personal stories for him.
 5. **Check:** build contact sheets and look at every slide. Fix any overflow or wrong handle.
 6. **Slots:** write `queue/<tomorrow>/{0800,1300,1900}.json`, following the format of the Day 2 files.
    - LinkedIn: 850–1,600 characters, no hashtags or emoji, links only in first_comment.
-   - Instagram: a caption with 3–5 hashtags, plus the list of JPEGs.
-   - Lint all three slots and fix every FAIL. Commit "Day N queue" and push. Confirm that the review issue opened.
-7. **Tell Roland (SendUserMessage):** the three titles and times, plus the review issue link. If instagram_autopost is false, also send the three Instagram captions and the JPEGs (SendUserFile, one group per post).
+   - Instagram: a caption with 3–5 hashtags and a 📌 save / 📤 send line, plus the list of JPEGs.
+   - Also write `queue/<tomorrow>/stories.json`: `[{"at": "0900", "media": "stories/s0900.jpg"}, ...]`.
+   - Lint all three slots and the stories file (`autopilot.lint.lint_stories(folder)`), and fix every FAIL. Commit "Day N queue" and push. Confirm that the review issue opened.
+7. **Tell Roland (SendUserMessage):** the three titles and times, the story times, and the review issue link. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
 8. **Book tomorrow's run:** call send_later at 18:10 UTC the next day with the message:
    "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."
    Don't skip this step: it is what keeps the nightly run going.

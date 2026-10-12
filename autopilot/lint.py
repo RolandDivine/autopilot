@@ -98,3 +98,21 @@ def lint_slot(data, slot=None):
 
 def blocked_platforms(issues):
     return {p for lvl, p, *_ in issues if lvl == "FAIL"}
+
+
+def lint_stories(folder):
+    """Return problems with queue/<date>/stories.json (empty list = fine)."""
+    import json
+    f = folder / "stories.json"
+    if not f.exists():
+        return []
+    out = []
+    for st in json.loads(f.read_text(encoding="utf-8")):
+        m = st.get("media", "")
+        if not re.fullmatch(r"\d{4}", st.get("at", "")):
+            out.append(f"bad time {st.get('at')}")
+        if not m.lower().endswith((".jpg", ".jpeg")):
+            out.append(f"{m}: Instagram needs JPEG")
+        elif not (folder / m).exists():
+            out.append(f"{m}: missing")
+    return out

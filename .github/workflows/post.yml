@@ -7,6 +7,8 @@ on:
     - cron: "2 12 * * *"
     - cron: "2 18 * * *"
     - cron: "40 7,8,12,13,18,19 * * *"
+    # hourly pass (Lagos 7 AM to 11 PM) for Instagram stories
+    - cron: "15 6-22 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

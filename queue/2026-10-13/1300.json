@@ -12,6 +12,7 @@
   },
   "instagram": {
     "enabled": true,
+    "caption": "ChatGPT isn't magic. It's 3 simple steps 🤯\n\nSwipe to see how AI chatbots actually work, with zero tech words.\n\nThen try the 2-minute task on slide 6 and tell me what the AI admitted 👇\n\n📌 Save this so you remember\n📤 Send it to a friend who uses ChatGPT every day\n\n#ai #chatgpt #learnai #aitools #productivity",
     "media": [
       "instagram/ai2-1.jpg",
       "instagram/ai2-2.jpg",
@@ -20,7 +21,6 @@
       "instagram/ai2-5.jpg",
       "instagram/ai2-6.jpg",
       "instagram/ai2-7.jpg"
-    ],
-    "caption": "AI chat feels like magic. It's actually 3 simple steps.\n\n1. It read a huge library and learned patterns.\n2. Your words get cut into small pieces called tokens.\n3. It predicts the reply one piece at a time.\n\nThat's why it can sound sure and still be wrong. You're the editor.\n\nTry the 2-minute task on slide 6.\nSave this for later.\n\n#ai #chatgpt #learnai #aitools #productivity"
+    ]
   }
 }

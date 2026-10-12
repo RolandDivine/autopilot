@@ -75,9 +75,9 @@ class LinkedInClient:
             up = requests.put(val["uploadUrl"], data=f.read(),
                               headers={"Authorization": self.s.headers["Authorization"]}, timeout=120)
         self._check(up, f"{kind} upload")
-        # documents are processed asynchronously; give LinkedIn a moment
-        if kind == "documents":
-            for _ in range(12):
+        # images and documents are processed asynchronously; wait until LinkedIn says AVAILABLE
+        if True:
+            for _ in range(24):
                 st = self.s.get(f"{self.base}/rest/documents/{urllib.parse.quote(urn)}", timeout=30)
                 if st.ok and st.json().get("status") == "AVAILABLE":
                     break

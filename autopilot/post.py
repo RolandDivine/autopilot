@@ -76,6 +76,7 @@ def run(dry_run=False, now_utc=None):
                 errors += 1
                 traceback.print_exc()
                 notes.append(f"{platform}: **failed**: {str(e)[:400]}")
+                print(f"::error title={platform} failed::{str(e)[:400]}".replace("\n", " "))
         print(f"{s.key}:", *notes, sep="\n  ")
         if issue and notes and not dry_run:
             github.comment(issue["number"], f"**{s.slot[:2]}:{s.slot[2:]} result**\n\n" + "\n".join(f"- {n}" for n in notes))
@@ -86,7 +87,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
-    sys.exit(run(dry_run=args.dry_run))
+    try:
+        rc = run(dry_run=args.dry_run)
+    except Exception as e:
+        traceback.print_exc()
+        print(f"::error title=autopilot crashed::{type(e).__name__}: {str(e)[:500]}".replace("\n", " "))
+        rc = 1
+    sys.exit(rc)
 
 
 if __name__ == "__main__":

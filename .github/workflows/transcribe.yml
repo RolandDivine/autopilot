@@ -25,17 +25,18 @@ jobs:
       - run: pip install faster-whisper==1.1.1
       - name: Transcribe
         run: |
-          python - <<'PY'
+          cat > /tmp/tr.py <<'PY'
           import json, glob
           from faster_whisper import WhisperModel
           m = WhisperModel("small.en", device="cpu", compute_type="int8")
           for f in sorted(glob.glob("audio/*.wav")):
-              segs, _ = m.transcribe(f, word_timestamps=True, vad_filter=False)
+              segs, _ = m.transcribe(f, word_timestamps=True)
               out = [{"start": round(s.start, 2), "end": round(s.end, 2), "text": s.text.strip(),
                       "words": [[round(w.start, 2), round(w.end, 2), w.word] for w in s.words]} for s in segs]
               json.dump(out, open(f[:-4] + ".json", "w"), indent=0)
               print(f, len(out), "segments")
           PY
+          python /tmp/tr.py 2> /tmp/err.txt || { echo "::error::$(tail -c 900 /tmp/err.txt | tr '\n' ' ')"; exit 1; }
       - name: Save
         run: |
           git config user.name "autopilot"

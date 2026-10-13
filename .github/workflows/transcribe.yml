@@ -1,0 +1,44 @@
+name: transcribe
+
+# Turns voice-over audio into timed text, used to build animated Reels.
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch holding audio/*.wav"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  transcribe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install faster-whisper==1.1.1
+      - name: Transcribe
+        run: |
+          python - <<'PY'
+          import json, glob
+          from faster_whisper import WhisperModel
+          m = WhisperModel("small.en", device="cpu", compute_type="int8")
+          for f in sorted(glob.glob("audio/*.wav")):
+              segs, _ = m.transcribe(f, word_timestamps=True, vad_filter=False)
+              out = [{"start": round(s.start, 2), "end": round(s.end, 2), "text": s.text.strip(),
+                      "words": [[round(w.start, 2), round(w.end, 2), w.word] for w in s.words]} for s in segs]
+              json.dump(out, open(f[:-4] + ".json", "w"), indent=0)
+              print(f, len(out), "segments")
+          PY
+      - name: Save
+        run: |
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add audio/*.json
+          git commit -m "transcripts" && git push

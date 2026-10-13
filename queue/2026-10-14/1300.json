@@ -1,0 +1,28 @@
+{
+  "title": "Crypto lesson 2: what a blockchain is",
+  "kind": "lesson",
+  "x": {
+    "enabled": false
+  },
+  "linkedin": {
+    "enabled": true,
+    "media": "media/crypto2.pdf",
+    "media_title": "Crypto lesson 2: what a blockchain is",
+    "text": "\"Blockchain\" gets used everywhere, but most explanations lose people in the first sentence. Lesson 2 of 100 in crypto from zero.\n\nStart with something familiar: an ajo group. The group keeps one record book of who paid, how much and when. The weakness is obvious. One person holds the book, so one person can change it.\n\nNow give every member an identical copy. If someone edits theirs, everyone else's copy disagrees, and the edit is rejected.\n\nA blockchain is that idea run by thousands of computers worldwide:\n\n1. Each page of records is a block.\n2. Each block carries a fingerprint of the block before it, so they form a chain. Change an old page and every page after it breaks.\n3. New pages are added by computers that put something at stake. On Bitcoin, miners spend computing power. On Ethereum, validators lock up coins as a deposit. Cheating costs them money.\n\nNo single owner. No single point to cheat.\n\nHomework: explain it to a friend using only the record book example. If they get it, you do too.\n\nEducation, not financial advice.",
+    "first_comment": "Further reading: the Bitcoin white paper (2008) https://bitcoin.org/bitcoin.pdf"
+  },
+  "instagram": {
+    "enabled": true,
+    "caption": "Blockchain, explained with an ajo book 📒\n\nIf you've ever been part of an ajo or esusu, you already understand the idea. Swipe to see how.\n\nThen try the 2-minute task on slide 6 👇\n\n📌 Save this so you can explain it next time\n📤 Send it to the friend who says \"crypto is just a scam\"\n\n#crypto #blockchain #learncrypto #bitcoin",
+    "media": [
+      "instagram/crypto2-1.jpg",
+      "instagram/crypto2-2.jpg",
+      "instagram/crypto2-3.jpg",
+      "instagram/crypto2-4.jpg",
+      "instagram/crypto2-5.jpg",
+      "instagram/crypto2-6.jpg",
+      "instagram/crypto2-7.jpg"
+    ],
+    "music": "Anita Baker – Sweet Love"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "News: $672M of leveraged bets wiped out in a day",
+  "kind": "news",
+  "x": {
+    "enabled": false
+  },
+  "linkedin": {
+    "enabled": true,
+    "media": "media/news3.pdf",
+    "media_title": "$672M wiped out in a day",
+    "text": "In the last 24 hours, about $672 million of leveraged crypto positions were wiped out.\n\nBitcoin slipped from roughly $84,200 to near $81,000. Not a crash by crypto standards. But for people trading with borrowed money, a move that size is enough.\n\nHere is what happened, in plain words. Traders borrowed to make bigger bets. When the price moved against them, the exchange closed their positions automatically to recover the loan. That is a liquidation. About $586 million of the total came from people betting on prices going up.\n\nThe lesson is not that crypto is dangerous. It is that leverage turns a normal dip into a total loss. The same 4% move that a spot holder can sit through can erase a 20x position completely.\n\nToday at 1:30 PM Lagos time, the US publishes its inflation number for September. Expect more swings either way.\n\nIf you are new: learn first, size small, and never put borrowed money into a market you are still learning.\n\nEducation, not financial advice.",
+    "first_comment": "Source: KuCoin Crypto Daily Market Report, 13 Oct 2026 https://www.kucoin.com/news/articles/crypto-daily-market-report-october-13-2026"
+  },
+  "instagram": {
+    "enabled": true,
+    "caption": "$672 million gone in one day 😳\n\nBitcoin only dipped about 4%, but people trading with borrowed money got wiped out. Swipe to see how, explained like a chat with a friend.\n\nAnd today at 1:30 PM Lagos, the US inflation number lands. More swings are possible.\n\n📌 Save this as a reminder\n📤 Send it to a friend who trades with leverage\n\nEducation, not financial advice.\n\n#crypto #bitcoin #riskmanagement #learncrypto",
+    "media": [
+      "instagram/news3-1.jpg",
+      "instagram/news3-2.jpg",
+      "instagram/news3-3.jpg"
+    ],
+    "music": "Phil Collins – Against All Odds"
+  }
+}

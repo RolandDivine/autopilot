@@ -1,0 +1,28 @@
+{
+  "title": "Builders lesson 2: the 150-day build challenge",
+  "kind": "lesson",
+  "x": {
+    "enabled": false
+  },
+  "linkedin": {
+    "enabled": true,
+    "media": "media/build2.pdf",
+    "media_title": "Builders lesson 2: the 150-day build challenge",
+    "text": "Lesson 2 of 100 in the Builders track, and the plan for the next 150 days.\n\nThe goal is simple: go from no idea to a launched product by 4 February 2027, in public, together.\n\nThe road has five stages:\n\n1. Find a real problem (to 10 November). Not an idea, a problem you or people around you face every week.\n2. Validate and plan (to 10 December). Check that people actually want it solved, then define the smallest useful version.\n3. Build and beta test (to 9 January). Real users, real feedback.\n4. Get launch-ready. Branding, copy, a demo, the paperwork.\n5. Launch Day, 4 February.\n\nFour rules for the whole journey: ship small and often, show your work in public, talk to real users, and remember that done beats perfect.\n\nNo idea yet is the best place to start. Stage one begins with problems.\n\nHomework: comment \"I'm in\" with one thing that annoys you every week. That list is where we begin.",
+    "first_comment": "Lesson 1 (why most products never launch) is on my profile from yesterday."
+  },
+  "instagram": {
+    "enabled": true,
+    "caption": "No idea → launched product in 150 days 🚀\n\nSwipe for how the build challenge works: 5 stages, 4 rules, one Launch Day (4 Feb 2027). No coding needed to start.\n\nComment \"I'm in\" and one thing that annoys you every week 👇\n\n📌 Save this so you remember the dates\n📤 Send it to the friend who always says \"I have an idea…\"\n\n#buildinpublic #startup #entrepreneur #lagos",
+    "media": [
+      "instagram/build2-1.jpg",
+      "instagram/build2-2.jpg",
+      "instagram/build2-3.jpg",
+      "instagram/build2-4.jpg",
+      "instagram/build2-5.jpg",
+      "instagram/build2-6.jpg",
+      "instagram/build2-7.jpg"
+    ],
+    "music": "Luther Vandross – Never Too Much"
+  }
+}

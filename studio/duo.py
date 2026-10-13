@@ -24,6 +24,9 @@ AUDIO = Path("/home/claude/kobo_audio")
 OUT = Path(__file__).resolve().parents[1] / "assets" / "reels"
 SERIES = "Klaerus explained"
 TOTAL_PARTS = 5
+SLUG = "klaerus-part"
+SUBTITLE = "with Kobo &amp; Babe · a 5-part series"
+SOLO = False  # True: Kobo alone, centred and bigger
 
 # (time the turn starts, speaker). K = Kobo (host), B = Babe (co-host)
 TURNS = {
@@ -142,7 +145,7 @@ function rig(p,t,talk,level,listen,phase){
   $(p+'-earR').style.transform=`rotate(${6+Math.sin(t*3.1+phase+1)*8}deg)`;
   const bt=(t+phase)%3.4, s=bt<.14?Math.max(.08,Math.abs(bt-.07)/.07):1;
   $(p+'-eyeL').style.transform=$(p+'-eyeR').style.transform=`scaleY(${s})`;
-  const open=talk?Math.max(0,level)*30:0;
+  const open=talk?Math.sqrt(Math.max(0,level))*30:0;
   $(p+'-mouth').setAttribute('ry',Math.max(.1,open));$(p+'-mouth').style.opacity=open>1.5?1:0;
   $(p+'-smile').style.opacity=open>1.5?0:1;
   const g=talk?Math.sin(t*4+phase)*10*level:0;
@@ -243,7 +246,7 @@ def load(n):
 def html(n, data):
     body = f"""
 <div class="top"><div class="av">RD</div><div><b style="font-size:34px">{SERIES}</b>
-<div style="font-size:27px;color:#6b7280">with Kobo &amp; Babe · a 5-part series</div></div>
+<div style="font-size:27px;color:#6b7280">{SUBTITLE}</div></div>
 <div class="part">PART {n}/{TOTAL_PARTS}</div></div>
 <div class="prog"><i id="prog"></i></div>
 <div class="bub" id="bub" style="opacity:0"><div class="who" id="who"></div><div id="txt"></div></div>
@@ -252,6 +255,9 @@ def html(n, data):
 {bunny_svg('kobo', KOBO_COLORS)}{bunny_svg('babe', BABE_COLORS, bow=True)}
 <div class="name" style="left:208px;color:#B38600">Kobo</div><div class="name" style="right:210px;color:#6A4FC2">Babe</div>
 <div class="foot">@defi_ring_master · education, not financial advice</div>"""
+    if SOLO:
+        body += ("<style>#babe,.name{display:none}#kobo{left:305px;top:1230px;transform:scale(1.25);transform-origin:50% 100%}.card{top:780px!important;z-index:3}#tail{left:516px!important}"
+                 "</style>")
     js = JS.replace("__DATA__", json.dumps(data))
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{CSS}</style></head>"
             f"<body>{body}<script>{js}</script></body></html>")
@@ -283,7 +289,7 @@ async def render_part(n, preview_times=None):
             await pg.screenshot(path=str(frames / f"f{i:05d}.jpg"), type="jpeg", quality=85)
         await b.close()
     OUT.mkdir(parents=True, exist_ok=True)
-    out = OUT / f"klaerus-part-{n}.mp4"
+    out = OUT / f"{SLUG}-{n}.mp4"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.jpg"),
                     "-i", str(AUDIO / f"part{n}.wav"), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "21",
                     "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-shortest", "-movflags", "+faststart", str(out)],

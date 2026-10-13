@@ -91,6 +91,16 @@ class InstagramClient:
             time.sleep(4)
         raise InstagramError(f"container {container_id} not ready after 2 minutes")
 
+    def _publish(self, creation_id):
+        """media_publish, retrying while Instagram says the media is not ready yet (code 9007)."""
+        for attempt in range(8):
+            try:
+                return self._req("post", f"{self.user_id}/media_publish", data={"creation_id": creation_id})["id"]
+            except InstagramError as e:
+                if "9007" not in str(e) and "not ready" not in str(e) or attempt == 7:
+                    raise
+                time.sleep(5 + attempt * 5)
+
     def publish_story(self, image_url):
         """One image story (disappears after 24h; add it to a highlight in the app). Returns media_id."""
         if self.dry_run:
@@ -98,7 +108,7 @@ class InstagramClient:
             return "DRYRUN"
         cid = self._req("post", f"{self.user_id}/media", data={"image_url": image_url, "media_type": "STORIES"})["id"]
         self._wait(cid)
-        return self._req("post", f"{self.user_id}/media_publish", data={"creation_id": cid})["id"]
+        return self._publish(cid)
 
     def publish(self, image_urls, caption):
         """1 URL = single image post; 2-10 = carousel. Returns (media_id, permalink)."""
@@ -117,7 +127,7 @@ class InstagramClient:
             cid = self._req("post", f"{self.user_id}/media",
                             data={"media_type": "CAROUSEL", "children": ",".join(children), "caption": caption})["id"]
         self._wait(cid)
-        mid = self._req("post", f"{self.user_id}/media_publish", data={"creation_id": cid})["id"]
+        mid = self._publish(cid)
         try:
             link = self._req("get", mid, params={"fields": "permalink"}).get("permalink")
         except InstagramError:

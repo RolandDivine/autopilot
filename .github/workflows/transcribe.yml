@@ -22,15 +22,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install faster-whisper==1.1.1 requests
+      - run: pip install faster-whisper==1.1.1 requests soundfile scipy
       - name: Transcribe
         run: |
           cat > /tmp/tr.py <<'PY'
           import json, glob
+          import soundfile as sf
+          from scipy.signal import resample_poly
           from faster_whisper import WhisperModel
           m = WhisperModel("small.en", device="cpu", compute_type="int8")
           for f in sorted(glob.glob("audio/*.wav")):
-              segs, _ = m.transcribe(f, word_timestamps=True)
+              y, sr = sf.read(f, dtype="float32")
+              if y.ndim > 1: y = y.mean(axis=1)
+              y = resample_poly(y, 16000, sr).astype("float32")
+              segs, _ = m.transcribe(y, word_timestamps=True)
               out = [{"start": round(s.start, 2), "end": round(s.end, 2), "text": s.text.strip(),
                       "words": [[round(w.start, 2), round(w.end, 2), w.word] for w in s.words]} for s in segs]
               json.dump(out, open(f[:-4] + ".json", "w"), indent=0)

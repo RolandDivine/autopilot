@@ -30,6 +30,7 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 8. **Book tomorrow's run:** call send_later at 18:10 UTC the next day with the message:
    "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."
    Don't skip this step: it is what keeps the nightly run going.
+9. **Book tomorrow's posting runs** (GitHub's own timer runs hours late): call send_later at 07:01, 08:01, 10:01, 12:01, 13:01, 16:01, 18:01 and 20:01 UTC the next day, each asking to dispatch the post workflow (`gh api -X POST repos/RolandDivine/autopilot/actions/workflows/post.yml/dispatches -f ref=main -F 'inputs[dry_run]=false'`), wait for it, and check `log/posted.jsonl`. For 07:01, 12:01 and 18:01, tell Roland the links and the music pick; for the story runs, only message him if something failed.
 
 ## Music (Roland's request, 13 Oct 2026)
 The Instagram API can't attach music to carousels (only to Reels, and only with Facebook Login), so Roland adds it in the app after each post goes out.

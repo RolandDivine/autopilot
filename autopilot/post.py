@@ -108,6 +108,8 @@ def run(dry_run=False, now_utc=None):
                     if not dry_run:
                         record(s.key, "instagram", {"status": "posted", "id": mid, "url": link})
                     notes.append(f"Instagram posted: {link}")
+                    if cfgp.get("music"):
+                        notes.append(f"🎵 Add music now: {cfgp['music']} (open the post → ⋯ → Edit → add music)")
                 else:
                     media = str(s.media_path(cfgp["media"])) if cfgp.get("media") else None
                     urn = client("linkedin").create_post(cfgp["text"], media, cfgp.get("media_title"))

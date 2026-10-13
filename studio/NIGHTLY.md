@@ -30,3 +30,8 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 8. **Book tomorrow's run:** call send_later at 18:10 UTC the next day with the message:
    "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."
    Don't skip this step: it is what keeps the nightly run going.
+
+## Music (Roland's request, 13 Oct 2026)
+The Instagram API can't attach music to carousels (only to Reels, and only with Facebook Login), so Roland adds it in the app after each post goes out.
+For every Instagram slot, set `"music"` to one old-school track that fits the mood. Rotate through Sade, Phil Collins and Michael Bolton, plus similar artists (Anita Baker, Luther Vandross, Lionel Richie, Whitney Houston, Tracy Chapman, George Michael). Don't repeat the same song within a week.
+Example: `"music": "Sade – Smooth Operator"`.

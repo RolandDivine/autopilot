@@ -49,6 +49,8 @@ def render(date):
         ig = data.get("instagram", {})
         if ig.get("enabled"):
             lines.append(f"\n**Instagram** _[{len(ig.get('media', []))} slides]_")
+            if ig.get("music"):
+                lines.append(f"🎵 After it posts, add music in the app: **{ig['music']}** (open post → ⋯ → Edit → add music)")
             lines.append("> " + ig.get("caption", "").replace("\n", "\n> "))
         if issues:
             lines.append("")

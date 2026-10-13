@@ -9,6 +9,8 @@ on:
     - cron: "40 7,8,12,13,18,19 * * *"
     # hourly pass (Lagos 7 AM to 11 PM) for Instagram stories
     - cron: "15 6-22 * * *"
+    # extra passes every 10 minutes around each slot, because GitHub sometimes starts scheduled runs late or skips them
+    - cron: "*/10 7,8,12,13,18,19 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

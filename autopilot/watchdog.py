@@ -6,7 +6,9 @@ from .queue import QUEUE, lagos_now
 
 
 def main():
-    tomorrow = (lagos_now() + dt.timedelta(days=1)).date().isoformat()
+    now = lagos_now()
+    # GitHub can start this run hours late; after midnight, the day that matters is today
+    tomorrow = (now + dt.timedelta(days=1 if now.hour >= 12 else 0)).date().isoformat()
     slots = sorted(p.name for p in (QUEUE / tomorrow).glob("*.json")) if (QUEUE / tomorrow).is_dir() else []
     if len(slots) >= 3:
         print(f"ok: {tomorrow} has {slots}")

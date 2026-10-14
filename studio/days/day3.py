@@ -19,61 +19,62 @@ def news():
                     R.note("# US CPI lands today, 1:30 PM Lagos.<br># source: KuCoin daily market report, 13 Oct."))]
 
 
-def crypto2():
+def buy1():
     T = 7
     return [
-        R.slide(0, T, R.command("learn crypto --lesson 2/100") +
-                R.h1("What a blockchain is, in plain words.") +
-                R.pre(f"crypto from zero\n{R.amber('lesson 2 of 100')}", top=24, size=13)),
-        R.slide(1, T, R.tag("fact") + R.h2("start with a notebook.") +
-                R.pre(f"an ajo group keeps one book:\n who paid, how much, when\n\n"
-                      f"problem: {R.amber('one person holds it')}\n  └── they can change it", size=12.5)),
-        R.slide(2, T, R.tag("fact") + R.h2("now give everyone a copy.") +
-                R.pre(f"thousands of computers\neach hold the same book\n\n"
-                      f"change your copy?\n  └── {R.amber('everyone else disagrees')}", size=12.5) +
-                R.note("# no single owner, no single point to cheat.")),
-        R.slide(3, T, R.tag("fact") + R.h2("pages are blocks. linked, they form a chain.") +
-                R.pre(f"[page 1] ← [page 2] ← [page 3]\n\neach page carries a fingerprint\nof the page before it.\n\n"
-                      f"edit an old page →\n{R.amber('every page after it breaks')}", size=12)),
-        R.slide(4, T, R.tag("fact") + R.h2("who writes the next page?") +
-                R.pre(f"bitcoin: miners compete\n  using computing power\n\nethereum: validators\n"
-                      f"  who lock up coins as a deposit\n\n{R.amber('cheating costs them money')}", size=12.5)),
-        R.slide(5, T, R.command("homework --2min") + R.h2("your 2-minute task") +
-                R.pre(f"explain a blockchain to a\nfriend using only the\nnotebook example.\n\n"
-                      f"{R.amber('if they get it, you do too.')}", top=20, size=13)),
-        R.signoff(6, T, "crypto from zero. lesson 3 drops thursday."),
+        R.slide(0, T, R.command("guide crypto --buy-safely") +
+                R.h1("How to buy your first crypto safely.") +
+                R.pre(f"a 5-step checklist\n{R.amber('works in any country')}", top=24, size=13)),
+        R.slide(1, T, R.tag("fact") + R.h2("step 1: pick a regulated exchange.") +
+                R.pre(f"check your country's regulator\nlist before you sign up.\n\n"
+                      f"download the app from the\n{R.amber('official site, not an ad link')}", size=12.5)),
+        R.slide(2, T, R.tag("fact") + R.h2("step 2: lock the door first.") +
+                R.pre(f"{R.gold('01')}  strong unique password\n{R.gold('02')}  2FA with an authenticator app\n"
+                      f"    {R.dim('(not SMS)')}\n{R.gold('03')}  {R.amber('support never DMs you first')}", size=12.5)),
+        R.slide(3, T, R.tag("fact") + R.h2("step 3: start with a test amount.") +
+                R.pre(f"buy small  →  withdraw small\n           →  check it arrived\n\n"
+                      f"only then move more.\n{R.amber('mistakes on-chain are final')}", size=12.5)),
+        R.slide(4, T, R.tag("fact") + R.h2("step 4: know your local rules.") +
+                R.pre(f"example, nigeria:\nbinance stopped naira deposits,\nwithdrawals and p2p in 2024.\n\n"
+                      f"use sec-licensed platforms.\n\n"
+                      f"p2p: {R.amber('wait for the money in')}\n{R.amber('your bank, not a screenshot')}", size=12)),
+        R.slide(5, T, R.tag("thesis") + R.h2("step 5: own your keys, guard the phrase.") +
+                R.pre(f"12-24 word recovery phrase\n  = full access to your money\n\n"
+                      f"write it on paper. never type\nit into a site or a chat.\n\n"
+                      f"{R.amber('anyone asking for it is a thief')}", size=12)),
+        R.signoff(6, T, "practical crypto, no hype. save this checklist."),
     ]
 
 
-def builders2():
+def robot1():
     T = 7
     return [
-        R.slide(0, T, R.command("learn build --lesson 2/100") +
-                R.h1("The 150-day build challenge: how it works.") +
-                R.pre(f"builders from zero\n{R.amber('lesson 2 of 100')}", top=24, size=13)),
-        R.slide(1, T, R.tag("fact") + R.h2("one goal: launch something real.") +
-                R.pre(f"start:   12 Oct 2026\nlaunch:  {R.amber('4 Feb 2027')}\n\n"
-                      f"a builders lesson most days.\nfree. in public. together.", size=12.5)),
-        R.slide(2, T, R.tag("fact") + R.h2("the road, in 5 stages.") +
-                R.pre(f"{R.gold('01')} find a real problem  →10 nov\n{R.gold('02')} validate + plan     →10 dec\n"
-                      f"{R.gold('03')} build + beta test   → 9 jan\n{R.gold('04')} get launch-ready\n"
-                      f"{R.gold('05')} {R.amber('launch day: 4 feb')}", size=12)),
-        R.slide(3, T, R.tag("thesis") + R.h2("no idea yet? good.") +
-                R.pre(f"stage 1 starts with problems,\nnot ideas.\n\n"
-                      f"you'll pick one you're close to\n{R.amber('before you build anything')}", size=12.5)),
-        R.slide(4, T, R.tag("thesis") + R.h2("the rules.") +
-                R.pre(f"{R.gold('01')}  ship small, ship often\n{R.gold('02')}  show your work in public\n"
-                      f"{R.gold('03')}  talk to real users\n{R.gold('04')}  {R.amber('done beats perfect')}", size=12.5)),
-        R.slide(5, T, R.command("homework --2min") + R.h2("your 2-minute task") +
-                R.pre(f"comment \"I'm in\" and one\nthing that annoys you every\nweek.\n\n"
-                      f"{R.amber('that list is where we start.')}", top=20, size=13)),
+        R.slide(0, T, R.command("build --in-public") +
+                R.h1("I built my own posting robot with AI.") +
+                R.pre(f"the new way to build\n{R.amber('one person + AI + free tools')}", top=24, size=13)),
+        R.slide(1, T, R.tag("fact") + R.h2("the problem: posting daily while busy.") +
+                R.pre(f"3 posts a day, 2 platforms\n  └── every single day\n       └── {R.amber('not while running companies')}",
+                      size=12.5)),
+        R.slide(2, T, R.tag("fact") + R.h2("step 1: describe it in plain words.") +
+                R.pre(f"\"post my content at 8am, 1pm\nand 7pm. let me review it\nthe night before. let me\n"
+                      f"cancel any post.\"\n\n{R.amber('that was the whole spec')}", size=12)),
+        R.slide(3, T, R.tag("fact") + R.h2("step 2: free building blocks.") +
+                R.pre(f"{R.gold('github')}     stores posts, runs\n           them on a schedule\n"
+                      f"{R.gold('linkedin')}   official posting api\n{R.gold('instagram')}  official posting api\n"
+                      f"{R.gold('claude')}     wrote and fixed the code", size=12)),
+        R.slide(4, T, R.tag("fact") + R.h2("step 3: ship, then fix what breaks.") +
+                R.pre(f"day 2: github's timer ran\nhours late.\n  └── fix: a backup trigger\n\n"
+                      f"{R.amber('real users find real bugs')}", size=12.5)),
+        R.slide(5, T, R.tag("thesis") + R.h2("the blueprint has changed.") +
+                R.pre(f"before: a team, months, money\nnow:    one person, days,\n        mostly free tools\n\n"
+                      f"{R.amber('the skill is knowing what')}\n{R.amber('to build and steering AI')}", size=12)),
         R.signoff(6, T, "building in public for 150 days. join the build."),
     ]
 
 
 POSTS = {"news3": (news, "$672M of leveraged bets wiped out in a day"),
-         "crypto2": (crypto2, "Crypto lesson 2: what a blockchain is"),
-         "build2": (builders2, "Builders lesson 2: the 150-day build challenge")}
+         "buy1": (buy1, "How to buy your first crypto safely"),
+         "robot1": (robot1, "I built my own posting robot with AI")}
 
 if __name__ == "__main__":
     R.use_platform("x_linkedin")

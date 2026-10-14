@@ -2,6 +2,13 @@
 
 Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post automatically from the queue (`instagram_autopost` is true). X is off: always set `"x": {"enabled": false}`. Never post anything directly.
 
+## Content direction (Roland, 14 Oct 2026)
+- **Audience is worldwide English speakers** (Nigeria/Africa, Europe, the Americas and beyond). Write for everyone; add a local note (e.g. "In Nigeria: …") only when the rules really differ by country.
+- **Every post answers one real question people are asking right now.** Each night, research questions first: Google Trends, Google "People also ask", Reddit, X and Nairaland threads, plus comments and DMs on Roland's posts. Prefer practical how-to topics (which wallet or platform, how to use it, how to stay safe, how to use an AI tool for a real task, how to build with AI today) over textbook definitions.
+- The curriculum in `curriculum.py` is only a loose backbone (which track goes on which day, Launch Day 4 Feb 2027). Don't follow its lesson titles if a real question is better; basic definitions only appear as short context inside a practical post.
+- Go deep: step-by-step guides with real platform names, what can go wrong, and a clear checklist people will save and send.
+- Mix in build-in-public posts about what Roland is actually building (Autopilot, Klaerus, his products), using only true details.
+
 ## Steps
 1. **Repo:** if `/home/claude/autopilot` is missing, call add_repo (RolandDivine/autopilot, push), clone it there, and call register_repo_root. Run `git pull`.
 2. **Tomorrow:** N = (tomorrow − 2026-10-12) + 1. Run `cd studio && python -c "from curriculum import plan; print(plan(N))"`.
@@ -11,7 +18,7 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 3. **Context:** read the plan doc (Claude Docs 5ece558f-0172-4c73-85df-9fa489f6e424, sections "This week" and "What's working") and the playbook (d2724498-05cf-47a0-ae76-5032152d85d1).
 4. **Content:** copy `studio/days/day2.py` to `studio/days/dayN.py` and rewrite it.
    - **8 AM:** a one-slide news card on the most important crypto, AI or markets development of the last 24h. Research it, check primary sources, and name the source on the card.
-   - **1 PM and 7 PM:** two 7-slide lessons taught from zero. Each has a homework slide and ends with the signoff slide.
+   - **1 PM and 7 PM:** two 7-slide practical guides, each answering one real question (see Content direction). End with the signoff slide; add a homework or checklist slide where useful.
    - **Tags:** only fact, interpretation, scenario or thesis.
    - Keep monospace lines ≤ 34 characters.
    - Run `python days/dayN.py`. It builds the LinkedIn PNGs and PDF in `media/` (terminal style, LinkedIn only).

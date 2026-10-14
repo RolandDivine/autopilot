@@ -1,27 +1,27 @@
 {
-  "title": "Crypto lesson 2: what a blockchain is",
+  "title": "Guide: how to buy your first crypto safely",
   "kind": "lesson",
   "x": {
     "enabled": false
   },
   "linkedin": {
     "enabled": true,
-    "media": "media/crypto2.pdf",
-    "media_title": "Crypto lesson 2: what a blockchain is",
-    "text": "\"Blockchain\" gets used everywhere, but most explanations lose people in the first sentence. Lesson 2 of 100 in crypto from zero.\n\nStart with something familiar: an ajo group. The group keeps one record book of who paid, how much and when. The weakness is obvious. One person holds the book, so one person can change it.\n\nNow give every member an identical copy. If someone edits theirs, everyone else's copy disagrees, and the edit is rejected.\n\nA blockchain is that idea run by thousands of computers worldwide:\n\n1. Each page of records is a block.\n2. Each block carries a fingerprint of the block before it, so they form a chain. Change an old page and every page after it breaks.\n3. New pages are added by computers that put something at stake. On Bitcoin, miners spend computing power. On Ethereum, validators lock up coins as a deposit. Cheating costs them money.\n\nNo single owner. No single point to cheat.\n\nHomework: explain it to a friend using only the record book example. If they get it, you do too.\n\nEducation, not financial advice.",
-    "first_comment": "Further reading: the Bitcoin white paper (2008) https://bitcoin.org/bitcoin.pdf"
+    "media": "media/buy1.pdf",
+    "media_title": "How to buy your first crypto safely",
+    "text": "Most people lose money in crypto before they ever make a trade. Not to the market, but to scams, fake apps and avoidable mistakes.\n\nHere is the 5-step checklist I give anyone buying for the first time, wherever they live:\n\n1. Pick a regulated exchange. Check your country's financial regulator list before signing up, and download the app from the official website, never from an ad link.\n\n2. Lock the door first. A strong, unique password and two-factor authentication with an authenticator app, not SMS. Real support staff never message you first.\n\n3. Start with a test amount. Buy a little, send a little to your own wallet, confirm it arrived. Only then move more. Crypto transfers cannot be reversed.\n\n4. Know your local rules. In Nigeria, for example, Binance stopped naira deposits, withdrawals and P2P in 2024, so use SEC-licensed platforms. If you trade peer to peer, release nothing until the money is actually in your bank. A payment screenshot proves nothing.\n\n5. Guard your recovery phrase. Those 12 to 24 words are full access to your money. Write them on paper and never type them into a website or chat. Anyone asking for them is a thief.\n\nSave this for the day you are ready to start.\n\nEducation, not financial advice.",
+    "first_comment": "Nigeria: check the SEC's list of registered digital asset operators at https://sec.gov.ng before you sign up anywhere."
   },
   "instagram": {
     "enabled": true,
-    "caption": "Blockchain, explained with an ajo book 📒\n\nIf you've ever been part of an ajo or esusu, you already understand the idea. Swipe to see how.\n\nThen try the 2-minute task on slide 6 👇\n\n📌 Save this so you can explain it next time\n📤 Send it to the friend who says \"crypto is just a scam\"\n\n#crypto #blockchain #learncrypto #bitcoin",
+    "caption": "How to buy your first crypto without getting scammed 🔒\n\nMy 5-step safety checklist. Works in any country, with a note for Nigeria 🇳🇬\n\n📌 Save it for the day you're ready to buy\n📤 Send it to the friend who just said \"I want to try crypto\"\n\nEducation, not financial advice.\n\n#crypto #bitcoin #cryptoforbeginners #cryptosafety",
     "media": [
-      "instagram/crypto2-1.jpg",
-      "instagram/crypto2-2.jpg",
-      "instagram/crypto2-3.jpg",
-      "instagram/crypto2-4.jpg",
-      "instagram/crypto2-5.jpg",
-      "instagram/crypto2-6.jpg",
-      "instagram/crypto2-7.jpg"
+      "instagram/buy1-1.jpg",
+      "instagram/buy1-2.jpg",
+      "instagram/buy1-3.jpg",
+      "instagram/buy1-4.jpg",
+      "instagram/buy1-5.jpg",
+      "instagram/buy1-6.jpg",
+      "instagram/buy1-7.jpg"
     ],
     "music": "Anita Baker – Sweet Love"
   }

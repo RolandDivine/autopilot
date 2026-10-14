@@ -1,27 +1,27 @@
 {
-  "title": "Builders lesson 2: the 150-day build challenge",
+  "title": "Build in public: I built my own posting robot with AI",
   "kind": "lesson",
   "x": {
     "enabled": false
   },
   "linkedin": {
     "enabled": true,
-    "media": "media/build2.pdf",
-    "media_title": "Builders lesson 2: the 150-day build challenge",
-    "text": "Lesson 2 of 100 in the Builders track, and the plan for the next 150 days.\n\nThe goal is simple: go from no idea to a launched product by 4 February 2027, in public, together.\n\nThe road has five stages:\n\n1. Find a real problem (to 10 November). Not an idea, a problem you or people around you face every week.\n2. Validate and plan (to 10 December). Check that people actually want it solved, then define the smallest useful version.\n3. Build and beta test (to 9 January). Real users, real feedback.\n4. Get launch-ready. Branding, copy, a demo, the paperwork.\n5. Launch Day, 4 February.\n\nFour rules for the whole journey: ship small and often, show your work in public, talk to real users, and remember that done beats perfect.\n\nNo idea yet is the best place to start. Stage one begins with problems.\n\nHomework: comment \"I'm in\" with one thing that annoys you every week. That list is where we begin.",
-    "first_comment": "Lesson 1 (why most products never launch) is on my profile from yesterday."
+    "media": "media/robot1.pdf",
+    "media_title": "I built my own posting robot with AI",
+    "text": "People keep asking how I post three times a day while running companies.\n\nI don't. A robot does. I built it with AI.\n\nThe problem was simple: I want to show up on LinkedIn and Instagram every day, and some days I simply can't.\n\nThe whole plan fit in one sentence: post my content at 8 AM, 1 PM and 7 PM, let me review it the night before, and let me cancel any post.\n\nThe building blocks were almost all free. GitHub stores the posts and runs them on a schedule. LinkedIn and Instagram's official tools publish them. Claude wrote and fixed the code with me. No developer team.\n\nThen I shipped it, and real use found real problems. On day two, GitHub's timer started our posts hours late, so we added a backup trigger. That is normal. You only find those things by running it.\n\nThe bigger lesson: the blueprint for building has changed. What used to need a team, months and real money now takes one person, a few days and mostly free tools. The scarce skill is no longer writing code. It is knowing what to build, and steering the AI well.\n\nStart with the task that annoys you every week.\n\nWhat would you automate first?",
+    "first_comment": "This is part of my 150-day build in public. Launch Day is 4 Feb 2027."
   },
   "instagram": {
     "enabled": true,
-    "caption": "No idea → launched product in 150 days 🚀\n\nSwipe for how the build challenge works: 5 stages, 4 rules, one Launch Day (4 Feb 2027). No coding needed to start.\n\nComment \"I'm in\" and one thing that annoys you every week 👇\n\n📌 Save this so you remember the dates\n📤 Send it to the friend who always says \"I have an idea…\"\n\n#buildinpublic #startup #entrepreneur #lagos",
+    "caption": "I don't post 3 times a day. My robot does 🤖\n\nI built my own posting robot with AI, almost all with free tools and no developer team. Swipe for the 3-step blueprint.\n\nWhat would you automate first? Tell me 👇\n\n📌 Save the blueprint\n📤 Send it to the friend who keeps saying \"I have an idea\"\n\n#buildinpublic #ai #automation #startup",
     "media": [
-      "instagram/build2-1.jpg",
-      "instagram/build2-2.jpg",
-      "instagram/build2-3.jpg",
-      "instagram/build2-4.jpg",
-      "instagram/build2-5.jpg",
-      "instagram/build2-6.jpg",
-      "instagram/build2-7.jpg"
+      "instagram/robot1-1.jpg",
+      "instagram/robot1-2.jpg",
+      "instagram/robot1-3.jpg",
+      "instagram/robot1-4.jpg",
+      "instagram/robot1-5.jpg",
+      "instagram/robot1-6.jpg",
+      "instagram/robot1-7.jpg"
     ],
     "music": "Luther Vandross – Never Too Much"
   }

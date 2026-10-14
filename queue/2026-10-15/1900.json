@@ -1,0 +1,27 @@
+{
+  "title": "Guide: use AI to write a CV that gets interviews",
+  "kind": "lesson",
+  "x": {
+    "enabled": false
+  },
+  "linkedin": {
+    "enabled": true,
+    "media": "media/aicv1.pdf",
+    "media_title": "Use AI to write a CV that gets interviews",
+    "text": "Most people use AI on their CV the wrong way. They type \"write my CV\" and get something that sounds exactly like everyone else's.\n\nHere is the approach that works, with any AI chat tool:\n\n1. Give it context, not a command. Paste the job ad and your real experience, then ask: \"Rewrite my bullet points for this role. Use numbers. Do not invent anything.\"\n\n2. Turn duties into results. \"Managed social media\" tells a recruiter nothing. \"Grew Instagram from 2,000 to 9,000 followers in six months\" tells them what you change. Ask yourself what your work actually changed, and use your own real numbers.\n\n3. Beat the software filter. Many companies screen CVs with software before a human ever reads them. Ask the AI: \"Which keywords from this job ad are missing from my CV?\" Then add the ones that are true for you.\n\n4. Keep the final say. Read every line out loud. Is it true? Does it sound like you? Recruiters spot generic AI writing quickly, and an invented claim can end an interview.\n\nAI drafts. You decide.\n\nWhat is the hardest part of your CV to write?"
+  },
+  "instagram": {
+    "enabled": true,
+    "caption": "Stop typing \"write my CV\" into AI 🙅🏾‍♂️\n\nHere's the 4-step way to use any AI tool for a CV that actually gets interviews.\n\n📌 Save it for your next application\n📤 Send it to the friend who's been job hunting for months\n\n#ai #cv #jobsearch #careertips",
+    "media": [
+      "instagram/aicv1-1.jpg",
+      "instagram/aicv1-2.jpg",
+      "instagram/aicv1-3.jpg",
+      "instagram/aicv1-4.jpg",
+      "instagram/aicv1-5.jpg",
+      "instagram/aicv1-6.jpg",
+      "instagram/aicv1-7.jpg"
+    ],
+    "music": "Lionel Richie – Easy"
+  }
+}

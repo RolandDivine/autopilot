@@ -12,8 +12,16 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
 ## Formats (15 Oct 2026)
 - **Cover image:** every post opens with a generated realistic-abstract image that makes people stop ("what is that?"): odd objects, odd materials, dramatic light, linked to the topic. Generate it with Figma (`mcp__Figma__generate_image`, planKey `team::1302716308970441796`, 1080×1350, prompt ends "no text, no logos, no people"), then run the `fetch-images` workflow with `[{"url": ..., "path": "assets/gen/<name>.jpg"}]` and `git pull`. Never use Pinterest or other people's images. Figma credits are limited: 3 images a night, reuse them for stories.
 - **Hook overlay:** `studio/cover.py` → `cover(img, hook, out, kicker=...)`. Hook 4–10 words with one ==highlight==.
-- **Instagram:** carousel = cover + Chat Bubbles slides (`ig_chat.carousel(..., offset=1)`), 5–7 slides after the cover. Chat Bubbles inside stays (Roland's choice).
-- **LinkedIn: one post a day (8 AM), text + the cover image (`swipe=False`, handle "Roland Divine"). Never a PDF.** 900–1,600 characters, short lines, sources named at the end. Pick the day's most debate-worthy topic for LinkedIn.
+- **Instagram:** carousel = cover + Chat Bubbles slides (`ig_chat.carousel(..., offset=1)`), 5–7 slides after the cover. The chat slides do the teaching (people won't read long captions), so the full lesson lives in the bubbles. Captions stay short: hook, one line of payoff, 📌 save / 📤 send, 3–5 hashtags.
+- **LinkedIn: three posts a day (8 AM, 1 PM, 7 PM), Roland's decision 15 Oct.** Mix the formats across the day:
+  - **PDF** for step-by-step guides: page 1 is the generated cover (handle "Roland Divine"), then the Chat Bubbles slides (`carousel(..., handle="Roland Divine")`), with a LinkedIn signoff slide (save, repost, follow Roland Divine). See the 1300 slot in `day5.py`.
+  - **Single image** (the cover with `swipe=False`) for myth checks, opinions and news.
+- **LinkedIn writing pattern (every post):**
+  - Line 1 is the hook, under ~12 words: a surprising claim, a question people argue about, or a pain ("Your customers are messaging you at 2 AM."). Line 2 re-hooks and promises the payoff. Both must land before "…see more".
+  - Short lines and paragraphs of 1–2 sentences, lots of white space. Numbered steps or → bullets for the value.
+  - Specific numbers, real product names, the catch nobody mentions, and one opinionated line of Roland's own ("The mistake I'd avoid: …").
+  - End with one specific question people can answer from their own experience. Never "thoughts?", "agree?" or the other banned phrases.
+  - 900–1,600 characters, no hashtags or emoji, sources named at the end.
 - **Stories:** 5 a day made with `cover(..., size=(1080, 1920), pos="top", swipe=False)` from the same images: two "new post · tap my profile" teasers, and three questions people can reply to.
 - Template: `studio/days/day5.py` (builds slots, covers, carousels and stories in one go).
 
@@ -27,7 +35,7 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
    - Look at the Instagram stats: what got reach, saves and shares? Do more of that. Report it in step 7.
 4. **Content:** copy `studio/days/day5.py` to `dayN.py`, generate 3 cover images, rewrite the copy, run it.
 5. **Check:** build contact sheets and look at every slide and story. Fix any overflow, clipped text or wrong counter.
-6. **Slots:** `dayN.py` writes `queue/<tomorrow>/{0800,1300,1900}.json` and `stories.json`. LinkedIn enabled only at 0800. Instagram caption: 3–5 hashtags and a 📌 save / 📤 send line. Lint all slots and stories (`autopilot.lint.lint_stories(folder)`), fix every FAIL. Commit "Day N queue" and push. Confirm the review issue opened.
+6. **Slots:** `dayN.py` writes `queue/<tomorrow>/{0800,1300,1900}.json` and `stories.json`. LinkedIn and Instagram both on in all three slots. Instagram caption: 3–5 hashtags and a 📌 save / 📤 send line. Lint all slots and stories (`autopilot.lint.lint_stories(folder)`), fix every FAIL. Commit "Day N queue" and push. Confirm the review issue opened.
 7. **Tell Roland (SendUserMessage):** the three titles and times, the search demand behind each topic, yesterday's Instagram numbers, the story times, and the review issue link. Send the three covers with SendUserFile. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
 8. **Book tomorrow's run:** call send_later at 18:10 UTC the next day with the message:
    "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."

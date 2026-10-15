@@ -57,13 +57,13 @@ def _img(spec):
             f"border:6px solid #fff'></div>")
 
 
-def _page(bubbles, label, foot_right, h=1350):
+def _page(bubbles, label, foot_right, h=1350, handle=HANDLE):
     fs = 42 if h == 1350 else 48
     top = (f"<div class='top'><div class='av'>RD</div><div><b style='font-size:36px'>{NAME}</b>"
            f"<div style='font-size:28px;color:#6b7280'>{html.escape(label)} · online</div></div></div>")
     body = "".join(_img(text) if who == "img" else f"<div class='b {who}'>{fmt(text)}</div>"
                    for who, text in bubbles)
-    foot = f"<div class='foot'><span>{HANDLE}</span><span>{foot_right}</span></div>"
+    foot = f"<div class='foot'><span>{handle}</span><span>{foot_right}</span></div>"
     pad = (90, 140) if h == 1350 else (250, 330)
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{_css(h, pad[0], pad[1], fs)}</style></head>"
             f"<body>{top}{body}{foot}</body></html>")
@@ -83,11 +83,11 @@ async def _shoot(pages, out, h):
         await b.close()
 
 
-def carousel(slides, label, outdir, name, offset=0):
+def carousel(slides, label, outdir, name, offset=0, handle=HANDLE):
     """offset: number of slides before these (e.g. 1 for a cover), so the page counter stays right."""
     out = Path(outdir); out.mkdir(parents=True, exist_ok=True)
     n = len(slides) + offset
-    pages = [(_page(s, label, f"{i+1+offset}/{n}" + (" →" if i + offset < n - 1 else "")), out / f"{name}-{i+1}.jpg")
+    pages = [(_page(s, label, f"{i+1+offset}/{n}" + (" →" if i + offset < n - 1 else ""), handle=handle), out / f"{name}-{i+1}.jpg")
              for i, s in enumerate(slides)]
     asyncio.run(_shoot(pages, out, 1350))
     return [str(p) for _, p in pages]

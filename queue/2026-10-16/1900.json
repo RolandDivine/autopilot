@@ -5,7 +5,9 @@
   "enabled": false
  },
  "linkedin": {
-  "enabled": false
+  "enabled": true,
+  "text": "Most people who say \"I'll learn AI later\" are waiting for a course.\n\nYou don't need one. You can build your first AI agent tonight, for free, without writing code.\n\nHere's how I'd do it with Google Gemini's Gems:\n\n1. Pick one boring task\nReplying to the same customer questions. Turning meeting notes into a to-do list. Drafting your weekly report. One task, not your whole job.\n\n2. Open gemini.google.com on a computer\nGo to the Gem manager and create a new Gem. You build it on the web and use it on your phone afterwards.\n\n3. Brief it like a new staff member\n\"You reply to customers of my bakery. Prices are in the attached file. Keep it short and friendly. If someone complains, tell them the owner will call back.\"\n\n4. Give it what it needs to know\nUpload your price list, FAQ or old emails. Then test it with 10 real questions and fix the instructions until the answers are right.\n\nThat's it. It knows your files, it follows your rules, and it does one job well.\n\nIs it a full \"agent\" that takes actions on its own? Not yet. That's the next step, connecting it to tools that send emails or update sheets. But this is where everyone who builds agents starts.\n\nWhat's the one task you'd hand to your first AI agent?",
+  "media": "media/gem-cover.jpg"
  },
  "instagram": {
   "enabled": true,

@@ -39,7 +39,9 @@ water_ig = [
 ]
 water_li = """Does every ChatGPT chat really drink a bottle of water?
 
-That claim came from a 2023 study estimating about 500 ml of water for every 10 to 50 replies from an older model. It spread everywhere. The newer, measured numbers are a lot smaller:
+I checked the numbers. The answer is no, and the real problem is somewhere else.
+
+The bottle claim came from a 2023 study estimating about 500 ml of water for every 10 to 50 replies from an older model. It spread everywhere. The newer, measured numbers are a lot smaller:
 
 → Google (2025): a typical Gemini text prompt uses about 0.26 ml of water
 → OpenAI (2025): about 0.32 ml per ChatGPT query
@@ -102,6 +104,61 @@ Source: TechCrunch, June 2026.
 
 #whatsappbusiness #smallbusiness #ai #automation"""
 
+wa_li = """Your customers are messaging you at 2 AM.
+
+Starting now, WhatsApp can answer them for you.
+
+Meta has rolled out Meta Business Agent inside the WhatsApp Business app. It's an AI that replies to customer chats on your behalf: it answers questions, recommends products from your catalog, books appointments, and hands tricky conversations back to a human.
+
+Setting it up takes about 10 minutes:
+
+1. Open WhatsApp Business and go to Tools
+2. Tap Meta Business Agent, link your account and confirm
+3. Let it learn from your past chats and add your catalog or website
+4. Message it from a second number and fix the answers you don't like
+5. Then switch it on
+
+Before you trust it with your customers, know this:
+
+→ It launched free. Meta says paid tiers will come through WhatsApp Business Premium
+→ It's rolling out gradually, so it may not be on your account yet
+→ It only replies. No broadcasts, no follow-ups
+→ While it's on, broadcast lists, disappearing messages and message editing are switched off
+
+The mistake I'd avoid: handing it everything on day one.
+
+Give it the 10 questions you answer every single day (price, location, delivery time). Keep the complaints and the big deals for yourself.
+
+The full step-by-step is in the slides.
+
+If you run a business on WhatsApp, which question would you hand to it first?
+
+Source: TechCrunch, 3 June 2026."""
+
+gem_li = """Most people who say "I'll learn AI later" are waiting for a course.
+
+You don't need one. You can build your first AI agent tonight, for free, without writing code.
+
+Here's how I'd do it with Google Gemini's Gems:
+
+1. Pick one boring task
+Replying to the same customer questions. Turning meeting notes into a to-do list. Drafting your weekly report. One task, not your whole job.
+
+2. Open gemini.google.com on a computer
+Go to the Gem manager and create a new Gem. You build it on the web and use it on your phone afterwards.
+
+3. Brief it like a new staff member
+"You reply to customers of my bakery. Prices are in the attached file. Keep it short and friendly. If someone complains, tell them the owner will call back."
+
+4. Give it what it needs to know
+Upload your price list, FAQ or old emails. Then test it with 10 real questions and fix the instructions until the answers are right.
+
+That's it. It knows your files, it follows your rules, and it does one job well.
+
+Is it a full "agent" that takes actions on its own? Not yet. That's the next step, connecting it to tools that send emails or update sheets. But this is where everyone who builds agents starts.
+
+What's the one task you'd hand to your first AI agent?"""
+
 # ── 19:00 · Instagram · first AI agent, free (search: "how to build ai agents for free",
 #    "how to create ai agents", "how do i create ai agent")
 gem_hook = "Build your first ==AI agent== tonight. Free."
@@ -150,22 +207,32 @@ def build():
     IG, MEDIA, ST = Q / "instagram", Q / "media", Q / "stories"
     posts = {
         "0800": ("water", "ice-server.jpg", water_hook, "AI · myth check", water_ig, water_cap, water_li,
-                 "Myth check: AI and water", "Bill Withers – Lovely Day"),
-        "1300": ("wa", "phone-glow.jpg", wa_hook, "Business · AI", wa_ig, wa_cap, None,
-                 "How to: WhatsApp AI agent", "Earth, Wind & Fire – September"),
-        "1900": ("gem", "paper-robot.jpg", gem_hook, "AI · how to", gem_ig, gem_cap, None,
-                 "How to: first AI agent, free", "Sade – Smooth Operator"),
+                 "Myth check: AI and water", "Bill Withers – Lovely Day", "image"),
+        "1300": ("wa", "phone-glow.jpg", wa_hook, "Business · AI", wa_ig, wa_cap, wa_li,
+                 "How to: WhatsApp AI agent", "Earth, Wind & Fire – September", "pdf"),
+        "1900": ("gem", "paper-robot.jpg", gem_hook, "AI · how to", gem_ig, gem_cap, gem_li,
+                 "How to: first AI agent, free", "Sade – Smooth Operator", "image"),
     }
-    for slot, (name, img, hook, kicker, slides, cap, li, title, music) in posts.items():
+    for slot, (name, img, hook, kicker, slides, cap, li, title, music, li_kind) in posts.items():
         cover(GEN / img, hook, IG / f"{name}-0.jpg", kicker=kicker)
         rest = carousel(slides, "AI & business", IG, name, offset=1)
         media = [f"instagram/{name}-0.jpg"] + [f"instagram/{Path(p).name}" for p in rest]
         d = {"title": title, "kind": "lesson", "x": {"enabled": False},
              "linkedin": {"enabled": False},
              "instagram": {"enabled": True, "caption": cap, "media": media, "music": music}}
-        if li:
+        if li and li_kind == "image":
             cover(GEN / img, hook, MEDIA / f"{name}-cover.jpg", kicker=kicker, handle="Roland Divine", swipe=False)
             d["linkedin"] = {"enabled": True, "text": li, "media": f"media/{name}-cover.jpg"}
+        elif li:  # PDF: the scroll-stopping cover first, then the chat slides, LinkedIn signoff last
+            from PIL import Image
+            pages = [cover(GEN / img, hook, MEDIA / f"{name}-p0.jpg", kicker=kicker, handle="Roland Divine")]
+            li_slides = slides[:-1] + [[("r", "Save this for later 📌"),
+                                        ("r", "Repost it for someone who needs it ♻️"),
+                                        ("r", "Follow **Roland Divine** for AI, crypto and building, explained straight.")]]
+            pages += carousel(li_slides, "AI & business", MEDIA, f"{name}-p", offset=1, handle="Roland Divine")
+            ims = [Image.open(x).convert("RGB") for x in pages]
+            ims[0].save(MEDIA / f"{name}.pdf", save_all=True, append_images=ims[1:], resolution=150)
+            d["linkedin"] = {"enabled": True, "text": li, "media": f"media/{name}.pdf", "media_title": title}
         (Q / f"{slot}.json").write_text(json.dumps(d, indent=1, ensure_ascii=False))
     st = []
     for at, (img, text, foot) in STORIES.items():

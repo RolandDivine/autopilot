@@ -52,3 +52,8 @@ Example: `"music": "Sade – Smooth Operator"`.
 Do not post anything about Klærus. The 15 Oct drafts are in archive/klaerus-2026-10-15 and are
 outdated: Klærus was restructured and terms like "house edge" are no longer used. Wait for Roland's
 restructured document before writing any Klærus content.
+
+## Kobo videos (Roland, 15 Oct 2026)
+"KOBO is strictly for stories… videos are for strictly stories." Kobo animated videos are only for
+story content: Kobo alone for a solo script, Kobo and Babe together for a duo script.
+Don't use the animated characters for any other kind of post.

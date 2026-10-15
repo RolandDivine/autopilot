@@ -84,6 +84,40 @@ class LinkedInClient:
                 time.sleep(5)
         return urn
 
+    def _upload_video(self, path):
+        """MP4 upload via the Videos API (multi-part). Returns the video URN once it is AVAILABLE."""
+        if self.dry_run:
+            return f"urn:li:video:DRY-{os.path.basename(path)}"
+        size = os.path.getsize(path)
+        r = self._check(self.s.post(f"{self.base}/rest/videos?action=initializeUpload",
+                                    data=json.dumps({"initializeUploadRequest": {
+                                        "owner": self.author, "fileSizeBytes": size,
+                                        "uploadCaptions": False, "uploadThumbnail": False}}), timeout=30),
+                        "video init")
+        val = r.json()["value"]
+        urn, token = val["video"], val.get("uploadToken", "")
+        etags = []
+        with open(path, "rb") as f:
+            for part in val["uploadInstructions"]:
+                f.seek(part["firstByte"])
+                chunk = f.read(part["lastByte"] - part["firstByte"] + 1)
+                up = requests.put(part["uploadUrl"], data=chunk,
+                                  headers={"Content-Type": "application/octet-stream"}, timeout=300)
+                self._check(up, "video upload")
+                etags.append(up.headers.get("etag") or up.headers.get("ETag"))
+        self._check(self.s.post(f"{self.base}/rest/videos?action=finalizeUpload",
+                                data=json.dumps({"finalizeUploadRequest": {
+                                    "video": urn, "uploadToken": token, "uploadedPartIds": etags}}), timeout=60),
+                    "video finalize")
+        for _ in range(60):  # processing can take a few minutes
+            st = self.s.get(f"{self.base}/rest/videos/{urllib.parse.quote(urn)}", timeout=30)
+            if st.ok and st.json().get("status") == "AVAILABLE":
+                return urn
+            if st.ok and st.json().get("status") == "PROCESSING_FAILED":
+                raise LinkedInError(f"video processing failed: {st.text[:300]}")
+            time.sleep(10)
+        return urn
+
     def create_post(self, text, media_path=None, media_title=None):
         body = {
             "author": self.author,
@@ -95,10 +129,10 @@ class LinkedInClient:
         }
         if media_path:
             ext = os.path.splitext(media_path)[1].lower()
-            kind = "documents" if ext == ".pdf" else "images"
-            urn = self._upload(kind, media_path)
+            kind = {".pdf": "documents", ".mp4": "videos"}.get(ext, "images")
+            urn = self._upload_video(media_path) if kind == "videos" else self._upload(kind, media_path)
             media = {"id": urn}
-            if kind == "documents":
+            if kind in ("documents", "videos") and (media_title or kind == "documents"):
                 media["title"] = media_title or "Document"
             body["content"] = {"media": media}
         if self.dry_run:

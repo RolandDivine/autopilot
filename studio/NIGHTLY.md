@@ -2,38 +2,33 @@
 
 Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post automatically from the queue (`instagram_autopost` is true). X is off: always set `"x": {"enabled": false}`. Never post anything directly.
 
-## Content direction (Roland, 14 Oct 2026)
-- **Audience is worldwide English speakers** (Nigeria/Africa, Europe, the Americas and beyond). Write for everyone; add a local note (e.g. "In Nigeria: …") only when the rules really differ by country.
-- **Every post answers one real question people are asking right now.** Each night, research questions first: Google Trends, Google "People also ask", Reddit, X and Nairaland threads, plus comments and DMs on Roland's posts. Prefer practical how-to topics (which wallet or platform, how to use it, how to stay safe, how to use an AI tool for a real task, how to build with AI today) over textbook definitions.
-- The curriculum in `curriculum.py` is only a loose backbone (which track goes on which day, Launch Day 4 Feb 2027). Don't follow its lesson titles if a real question is better; basic definitions only appear as short context inside a practical post.
-- Go deep: step-by-step guides with real platform names, what can go wrong, and a clear checklist people will save and send.
-- Mix in build-in-public posts about what Roland is actually building (Autopilot, Klaerus, his products), using only true details.
+## Content direction (Roland, 15 Oct 2026: full rebuild after a week of near-zero reach)
+Old approach is retired: no curriculum lessons, no basic explainers (what is a wallet, how to use a wallet), no daily news card, no terminal-style PDFs on LinkedIn. Those got 2–31 reach per post.
+- **Topics come from tonight's search demand, nothing else.** Categories: AI, crypto, business, tech infrastructure (data centers, cloud, chips, cybersecurity). Audience is worldwide English speakers.
+- **Every post makes someone's life better:** a how-to, a where-to, a tool they can use tonight, a myth corrected with real numbers. Practical and specific, real product names, real steps, what it costs, the catch.
+- **Psychology on every post:** a hook that opens a curiosity gap or challenges a belief ("Does every ChatGPT chat drink a bottle of water?"), "you" language, specific numbers, and a clear payoff on the last slide. On LinkedIn end with one specific question people can answer from their own experience (never "thoughts?" or "agree?").
+- Build-in-public only when there is something real and new. Klærus stays on hold (below).
+
+## Formats (15 Oct 2026)
+- **Cover image:** every post opens with a generated realistic-abstract image that makes people stop ("what is that?"): odd objects, odd materials, dramatic light, linked to the topic. Generate it with Figma (`mcp__Figma__generate_image`, planKey `team::1302716308970441796`, 1080×1350, prompt ends "no text, no logos, no people"), then run the `fetch-images` workflow with `[{"url": ..., "path": "assets/gen/<name>.jpg"}]` and `git pull`. Never use Pinterest or other people's images. Figma credits are limited: 3 images a night, reuse them for stories.
+- **Hook overlay:** `studio/cover.py` → `cover(img, hook, out, kicker=...)`. Hook 4–10 words with one ==highlight==.
+- **Instagram:** carousel = cover + Chat Bubbles slides (`ig_chat.carousel(..., offset=1)`), 5–7 slides after the cover. Chat Bubbles inside stays (Roland's choice).
+- **LinkedIn: one post a day (8 AM), text + the cover image (`swipe=False`, handle "Roland Divine"). Never a PDF.** 900–1,600 characters, short lines, sources named at the end. Pick the day's most debate-worthy topic for LinkedIn.
+- **Stories:** 5 a day made with `cover(..., size=(1080, 1920), pos="top", swipe=False)` from the same images: two "new post · tap my profile" teasers, and three questions people can reply to.
+- Template: `studio/days/day5.py` (builds slots, covers, carousels and stories in one go).
 
 ## Steps
 1. **Repo:** if `/home/claude/autopilot` is missing, call add_repo (RolandDivine/autopilot, push), clone it there, and call register_repo_root. Run `git pull`.
-2. **Tomorrow:** N = (tomorrow − 2026-10-12) + 1. Run `cd studio && python -c "from curriculum import plan; print(plan(N))"`.
-   - If `queue/<tomorrow>/` already has 3 slot files, skip to step 7.
-   - After Day 150 (10 Mar 2027), tell Roland the plan has ended and stop.
-   - Every 20th day, the 8 AM slot is a Klaerus spotlight instead of news. Builders Launch Day is Day 116 (4 Feb 2027).
-3. **Context:** read the plan doc (Claude Docs 5ece558f-0172-4c73-85df-9fa489f6e424, sections "This week" and "What's working") and the playbook (d2724498-05cf-47a0-ae76-5032152d85d1).
-4. **Content:** copy `studio/days/day2.py` to `studio/days/dayN.py` and rewrite it.
-   - **8 AM:** a one-slide news card on the most important crypto, AI or markets development of the last 24h. Research it, check primary sources, and name the source on the card.
-   - **1 PM and 7 PM:** two 7-slide practical guides, each answering one real question (see Content direction). End with the signoff slide; add a homework or checklist slide where useful.
-   - **Tags:** only fact, interpretation, scenario or thesis.
-   - Keep monospace lines ≤ 34 characters.
-   - Run `python days/dayN.py`. It builds the LinkedIn PNGs and PDF in `media/` (terminal style, LinkedIn only).
-   - **Instagram uses the Chat Bubbles style, permanently (Roland's choice, 12 Oct 2026). Never use the terminal style on Instagram.** Copy `studio/days/day2_ig.py` to `dayN_ig.py` and write the same lessons as a chat between a curious friend ("q") and Roland ("r"), using `studio/ig_chat.py`.
-     - Use plain words and no tech jargon. Each slide has 2–4 bubbles, and slide 2 has its own hook.
-     - The last slide asks people to save the post, send it to a named kind of friend, and follow.
-     - The script makes the feed carousels in `instagram/` (JPEG) plus **5 stories** in `stories/`: 09:00 new-post teaser, 11:00 quiz ("reply A or B"), 14:00 the answer, 17:00 builders check-in or one of Roland's stories, 21:00 tomorrow preview with "turn on notifications".
-     - Story text must be true. Use Roland's own experiences only from `studio/story_bank.md`; never invent personal stories for him.
-5. **Check:** build contact sheets and look at every slide. Fix any overflow or wrong handle.
-6. **Slots:** write `queue/<tomorrow>/{0800,1300,1900}.json`, following the format of the Day 2 files.
-   - LinkedIn: 850–1,600 characters, no hashtags or emoji, links only in first_comment.
-   - Instagram: a caption with 3–5 hashtags and a 📌 save / 📤 send line, plus the list of JPEGs.
-   - Also write `queue/<tomorrow>/stories.json`: `[{"at": "0900", "media": "stories/s0900.jpg"}, ...]`.
-   - Lint all three slots and the stories file (`autopilot.lint.lint_stories(folder)`), and fix every FAIL. Commit "Day N queue" and push. Confirm that the review issue opened.
-7. **Tell Roland (SendUserMessage):** the three titles and times, the story times, and the review issue link. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
+2. **Tomorrow:** N = (tomorrow − 2026-10-12) + 1. If `queue/<tomorrow>/` already has 3 slot files, skip to step 7. After Day 150 (10 Mar 2027), tell Roland the plan has ended and stop.
+3. **Research (do this before writing anything):**
+   - Dispatch the `research` workflow (`gh api -X POST repos/RolandDivine/autopilot/actions/workflows/research.yml/dispatches -f ref=main`), wait for it, `git pull`, and read `research/<today>.json`: Google Trends (US, GB, NG, IN), Hacker News, Google autocomplete questions per topic, and Instagram stats per post.
+   - Run 3–5 WebSearches for what people are asking this week in the four categories (Reddit and X threads, new product launches, "how to" questions). Reddit blocks the workflow, so search it.
+   - Pick 3 topics with clear demand. Verify every fact in primary or reputable sources; name sources.
+   - Look at the Instagram stats: what got reach, saves and shares? Do more of that. Report it in step 7.
+4. **Content:** copy `studio/days/day5.py` to `dayN.py`, generate 3 cover images, rewrite the copy, run it.
+5. **Check:** build contact sheets and look at every slide and story. Fix any overflow, clipped text or wrong counter.
+6. **Slots:** `dayN.py` writes `queue/<tomorrow>/{0800,1300,1900}.json` and `stories.json`. LinkedIn enabled only at 0800. Instagram caption: 3–5 hashtags and a 📌 save / 📤 send line. Lint all slots and stories (`autopilot.lint.lint_stories(folder)`), fix every FAIL. Commit "Day N queue" and push. Confirm the review issue opened.
+7. **Tell Roland (SendUserMessage):** the three titles and times, the search demand behind each topic, yesterday's Instagram numbers, the story times, and the review issue link. Send the three covers with SendUserFile. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
 8. **Book tomorrow's run:** call send_later at 18:10 UTC the next day with the message:
    "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."
    Don't skip this step: it is what keeps the nightly run going.

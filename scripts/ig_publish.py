@@ -2,6 +2,7 @@
 
     KIND=stories  PATHS="assets/stories/start-here-1.jpg assets/stories/start-here-2.jpg"
     KIND=post     PATHS="a-1.jpg a-2.jpg"  CAPTION="..."
+    KIND=reel     PATHS="assets/reels/video.mp4"  CAPTION="..."
 """
 import os
 import sys
@@ -21,6 +22,15 @@ if os.environ.get("KIND", "stories") == "stories":
         except Exception as e:
             ok = False
             print(f"::error title=story failed::{str(e)[:500]}".replace("\n", " "))
+            break
+elif os.environ.get("KIND") == "reel":
+    for u in urls:
+        try:
+            mid, link = c.publish_reel(u, os.environ.get("CAPTION", ""))
+            print(f"::notice title=reel published::{link or mid}")
+        except Exception as e:
+            ok = False
+            print(f"::error title=reel failed::{str(e)[:500]}".replace("\n", " "))
             break
 else:
     try:

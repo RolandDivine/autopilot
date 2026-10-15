@@ -7,14 +7,14 @@ on:
       kind:
         description: "stories or post"
         type: choice
-        options: [stories, post]
+        options: [stories, post, reel]
         default: stories
       paths:
-        description: "Space-separated image paths in the repo (JPEG)"
+        description: "Space-separated image (JPEG) or video (MP4) paths in the repo"
         required: true
         type: string
       caption:
-        description: "Caption (posts only)"
+        description: "Caption (posts and reels)"
         type: string
         default: ""
 
@@ -24,7 +24,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

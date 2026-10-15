@@ -81,15 +81,15 @@ class InstagramClient:
             raise InstagramError(f"{method.upper()} {path}: HTTP {r.status_code} {r.text[:400]}")
         return r.json()
 
-    def _wait(self, container_id):
-        for _ in range(30):
+    def _wait(self, container_id, tries=30):
+        for _ in range(tries):
             st = self._req("get", container_id, params={"fields": "status_code,status"})
             if st.get("status_code") == "FINISHED":
                 return
             if st.get("status_code") in ("ERROR", "EXPIRED"):
                 raise InstagramError(f"container {container_id}: {st}")
             time.sleep(4)
-        raise InstagramError(f"container {container_id} not ready after 2 minutes")
+        raise InstagramError(f"container {container_id} not ready after {tries * 4} seconds")
 
     def _publish(self, creation_id):
         """media_publish, retrying while Instagram says the media is not ready yet (code 9007)."""
@@ -109,6 +109,22 @@ class InstagramClient:
         cid = self._req("post", f"{self.user_id}/media", data={"image_url": image_url, "media_type": "STORIES"})["id"]
         self._wait(cid)
         return self._publish(cid)
+
+    def publish_reel(self, video_url, caption, share_to_feed=True):
+        """MP4 video as a Reel (vertical 9:16). Returns (media_id, permalink)."""
+        if self.dry_run:
+            print("[dry-run] Instagram reel:", video_url, "caption:", caption[:120])
+            return "DRYRUN", None
+        cid = self._req("post", f"{self.user_id}/media",
+                        data={"media_type": "REELS", "video_url": video_url, "caption": caption,
+                              "share_to_feed": "true" if share_to_feed else "false"})["id"]
+        self._wait(cid, tries=90)  # video processing can take a few minutes
+        mid = self._publish(cid)
+        try:
+            link = self._req("get", mid, params={"fields": "permalink"}).get("permalink")
+        except InstagramError:
+            link = None
+        return mid, link
 
     def publish(self, image_urls, caption):
         """1 URL = single image post; 2-10 = carousel. Returns (media_id, permalink)."""

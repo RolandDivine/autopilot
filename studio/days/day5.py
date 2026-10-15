@@ -193,13 +193,27 @@ gem_cap = """Build your first AI agent tonight. Free. No code. 🤖
 
 #ai #aiagents #gemini #nocode #productivity"""
 
+# ── 21:00 · Instagram feed + story · "Do you know…?" teaser for tomorrow's 8 AM post (Roland, 15 Oct).
+#    The promise must be kept: tomorrow's 8 AM post answers it. Logged in studio/teasers.md.
+TEASER = ("chrome-hourglass.jpg",
+          "Do you know your business is stuck because ==you're doing work a free tool could do?==",
+          "Tomorrow · 8 AM",
+          """Do you know your business is stuck because you're doing work a free tool could do? ⏳
+
+Tomorrow at 8 AM I'm showing you the tasks you can hand off this weekend, and the free tools that do them.
+
+🔔 Turn on notifications so you don't miss it
+📤 Send this to the business owner who's always "too busy"
+
+#smallbusiness #automation #ai #entrepreneur""")
+
 # ── Stories (Instagram only)
 STORIES = {
     "s0900": ("ice-server.jpg", "Every AI chat drinks a bottle of water. ==True or false?==", "New post · tap my profile"),
     "s1100": ("phone-glow.jpg", "What question do customers ask you ==10 times a day?==", "Reply 👇"),
     "s1400": ("phone-glow.jpg", "WhatsApp can now ==reply for you.== How to turn it on is on my page.", "New post · tap my profile"),
     "s1700": ("paper-robot.jpg", "Which boring task would you ==hand to an AI== first?", "Reply 👇"),
-    "s2100": ("paper-robot.jpg", "Your first AI agent, ==free, in 10 minutes.== Guide is up.", "New post · tap my profile"),
+    "s2100": None,  # the teaser (below) is the 9 PM story
 }
 
 
@@ -234,8 +248,19 @@ def build():
             ims[0].save(MEDIA / f"{name}.pdf", save_all=True, append_images=ims[1:], resolution=150)
             d["linkedin"] = {"enabled": True, "text": li, "media": f"media/{name}.pdf", "media_title": title}
         (Q / f"{slot}.json").write_text(json.dumps(d, indent=1, ensure_ascii=False))
+    img, hook, kicker, cap = TEASER
+    cover(GEN / img, hook, IG / "teaser-0.jpg", kicker=kicker, swipe=False)
+    (Q / "2100.json").write_text(json.dumps({
+        "title": "Teaser: tomorrow 8 AM", "kind": "story", "x": {"enabled": False}, "linkedin": {"enabled": False},
+        "instagram": {"enabled": True, "caption": cap, "media": ["instagram/teaser-0.jpg"],
+                      "music": "Phil Collins – In the Air Tonight"}}, indent=1, ensure_ascii=False))
+    cover(GEN / img, hook, ST / "s2100.jpg", kicker=kicker, size=(1080, 1920), pos="top", swipe=False)
     st = []
-    for at, (img, text, foot) in STORIES.items():
+    for at, v in STORIES.items():
+        if v is None:
+            st.append({"at": at[1:], "media": f"stories/{at}.jpg"})
+            continue
+        img, text, foot = v
         cover(GEN / img, text, ST / f"{at}.jpg", kicker=foot, size=(1080, 1920), pos="top", swipe=False)
         st.append({"at": at[1:], "media": f"stories/{at}.jpg"})
     (Q / "stories.json").write_text(json.dumps(st, indent=2))

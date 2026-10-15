@@ -23,6 +23,7 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
   - End with one specific question people can answer from their own experience. Never "thoughts?", "agree?" or the other banned phrases.
   - 900–1,600 characters, no hashtags or emoji, sources named at the end.
 - **Stories:** 5 a day made with `cover(..., size=(1080, 1920), pos="top", swipe=False)` from the same images: two "new post · tap my profile" teasers, and three questions people can reply to.
+- **Daily 9 PM teaser (Roland, 15 Oct):** one "Do you know…?" question on a generated image, posted as an Instagram feed post (slot `2100.json`, Instagram only) and as the 9 PM story. It teases tomorrow's 8 AM post, so pick tomorrow's 8 AM topic first. Rules and the log are in `studio/teasers.md`: before writing the 8 AM post, check what yesterday's teaser promised and answer it exactly.
 - Template: `studio/days/day5.py` (builds slots, covers, carousels and stories in one go).
 
 ## Steps
@@ -35,7 +36,7 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
    - Look at the Instagram stats: what got reach, saves and shares? Do more of that. Report it in step 7.
 4. **Content:** copy `studio/days/day5.py` to `dayN.py`, generate 3 cover images, rewrite the copy, run it.
 5. **Check:** build contact sheets and look at every slide and story. Fix any overflow, clipped text or wrong counter.
-6. **Slots:** `dayN.py` writes `queue/<tomorrow>/{0800,1300,1900}.json` and `stories.json`. LinkedIn and Instagram both on in all three slots. Instagram caption: 3–5 hashtags and a 📌 save / 📤 send line. Lint all slots and stories (`autopilot.lint.lint_stories(folder)`), fix every FAIL. Commit "Day N queue" and push. Confirm the review issue opened.
+6. **Slots:** `dayN.py` writes `queue/<tomorrow>/{0800,1300,1900,2100}.json` and `stories.json`. LinkedIn and Instagram both on in all three slots. Instagram caption: 3–5 hashtags and a 📌 save / 📤 send line. Lint all slots and stories (`autopilot.lint.lint_stories(folder)`), fix every FAIL. Commit "Day N queue" and push. Confirm the review issue opened.
 7. **Tell Roland (SendUserMessage):** the three titles and times, the search demand behind each topic, yesterday's Instagram numbers, the story times, and the review issue link. Send the three covers with SendUserFile. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
 8. **Book tomorrow's run:** call send_later at 18:10 UTC the next day with the message:
    "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."

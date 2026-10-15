@@ -83,10 +83,11 @@ async def _shoot(pages, out, h):
         await b.close()
 
 
-def carousel(slides, label, outdir, name):
+def carousel(slides, label, outdir, name, offset=0):
+    """offset: number of slides before these (e.g. 1 for a cover), so the page counter stays right."""
     out = Path(outdir); out.mkdir(parents=True, exist_ok=True)
-    n = len(slides)
-    pages = [(_page(s, label, f"{i+1}/{n}" + (" →" if i < n - 1 else "")), out / f"{name}-{i+1}.jpg")
+    n = len(slides) + offset
+    pages = [(_page(s, label, f"{i+1+offset}/{n}" + (" →" if i + offset < n - 1 else "")), out / f"{name}-{i+1}.jpg")
              for i, s in enumerate(slides)]
     asyncio.run(_shoot(pages, out, 1350))
     return [str(p) for _, p in pages]

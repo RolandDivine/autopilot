@@ -1,0 +1,26 @@
+{
+ "title": "Myth check: AI and water",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Does every ChatGPT chat really drink a bottle of water?\n\nThat claim came from a 2023 study estimating about 500 ml of water for every 10 to 50 replies from an older model. It spread everywhere. The newer, measured numbers are a lot smaller:\n\n→ Google (2025): a typical Gemini text prompt uses about 0.26 ml of water\n→ OpenAI (2025): about 0.32 ml per ChatGPT query\n→ Even counting the water used to generate the electricity, estimates land around 1 to 2 ml per prompt\n\nSo one bottle of water covers hundreds of chats, not 20.\n\nBut that doesn't mean the water worry is made up. It's just aimed at the wrong place.\n\nThe real issue is local. A single large data center can need millions of litres a day for cooling, and some are being built in regions that are already short of water. That's why communities are pushing back.\n\nYour prompt: a few drops.\nA giant data center next to a dry town: a real fight.\n\nBoth are true, and the second one is the conversation worth having as AI infrastructure gets built out across the world, including in Africa.\n\nShould countries require new data centers to publish their water use before they're approved?\n\nSources: Google Cloud, \"Measuring the environmental impact of AI inference\" (2025); Sam Altman, \"The Gentle Singularity\" (2025); Li et al., UC Riverside (2023).",
+  "media": "media/water-cover.jpg"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Does every ChatGPT chat drink a bottle of water? 💧\n\nThe real numbers are surprising, and so is the part people get wrong. Swipe →\n\n📤 Send this to the friend who says AI is drinking all the water\n\n#ai #chatgpt #datacenters #tech",
+  "media": [
+   "instagram/water-0.jpg",
+   "instagram/water-1.jpg",
+   "instagram/water-2.jpg",
+   "instagram/water-3.jpg",
+   "instagram/water-4.jpg",
+   "instagram/water-5.jpg",
+   "instagram/water-6.jpg"
+  ],
+  "music": "Bill Withers – Lovely Day"
+ }
+}

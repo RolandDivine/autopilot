@@ -11,6 +11,7 @@ A lesson is a chat between a curious friend ("q") and Roland ("r").
     carousel(slides, "AI lesson 2", "queue/2026-10-13/instagram", "ai2")   # -> ai2-1.jpg ... (1080x1350)
     story([("q", "..."), ("r", "...")], "AI lesson 2", "queue/2026-10-13/stories", "s1")  # -> s1.jpg (1080x1920)
 
+A screenshot bubble: ("img", ("path.jpg", height_px)).
 Markup inside bubble text: **bold**, ==yellow highlight==. Keep 2–4 bubbles per slide,
 each under ~160 characters, so text stays big. The last slide should ask people to save
 and send the post, and to follow @defi_ring_master.
@@ -46,11 +47,22 @@ def _css(h, pad_top, pad_bottom, fs):
             f".foot{{position:absolute;left:70px;right:70px;bottom:{60 if h == 1350 else 230}px;display:flex;justify-content:space-between;font-size:28px;color:#6b6257}}")
 
 
+def _img(spec):
+    """("img", (path, height_px)) -> a rounded screenshot card, centred, base64-inlined."""
+    import base64
+    path, h = spec
+    data = base64.b64encode(Path(path).read_bytes()).decode()
+    return (f"<div style='text-align:center;margin:4px 0 30px'><img src='data:image/jpeg;base64,{data}' "
+            f"style='height:{h}px;max-width:100%;border-radius:28px;box-shadow:0 10px 30px rgba(0,0,0,.18);"
+            f"border:6px solid #fff'></div>")
+
+
 def _page(bubbles, label, foot_right, h=1350):
     fs = 42 if h == 1350 else 48
     top = (f"<div class='top'><div class='av'>RD</div><div><b style='font-size:36px'>{NAME}</b>"
            f"<div style='font-size:28px;color:#6b7280'>{html.escape(label)} · online</div></div></div>")
-    body = "".join(f"<div class='b {who}'>{fmt(text)}</div>" for who, text in bubbles)
+    body = "".join(_img(text) if who == "img" else f"<div class='b {who}'>{fmt(text)}</div>"
+                   for who, text in bubbles)
     foot = f"<div class='foot'><span>{HANDLE}</span><span>{foot_right}</span></div>"
     pad = (90, 140) if h == 1350 else (250, 330)
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{_css(h, pad[0], pad[1], fs)}</style></head>"

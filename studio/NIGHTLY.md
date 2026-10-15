@@ -43,3 +43,8 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 The Instagram API can't attach music to carousels (only to Reels, and only with Facebook Login), so Roland adds it in the app after each post goes out.
 For every Instagram slot, set `"music"` to one old-school track that fits the mood. Rotate through Sade, Phil Collins and Michael Bolton, plus similar artists (Anita Baker, Luther Vandross, Lionel Richie, Whitney Houston, Tracy Chapman, George Michael). Don't repeat the same song within a week.
 Example: `"music": "Sade – Smooth Operator"`.
+
+## Klærus content: on hold (Roland, 15 Oct 2026)
+Do not post anything about Klærus. The 15 Oct drafts are in archive/klaerus-2026-10-15 and are
+outdated: Klærus was restructured and terms like "house edge" are no longer used. Wait for Roland's
+restructured document before writing any Klærus content.

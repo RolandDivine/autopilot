@@ -54,6 +54,6 @@ outdated: Klærus was restructured and terms like "house edge" are no longer use
 restructured document before writing any Klærus content.
 
 ## Kobo videos (Roland, 15 Oct 2026)
-"KOBO is strictly for stories… videos are for strictly stories." Kobo animated videos are only for
-story content: Kobo alone for a solo script, Kobo and Babe together for a duo script.
-Don't use the animated characters for any other kind of post.
+Kobo animated videos are strictly for storytelling content: story-led videos like Kobo's Money Story.
+They can go out as Instagram Reels and as LinkedIn videos, but are never used for news or plain how-tos.
+Kobo alone for a solo script; Kobo and Babe together for a duo script.

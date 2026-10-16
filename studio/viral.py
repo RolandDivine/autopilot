@@ -366,7 +366,45 @@ def solo_spec():
     return std("solo", timeline, {"Carter": "Carta"})
 
 
-SPECS = {"ram": ram_spec, "solo": solo_spec}
+def ledger_spec():
+    A = ROOT / "assets" / "viral" / "ledger"
+
+    def timeline(at, dur):
+        t_here, t_res, t_former, t_watch = at("here's"), at("reseller"), at("former"), at("watches")
+        t_still, t_says, t_lesson, t_follow = at("still"), at("says"), at("lesson"), at("follow")
+        bgs = [(-1, t_former, A / "shop.jpg"), (t_former - .2, t_says, A / "implant.jpg"), (t_says - .2, dur, A / "shop.jpg")]
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_here - .1, "kick": "Hardware wallet theft · Oct 2026", "value": "$90M+",
+             "cls": "red", "label": "drained from wallets people bought to stay safe",
+             "src": "Bitquery on-chain estimate (Ledger hasn't confirmed a total)"},
+            {"kind": "html", "a": t_res, "b": t_former - .1, "src": "Ledger, via Help Net Security",
+             "html": "<div class='kick'>Where it came from</div><div class='mid'>An authorised reseller in Southeast Asia</div>"
+                     "<div class='sm' style='margin-top:16px'>CryptoBilis. Ledger confirmed an unauthorised hardware implant in a device it sold.</div>"},
+            {"kind": "checks", "a": t_former, "b": t_watch - .1, "kick": "Opened up by Mark Karpelès", "title": "What was hidden inside",
+             "src": "Mark Karpelès, via Help Net Security",
+             "items": [{"t": "A tiny board under the screen", "d": at("under") - t_former},
+                       {"t": "An antenna", "d": at("antenna") - t_former},
+                       {"t": "A mobile data chip", "d": at("mobile") - t_former}]},
+            {"kind": "html", "a": t_watch, "b": t_still - .1,
+             "html": "<div class='kick'>How it steals</div><div class='mid'>It reads the screen.</div>"
+                     "<div class='mid red' style='margin-top:14px'>Your recovery phrase leaves the device.</div>"},
+            {"kind": "stat", "a": t_still, "b": t_says - .1, "kick": "The scary part", "value": "Passed ✓", "cls": "grn",
+             "label": "Ledger's own Genuine Check", "sub": "Because the security chip itself is real",
+             "src": "Mark Karpelès, via Help Net Security"},
+            {"kind": "checks", "a": t_says, "b": t_lesson - .1, "kick": "Ledger's advice", "title": "If you bought from that reseller",
+             "items": [{"t": "Don't set it up", "d": at("don't") - t_says},
+                       {"t": "Already did? New device, new phrase, move your coins", "d": at("already") - t_says}]},
+            {"kind": "html", "a": t_lesson, "b": t_follow - .1,
+             "html": "<div class='kick'>Kobo's rule</div><div class='mid'>Buy hardware wallets <span class='yel'>only</span> from the maker's official store.</div>"
+                     "<div class='sm' style='margin-top:16px'>And no real company will ever DM you for your 24 words.</div>"},
+            {"kind": "html", "a": t_follow - .1, "b": dur + 1, "html": FOLLOW.format("Keep your crypto safe.")},
+        ]
+        return bgs, cards
+
+    return std("ledger", timeline, {"Mount": "Mt.", "Karpel": "Karpelès"})
+
+
+SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

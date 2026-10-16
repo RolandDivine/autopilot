@@ -27,7 +27,11 @@ import re
 def yt():
     desc = re.sub(r"\n?📤.*\n?📌.*\n", "\n", d["reel_caption"]).strip() + "\n\nFollow for more: Instagram @defi_ring_master · LinkedIn Roland Divine"
     tags = ",".join(re.findall(r"#(\w+)", d["reel_caption"])) or "ai,crypto"
-    return run("youtube-publish.yml", {"paths": d["video"], "title": (d["title"][:90] + " #Shorts"), "description": desc, "tags": tags, "privacy": "public"})
+    res = run("youtube-publish.yml", {"paths": d["video"], "title": (d["title"][:90] + " #Shorts"), "description": desc, "tags": tags, "privacy": "public"})
+    m = re.search(r"youtube\.com/shorts/([\w-]+)", res[2])
+    if m and d.get("playlist"):
+        run("youtube-admin.yml", {"ops": json.dumps([{"op": "add_to_playlist", "playlist": d["playlist"], "video_ids": [m.group(1)]}])})
+    return res
 if "ytonly" in sys.argv:
     print(yt()); sys.exit()
 print(run("instagram-publish.yml", {"kind": "reel", "paths": d["video"], "caption": d["reel_caption"]}))

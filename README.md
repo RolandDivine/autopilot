@@ -1,6 +1,6 @@
 # Autopilot
 
-Posts Roland's content to **LinkedIn (RolandDivine2)** and **Instagram (@defi_ring_master)** three times a day: 8 AM, 1 PM and 7 PM Lagos time. It runs on GitHub's servers, so Roland's laptop can be off.
+Posts Roland's content to **LinkedIn (RolandDivine2)**, **Instagram (@defi_ring_master)** and **YouTube** three times a day: 8 AM, 1 PM and 7 PM Lagos time. It runs on GitHub's servers, so Roland's laptop can be off.
 
 ## How a day works
 
@@ -29,6 +29,16 @@ To change wording, tap **edit this post** in the issue, then the pencil icon. Ed
 2. Add credit under **Billing**. $10 lasts months: each post costs about $0.015.
 3. In App **Settings → User authentication**, set permissions to **Read and write** (type: Web App or Automated bot; callback and website URL: `https://x.com/RolandDivine2`).
 4. In **Keys and tokens**, copy the API Key and Secret, then generate an Access Token and Secret. Generate them *after* step 3 so they have write access.
+
+### YouTube: free, no computer needed
+1. At [console.cloud.google.com](https://console.cloud.google.com), create a project called **Autopilot**. Under **APIs & Services → Library**, enable **YouTube Data API v3**.
+2. Under **Google Auth Platform**: set **Branding** (app name Autopilot, your email). Under **Audience**, choose **External** and click **Publish app**, so the sign-in doesn't expire after 7 days.
+3. Under **Clients → Create client**, choose **Web application** and add the redirect URI `https://github.com/RolandDivine/autopilot`.
+4. Put the **Client ID** in `config.json` as `youtube_client_id` (it's public). Add the **Client secret** as the Actions secret `YOUTUBE_CLIENT_SECRET` (Settings → Secrets and variables → Actions). Never paste the secret anywhere else.
+5. Open the YouTube sign-in link (`python -c "from autopilot.yt_client import sign_in_link; print(sign_in_link())"`), choose your channel's Google account, click **Advanced → Go to Autopilot** on the "unverified app" screen, and allow. Copy the address you land on, then run **Actions → youtube-connect** with it, within a few minutes.
+6. Post with **Actions → youtube-publish**. Vertical MP4s up to 3 minutes become Shorts.
+
+Note: Google keeps uploads from a new, unaudited API project **private** until the project passes the free [YouTube API audit](https://support.google.com/youtube/contact/yt_api_form). Until then, flip each video to Public in YouTube Studio.
 
 ### LinkedIn: free, no computer needed
 1. In the LinkedIn developer app's **Auth** tab, add the redirect URL `https://github.com/RolandDivine/autopilot`. In the **Products** tab, add **Sign In with LinkedIn using OpenID Connect** and **Share on LinkedIn**.

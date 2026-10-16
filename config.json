@@ -11,7 +11,8 @@
   "handles": {
     "x": "RolandDivine2",
     "linkedin": "RolandDivine2",
-    "instagram": "defi_ring_master"
+    "instagram": "defi_ring_master",
+    "youtube": ""
   },
   "linkedin_api_version": "202609",
   "x_api_base": "https://api.x.com",
@@ -52,5 +53,6 @@
   "instagram_max_chars": 2200,
   "instagram_max_hashtags": 5,
   "instagram_autopost": true,
-  "story_grace_minutes": 90
+  "story_grace_minutes": 90,
+  "youtube_client_id": ""
 }

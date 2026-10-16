@@ -1,0 +1,50 @@
+name: youtube-publish
+
+# Upload a video from the repo to YouTube (vertical MP4s up to 3 minutes become Shorts).
+on:
+  workflow_dispatch:
+    inputs:
+      paths:
+        description: "MP4 path(s) in the repo"
+        required: true
+        type: string
+      title:
+        description: "Title (max 100 characters)"
+        required: true
+        type: string
+      description:
+        description: "Description"
+        type: string
+        default: ""
+      tags:
+        description: "Comma-separated tags"
+        type: string
+        default: ""
+      privacy:
+        description: "public, unlisted or private"
+        type: choice
+        options: [public, unlisted, private]
+        default: public
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/yt_publish.py
+        env:
+          PATHS: ${{ inputs.paths }}
+          TITLE: ${{ inputs.title }}
+          DESCRIPTION: ${{ inputs.description }}
+          TAGS: ${{ inputs.tags }}
+          PRIVACY: ${{ inputs.privacy }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}

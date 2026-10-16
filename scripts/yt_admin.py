@@ -110,7 +110,10 @@ def run(o):
         same = [p for p in playlists() if p["snippet"]["title"] == o["title"]]
         p = same[0] if same else c.api("POST", "playlists", {"part": "snippet,status"}, {"snippet": {"title": o["title"], "description": o.get("description", "")},
                                                                     "status": {"privacyStatus": o.get("privacy", "public")}})
-        have = {i["contentDetails"]["videoId"] for i in c.api("GET", "playlistItems", {"part": "contentDetails", "playlistId": p["id"], "maxResults": 50}).get("items", [])}
+        try:
+            have = {i["contentDetails"]["videoId"] for i in c.api("GET", "playlistItems", {"part": "contentDetails", "playlistId": p["id"], "maxResults": 50}).get("items", [])}
+        except Exception:
+            have = set()
         for vid in o.get("video_ids", []):
             if vid not in have:
                 add_item(p["id"], vid)
@@ -120,6 +123,12 @@ def run(o):
         for vid in o["video_ids"]:
             add_item(pid, vid)
         say("added to playlist", o)
+    elif op == "update_playlist":
+        p = [x for x in playlists() if x["id"] == o["id"]][0]
+        sn = {"title": o.get("title", p["snippet"]["title"]), "description": o.get("description", p["snippet"].get("description", ""))}
+        c.api("PUT", "playlists", {"part": "snippet,status"}, {"id": o["id"], "snippet": sn,
+              "status": {"privacyStatus": o.get("privacy", p["status"]["privacyStatus"])}})
+        say("playlist updated", o)
     elif op == "list_playlists":
         say("playlists", [{"id": p["id"], "title": p["snippet"]["title"], "privacy": p["status"]["privacyStatus"],
                            "items": p["contentDetails"]["itemCount"]} for p in playlists()])

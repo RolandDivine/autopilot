@@ -62,3 +62,4 @@ Exception (Roland, 16 Oct 2026): Kobo is the brand host of the viral explainer v
 ## Viral explainer videos (Roland, 16 Oct 2026)
 Trend-led 40-65s Reels with on-screen evidence, one each across founders/building products, crypto and AI.
 Pipeline: research a trending story and verify facts in reputable sources → ElevenLabs voice (Oluwadamilare, VzScgb5Pi0A6lafMNQpm) → 1-2 Figma images → `python studio/viral_pull.py <name> <voice_url> <img_url>=<file>` → add a spec to `studio/viral.py` (cards name their sources) → preview frames, fix, render → captions in `queue/kobo/viral.json` (LinkedIn text short: a powerful hook + 1-2 lines + sources).
+Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key> [story]` posts the Instagram Reel, the LinkedIn video, the YouTube Short (channel "Building Gen12 with Roland", via youtube-publish) and, with `story`, an Instagram video story (only for videos up to 60s).

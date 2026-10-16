@@ -129,6 +129,15 @@ def run(o):
         c.api("PUT", "playlists", {"part": "snippet,status"}, {"id": o["id"], "snippet": sn,
               "status": {"privacyStatus": o.get("privacy", p["status"]["privacyStatus"])}})
         say("playlist updated", o)
+    elif op == "dedupe_playlist":  # removes repeated entries of the same video (the video itself is untouched)
+        seen, removed = set(), 0
+        for it in c.api("GET", "playlistItems", {"part": "contentDetails", "playlistId": o["id"], "maxResults": 50}).get("items", []):
+            v = it["contentDetails"]["videoId"]
+            if v in seen:
+                c.api("DELETE", "playlistItems", {"id": it["id"]})
+                removed += 1
+            seen.add(v)
+        say("playlist deduped", {"id": o["id"], "removed": removed})
     elif op == "list_playlists":
         say("playlists", [{"id": p["id"], "title": p["snippet"]["title"], "privacy": p["status"]["privacyStatus"],
                            "items": p["contentDetails"]["itemCount"]} for p in playlists()])

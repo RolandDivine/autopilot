@@ -19,6 +19,10 @@ from playwright.async_api import async_playwright
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ig_options import FONT_CSS  # noqa: E402
+import duo  # noqa: E402  (Kobo drawing)
+import numpy as np  # noqa: E402
+import re  # noqa: E402
+import soundfile as sf  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 FPS = 30
@@ -71,6 +75,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#07080B;font-fam
 .check{display:flex;gap:26px;align-items:flex-start;margin:26px 0;opacity:0}
 .check .box{flex:none;width:70px;height:70px;border-radius:18px;background:#3DDC97;color:#07080B;font:800 50px/70px Jakarta;text-align:center}
 .check div{font:700 50px/1.2 Jakarta}
+#host{position:absolute;right:-20px;bottom:-10px;width:330px;height:435px;opacity:0}
+#host svg{width:330px;height:435px}
+#hostname{position:absolute;right:70px;bottom:28px;font:800 28px Jakarta;color:#111;background:#FFD84D;border-radius:999px;padding:6px 18px;opacity:0}
+.shot{display:block;width:100%;max-height:640px;object-fit:cover;object-position:top;border-radius:24px;margin-top:16px;border:1px solid rgba(255,255,255,.15)}
 """
 
 JS = r"""
@@ -80,7 +88,21 @@ const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const ease=x=>{x=cl(x);return 1-Math.pow(1-x,3)};
 const back=x=>{x=cl(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
 function vis(el,t,a,b,fade=.35){const v=Math.min(ease((t-a)/fade),1-ease((t-(b-fade))/fade));el.style.opacity=cl(v);return cl(v)}
+function host(t){
+  const h=$('#host');if(!h)return;
+  const show=D.host.some(([a,b])=>t>=a&&t<=b);
+  const v=cl(show?1:0);h.style.opacity=v;$('#hostname').style.opacity=v;
+  const f=Math.min(D.env.length-1,Math.floor(t*30));const lv=D.env[f]||0;
+  const bob=Math.sin(t*6.3)*6;$('#kobo-whole').style.transform=`translateY(${bob-lv*8}px)`;$('#kobo-whole').style.transformOrigin='300px 740px';
+  $('#kobo-head').style.transform=`rotate(${Math.sin(t*2.2)*3}deg)`;
+  $('#kobo-earL').style.transform=`rotate(${-6+Math.sin(t*3.1)*6}deg)`;$('#kobo-earR').style.transform=`rotate(${6+Math.sin(t*3.1+1)*8}deg)`;
+  const bt=t%3.4,sc=bt<.14?Math.max(.08,Math.abs(bt-.07)/.07):1;$('#kobo-eyeL').style.transform=$('#kobo-eyeR').style.transform=`scaleY(${sc})`;
+  const open=Math.sqrt(Math.max(0,lv))*30;$('#kobo-mouth').setAttribute('ry',Math.max(.1,open));$('#kobo-mouth').style.opacity=open>1.5?1:0;
+  $('#kobo-smile').style.opacity=open>1.5?0:1;
+  const g=Math.sin(t*4)*10*lv;$('#kobo-armR').style.transform=`rotate(${-25-g*2}deg)`;$('#kobo-armL').style.transform=`rotate(${18+g}deg)`;
+}
 function render(t){
+  host(t);
   $('#prog').style.width=(100*t/D.dur)+'%';
   // backgrounds: crossfade + slow push-in
   D.bgs.forEach((g,i)=>{const el=$('#bg'+i);const v=vis(el,t,g.a,g.b,.6);
@@ -161,6 +183,8 @@ def card_html(i, c):
     elif k == "checks":
         items = "".join(f"<div class='check k{j}'><div class='box'>✓</div><div>{q['t']}</div></div>" for j, q in enumerate(c["items"]))
         body = f"{kick}<div class='mid' style='margin-bottom:10px'>{c['title']}</div>{items}"
+    elif k == "image":
+        body = f"{kick}<div class='mid' style='font-size:52px'>{c['title']}</div><img class='shot' src='{b64(c['img'])}'>"
     else:
         body = c.get("html", "")
     return f"<div class='card' id='c{i}'><div class='panel'>{body}{src}</div></div>"
@@ -177,8 +201,7 @@ def build(spec):
             words.append([a, b, t.strip()])
     for w in words:
         for a, b in spec.get("fix", {}).items():
-            if w[2] == a:
-                w[2] = b
+            w[2] = re.sub(rf"^{re.escape(a)}(?=\W*$)", b, w[2])
     dur = spec["dur"]
 
     def at(word, after=0.0, nth=1):
@@ -191,9 +214,19 @@ def build(spec):
         raise KeyError(word)
 
     bgs, cards = spec["timeline"](at, dur)
-    data = {"dur": dur, "chunks": chunks(words), "bgs": [{"a": a, "b": b} for a, b, _ in bgs], "cards": cards}
+    y, sr = sf.read(str(spec["wav"]), dtype="float32")
+    if y.ndim > 1:
+        y = y.mean(axis=1)
+    hop = sr // 30
+    env = np.array([np.sqrt(np.mean(y[i:i + hop] ** 2)) for i in range(0, len(y), hop)])
+    env = np.clip(env / (np.percentile(env, 95) + 1e-6), 0, 1)
+    env[env < 0.12] = 0
+    host = spec.get("host", [])
+    data = {"dur": dur, "chunks": chunks(words), "bgs": [{"a": a, "b": b} for a, b, _ in bgs], "cards": cards,
+            "env": [round(float(v), 3) for v in env], "host": host}
     bg_html = "".join(f"<div class='bg' id='bg{i}' style=\"background-image:url('{b64(p)}')\"></div>" for i, (_, _, p) in enumerate(bgs))
     body = (bg_html + "<div class='shade'></div>" + "".join(card_html(i, c) for i, c in enumerate(cards)) +
+            (f"<div id='host'>{duo.bunny_svg('kobo', duo.KOBO_COLORS)}</div><div id='hostname'>Kobo</div>" if host else "") +
             "<div class='brand'><b>@</b>defi_ring_master</div><div class='prog'><i id='prog'></i></div><div class='cap' id='cap'></div>")
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{CSS}</style></head><body>{body}"
             f"<script>{JS.replace('__DATA__', json.dumps(data))}</script></body></html>")
@@ -282,11 +315,58 @@ def ram_spec():
     audio = A / "voice.mp3"
     wav = Path("/home/claude/money_audio/ram.wav")
     info = sf.info(str(wav))
-    return {"transcript": A / "voice.json", "audio": audio, "dur": info.frames / info.samplerate + 0.6,
+    return {"transcript": A / "voice.json", "audio": audio, "wav": wav, "dur": info.frames / info.samplerate + 0.6,
             "timeline": timeline, "fix": {}}
 
 
-SPECS = {"ram": ram_spec}
+def std(name, timeline, fix=None, host=True):
+    A = ROOT / "assets" / "viral" / name
+    wav = Path(f"/home/claude/money_audio/{name}.wav")
+    info = sf.info(str(wav))
+    dur = info.frames / info.samplerate + 0.6
+    return {"transcript": A / "voice.json", "audio": A / "voice.mp3", "wav": wav, "dur": dur,
+            "timeline": timeline, "fix": {"Cobo": "Kobo", "Kubo": "Kobo", **(fix or {})},
+            "host": [[0, dur]] if host else []}
+
+
+GEN = ROOT / "assets" / "gen"
+FOLLOW = "<div class='kick'>Follow</div><div class='mid'>@defi_ring_master</div><div class='sm' style='margin-top:14px'>{}</div>"
+
+
+def solo_spec():
+    A = ROOT / "assets" / "viral" / "solo"
+
+    def timeline(at, dur):
+        t_carta, t_year, t_ten, t_why = at("carta"), at("year"), at("10"), at("why")
+        t_rol, t_catch, t_go, t_follow = at("roland"), at("catch"), at("go"), at("follow")
+        bgs = [(-1, t_why, A / "office.jpg"), (t_why - .2, t_catch, GEN / "paper-robot.jpg"),
+               (t_catch - .2, dur, GEN / "black-cube.jpg")]
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_carta - .1, "kick": "Founders in 2025", "value": "1 in 3",
+             "cls": "yel", "label": "new startups now has just ONE founder"},
+            {"kind": "bars", "a": t_carta, "b": t_ten - .1, "kick": "Startups founded solo", "title": "The solo founder is rising",
+             "max": 40, "bars": [{"t": "31%", "v": 31, "q": "2024"}, {"t": "36%", "v": 36, "q": "2025"}],
+             "src": "Carta, Founder Ownership Report 2026"},
+            {"kind": "stat", "a": t_ten, "b": t_why - .1, "kick": "Over 10 years", "value": "2×", "cls": "yel",
+             "label": "the share of solo-founded startups has doubled", "src": "Carta"},
+            {"kind": "checks", "a": t_why + .6, "b": t_rol - .1, "kick": "Why", "title": "AI does a co-founder's job",
+             "items": [{"t": "Code", "d": at("code") - t_why - .6}, {"t": "Design", "d": at("design") - t_why - .6},
+                       {"t": "Ads", "d": at("ads") - t_why - .6}, {"t": "Customer support", "d": at("customer") - t_why - .6}]},
+            {"kind": "image", "a": t_rol, "b": t_catch - .1, "kick": "Proof", "title": "Roland's posting robot: AI, zero developers",
+             "img": str(ROOT / "queue" / "2026-10-14" / "instagram" / "robot1-1.jpg")},
+            {"kind": "stat", "a": t_catch, "b": t_go - .1, "kick": "The catch", "value": "2 founders", "cls": "red",
+             "label": "is still the most common team among startups that raise money", "sub": "36% of funded startups",
+             "src": "Carta"},
+            {"kind": "html", "a": t_go, "b": t_follow - .1,
+             "html": "<div class='kick'>Kobo's rule</div><div class='mid'>Go solo if you want.<br><span class='yel'>Just keep one person who'll tell you you're wrong.</span></div>"},
+            {"kind": "html", "a": t_follow - .1, "b": dur + 1, "html": FOLLOW.format("Founder truths, every week.")},
+        ]
+        return bgs, cards
+
+    return std("solo", timeline, {"Carter": "Carta"})
+
+
+SPECS = {"ram": ram_spec, "solo": solo_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

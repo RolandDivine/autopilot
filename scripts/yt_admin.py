@@ -57,6 +57,22 @@ def videos(ids):
     return res
 
 
+def add_item(pid, vid):
+    import time
+    for a in range(6):
+        try:
+            return c.api("POST", "playlistItems", {"part": "snippet"},
+                         {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+        except Exception as e:
+            if "409" not in str(e) and "50" not in str(e)[:40] or a == 5:
+                raise
+            time.sleep(4 + 4 * a)
+
+
+def playlists():
+    return c.api("GET", "playlists", {"part": "snippet,status,contentDetails", "mine": "true", "maxResults": 50}).get("items", [])
+
+
 def upload_media(url, path, mime, params):
     with open(path, "rb") as f:
         r = requests.post(url, headers={**c.h, "Content-Type": mime}, params=params, data=f, timeout=300)
@@ -91,15 +107,22 @@ def run(o):
         c.api("PUT", "channels", {"part": "brandingSettings"}, {"id": CID, "brandingSettings": {"channel": bc}})
         say("channel updated", {k: o[k] for k in o if k != "op"})
     elif op == "create_playlist":
-        p = c.api("POST", "playlists", {"part": "snippet,status"}, {"snippet": {"title": o["title"], "description": o.get("description", "")},
+        same = [p for p in playlists() if p["snippet"]["title"] == o["title"]]
+        p = same[0] if same else c.api("POST", "playlists", {"part": "snippet,status"}, {"snippet": {"title": o["title"], "description": o.get("description", "")},
                                                                     "status": {"privacyStatus": o.get("privacy", "public")}})
+        have = {i["contentDetails"]["videoId"] for i in c.api("GET", "playlistItems", {"part": "contentDetails", "playlistId": p["id"], "maxResults": 50}).get("items", [])}
         for vid in o.get("video_ids", []):
-            c.api("POST", "playlistItems", {"part": "snippet"}, {"snippet": {"playlistId": p["id"], "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+            if vid not in have:
+                add_item(p["id"], vid)
         say("playlist created", {"id": p["id"], "title": o["title"], "videos": len(o.get("video_ids", []))})
     elif op == "add_to_playlist":
+        pid = o.get("playlist_id") or [p["id"] for p in playlists() if p["snippet"]["title"] == o["playlist"]][0]
         for vid in o["video_ids"]:
-            c.api("POST", "playlistItems", {"part": "snippet"}, {"snippet": {"playlistId": o["playlist_id"], "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+            add_item(pid, vid)
         say("added to playlist", o)
+    elif op == "list_playlists":
+        say("playlists", [{"id": p["id"], "title": p["snippet"]["title"], "privacy": p["status"]["privacyStatus"],
+                           "items": p["contentDetails"]["itemCount"]} for p in playlists()])
     elif op == "list_sections":
         say("sections", c.api("GET", "channelSections", {"part": "snippet,contentDetails", "mine": "true"}).get("items", []))
     elif op == "set_sections":

@@ -1,0 +1,296 @@
+"""Viral explainer Reels (Roland, 16 Oct 2026): a trend topic told with on-screen evidence.
+
+Each video = voiceover (ElevenLabs) + Whisper word timings + full-bleed generated photos with slow
+camera moves + animated evidence cards (price tags, charts, stats, timelines, each naming its
+source) + big word-by-word captions. 1080x1920, 30 fps. Rendered frame by frame in Chromium.
+
+    python viral.py ram            -> ../assets/reels/viral-ram.mp4
+    python viral.py ram 2 12 30    -> preview PNGs at those seconds
+"""
+import asyncio
+import base64
+import json
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+from playwright.async_api import async_playwright
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from ig_options import FONT_CSS  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[1]
+FPS = 30
+
+
+def b64(p):
+    return "data:image/jpeg;base64," + base64.b64encode(Path(p).read_bytes()).decode()
+
+
+CSS = """
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#07080B;font-family:Jakarta;color:#fff}
+.bg{position:absolute;inset:-60px;background-size:cover;background-position:center;opacity:0;will-change:transform,opacity}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.85) 100%)}
+.brand{position:absolute;top:70px;left:60px;font:700 30px Jakarta;letter-spacing:1px;color:rgba(255,255,255,.85)}
+.brand b{color:#FFD84D}
+.prog{position:absolute;top:126px;left:60px;right:60px;height:6px;border-radius:6px;background:rgba(255,255,255,.18)}
+.prog i{display:block;height:100%;width:0;background:#FFD84D;border-radius:6px}
+.cap{position:absolute;left:60px;right:60px;top:1390px;text-align:center;font:800 78px/1.12 Jakarta;letter-spacing:-1px;
+     text-shadow:0 6px 24px rgba(0,0,0,.7)}
+.cap span{display:inline-block;margin:0 10px;opacity:.55;transition:none}
+.cap span.on{opacity:1}
+.cap span.now{color:#111;background:#FFD84D;border-radius:14px;padding:0 14px;margin:0 -4px;opacity:1}
+.card{position:absolute;left:70px;right:70px;top:300px;opacity:0;will-change:transform,opacity}
+.panel{background:rgba(10,12,16,.78);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);border-radius:40px;padding:44px 50px}
+.src{display:inline-block;margin-top:26px;font:600 26px Jakarta;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);
+     border-radius:999px;padding:8px 20px}
+.kick{font:700 30px Jakarta;letter-spacing:3px;text-transform:uppercase;color:#FFD84D;margin-bottom:18px}
+.big{font:800 150px/1 Jakarta;letter-spacing:-5px}
+.mid{font:800 64px/1.1 Jakarta;letter-spacing:-1.5px}
+.sm{font:600 36px/1.35 Jakarta;color:rgba(255,255,255,.85)}
+.red{color:#FF4D4D}.yel{color:#FFD84D}.grn{color:#3DDC97}
+.strike{position:relative;display:inline-block}
+.strike:after{content:"";position:absolute;left:-6px;right:-6px;top:52%;height:12px;background:#FF4D4D;border-radius:6px;
+              transform-origin:left;transform:scaleX(var(--s,0))}
+.bars{display:flex;align-items:flex-end;gap:34px;height:520px;margin-top:20px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar i{display:block;width:100%;border-radius:18px 18px 6px 6px;background:linear-gradient(180deg,#FF4D4D,#B3261E);height:0}
+.bar b{font:800 50px Jakarta;margin-bottom:12px}.bar span{font:700 30px Jakarta;margin-top:14px;color:rgba(255,255,255,.8)}
+.lane{display:flex;align-items:center;gap:24px;margin:22px 0}
+.lane .t{width:300px;font:800 40px Jakarta}
+.lane .track{flex:1;height:64px;border-radius:20px;background:rgba(255,255,255,.08);overflow:hidden}
+.lane .track i{display:block;height:100%;width:0;border-radius:20px}
+.tl{position:relative;margin:40px 0 10px;height:330px}
+.tl .line{position:absolute;left:40px;right:40px;top:60px;height:8px;border-radius:8px;background:rgba(255,255,255,.2)}
+.tl .line i{display:block;height:100%;width:0;background:#FFD84D;border-radius:8px}
+.tl .pt{position:absolute;top:36px;width:300px;margin-left:-150px;text-align:center;opacity:0}
+.tl .pt .dot{width:56px;height:56px;border-radius:50%;background:#FFD84D;margin:0 auto 20px;border:8px solid #07080B}
+.tl .pt b{display:block;font:800 46px Jakarta}.tl .pt span{font:600 28px/1.3 Jakarta;color:rgba(255,255,255,.8)}
+.check{display:flex;gap:26px;align-items:flex-start;margin:26px 0;opacity:0}
+.check .box{flex:none;width:70px;height:70px;border-radius:18px;background:#3DDC97;color:#07080B;font:800 50px/70px Jakarta;text-align:center}
+.check div{font:700 50px/1.2 Jakarta}
+"""
+
+JS = r"""
+const D=__DATA__;
+const $=s=>document.querySelector(s);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=cl(x);return 1-Math.pow(1-x,3)};
+const back=x=>{x=cl(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+function vis(el,t,a,b,fade=.35){const v=Math.min(ease((t-a)/fade),1-ease((t-(b-fade))/fade));el.style.opacity=cl(v);return cl(v)}
+function render(t){
+  $('#prog').style.width=(100*t/D.dur)+'%';
+  // backgrounds: crossfade + slow push-in
+  D.bgs.forEach((g,i)=>{const el=$('#bg'+i);const v=vis(el,t,g.a,g.b,.6);
+    const p=cl((t-g.a)/(g.b-g.a));const z=1.04+.10*p;const dx=(i%2?-1:1)*30*p;
+    el.style.transform=`translate(${dx}px,${-20*p}px) scale(${z})`;});
+  // cards
+  D.cards.forEach((c,i)=>{const el=$('#c'+i);const v=vis(el,t,c.a,c.b,.3);
+    const k=back((t-c.a)/.45);el.style.transform=`translateY(${(1-k)*60}px) scale(${.94+.06*k})`;
+    if(c.kind==='price'){const s=cl((t-c.a-c.strike)/.35);el.style.setProperty('--s',s);
+      const n=$('#c'+i+' .new');const k2=back((t-c.a-c.strike-.25)/.4);n.style.opacity=cl(k2*2);
+      n.style.transform=`scale(${.6+.4*k2}) rotate(${(1-cl(k2))*-6}deg)`;
+      const sh=(t-c.a-c.strike-.25);n.style.translate=(sh>0&&sh<.35)?`${Math.sin(sh*80)*10}px 0`:'0 0';}
+    if(c.kind==='count'){const p=ease((t-c.a-.2)/1.2);$('#c'+i+' .num').textContent=c.pre+Math.round(c.to*p)+c.post;}
+    if(c.kind==='donut'){const p=ease((t-c.a-.2)/1.4);$('#c'+i+' circle.v').setAttribute('stroke-dasharray',`${p*c.pct*9.42} 942`);
+      $('#c'+i+' .num').textContent=Math.round(c.pct*p)+'%';}
+    if(c.kind==='bars'){c.bars.forEach((b,j)=>{const p=ease((t-c.a-.3-j*.35)/.7);
+      $('#c'+i+' .bar'+j+' i').style.height=(p*b.v/c.max*100)+'%';$('#c'+i+' .bar'+j+' b').style.opacity=p;});}
+    if(c.kind==='lanes'){c.lanes.forEach((l,j)=>{const p=ease((t-c.a-.3-j*.6)/.9);document.getElementById('c'+i+'l'+j).style.width=(p*l.v)+'%';});}
+    if(c.kind==='timeline'){const p=ease((t-c.a-.2)/(c.b-c.a-1));$('#c'+i+' .line i').style.width=(p*100)+'%';
+      c.pts.forEach((q,j)=>{$('#c'+i+' .p'+j).style.opacity=cl((p*100-q.x+6)/8);});}
+    if(c.kind==='checks'){c.items.forEach((q,j)=>{const e=$('#c'+i+' .k'+j);const p=back((t-c.a-q.d)/.4);
+      e.style.opacity=cl(p*2);e.style.transform=`translateX(${(1-cl(p))*-40}px)`;});}
+  });
+  // captions: chunk of words
+  let ci=-1;for(let i=0;i<D.chunks.length;i++){if(D.chunks[i].s<=t+.05)ci=i;}
+  const cap=$('#cap');
+  if(ci<0||t>D.chunks[ci].e+.6){cap.innerHTML='';return}
+  const ch=D.chunks[ci];
+  if(cap.dataset.i!=ci){cap.dataset.i=ci;cap.innerHTML=ch.w.map((w,j)=>`<span id="cw${j}">${w[2]}</span>`).join('');}
+  const pop=back((t-ch.s)/.18);cap.style.transform=`scale(${.92+.08*pop})`;
+  ch.w.forEach((w,j)=>{const e=$('#cw'+j);e.className=t>=w[0]?(t<w[1]+.08?'now':'on'):'';});
+}
+"""
+
+
+def chunks(words, n=3):
+    out, cur = [], []
+    for w in words:
+        cur.append(w)
+        end = w[2][-1:] in ".?!,"
+        if len(cur) >= n or end or (len(cur) >= 2 and len(w[2]) > 9):
+            out.append(cur)
+            cur = []
+    if cur:
+        out.append(cur)
+    return [{"s": c[0][0], "e": c[-1][1], "w": c} for c in out]
+
+
+def card_html(i, c):
+    k = c["kind"]
+    src = f"<div class='src'>Source: {c['src']}</div>" if c.get("src") else ""
+    kick = f"<div class='kick'>{c['kick']}</div>" if c.get("kick") else ""
+    if k == "price":
+        body = (f"{kick}<div class='sm'>{c['was_label']}</div><div class='big strike'>{c['was']}</div>"
+                f"<div class='sm' style='margin-top:26px'>{c['now_label']}</div><div class='big red new'>{c['now']}</div>"
+                f"<div class='mid yel' style='margin-top:18px'>{c['delta']}</div>")
+    elif k == "count":
+        body = f"{kick}<div class='big {c.get('cls','red')} num'>{c['pre']}0{c['post']}</div><div class='mid' style='margin-top:20px'>{c['label']}</div><div class='sm' style='margin-top:14px'>{c.get('sub','')}</div>"
+    elif k == "stat":
+        body = f"{kick}<div class='big {c.get('cls','red')}'>{c['value']}</div><div class='mid' style='margin-top:20px'>{c['label']}</div><div class='sm' style='margin-top:14px'>{c.get('sub','')}</div>"
+    elif k == "donut":
+        body = (f"{kick}<div style='display:flex;align-items:center;gap:40px'><svg width='340' height='340' viewBox='0 0 340 340'>"
+                "<circle cx='170' cy='170' r='150' fill='none' stroke='rgba(255,255,255,.12)' stroke-width='44'/>"
+                "<circle class='v' cx='170' cy='170' r='150' fill='none' stroke='#FFD84D' stroke-width='44' stroke-linecap='round' "
+                "stroke-dasharray='0 942' transform='rotate(-90 170 170)'/></svg>"
+                f"<div><div class='big yel num'>0%</div><div class='mid' style='font-size:48px'>{c['label']}</div></div></div>")
+    elif k == "bars":
+        bars = "".join(f"<div class='bar bar{j}'><b>{b['t']}</b><i></i><span>{b['q']}</span></div>" for j, b in enumerate(c["bars"]))
+        body = f"{kick}<div class='mid'>{c['title']}</div><div class='bars'>{bars}</div>"
+    elif k == "lanes":
+        lanes = "".join(f"<div class='lane'><div class='t'>{l['t']}</div><div class='track'><i id='c{i}l{j}' style='background:{l['c']};width:0'></i></div></div>"
+                        for j, l in enumerate(c["lanes"]))
+        body = f"{kick}<div class='mid'>{c['title']}</div><div style='margin-top:20px'>{lanes}</div><div class='sm' style='margin-top:10px'>{c.get('sub','')}</div>"
+    elif k == "timeline":
+        pts = "".join(f"<div class='pt p{j}' style='left:{q['x']}%'><div class='dot'></div><b>{q['t']}</b><span>{q['s']}</span></div>"
+                      for j, q in enumerate(c["pts"]))
+        body = f"{kick}<div class='mid'>{c['title']}</div><div class='tl'><div class='line'><i></i></div>{pts}</div>"
+    elif k == "checks":
+        items = "".join(f"<div class='check k{j}'><div class='box'>✓</div><div>{q['t']}</div></div>" for j, q in enumerate(c["items"]))
+        body = f"{kick}<div class='mid' style='margin-bottom:10px'>{c['title']}</div>{items}"
+    else:
+        body = c.get("html", "")
+    return f"<div class='card' id='c{i}'><div class='panel'>{body}{src}</div></div>"
+
+
+def build(spec):
+    raw = [w for s in json.load(open(spec["transcript"])) for w in s["words"]]
+    words = []
+    for a, b, t in raw:  # merge pieces without a leading space ("70" + "%")
+        if words and not t.startswith(" "):
+            words[-1][1] = b
+            words[-1][2] += t.strip()
+        else:
+            words.append([a, b, t.strip()])
+    for w in words:
+        for a, b in spec.get("fix", {}).items():
+            if w[2] == a:
+                w[2] = b
+    dur = spec["dur"]
+
+    def at(word, after=0.0, nth=1):
+        n = 0
+        for w in words:
+            if w[0] >= after and w[2].lower().strip(".,?!'\"") == word.lower():
+                n += 1
+                if n == nth:
+                    return w[0]
+        raise KeyError(word)
+
+    bgs, cards = spec["timeline"](at, dur)
+    data = {"dur": dur, "chunks": chunks(words), "bgs": [{"a": a, "b": b} for a, b, _ in bgs], "cards": cards}
+    bg_html = "".join(f"<div class='bg' id='bg{i}' style=\"background-image:url('{b64(p)}')\"></div>" for i, (_, _, p) in enumerate(bgs))
+    body = (bg_html + "<div class='shade'></div>" + "".join(card_html(i, c) for i, c in enumerate(cards)) +
+            "<div class='brand'><b>@</b>defi_ring_master</div><div class='prog'><i id='prog'></i></div><div class='cap' id='cap'></div>")
+    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{CSS}</style></head><body>{body}"
+            f"<script>{JS.replace('__DATA__', json.dumps(data))}</script></body></html>")
+
+
+async def render(spec, out, preview=None):
+    page = build(spec)
+    async with async_playwright() as p:
+        b = await p.chromium.launch()
+        pg = await b.new_page(viewport={"width": 1080, "height": 1920})
+        await pg.set_content(page, wait_until="load")
+        await pg.wait_for_timeout(400)
+        if preview:
+            shots = []
+            for t in preview:
+                await pg.evaluate(f"render({t})")
+                f = f"/tmp/claude-test/viral_{t}.png"
+                await pg.screenshot(path=f)
+                shots.append(f)
+            await b.close()
+            return shots
+        frames = Path("/tmp/viral_frames")
+        shutil.rmtree(frames, ignore_errors=True)
+        frames.mkdir()
+        for i in range(int(spec["dur"] * FPS)):
+            await pg.evaluate(f"render({i / FPS})")
+            await pg.screenshot(path=str(frames / f"{i:05d}.jpg"), type="jpeg", quality=90)
+        await b.close()
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-framerate", str(FPS), "-i", str(frames / "%05d.jpg"),
+                    "-i", str(spec["audio"]), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "20",
+                    "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", str(out)], check=True)
+    return str(out)
+
+
+def ram_spec():
+    A = ROOT / "assets" / "viral" / "ram"
+
+    def timeline(at, dur):
+        t_phone = at("firing")
+        t_why = at("why")
+        t_dc = at("swallowing")
+        t_idc = at("idc")
+        t_sell = at("sell")
+        t_expl = at("exploded")
+        t_pocket = at("pocket")
+        t_100 = at("under")
+        t_mea = at("middle")
+        t_wait = at("wait")
+        t_buy = at("buy", t_wait)
+        t_follow = at("follow")
+        bgs = [(-1, t_phone - .2, A / "ram.jpg"), (t_phone - .4, t_dc - .2, A / "phone.jpg"),
+               (t_dc - .4, t_pocket - .2, A / "datacenter.jpg"), (t_pocket - .4, t_mea - .2, A / "phone.jpg"),
+               (t_mea - .4, t_wait - .2, A / "market.jpg"), (t_wait - .4, dur, A / "datacenter.jpg")]
+        cards = [
+            {"kind": "price", "a": -1, "b": t_phone - .1, "strike": 4.9, "kick": "32GB DDR5 memory kit",
+             "was_label": "October 2025", "was": "$117", "now_label": "A few months later", "now": "$439",
+             "delta": "+275%", "src": "Tom's Guide, via Startup Fortune"},
+            {"kind": "donut", "a": t_idc - .2, "b": t_sell - .1, "pct": 70, "kick": "2026 estimate",
+             "label": "of all memory chips go to data centers", "src": "IDC"},
+            {"kind": "lanes", "a": t_sell, "b": t_expl - .1, "kick": "Who gets chips first", "title": "AI pays more. AI goes first.",
+             "lanes": [{"t": "AI data centers", "v": 100, "c": "#FFD84D"}, {"t": "Your phone", "v": 30, "c": "#FF4D4D"}],
+             "sub": "Everyone else gets what's left."},
+            {"kind": "bars", "a": t_expl, "b": t_pocket - .1, "kick": "Memory contract prices, quarter on quarter",
+             "title": "Prices exploded", "max": 95,
+             "bars": [{"t": "+50%", "v": 50, "q": "Q4 '25"}, {"t": "+95%", "v": 95, "q": "Q1 '26"},
+                      {"t": "+63%", "v": 63, "q": "Q2 '26"}], "src": "TrendForce (upper estimates)"},
+            {"kind": "count", "a": t_pocket + .6, "b": t_100 - .3, "pre": "+", "to": 14, "post": "%", "kick": "Average smartphone price",
+             "label": "more expensive in 2026", "sub": "A record ~$523 average", "src": "IDC"},
+            {"kind": "stat", "a": t_100 - .2, "b": t_mea - .1, "value": "<span class='strike' style='--s:1'>$99</span>",
+             "kick": "Budget phones", "label": "Phones under $100 could disappear", "sub": "\"Permanently uneconomical\"",
+             "src": "IDC, via TechCrunch", "cls": ""},
+            {"kind": "count", "a": t_mea, "b": t_wait - .1, "pre": "−", "to": 20, "post": "%+", "kick": "Middle East & Africa",
+             "label": "phone sales could fall", "sub": "Steepest drop of any region", "src": "IDC, via TechCrunch"},
+            {"kind": "timeline", "a": t_wait, "b": t_buy - .1, "kick": "When does it end?", "title": "Don't wait for a price drop",
+             "pts": [{"x": 12, "t": "Now", "s": "prices still rising"}, {"x": 50, "t": "Mid-2027", "s": "IDC: prices calm"},
+                     {"x": 88, "t": "2030+", "s": "SK Hynix CEO: could last"}], "src": "IDC · Bloomberg"},
+            {"kind": "checks", "a": t_buy - .2, "b": t_follow - .1, "kick": "If you need a new device", "title": "Do this",
+             "items": [{"t": "Buy the storage you'll need for years", "d": .3},
+                       {"t": "Look at certified refurbished", "d": at("certified") - t_buy + .2}]},
+            {"kind": "html", "a": t_follow - .1, "b": dur + 1,
+             "html": "<div class='kick'>Follow</div><div class='mid'>@defi_ring_master</div><div class='sm' style='margin-top:14px'>AI stories that hit your pocket.</div>"},
+        ]
+        return bgs, cards
+
+    import soundfile as sf
+    audio = A / "voice.mp3"
+    wav = Path("/home/claude/money_audio/ram.wav")
+    info = sf.info(str(wav))
+    return {"transcript": A / "voice.json", "audio": audio, "dur": info.frames / info.samplerate + 0.6,
+            "timeline": timeline, "fix": {}}
+
+
+SPECS = {"ram": ram_spec}
+
+if __name__ == "__main__":
+    name = sys.argv[1]
+    spec = SPECS[name]()
+    pv = [float(x) for x in sys.argv[2:]]
+    out = ROOT / "assets" / "reels" / f"viral-{name}.mp4"
+    print(asyncio.run(render(spec, out, pv or None)))

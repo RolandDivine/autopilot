@@ -500,8 +500,41 @@ def usbtc_spec():
     return std("usbtc", timeline, {"Explain": "Explained"})
 
 
+def fakes_spec():
+    A = ROOT / "assets" / "viral" / "fakes"
+
+    def timeline(at, dur):
+        t_showed, t_came, t_team, t_meta = at("showed"), at("came"), at("team"), at("meta")
+        t_spot, t_confirm, t_follow = at("spot"), at("confirm"), at("follow")
+        bgs = [(-1, t_showed, A / "magnifier.jpg"), (t_showed - .2, t_spot, GEN / "phone-glow.jpg"),
+               (t_spot - .2, dur, A / "magnifier.jpg")]
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_showed - .1, "kick": "Instagram · October 2026", "value": "FAKE", "cls": "red",
+             "label": "An AI selfie of actress Mia Goth got hundreds of thousands of likes", "src": "IBTimes, The Verge"},
+            {"kind": "html", "a": t_showed, "b": t_came - .1,
+             "html": "<div class='kick'>What it showed</div><div class='mid'>Her, in a T-shirt mocking her ex</div>"
+                     "<div class='sm' style='margin-top:16px'>Days after her divorce filing made the news.</div>"},
+            {"kind": "stat", "a": t_came, "b": t_team - .1, "kick": "Posted by", "value": "Blue tick ✓", "cls": "yel",
+             "label": "a fan page with about a million followers", "sub": "Not her", "src": "IBTimes"},
+            {"kind": "html", "a": t_team, "b": t_meta - .1, "src": "Her representative, via The Verge",
+             "html": "<div class='kick'>Her team</div><div class='mid'>\"Mia Goth does not … engage in social media on any platform.\"</div>"},
+            {"kind": "stat", "a": t_meta, "b": t_spot - .1, "kick": "Meta's response", "value": "Removed", "cls": "grn",
+             "label": "for impersonating a public figure", "src": "Meta, via The Verge"},
+            {"kind": "checks", "a": t_spot, "b": t_confirm - .1, "kick": "Kobo's fake-check", "title": "How to spot a fake",
+             "items": [{"t": "Check who posted it. A blue tick ≠ the real person", "d": at("check") - t_spot},
+                       {"t": "Reverse image search with Google Lens", "d": at("run") - t_spot},
+                       {"t": "Find the story in a real news outlet", "d": at("look") - t_spot}]},
+            {"kind": "html", "a": t_confirm - .3, "b": t_follow - .1,
+             "html": "<div class='kick'>Kobo's rule</div><div class='mid'>Can't confirm it?<br><span class='red'>Don't share it.</span></div>"},
+            {"kind": "html", "a": t_follow - .1, "b": dur + 1, "html": FOLLOW.format("Stay smart about AI.")},
+        ]
+        return bgs, cards
+
+    return std("fakes", timeline, {"1": "One:", "2": "Two:", "3": "Three:"})
+
+
 SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec, "agents": agents_spec, "nomoney": nomoney_spec,
-         "usbtc": usbtc_spec}
+         "usbtc": usbtc_spec, "fakes": fakes_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

@@ -442,7 +442,33 @@ def agents_spec():
     return std("agents", timeline)
 
 
-SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec, "agents": agents_spec}
+def nomoney_spec():
+    A = ROOT / "assets" / "viral" / "nomoney"
+
+    def timeline(at, dur):
+        t_cb, t_so, t_s1, t_s4 = at("cb"), at("so"), at("step"), at("four")
+        t_10, t_follow = at("10", t_s4), at("follow")
+        bgs = [(-1, t_s1, A / "wallet.jpg"), (t_s1 - .2, t_s4, GEN / "phone-glow.jpg"), (t_s4 - .2, dur, GEN / "paper-robot.jpg")]
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_cb - .1, "kick": "Start a business with", "value": "$0", "cls": "yel",
+             "label": "Here's the way that actually works"},
+            {"kind": "stat", "a": t_cb, "b": t_so - .1, "kick": "Why startups die · No. 1 reason", "value": "1 in 3+", "cls": "red",
+             "label": "built something nobody needed", "src": "CB Insights startup post-mortems"},
+            {"kind": "checks", "a": t_so, "b": t_10 - .1, "kick": "The zero-money way", "title": "4 steps",
+             "items": [{"t": "Find a problem people already complain about", "d": t_s1 - t_so},
+                       {"t": "Sell it before you build it", "d": at("two") - t_so},
+                       {"t": "Deliver your first 10 by hand", "d": at("three") - t_so},
+                       {"t": "Then automate with free AI tools", "d": t_s4 - t_so}]},
+            {"kind": "stat", "a": t_10, "b": t_follow - .1, "kick": "Kobo's rule", "value": "10 > 0", "cls": "grn",
+             "label": "10 paying customers beat a perfect app with zero"},
+            {"kind": "html", "a": t_follow - .1, "b": dur + 1, "html": FOLLOW.format("Build smart, not expensive.")},
+        ]
+        return bgs, cards
+
+    return std("nomoney", timeline)
+
+
+SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec, "agents": agents_spec, "nomoney": nomoney_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

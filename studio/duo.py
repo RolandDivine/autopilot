@@ -27,6 +27,7 @@ TOTAL_PARTS = 5
 SLUG = "klaerus-part"
 SUBTITLE = "with Kobo &amp; Babe · a 5-part series"
 SOLO = False  # True: Kobo alone, centred and bigger
+BG = {}  # part -> background image path (generated scene), drawn full-bleed behind everything
 
 # (time the turn starts, speaker). K = Kobo (host), B = Babe (co-host)
 TURNS = {
@@ -255,6 +256,12 @@ def html(n, data):
 {bunny_svg('kobo', KOBO_COLORS)}{bunny_svg('babe', BABE_COLORS, bow=True)}
 <div class="name" style="left:208px;color:#B38600">Kobo</div><div class="name" style="right:210px;color:#6A4FC2">Babe</div>
 <div class="foot">@defi_ring_master · education, not financial advice</div>"""
+    if BG.get(n):
+        import base64
+        b64 = base64.b64encode(Path(BG[n]).read_bytes()).decode()
+        body = (f"<div style='position:absolute;inset:0;background:url(data:image/jpeg;base64,{b64}) center/cover'></div>"
+                "<div style='position:absolute;inset:0;background:linear-gradient(180deg,rgba(239,231,222,.55),rgba(239,231,222,.15) 45%,rgba(239,231,222,0))'></div>"
+                + body)
     if SOLO:
         body += ("<style>#babe,.name{display:none}#kobo{left:305px;top:1230px;transform:scale(1.25);transform-origin:50% 100%}.card{top:780px!important;z-index:3}#tail{left:516px!important}"
                  "</style>")

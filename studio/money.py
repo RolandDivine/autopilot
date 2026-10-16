@@ -17,7 +17,10 @@ duo.TOTAL_PARTS = 5
 duo.SLUG = "kobo-money-part"
 duo.SOLO = True
 duo.TURNS = {n: [(0.0, "K")] for n in range(1, 6)}
-duo.FIX = {r"\bAdjo,": "Ajo,", r"\bIsusu,": "esusu,", r"\bLegos\b": "Lagos"}
+duo.FIX = {r"\bAdjo,": "Ajo,", r"\bIsusu,": "esusu,", r"\bLegos\b": "Lagos", r"\bCobo\b": "Kobo", r"\bKubo\b": "Kobo",
+           r"\bKubo's": "Kobo's", r"\bNara\b": "naira", r"\bhow\b(?= money grows)": "her"}
+GEN = Path(__file__).resolve().parents[1] / "assets" / "gen"
+duo.BG = {3: GEN / "kobo-bg-mango.jpg", 5: GEN / "kobo-bg-phone.jpg"}
 duo.CARDS = {
     1: [(6.5, 12.4, "👥", "Same salary", "₦100,000 a month each"),
         (29.1, 38.9, "💡", "Pay yourself first", "Save before you spend, not after"),
@@ -28,6 +31,16 @@ duo.CARDS = {
         (25.0, 40.0, "🍛", "₦1,000 → ₦1,200", "Same money, fewer plates of jollof"),
         (40.3, 51.7, "🪜", "Step 1 save, step 2 grow", "Grow money faster than prices rise"),
         (51.9, 58.3, "📈", "Next: investing", "Follow so you don't miss it")],
+    3: [(6.6, 12.9, "🥭", "Buy the tree", "Not just the mangoes"),
+        (18.9, 28.8, "🌱", "Things that grow or pay you", "Money market funds · T-bills · shares"),
+        (28.8, 44.4, "🔁", "Compounding", "₦240,000 → ₦264,000 → interest on interest"),
+        (44.6, 54.8, "📏", "3 rules", "Understand it · spread it · be patient"),
+        (54.8, 60.1, "🏛️", "Next: the capital market", "Follow so you don't miss it")],
+    5: [(6.4, 13.9, "🚩", "\"Double your money in 30 days\"", "The classic bait"),
+        (25.4, 29.5, "🔺", "Ponzi scheme", "Old investors paid with new investors' money"),
+        (29.6, 48.3, "🛑", "4 red flags", "Guaranteed returns · hurry · recruit · unregistered"),
+        (48.6, 55.2, "🔎", "Check the regulator", "In Nigeria: the SEC"),
+        (55.2, 59.1, "✅", "Save · grow · protect", "Share this with someone who needs it")],
 }
 
 if __name__ == "__main__":

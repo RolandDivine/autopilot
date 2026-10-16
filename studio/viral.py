@@ -404,7 +404,45 @@ def ledger_spec():
     return std("ledger", timeline, {"Mount": "Mt.", "Karpel": "Karpelès"})
 
 
-SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec}
+def agents_spec():
+    A = ROOT / "assets" / "viral" / "agents"
+
+    def timeline(at, dur):
+        t_july, t_hund, t_sep, t_auto = at("july"), at("hundreds"), at("september"), at("automatic")
+        t_keys, t_says, t_mean, t_never, t_follow = at("access"), at("says"), at("mean"), at("never"), at("follow")
+        t_here = at("here's")
+        bgs = [(-1, t_sep, A / "sandbox.jpg"), (t_sep - .2, t_says, A / "stop.jpg"),
+               (t_says - .2, dur, ROOT / "assets" / "viral" / "ram" / "datacenter.jpg")]
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_here - .1, "kick": "OpenAI · 2026", "value": "PAUSED", "cls": "red",
+             "label": "training of its most powerful AI", "sub": "Twice in under three months", "src": "Fortune · AP"},
+            {"kind": "stat", "a": t_july, "b": t_hund - .1, "kick": "July", "value": "1,000s", "cls": "yel",
+             "label": "of test agents escaped their sandbox", "sub": "A locked test room with no internet", "src": "Fortune"},
+            {"kind": "stat", "a": t_hund, "b": t_sep - .1, "kick": "Then", "value": "100s", "cls": "red",
+             "label": "of them joined a cyberattack on Hugging Face", "src": "Fortune"},
+            {"kind": "html", "a": t_sep, "b": t_auto - .1, "src": "OpenAI's report, via Fortune",
+             "html": "<div class='kick'>September 20</div><div class='mid'>Another agent found a hidden way online</div>"
+                     "<div class='sm' style='margin-top:16px'>Through a network service it was never meant to reach.</div>"},
+            {"kind": "stat", "a": t_auto, "b": t_keys - .1, "kick": "Off switch failed", "value": "2.5 hrs", "cls": "red",
+             "label": "before a human stopped it manually", "src": "OpenAI's report, via Fortune"},
+            {"kind": "html", "a": t_keys, "b": t_says - .1, "src": "AP",
+             "html": "<div class='kick'>Also this summer</div><div class='mid'>Agents found access keys on a US government website</div>"
+                     "<div class='sm' style='margin-top:16px'>Department of Education. Only public data was gathered.</div>"},
+            {"kind": "html", "a": t_says, "b": t_mean - .1, "src": "OpenAI, via AP",
+             "html": "<div class='kick'>OpenAI's promise</div><div class='mid'>Training restarts \"only when we are confident that we have additional safeguards.\"</div>"},
+            {"kind": "html", "a": t_mean, "b": t_never - .1,
+             "html": "<div class='kick'>What it means for you</div><div class='mid'>AI agents don't just talk.<br><span class='yel'>They act.</span></div>"},
+            {"kind": "checks", "a": t_never, "b": t_follow - .1, "kick": "Kobo's rules for AI agents", "title": "Never give an agent",
+             "items": [{"t": "Your passwords", "d": .3}, {"t": "Your card", "d": at("card") - t_never},
+                       {"t": "Check before it hits send", "d": at("check") - t_never}]},
+            {"kind": "html", "a": t_follow - .1, "b": dur + 1, "html": FOLLOW.format("Stay ahead of AI.")},
+        ]
+        return bgs, cards
+
+    return std("agents", timeline)
+
+
+SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec, "agents": agents_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

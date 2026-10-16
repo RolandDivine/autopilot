@@ -533,8 +533,88 @@ def fakes_spec():
     return std("fakes", timeline, {"1": "One:", "2": "Two:", "3": "Three:"})
 
 
+def chatleak_spec():
+    A = ROOT / "assets" / "viral" / "chatleak"
+
+    def timeline(at, dur):
+        t_story, t_another, t_three = at("here's"), at("another"), at("three")
+        t_answer, t_banned, t_lesson = at("answer"), at("banned"), at("lesson")
+        t_so = at("three", t_lesson) - .9
+        t_out = at("kobo", 50)
+        bgs = [(-1, t_story, A / "whisper.jpg"), (t_story - .4, t_another, A / "fab.jpg"),
+               (t_another - .4, t_answer, A / "folder.jpg"), (t_answer - .4, t_lesson, A / "padlock.jpg"),
+               (t_lesson - .4, dur, A / "settings.jpg")]
+        src_aa = "Economist Korea, via Android Authority"
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_story - .1, "kick": "One of the most-asked AI questions on Google",
+             "value": "Is it safe?", "cls": "yel", "label": "to tell ChatGPT your secrets"},
+            {"kind": "html", "a": t_story, "b": t_another - .1, "src": src_aa,
+             "html": "<div class='kick'>True story · Samsung, 2023</div><div class='mid'>Engineers pasted secret source code into ChatGPT</div>"
+                     "<div class='sm' style='margin-top:16px'>To fix a bug.</div>"},
+            {"kind": "html", "a": t_another, "b": t_three - .1, "src": src_aa,
+             "html": "<div class='kick'>Then</div><div class='mid'>Someone pasted a whole <span class='red'>confidential meeting</span></div>"
+                     "<div class='sm' style='margin-top:16px'>To get the minutes.</div>"},
+            {"kind": "stat", "a": t_three, "b": t_answer - .1, "kick": "Samsung", "value": "3 leaks", "cls": "red",
+             "label": "in about 3 weeks", "sub": "Right after it allowed staff to use ChatGPT", "src": src_aa},
+            {"kind": "stat", "a": t_answer, "b": t_banned - .1, "kick": "Samsung's first fix", "value": "1,024 bytes", "cls": "yel",
+             "label": "max ChatGPT prompt size for staff", "src": src_aa},
+            {"kind": "stat", "a": t_banned, "b": t_lesson - .1, "kick": "Then, May 2023", "value": "BANNED", "cls": "red",
+             "label": "AI chatbots on company devices", "src": "Bloomberg"},
+            {"kind": "html", "a": t_lesson, "b": t_so - .1, "src": "OpenAI Help Center, Data Controls FAQ",
+             "html": "<div class='kick'>The lesson</div><div class='mid'>What you type can be stored</div>"
+                     "<div class='mid yel' style='margin-top:14px'>and, by default, used to train the model.</div>"},
+            {"kind": "checks", "a": t_so, "b": t_out - .1, "kick": "Kobo's 3 rules", "title": "Do this today",
+             "src": "OpenAI Help Center",
+             "items": [{"t": "Settings → Data controls → turn off \"Improve the model for everyone\"", "d": at("one", t_lesson) - t_so},
+                       {"t": "Use Temporary Chat for anything sensitive", "d": at("two", t_lesson) - t_so},
+                       {"t": "Never paste passwords, card or ID numbers, or client data", "d": at("three", t_so + 1) - t_so}]},
+            {"kind": "html", "a": t_out - .1, "b": dur + 1, "html": FOLLOW.format("AI, explained with real stories.")},
+        ]
+        return bgs, cards
+
+    return std("chatleak", timeline, {"chat": "Chat", "GPT": "GPT", "settings": "Settings", "temporary": "Temporary"})
+
+
+def ftx_spec():
+    A = ROOT / "assets" / "viral" / "ftx"
+
+    def timeline(at, dur):
+        t_story, t_nov, t_cust, t_its = at("here's"), at("november"), at("customers"), at("its")
+        t_twist, t_they, t_got = at("twist"), at("they"), at("got", at("so"))
+        t_lesson, t_keep, t_not, t_out = at("lesson"), at("keep", at("lesson")), at("not", at("lesson") + 3), at("kobo", 50)
+        bgs = [(-1, t_nov, A / "tower.jpg"), (t_nov - .4, t_cust, A / "ice.jpg"), (t_cust - .4, t_twist, A / "gavel.jpg"),
+               (t_twist - .4, t_lesson, A / "hourglass.jpg"), (t_lesson - .4, dur, A / "key.jpg")]
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_story + .9, "kick": "Asked on Google every day", "value": "Is it safe?", "cls": "yel",
+             "label": "to keep your crypto on an exchange?"},
+            {"kind": "html", "a": t_nov, "b": t_cust - .1,
+             "html": "<div class='kick'>True story · November 2022</div><div class='mid'>FTX, one of the world's biggest crypto exchanges,</div>"
+                     "<div class='mid red' style='margin-top:14px'>froze withdrawals.</div>"},
+            {"kind": "stat", "a": t_cust, "b": t_its - .1, "kick": "Customers couldn't touch their money", "value": "~$8B",
+             "cls": "red", "label": "of customer funds missing", "src": "US prosecutors, via AP"},
+            {"kind": "stat", "a": t_its, "b": t_twist - .1, "kick": "Founder Sam Bankman-Fried", "value": "25 years", "cls": "red",
+             "label": "in prison", "sub": "Sentenced March 2024", "src": "AP · NPR"},
+            {"kind": "stat", "a": t_twist, "b": t_they - .1, "kick": "The twist", "value": "118%", "cls": "grn",
+             "label": "paid back to customers", "sub": "Sounds great?", "src": "FTX bankruptcy plan, via The Defiant"},
+            {"kind": "price", "a": t_they, "b": t_lesson - .1, "strike": t_got - t_they, "kick": "If you had 1 bitcoin on FTX",
+             "was_label": "It's worth today", "was": "~$82,000", "now_label": "FTX paid you (Nov 2022 price × 118%)",
+             "now": "~$20,800", "delta": "You missed ~$61,000", "src": "CoinGecko prices · FTX plan"},
+            {"kind": "html", "a": t_lesson, "b": t_keep - .1,
+             "html": "<div class='kick'>The lesson</div><div class='mid'>On an exchange,<br><span class='yel'>they hold your keys.</span></div>"},
+            {"kind": "checks", "a": t_keep, "b": t_not - .1, "kick": "Kobo's rule", "title": "Do this",
+             "items": [{"t": "Keep only what you trade on an exchange", "d": .3},
+                       {"t": "Move long-term savings to a wallet only you control", "d": at("move") - t_keep}]},
+            {"kind": "html", "a": t_not, "b": t_out - .1,
+             "html": "<div class='mid'>Not your keys,<br><span class='red'>not your coins.</span></div>"},
+            {"kind": "html", "a": t_out - .1, "b": dur + 1, "html": FOLLOW.format("Crypto lessons from real stories.")},
+        ]
+        return bgs, cards
+
+    return std("ftx", timeline, {"Bitcoin": "bitcoin"})
+
+
 SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec, "agents": agents_spec, "nomoney": nomoney_spec,
-         "usbtc": usbtc_spec, "fakes": fakes_spec}
+         "usbtc": usbtc_spec, "fakes": fakes_spec, "chatleak": chatleak_spec, "ftx": ftx_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

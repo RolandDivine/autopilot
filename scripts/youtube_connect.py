@@ -31,4 +31,14 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        if not os.environ.get("YOUTUBE_CLIENT_SECRET"):
+            raise SystemExit("The YOUTUBE_CLIENT_SECRET Actions secret is missing or empty (Settings -> Secrets and variables -> Actions).")
+        main()
+    except SystemExit as e:
+        if e.code not in (0, None):
+            print(f"::error title=youtube connect failed::{e.code}")
+        raise
+    except Exception as e:  # never print the code or tokens, only the reason
+        print(f"::error title=youtube connect failed::{type(e).__name__}: {str(e)[:400]}".replace("\n", " "))
+        sys.exit(1)

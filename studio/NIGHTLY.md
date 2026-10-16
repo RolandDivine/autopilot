@@ -63,3 +63,11 @@ Exception (Roland, 16 Oct 2026): Kobo is the brand host of the viral explainer v
 Trend-led 40-65s Reels with on-screen evidence, one each across founders/building products, crypto and AI.
 Pipeline: research a trending story and verify facts in reputable sources → ElevenLabs voice (Oluwadamilare, VzScgb5Pi0A6lafMNQpm) → 1-2 Figma images → `python studio/viral_pull.py <name> <voice_url> <img_url>=<file>` → add a spec to `studio/viral.py` (cards name their sources) → preview frames, fix, render → captions in `queue/kobo/viral.json` (LinkedIn text short: a powerful hook + 1-2 lines + sources).
 Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key> [story]` posts the Instagram Reel, the LinkedIn video, the YouTube Short (channel "Building Gen12 with Roland", via youtube-publish) and, with `story`, an Instagram video story (only for videos up to 60s).
+
+## YouTube: "Trade Like an Institution" (Roland, 16 Oct 2026)
+- **Crypto only.** Non-crypto videos never go to YouTube (`"youtube": true` only on crypto entries; `post_video.py` skips the rest). Instagram and LinkedIn are unchanged.
+- **Shorts = Daily Market Read**, every day: `market` workflow (05:15 UTC, CoinGecko) → `python studio/market_short.py script <date>` → ElevenLabs voice → `viral_pull.py market-<date> <url>` → `market_short.py render <date>`. Playlist "Daily Market Read".
+- **Scenario analysis only:** levels, "if it closes above X, next level Y; lose Z and the idea is wrong". Never "buy/sell", never leverage or position size advice. Always "Scenarios, not signals. Education, not financial advice." Post a weekly recap of which setups played out and which failed.
+- **Landscape videos = how-tos** (apps, exchanges, wallets, TradingView), trading like an institution (risk, sizing, funding, open interest), crypto terms explained. Roland will also send screen recordings (Google Drive or the desktop link) for editing.
+- **Voice (worldwide audience, all new videos on every platform):** ElevenLabs "Jon - Catalyst" `dSByRdUbTGloB7TFA1qD` until Roland picks from samples A/B/C in `assets/voices/`. No Nigerian voice from now on.
+- Playlists: Daily Market Read, How To: Crypto Apps & Tools, Trade Like an Institution, Crypto Terms Explained, Crypto Safety. Manage the channel with `youtube-admin` (never delete; set private instead).

@@ -25,6 +25,8 @@ def run(wf, fields):
     return wf, r["conclusion"], " | ".join(notes) or r["html_url"]
 import re
 def yt():
+    if not d.get("youtube"):  # Roland, 16 Oct: YouTube is crypto-only
+        return ("youtube", "skipped (not crypto)", "")
     desc = re.sub(r"\n?📤.*\n?📌.*\n", "\n", d["reel_caption"]).strip() + "\n\nFollow for more: Instagram @defi_ring_master · LinkedIn Roland Divine"
     tags = ",".join(re.findall(r"#(\w+)", d["reel_caption"])) or "ai,crypto"
     res = run("youtube-publish.yml", {"paths": d["video"], "title": (d["title"][:90] + " #Shorts"), "description": desc, "tags": tags, "privacy": "public"})

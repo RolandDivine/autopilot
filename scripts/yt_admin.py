@@ -33,7 +33,11 @@ out = []
 
 def say(title, data):
     out.append(f"### {title}\n```json\n{json.dumps(data, indent=1, ensure_ascii=False)[:60000]}\n```")
-    print(f"::notice title={title}::{json.dumps(data, ensure_ascii=False)[:900]}")
+    txt = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+    parts = [txt[i:i + 3000] for i in range(0, len(txt), 3000)][:30]
+    for n, part in enumerate(parts):  # annotations are how results are read back (max 10 per level)
+        lvl = ("notice", "warning", "error")[n // 10]
+        print(f"::{lvl} title={title} {n + 1}/{len(parts)}::{part}")
 
 
 def uploads():

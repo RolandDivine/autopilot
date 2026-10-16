@@ -26,7 +26,7 @@
   "bias": "bearish",
   "score": -2,
   "trigger": 79800.0,
-  "target": 75200.0,
+  "target": 77800.0,
   "invalid": 84200.0,
   "candles": [
    [
@@ -457,10 +457,9 @@
   }
  },
  "picks": [
-  "USDG",
-  "TRX",
   "XMR",
-  "LEO"
+  "BNB",
+  "BCH"
  ],
  "coins": [
   {
@@ -483,7 +482,7 @@
    "bias": "bearish",
    "score": -2,
    "trigger": 79800.0,
-   "target": 75200.0,
+   "target": 77800.0,
    "invalid": 84200.0,
    "candles": [
     [
@@ -1833,7 +1832,7 @@
    "bias": "bearish",
    "score": -2,
    "trigger": 1.29,
-   "target": 1.239,
+   "target": 1.25,
    "invalid": 1.42,
    "candles": [
     [
@@ -2733,7 +2732,7 @@
    "bias": "bullish",
    "score": 4,
    "trigger": 0.3359,
-   "target": 0.3492,
+   "target": 0.3396,
    "invalid": 0.3269,
    "candles": [
     [
@@ -4979,7 +4978,7 @@
    "bias": "bullish",
    "score": 4,
    "trigger": 569.8,
-   "target": 630.5,
+   "target": 592.4,
    "invalid": 514.9,
    "candles": [
     [
@@ -5429,7 +5428,7 @@
    "bias": "bearish",
    "score": -2,
    "trigger": 11.83,
-   "target": 10.62,
+   "target": 11.24,
    "invalid": 13.49,
    "candles": [
     [
@@ -6329,7 +6328,7 @@
    "bias": "bearish",
    "score": -2,
    "trigger": 0.2175,
-   "target": 0.1905,
+   "target": 0.2064,
    "invalid": 0.259,
    "candles": [
     [
@@ -6779,7 +6778,7 @@
    "bias": "bullish",
    "score": 4,
    "trigger": 9.05,
-   "target": 9.093,
+   "target": 9.1,
    "invalid": 8.65,
    "candles": [
     [
@@ -8575,7 +8574,7 @@
    "bias": "bullish",
    "score": 3,
    "trigger": 288.3,
-   "target": 365.1,
+   "target": 301.6,
    "invalid": 257.7,
    "candles": [
     [
@@ -10825,7 +10824,7 @@
    "bias": "bearish",
    "score": -3,
    "trigger": 0.1035,
-   "target": 0.08894,
+   "target": 0.09639,
    "invalid": 0.1303,
    "candles": [
     [
@@ -12175,7 +12174,7 @@
    "bias": "bullish",
    "score": 2,
    "trigger": 4210.0,
-   "target": 4390.0,
+   "target": 4260.0,
    "invalid": 4080.0,
    "candles": [
     [
@@ -12625,7 +12624,7 @@
    "bias": "bullish",
    "score": 2,
    "trigger": 301.6,
-   "target": 340.7,
+   "target": 317.8,
    "invalid": 256.5,
    "candles": [
     [
@@ -13521,7 +13520,7 @@
    "bias": "bearish",
    "score": -2,
    "trigger": 4.86e-06,
-   "target": 4.674e-06,
+   "target": 4.75e-06,
    "invalid": 5.55e-06,
    "candles": [
     [
@@ -13971,7 +13970,7 @@
    "bias": "bearish",
    "score": -2,
    "trigger": 192.1,
-   "target": 58.84,
+   "target": 175.5,
    "invalid": 256.0,
    "candles": [
     [

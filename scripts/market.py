@@ -82,14 +82,12 @@ def analyse(m, candles):
     score -= 1 if near_lo and score < 0 else 0
     vm = (m.get("total_volume") or 0) / max(m.get("market_cap") or 1, 1)
     bias = "bullish" if score >= 2 else "bearish" if score <= -2 else "range"
-    if bias == "bullish":
-        trigger, target, invalid = hi7, max(hi30, hi7 + 2 * a), min(e50, lo7)
-        if target <= trigger * 1.01:
-            target = trigger + 2 * a
+    if bias == "bullish":  # next level: the 30-day high if it is within reach, else 2 ATR
+        trigger, invalid = hi7, min(e50, lo7)
+        target = hi30 if trigger + a < hi30 <= trigger + 4 * a else trigger + 2 * a
     elif bias == "bearish":
-        trigger, target, invalid = lo7, min(lo30, lo7 - 2 * a), max(e50, hi7)
-        if target >= trigger * 0.99:
-            target = trigger - 2 * a
+        trigger, invalid = lo7, max(e50, hi7)
+        target = lo30 if trigger - 4 * a <= lo30 < trigger - a else trigger - 2 * a
     else:
         trigger, target, invalid = hi7, lo7, None
     return {"id": m["id"], "symbol": m["symbol"].upper(), "name": m["name"], "price": price,
@@ -100,6 +98,17 @@ def analyse(m, candles):
             "bias": bias, "score": score, "trigger": rnd(trigger), "target": rnd(target),
             "invalid": rnd(invalid) if invalid else None,
             "candles": [[k[0], k[1], k[2], k[3], k[4]] for k in candles[-60:]]}
+
+
+def tradable(x):
+    """Liquid perpetual market and real volatility: drops stablecoins, gold tokens and thin exchange tokens."""
+    oi = (x.get("futures") or {}).get("open_interest_usd") or 0
+    return x["symbol"] != "BTC" and oi >= 300e6 and x["atr"] / x["price"] >= 0.008
+
+
+def pick(res, n=3):
+    return sorted([x for x in res if tradable(x) and x["bias"] != "range"],
+                  key=lambda x: (abs(x["score"]), (x.get("futures") or {}).get("open_interest_usd") or 0), reverse=True)[:n]
 
 
 def futures():
@@ -125,7 +134,7 @@ def main():
     g = get("global")["data"]
     mk = get("coins/markets", vs_currency="usd", order="market_cap_desc", per_page=80, page=1,
              price_change_percentage="24h,7d,30d")
-    coins = [m for m in mk if m["symbol"].lower() not in STABLE and not any(w in m["id"] for w in WRAPPED)][:int(os.environ.get("N", "35"))]
+    coins = [m for m in mk if m["symbol"].lower() not in STABLE and not any(w in m["id"] for w in WRAPPED)][:int(os.environ.get("N", "30"))]
     fut = futures()
     res = []
     for m in coins:
@@ -137,10 +146,9 @@ def main():
                 res.append(a)
         except Exception as e:
             print(f"::warning title={m['id']}::{e}")
-        time.sleep(float(os.environ.get("SLEEP", "4")))
+        time.sleep(float(os.environ.get("SLEEP", "6")))
     btc = next((x for x in res if x["symbol"] == "BTC"), None)
-    picks = sorted([x for x in res if x["symbol"] != "BTC" and x["bias"] != "range"],
-                   key=lambda x: (abs(x["score"]), x["vol_mcap"]), reverse=True)[:4]
+    picks = pick(res)
     out = {"date": today, "generated": dt.datetime.utcnow().isoformat(timespec="minutes") + "Z",
            "global": {"mcap_usd": g["total_market_cap"]["usd"], "mcap_chg24": g["market_cap_change_percentage_24h_usd"],
                       "btc_dom": g["market_cap_percentage"]["btc"]},

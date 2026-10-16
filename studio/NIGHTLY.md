@@ -26,6 +26,12 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
 - **Daily 9 PM teaser (Roland, 15 Oct):** one "Do you know…?" question on a generated image, posted as an Instagram feed post (slot `2100.json`, Instagram only) and as the 9 PM story. It teases tomorrow's 8 AM post, so pick tomorrow's 8 AM topic first. Rules and the log are in `studio/teasers.md`: before writing the 8 AM post, check what yesterday's teaser promised and answer it exactly.
 - Template: `studio/days/day5.py` (builds slots, covers, carousels and stories in one go).
 
+## Notion HQ and messages (Roland, 16 Oct 2026: "too scattered, organize it")
+- Everything lives in Notion: page "Autopilot HQ" (https://app.notion.com/p/3fb0e9f9cf9f813b9c55eecc3f91555b) with the **Content Calendar** database (data source `collection://f324bb97-ecd6-48da-81dd-1d766c61fbc0`; columns Post, When, Platforms, Format, Pillar, Status, Instagram, LinkedIn, YouTube, Notes).
+- Nightly build: add a row (Status = Scheduled) for every post and video booked for tomorrow.
+- Every posting run: update that row (Status Posted/Failed + links). **Do not message Roland after a posting run unless something failed.**
+- The nightly build sends ONE evening message: tomorrow's plan (titles + times), today's results in one line, and the Notion link.
+
 ## Steps
 1. **Repo:** if `/home/claude/autopilot` is missing, call add_repo (RolandDivine/autopilot, push), clone it there, and call register_repo_root. Run `git pull`.
 2. **Tomorrow:** N = (tomorrow − 2026-10-12) + 1. If `queue/<tomorrow>/` already has 3 slot files, skip to step 7. After Day 150 (10 Mar 2027), tell Roland the plan has ended and stop.
@@ -37,11 +43,11 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
 4. **Content:** copy `studio/days/day5.py` to `dayN.py`, generate 3 cover images, rewrite the copy, run it.
 5. **Check:** build contact sheets and look at every slide and story. Fix any overflow, clipped text or wrong counter.
 6. **Slots:** `dayN.py` writes `queue/<tomorrow>/{0800,1300,1900,2100}.json` and `stories.json`. LinkedIn and Instagram both on in all three slots. Instagram caption: 3–5 hashtags and a 📌 save / 📤 send line. Lint all slots and stories (`autopilot.lint.lint_stories(folder)`), fix every FAIL. Commit "Day N queue" and push. Confirm the review issue opened.
-7. **Tell Roland (SendUserMessage):** the three titles and times, the search demand behind each topic, yesterday's Instagram numbers, the story times, and the review issue link. Send the three covers with SendUserFile. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
+7. **Tell Roland (one SendUserMessage, the only routine message of the day; also add tomorrow's rows to the Notion Content Calendar):** the three titles and times, the search demand behind each topic, yesterday's Instagram numbers, the story times, and the review issue link. Send the three covers with SendUserFile. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
 8. **Book tomorrow's run:** call send_later at 18:10 UTC the next day with the message:
    "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."
    Don't skip this step: it is what keeps the nightly run going.
-9. **Book tomorrow's posting runs** (GitHub's own timer runs hours late): call send_later at 07:01, 08:01, 10:01, 12:01, 13:01, 16:01, 18:01 and 20:01 UTC the next day, each asking to dispatch the post workflow (`gh api -X POST repos/RolandDivine/autopilot/actions/workflows/post.yml/dispatches -f ref=main -F 'inputs[dry_run]=false'`), wait for it, and check `log/posted.jsonl`. For 07:01, 12:01 and 18:01, tell Roland the links and the music pick; for the story runs, only message him if something failed.
+9. **Book tomorrow's posting runs** (GitHub's own timer runs hours late): call send_later at 07:01, 08:01, 10:01, 12:01, 13:01, 16:01, 18:01 and 20:01 UTC the next day, each asking to dispatch the post workflow (`gh api -X POST repos/RolandDivine/autopilot/actions/workflows/post.yml/dispatches -f ref=main -F 'inputs[dry_run]=false'`), wait for it, and check `log/posted.jsonl`. After each run, update the post's row in the Notion Content Calendar (Status + links). Only message Roland if something failed.
 
 ## Music (Roland's request, 13 Oct 2026)
 The Instagram API can't attach music to carousels (only to Reels, and only with Facebook Login), so Roland adds it in the app after each post goes out.

@@ -103,9 +103,9 @@ def chart_svg(c, w=840, h=640):
             continue
         yy = y(v)
         body.append(f"<line x1='0' x2='{w - 140}' y1='{yy:.1f}' y2='{yy:.1f}' stroke='{col}' stroke-width='3' stroke-dasharray='12 8'/>")
-        body.append(f"<rect x='{w - 138}' y='{yy - 26:.1f}' width='138' height='52' rx='12' fill='{col}'/>")
-        body.append(f"<text x='{w - 69}' y='{yy - 2:.1f}' text-anchor='middle' font-size='19' font-weight='800' fill='#07080B' font-family='Jakarta'>{lab}</text>")
-        body.append(f"<text x='{w - 69}' y='{yy + 19:.1f}' text-anchor='middle' font-size='19' font-weight='700' fill='#07080B' font-family='Jakarta'>{money(v)}</text>")
+        body.append(f"<rect x='{w - 138}' y='{yy - 30:.1f}' width='138' height='60' rx='12' fill='{col}'/>")
+        body.append(f"<text x='{w - 69}' y='{yy - 4:.1f}' text-anchor='middle' font-size='22' font-weight='800' fill='#07080B' font-family='Jakarta'>{lab}</text>")
+        body.append(f"<text x='{w - 69}' y='{yy + 21:.1f}' text-anchor='middle' font-size='22' font-weight='700' fill='#07080B' font-family='Jakarta'>{money(v)}</text>")
     py = y(c["price"])
     body.append(f"<circle cx='{10 + (len(cs) - .5) * cw:.1f}' cy='{py:.1f}' r='9' fill='#fff'/>")
     return f"<svg width='{w}' height='{h}' viewBox='0 0 {w} {h}'>{''.join(body)}</svg>"
@@ -157,8 +157,8 @@ def spec(date):
         t_btc = at("bitcoin", nth=2)
         starts = [t_btc]
         after = t_btc + 1
-        for _ in plan["coins"][1:]:
-            s = at("next", after)
+        for sym in plan["coins"][1:]:
+            s = at(coins[sym]["name"].split()[0].lower().strip(".,"), after) - .7  # "Next, <name>"
             starts.append(s)
             after = s + 1
         t_end = at("scenarios", after)

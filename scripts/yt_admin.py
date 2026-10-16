@@ -65,7 +65,7 @@ def upload_media(url, path, mime, params):
     return r.json() if r.text else {}
 
 
-for o in json.loads(os.environ.get("OPS") or "[]"):
+def run(o):
     op = o["op"]
     if op == "list_videos":
         say("videos", [{"id": v["id"], "title": v["snippet"]["title"], "privacy": v["status"]["privacyStatus"],
@@ -151,5 +151,15 @@ for o in json.loads(os.environ.get("OPS") or "[]"):
     else:
         raise SystemExit(f"unknown op {op}")
 
+failed = False
+for o in json.loads(os.environ.get("OPS") or "[]"):
+    try:
+        run(o)
+    except Exception as e:
+        failed = True
+        print(f"::error title={o.get('op')} failed::{type(e).__name__}: {str(e)[:900]}".replace("\n", " "))
+        break
+
 with open(os.environ.get("GITHUB_STEP_SUMMARY", "/dev/null"), "a") as f:
     f.write("\n\n".join(out))
+sys.exit(1 if failed else 0)

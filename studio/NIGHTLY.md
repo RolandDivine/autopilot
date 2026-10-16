@@ -57,3 +57,8 @@ restructured document before writing any Klærus content.
 Kobo animated videos are strictly for storytelling content: story-led videos like Kobo's Money Story.
 They can go out as Instagram Reels and as LinkedIn videos, but are never used for news or plain how-tos.
 Kobo alone for a solo script; Kobo and Babe together for a duo script.
+Exception (Roland, 16 Oct 2026): Kobo is the brand host of the viral explainer videos (`studio/viral.py`): he opens with "Hey, Kobo here" and appears lip-synced in the corner.
+
+## Viral explainer videos (Roland, 16 Oct 2026)
+Trend-led 40-65s Reels with on-screen evidence, one each across founders/building products, crypto and AI.
+Pipeline: research a trending story and verify facts in reputable sources → ElevenLabs voice (Oluwadamilare, VzScgb5Pi0A6lafMNQpm) → 1-2 Figma images → `python studio/viral_pull.py <name> <voice_url> <img_url>=<file>` → add a spec to `studio/viral.py` (cards name their sources) → preview frames, fix, render → captions in `queue/kobo/viral.json` (LinkedIn text short: a powerful hook + 1-2 lines + sources).

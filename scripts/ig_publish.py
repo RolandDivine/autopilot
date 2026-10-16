@@ -1,6 +1,6 @@
 """Publish repo images to Instagram by hand (Actions -> instagram-publish).
 
-    KIND=stories  PATHS="assets/stories/start-here-1.jpg assets/stories/start-here-2.jpg"
+    KIND=stories  PATHS="assets/stories/start-here-1.jpg assets/reels/clip.mp4"  (images, or MP4s up to 60s)
     KIND=post     PATHS="a-1.jpg a-2.jpg"  CAPTION="..."
     KIND=reel     PATHS="assets/reels/video.mp4"  CAPTION="..."
 """

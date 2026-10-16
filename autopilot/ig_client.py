@@ -106,8 +106,12 @@ class InstagramClient:
         if self.dry_run:
             print("[dry-run] Instagram story:", image_url)
             return "DRYRUN"
-        cid = self._req("post", f"{self.user_id}/media", data={"image_url": image_url, "media_type": "STORIES"})["id"]
-        self._wait(cid)
+        if image_url.lower().endswith(".mp4"):  # video story, 3-60 seconds
+            cid = self._req("post", f"{self.user_id}/media", data={"video_url": image_url, "media_type": "STORIES"})["id"]
+            self._wait(cid, tries=90)
+        else:
+            cid = self._req("post", f"{self.user_id}/media", data={"image_url": image_url, "media_type": "STORIES"})["id"]
+            self._wait(cid)
         return self._publish(cid)
 
     def publish_reel(self, video_url, caption, share_to_feed=True):

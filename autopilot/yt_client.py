@@ -21,7 +21,8 @@ from . import ROOT, load_config
 
 FILE = ROOT / "secrets" / "youtube.enc"
 REDIRECT = "https://github.com/RolandDivine/autopilot"
-SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly"
+SCOPES = " ".join("https://www.googleapis.com/auth/" + s for s in [
+    "youtube", "youtube.force-ssl", "youtube.upload", "youtube.readonly", "yt-analytics.readonly"])
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 
 
@@ -89,6 +90,13 @@ class YouTubeClient:
         if not r.ok:
             raise YouTubeError(f"sign-in refresh failed (reconnect with youtube-connect): HTTP {r.status_code} {r.text[:300]}")
         self.h = {"Authorization": f"Bearer {r.json()['access_token']}"}
+
+    def api(self, method, path, params=None, body=None, base=None):
+        r = requests.request(method, f"{base or self.API}/{path}", headers=self.h, params=params or {},
+                             json=body, timeout=60)
+        if not r.ok:
+            raise YouTubeError(f"{method} {path}: HTTP {r.status_code} {r.text[:400]}")
+        return r.json() if r.text else {}
 
     def channel(self):
         r = requests.get(f"{self.API}/channels", headers=self.h, timeout=30, params={"part": "snippet", "mine": "true"})

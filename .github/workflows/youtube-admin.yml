@@ -1,0 +1,31 @@
+name: youtube-admin
+
+# Manage the YouTube channel: list videos, privacy, titles, channel profile, playlists,
+# home page sections, banner, watermark, captions, analytics, comments. See scripts/yt_admin.py.
+# It never deletes videos.
+on:
+  workflow_dispatch:
+    inputs:
+      ops:
+        description: 'JSON list of operations, e.g. [{"op":"list_videos"}]'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  admin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/yt_admin.py
+        env:
+          OPS: ${{ inputs.ops }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}

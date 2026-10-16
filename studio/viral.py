@@ -468,7 +468,40 @@ def nomoney_spec():
     return std("nomoney", timeline)
 
 
-SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec, "agents": agents_spec, "nomoney": nomoney_spec}
+def usbtc_spec():
+    A = ROOT / "assets" / "viral" / "usbtc"
+
+    def timeline(at, dur):
+        t_here, t_oct, t_day, t_but = at("here's"), at("on"), at("earlier"), at("but")
+        t_march, t_cd, t_lesson, t_follow = at("march"), at("coindesk"), at("lesson"), at("follow")
+        bgs = [(-1, t_but, A / "vault.jpg"), (t_but - .2, t_lesson, GEN / "black-cube.jpg"), (t_lesson - .2, dur, A / "vault.jpg")]
+        cards = [
+            {"kind": "stat", "a": -1, "b": t_here - .1, "kick": "US government · Oct 2026", "value": "$1B+", "cls": "yel",
+             "label": "of seized bitcoin just moved. About to dump?", "src": "CoinDesk, Arkham data"},
+            {"kind": "stat", "a": t_oct, "b": t_day - .4, "kick": "October 8", "value": "12,267 BTC", "cls": "yel",
+             "label": "from the 2016 Bitfinex hack seizure → a new wallet", "sub": "Not to an exchange", "src": "CoinDesk, Arkham data"},
+            {"kind": "stat", "a": t_day - .3, "b": t_but - .1, "kick": "A day earlier", "value": "~3,200 BTC", "cls": "red",
+             "label": "went to Coinbase Prime", "sub": "Sounds scary…", "src": "CoinDesk"},
+            {"kind": "html", "a": t_but, "b": t_march - .1,
+             "html": "<div class='kick'>But</div><div class='mid'>Coinbase Prime is also a custodian.</div>"
+                     "<div class='mid yel' style='margin-top:14px'>A safe, not just a selling desk.</div>"},
+            {"kind": "html", "a": t_march, "b": t_cd - .1, "src": "CoinDesk",
+             "html": "<div class='kick'>March 2025 executive order</div><div class='mid'>Seized bitcoin goes into a Strategic Bitcoin Reserve</div>"
+                     "<div class='mid grn' style='margin-top:14px'>and should not be sold.</div>"},
+            {"kind": "stat", "a": t_cd, "b": t_lesson - .1, "kick": "CoinDesk's read", "value": "Reshuffling", "cls": "grn",
+             "label": "not selling", "src": "CoinDesk"},
+            {"kind": "checks", "a": t_lesson, "b": t_follow - .1, "kick": "Kobo's rule", "title": "Before you panic sell",
+             "items": [{"t": "A big wallet move is not a sale", "d": at("big") - t_lesson},
+                       {"t": "Check where the coins went", "d": at("check") - t_lesson}]},
+            {"kind": "html", "a": t_follow - .1, "b": dur + 1, "html": FOLLOW.format("Crypto, explained straight.")},
+        ]
+        return bgs, cards
+
+    return std("usbtc", timeline, {"Explain": "Explained"})
+
+
+SPECS = {"ram": ram_spec, "solo": solo_spec, "ledger": ledger_spec, "agents": agents_spec, "nomoney": nomoney_spec,
+         "usbtc": usbtc_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

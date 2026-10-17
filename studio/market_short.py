@@ -5,7 +5,7 @@ Scenario analysis only: levels, "if / then", and where the idea is invalid. Neve
     python market_short.py script [date]       -> queue/market/<date>/script.txt (voiceover text) + plan.json
     python market_short.py render [date] [secs...] -> assets/reels/market-<date>.mp4 (or preview PNGs)
 
-Voice: ElevenLabs "Jon - Catalyst" (dSByRdUbTGloB7TFA1qD), worldwide audience. Pull + transcribe with
+Voice: ElevenLabs "Oluwadamilare" (VzScgb5Pi0A6lafMNQpm), the FTX and hardware-wallet video voice (Roland, 17 Oct). Pull + transcribe with
 viral_pull.py market-<date> <voice_url>, which writes assets/viral/market-<date>/voice.json.
 """
 import asyncio
@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import viral  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-VOICE_ID = "dSByRdUbTGloB7TFA1qD"
+VOICE_ID = "VzScgb5Pi0A6lafMNQpm"
 
 
 def money(x):

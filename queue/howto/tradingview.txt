@@ -1,0 +1,17 @@
+Hey, Kobo here. Most people open TradingView, see a hundred buttons, and close it. In the next two minutes, I'll show you how to set it up the way professional traders do. For free.
+
+Step one. Go to tradingview.com and create a free Basic account. Crypto prices are real-time on the free plan. The limits: two indicators per chart, and only a few price alerts. That's enough.
+
+Step two. Pick the market. Click the symbol search at the top left and type B T C U S D T. Choose a big exchange, so you're watching where the volume is.
+
+Step three. Pick your timeframe. You don't need the menu. Just type two four zero on your keyboard and press enter. Two hundred and forty minutes. That's the four-hour chart. Institutions start with the bigger picture: check the daily chart first, then come down to the four-hour.
+
+Step four. Two indicators, because that's all you get. Press the forward slash key to open indicators. Add the exponential moving average, and set the length to fifty. It shows you the trend. Then add R S I. It shows you when a move is stretched.
+
+Step five. This is the institutional part. Mark your levels. Press Alt and H to draw a horizontal line. Put one at the recent high, and one at the recent low. That's where big orders sit, and that's where your scenarios start.
+
+Step six. Let the chart call you. Press Alt and A to set an alert at your level. Now you don't have to stare at the screen all day.
+
+That's it. One market. One timeframe. Two indicators. Two levels. One alert. A clean chart, and a clear plan.
+
+Remember, a chart shows scenarios, not certainties. Always know where your idea is wrong. Education, not financial advice. Subscribe for the daily market read, and the next how-to.

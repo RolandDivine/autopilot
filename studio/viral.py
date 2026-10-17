@@ -32,6 +32,19 @@ def b64(p):
     return "data:image/jpeg;base64," + base64.b64encode(Path(p).read_bytes()).decode()
 
 
+LAND_CSS = """
+html,body{width:1920px;height:1080px}
+.brand{top:44px;left:70px}
+.prog{top:96px;left:70px;right:70px}
+.cap{top:935px;left:200px;right:360px;font-size:58px}
+.card{left:120px;right:420px;top:140px}
+.panel{padding:40px 48px}
+.big{font-size:130px}
+#host{right:20px;bottom:-10px;width:300px;height:396px}
+#host svg{width:300px;height:396px}
+#hostname{right:96px;bottom:22px}
+"""
+
 CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1920px;overflow:hidden;background:#07080B;font-family:Jakarta;color:#fff}
@@ -227,8 +240,8 @@ def build(spec):
     bg_html = "".join(f"<div class='bg' id='bg{i}' style=\"background-image:url('{b64(p)}')\"></div>" for i, (_, _, p) in enumerate(bgs))
     body = (bg_html + "<div class='shade'></div>" + "".join(card_html(i, c) for i, c in enumerate(cards)) +
             (f"<div id='host'>{duo.bunny_svg('kobo', duo.KOBO_COLORS)}</div><div id='hostname'>Kobo</div>" if host else "") +
-            "<div class='brand'><b>@</b>defi_ring_master</div><div class='prog'><i id='prog'></i></div><div class='cap' id='cap'></div>")
-    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{CSS}</style></head><body>{body}"
+            spec.get("brand", "<div class='brand'><b>@</b>defi_ring_master</div>") + "<div class='prog'><i id='prog'></i></div><div class='cap' id='cap'></div>")
+    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{CSS}{LAND_CSS if spec.get('land') else ''}</style></head><body>{body}"
             f"<script>{JS.replace('__DATA__', json.dumps(data))}</script></body></html>")
 
 
@@ -236,7 +249,7 @@ async def render(spec, out, preview=None):
     page = build(spec)
     async with async_playwright() as p:
         b = await p.chromium.launch()
-        pg = await b.new_page(viewport={"width": 1080, "height": 1920})
+        pg = await b.new_page(viewport={"width": 1920, "height": 1080} if spec.get("land") else {"width": 1080, "height": 1920})
         await pg.set_content(page, wait_until="load")
         await pg.wait_for_timeout(400)
         if preview:

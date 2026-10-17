@@ -1,0 +1,95 @@
+name: fish-tts
+
+# Fish Audio voiceovers (Roland, 18 Oct 2026: replaces ElevenLabs). Needs the FISH_API_KEY Actions secret.
+#   op=check  -> annotations: API credit balance, plan, and your own + top English voices (id, title)
+#   op=tts    -> reads `text_path` (repo file), voices it with `voice_id`, commits mp3 to `out_path` (under assets/)
+on:
+  workflow_dispatch:
+    inputs:
+      op:
+        description: "check | tts"
+        required: true
+        default: check
+      text_path:
+        description: "repo path of the script .txt (tts)"
+        required: false
+      voice_id:
+        description: "Fish Audio voice model _id (tts)"
+        required: false
+      out_path:
+        description: "repo path for the mp3, under assets/ (tts)"
+        required: false
+      model:
+        description: "Fish model"
+        required: false
+        default: s2.1-pro
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+jobs:
+  fish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: run
+        env:
+          FISH_API_KEY: ${{ secrets.FISH_API_KEY }}
+          OP: ${{ inputs.op }}
+          TEXT_PATH: ${{ inputs.text_path }}
+          VOICE_ID: ${{ inputs.voice_id }}
+          OUT_PATH: ${{ inputs.out_path }}
+          MODEL: ${{ inputs.model }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, urllib.request, urllib.error
+          key = os.environ.get("FISH_API_KEY", "")
+          if not key:
+              print("::error title=fish::FISH_API_KEY secret is missing"); raise SystemExit(1)
+          H = {"Authorization": f"Bearer {key}"}
+          def get(url):
+              req = urllib.request.Request(url, headers=H)
+              try:
+                  return json.loads(urllib.request.urlopen(req, timeout=30).read())
+              except urllib.error.HTTPError as e:
+                  return {"http_error": e.code, "body": e.read().decode()[:300]}
+          op = os.environ["OP"]
+          if op == "check":
+              print("::notice title=api credit::" + json.dumps(get("https://api.fish.audio/wallet/self/api-credit"))[:900])
+              print("::notice title=package::" + json.dumps(get("https://api.fish.audio/wallet/self/package"))[:900])
+              for label, q in (("my voices", "self=true&page_size=20"),
+                               ("top english voices", "language=en&sort_by=task_count&page_size=20")):
+                  r = get(f"https://api.fish.audio/model?{q}")
+                  items = [f"{m.get('_id')} | {m.get('title')}" for m in r.get("items", [])] or [json.dumps(r)[:300]]
+                  print(f"::notice title={label}::" + " ;; ".join(items)[:2900])
+          elif op == "tts":
+              text = pathlib.Path(os.environ["TEXT_PATH"]).read_text().strip()
+              out = pathlib.Path(os.environ["OUT_PATH"])
+              assert out.parts[0] == "assets" and ".." not in out.parts, out
+              body = json.dumps({"text": text, "reference_id": os.environ["VOICE_ID"], "format": "mp3",
+                                 "mp3_bitrate": 192, "latency": "normal"}).encode()
+              req = urllib.request.Request("https://api.fish.audio/v1/tts", data=body, method="POST",
+                                           headers={**H, "Content-Type": "application/json", "model": os.environ["MODEL"]})
+              try:
+                  audio = urllib.request.urlopen(req, timeout=300).read()
+              except urllib.error.HTTPError as e:
+                  print(f"::error title=fish tts failed::HTTP {e.code} {e.read().decode()[:500]}"); raise SystemExit(1)
+              out.parent.mkdir(parents=True, exist_ok=True)
+              out.write_bytes(audio)
+              print(f"::notice title=fish tts::{out} {len(audio)} bytes, {len(text)} chars")
+          else:
+              raise SystemExit(f"unknown op {op}")
+          PY
+      - name: commit
+        if: inputs.op == 'tts'
+        run: |
+          git config user.name "autopilot-bot"
+          git config user.email "autopilot-bot@users.noreply.github.com"
+          git add assets
+          git commit -m "fish tts: ${{ inputs.out_path }}" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

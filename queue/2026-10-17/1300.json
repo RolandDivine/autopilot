@@ -1,0 +1,27 @@
+{
+ "title": "Myth check: mining Bitcoin on your phone",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Can you mine Bitcoin on your phone?\n\nTechnically yes. In practice, the math says no, and the apps that say otherwise are selling you something.\n\nThe numbers, as of October 2026:\n\n→ The Bitcoin network does about 970 EH/s, roughly 970 quintillion guesses a second\n→ A phone does less than 1 million a second. A laptop, around 100 million\n→ Mining alone, a phone would expect to find a block in about 37 billion years. A laptop, about 185 million years\n\nEven the big machines struggle at home. A top-end miner (around 473 TH/s) earns about $19 a day, but burns about $23 of electricity at $0.17 per kWh. Mining pays when you have cheap power at industrial scale.\n\nSo what are all those \"mining apps\"?\n\nApple's App Store rules don't allow apps that mine on the device. Google Play banned on-device mining in 2018. What's left is mostly cloud-mining schemes and ad farms, and many cap or block withdrawals. Trend Micro found fake cloud-mining apps on Google Play back in 2021.\n\nThe mistake I'd avoid: paying a \"mining\" app or platform to \"boost\" your earnings. That boost is usually how the scheme makes its money.\n\nMining is an industry now, not a side hustle.\n\nHave you or someone you know ever tried a phone mining app? What happened when it was time to withdraw?\n\nEducation, not financial advice.\n\nSources: mempool.space (network hashrate); OneMiners profitability estimates (Oct 2026); Apple App Review Guidelines 3.1.5; Google Play policy (2018); Trend Micro (2021).",
+  "media": "media/mine-cover.jpg"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Can your phone mine Bitcoin? Here's the math. 📱⛏️\n\n37 billion years, app store bans, and why most \"mining apps\" are selling you something. Swipe →\n\n📤 Send this to the friend with a mining app\nEducation, not financial advice.\n\n#bitcoin #crypto #cryptoscams #bitcoinmining",
+  "media": [
+   "instagram/mine-0.jpg",
+   "instagram/mine-1.jpg",
+   "instagram/mine-2.jpg",
+   "instagram/mine-3.jpg",
+   "instagram/mine-4.jpg",
+   "instagram/mine-5.jpg",
+   "instagram/mine-6.jpg",
+   "instagram/mine-7.jpg"
+  ],
+  "music": "George Michael – Faith"
+ }
+}

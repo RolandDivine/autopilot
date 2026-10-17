@@ -1,0 +1,26 @@
+{
+ "title": "How to: check apps with access to your Google account",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "How many apps can read your Gmail right now?\n\nMost people don't know. Every \"Sign in with Google\" and every \"Allow access\" you ever clicked is still on a list.\n\nHere's the 2-minute check:\n\n1. Go to myaccount.google.com/linkedapps (or Google Account, then Security, then your connections to third-party apps and services)\n\n2. Look at the four kinds of access Google lists:\n→ Sign in with Google\n→ Linked account\n→ Access to your Google Account (the app can read some of your data)\n→ Agent access (Gemini or your AI agents can use the app)\n\n3. Open anything you don't recognise, select See details, and read what it can reach\n\n4. If you don't use it anymore, select Remove access and confirm\n\nThe catch nobody mentions: removing access stops future access. It doesn't delete the data the app already collected. For that, delete your account inside the app itself.\n\nThe mistake I'd avoid: clicking \"Allow\" on a free tool because it saves you five minutes. Read what it asks for. A PDF converter has no reason to read your email.\n\nDo this every three months. It takes two minutes.\n\nWhen you check your list, how many apps are on it that you don't remember connecting?\n\nSource: Google Account Help, \"Manage connections between your Google Account and third parties\".",
+  "media": "media/keys-cover.jpg"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "How many apps can read your Gmail right now? 👀\n\nThe 2-minute check, the 4 kinds of access, and the one thing removing access doesn't do. Swipe →\n\n📌 Save it\n📤 Send it to the friend who signs into everything with Google\n\n#cybersecurity #google #privacy #techtips",
+  "media": [
+   "instagram/keys-0.jpg",
+   "instagram/keys-1.jpg",
+   "instagram/keys-2.jpg",
+   "instagram/keys-3.jpg",
+   "instagram/keys-4.jpg",
+   "instagram/keys-5.jpg",
+   "instagram/keys-6.jpg"
+  ],
+  "music": "Lionel Richie – Hello"
+ }
+}

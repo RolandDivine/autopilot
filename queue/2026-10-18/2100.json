@@ -1,0 +1,18 @@
+{
+ "title": "Teaser: tomorrow 8 AM",
+ "kind": "story",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Do you know you can start learning cybersecurity this week, free, with no experience? 🔐\n\nTomorrow at 8 AM: the free path I'd follow from zero, step by step.\n\n🔔 Turn on notifications so you don't miss it\n📤 Send this to the friend who keeps saying they want to get into tech\n\n#cybersecurity #tech #learning #careers",
+  "media": [
+   "instagram/teaser-0.jpg"
+  ],
+  "music": "Lionel Richie – Stuck on You"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "title": "How to: vibe coding, free",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "You can now build an app by describing it in plain English. That's vibe coding.\n\nIt's real, it's useful, and there's one number you should know before you trust it.\n\nHow it works: you describe what you want, the AI writes the code, you test it and tell it what's wrong.\n\nTwo tools you can try for free tonight:\n→ Lovable: polished interfaces, 5 free credits a day\n→ Bolt: fast builds, a free daily token allowance\n\nHow I'd start:\n1. Pick one tiny problem: a booking form, a price calculator, a waitlist page\n2. Describe who uses it and what they click, step by step\n3. Build one screen at a time and test it before asking for more\n4. When it breaks, paste the exact error back to the AI\n\nThe catch: a 2026 Carnegie Mellon study found AI-written code passed 61% of functional tests, but only 10.5% passed security tests.\n\nSo vibe code your prototype, not your bank. Don't put real customer data or payments into it until someone who can read code has checked it.\n\nThe mistake I'd avoid: one giant prompt for the whole app. Small steps burn fewer credits and break less.\n\nWhat's the first small tool you'd build if code wasn't the problem?\n\nSources: Zapier, \"Lovable vs. Bolt\" (July 2026); Carnegie Mellon University (2026).",
+  "media": "media/vibe-cover.jpg"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "You can build an app by just describing it. Here's the catch. 🛠️\n\nVibe coding: 2 free tools, how to start, and the security number nobody talks about. Swipe →\n\n📌 Save it\n📤 Send it to the friend with an app idea and no developer\n\n#vibecoding #ai #nocode #buildinpublic",
+  "media": [
+   "instagram/vibe-0.jpg",
+   "instagram/vibe-1.jpg",
+   "instagram/vibe-2.jpg",
+   "instagram/vibe-3.jpg",
+   "instagram/vibe-4.jpg",
+   "instagram/vibe-5.jpg",
+   "instagram/vibe-6.jpg",
+   "instagram/vibe-7.jpg"
+  ],
+  "music": "Sade – By Your Side"
+ }
+}

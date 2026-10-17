@@ -1,0 +1,26 @@
+{
+ "title": "Explained: how stablecoins make money",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Your $1 stablecoin earns interest. Just not for you.\n\nHere's how USDT and USDC actually work, and who gets paid.\n\nFor every coin in circulation, the issuer says it holds $1 in reserves: cash, short-term US Treasury bills and repo. Big holders can swap 1 coin for $1 with the issuer, and that's what keeps the price pinned.\n\nThose Treasury bills pay interest. The issuer keeps it. You get nothing.\n\nThe numbers:\n→ Tether made about $13 billion in profit in 2024, with more than $186 billion USDT in circulation by end-2025\n→ Circle reported $2.7 billion in revenue and reserve income for 2025, almost all of it interest on reserves\n\nIn the US, the GENIUS Act (2025) now requires 1:1 reserves in cash or short-term Treasuries, monthly disclosure, and bans issuers from paying holders interest.\n\nIs a stablecoin safe? Safer than most crypto, but it can still break. USDC fell to about $0.87 in March 2023 when Silicon Valley Bank failed while holding part of its reserves. And a stablecoin on an exchange carries that exchange's risk too.\n\nThe mistake I'd avoid: treating USDT like a savings account. It's a tool for moving and parking money, not a place to earn.\n\nWhich stablecoin do you use most, and why that one?\n\nEducation, not financial advice.\n\nSources: Tether and Circle reports via Transak (2026); GENIUS Act, S.1582; Reuters (March 2023).",
+  "media": "media/stab-cover.jpg"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Your $1 stablecoin earns interest. Just not for you. 💸\n\nHow USDT and USDC stay at $1, who keeps the interest, and the risk nobody mentions. Swipe →\n\n📤 Send this to the friend who keeps their savings in USDT\nEducation, not financial advice.\n\n#stablecoins #crypto #usdt #usdc #bitcoin",
+  "media": [
+   "instagram/stab-0.jpg",
+   "instagram/stab-1.jpg",
+   "instagram/stab-2.jpg",
+   "instagram/stab-3.jpg",
+   "instagram/stab-4.jpg",
+   "instagram/stab-5.jpg",
+   "instagram/stab-6.jpg"
+  ],
+  "music": "Tracy Chapman – Give Me One Reason"
+ }
+}

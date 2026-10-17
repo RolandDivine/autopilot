@@ -1,0 +1,28 @@
+{
+ "title": "How to: ChatGPT Projects",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "ChatGPT keeps forgetting your business because every new chat starts from zero.\n\nThe fix takes ten minutes and it's free: give your business its own Project.\n\nA Project is a home inside ChatGPT with its own instructions and files. Every chat you start inside it already knows your rules. It works on every plan, including Free.\n\nHow to set it up:\n\n1. In the ChatGPT sidebar, select New project and name it after your business\n\n2. Open the project menu and add Instructions. Be specific: what you sell, where, your tone, your prices, what you never promise\n\n3. Upload what it should know: price list, FAQ, product details. The Free plan allows 5 files per project, Plus allows 25\n\n4. Start every work chat inside the project. No more pasting the same introduction every morning\n\nThe catch: the instructions only apply inside that project, and your files are stored with OpenAI. Don't upload anything you wouldn't put in an email.\n\nThe mistake I'd avoid: one giant project for everything. Make one per job (customer replies, social posts, invoices) and keep each one sharp.\n\nWhat's the first project you'd set up?\n\nSource: OpenAI Help Center, \"Projects in ChatGPT\".",
+  "media": "media/proj.pdf",
+  "media_title": "How to: ChatGPT Projects"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Stop re-explaining your business to ChatGPT. Give it a home. 🏠\n\nChatGPT Projects: 4 steps, free on every plan, and the one thing you shouldn't upload. Swipe →\n\n📌 Save it\n📤 Send it to the friend who types the same prompt every day\n\n#chatgpt #ai #productivity #smallbusiness",
+  "media": [
+   "instagram/proj-0.jpg",
+   "instagram/proj-1.jpg",
+   "instagram/proj-2.jpg",
+   "instagram/proj-3.jpg",
+   "instagram/proj-4.jpg",
+   "instagram/proj-5.jpg",
+   "instagram/proj-6.jpg",
+   "instagram/proj-7.jpg"
+  ],
+  "music": "Anita Baker – Giving You the Best That I Got"
+ }
+}

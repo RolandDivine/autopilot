@@ -24,7 +24,7 @@
     "traffic": "200+",
     "news": [
      "Alligator kills 71-year-old man fishing at pond in Florida",
-     "71-year-old man killed by 12-foot alligator while fishing alongside lake"
+     "Fisherman, 71, attacked and killed by 12-foot alligator alongside Florida lake"
     ]
    },
    {
@@ -86,11 +86,75 @@
   ],
   "GB": [
    {
+    "q": "bundesliga",
+    "traffic": "500+",
+    "news": [
+     "Bundesliga | BVB enttäuscht, Füllkrug-Spektakel – Muheim wieder mit Lucky Punch!",
+     "[Live-Übertragung] Union Berlin vs. Borussia Dortmund direkte im kostenlosen Livestream und TV"
+    ]
+   },
+   {
+    "q": "roma vs genoa",
+    "traffic": "200+",
+    "news": [
+     "Roma vs Genoa: Italian Serie A stats & head-to-head",
+     "Probable Formation: Roma vs Genoa"
+    ]
+   },
+   {
+    "q": "leon goretzka",
+    "traffic": "200+",
+    "news": [
+     "Leon Goretzka to miss Aston Villa’s visit of Brentford, Brian Madjo and Pau Torres available",
+     "Aston Villa signing eager to prove his worth after injury-hit start"
+    ]
+   },
+   {
+    "q": "money",
+    "traffic": "200+",
+    "news": [
+     "'RAC took 14 hours to recover my elderly mum's car from an isolated forest - in the middle of the night' | Money blog",
+     "Bank of America hit with $1.2bn fine for money laundering failings"
+    ]
+   },
+   {
     "q": "danni dyer",
     "traffic": "200+",
     "news": [
      "Dani Dyer 'to miss out on Strictly final' as star dealt heartbreaking blow",
      "Strictly Come Dancing viewers criticise star's 'car crash' week 3 performance"
+    ]
+   },
+   {
+    "q": "delta strictly come dancing",
+    "traffic": "200+",
+    "news": [
+     "Strictly Icons Week arrives as fan favourite misses out due to injury - live",
+     "Delta Goodrem to miss Strictly Come Dancing Icons Week due to injury"
+    ]
+   },
+   {
+    "q": "dundee fc",
+    "traffic": "200+",
+    "news": [
+     "Preview: Dundee v Rangers",
+     "McInnes: We Have to Deliver a Big Performance"
+    ]
+   },
+   {
+    "q": "indiana vs ohio state",
+    "traffic": "500+",
+    "news": [
+     "College football picks: Predictions against the spread, odds, betting lines for top 25 games in Week 7",
+     "Week 7 Predictions: Huskers at Ducks"
+    ]
+   },
+   {
+    "q": "cliftonville vs portadown",
+    "traffic": "100+",
+    "news": [
+     "Irish Premiership - radio, text and in-play clips from Saturday's games",
+     "Updates from Solitude as David Jeffrey’s Portadown lead Jim Magilton’s Cliftonville"
     ]
    },
    {
@@ -100,73 +164,33 @@
      "Pablito Ruiz confesó un íntimo momento con Ricky Martin en medio de una gira: \"Después me quedé enganchado\"",
      "Pablo Ruiz relata una anécdota sobre Ricky Martin durante una entrevista"
     ]
-   },
-   {
-    "q": "lewis cope",
-    "traffic": "1000+",
-    "news": [
-     "Emmerdale's Lewis Cope splits from girlfriend of 8 years after Strictly",
-     "Strictly Come Dancing star splits from famous partner of eight years"
-    ]
-   },
-   {
-    "q": "student protest",
-    "traffic": "200+",
-    "news": [
-     "Revealed: French police used UK-funded 4x4 vehicles to charge student protesters",
-     "France investigates use of UK-funded 4x4 during protest in Dunkirk — The Guardian"
-    ]
-   },
-   {
-    "q": "aldi bladeless fan heater review",
-    "traffic": "200+",
-    "news": [
-     "Aldi's new bladeless fan heater is almost identical to Dyson's – but costs a fraction of the price",
-     "Aldi is launching a dehumidifier for less than £50 – here’s what we know"
-    ]
-   },
-   {
-    "q": "danny dyer",
-    "traffic": "500+",
-    "news": [
-     "Danny Dyer sails River Thames with poo sculpture in water protest",
-     "EastEnders legend Danny Dyer vows to shake up No10 as he delivers landmark petition to Andy Burnham"
-    ]
-   },
-   {
-    "q": "china",
-    "traffic": "500+",
-    "news": [
-     "China is helping the Houthis in order to spite the US",
-     "Are Houthis building advanced missiles with Chinese parts? What a new report reveals"
-    ]
-   },
-   {
-    "q": "tenzing film",
-    "traffic": "200+",
-    "news": [
-     "Tenzing to Goodfellas: the seven best films to watch on TV this week",
-     "Tenzing film review — a famed mountaineer finally gets his cinematic due"
-    ]
-   },
-   {
-    "q": "strategic petroleum reserve",
-    "traffic": "100+",
-    "news": [
-     "US solicits exchange of up to 17 million barrels of oil from strategic reserve",
-     "U.S. Offers Another 17 Million SPR Barrels as Fuel Crisis Deepens"
-    ]
-   },
-   {
-    "q": "rc strasbourg alsace vs psg standings",
-    "traffic": "2000+",
-    "news": [
-     "Paris St-Germain come back against Strasbourg to make it six wins in a row",
-     "Strasbourg 1-3 PSG (17 Oct, 2026) Game Analysis"
-    ]
    }
   ],
   "NG": [
+   {
+    "q": "telstar vs feyenoord",
+    "traffic": "200+",
+    "news": [
+     "Telstar vs Feyenoord: Dutch Eredivisie stats & head-to-head",
+     "Predicted Feyenoord line-up: what will Van Bronckhorst do with Valente?"
+    ]
+   },
+   {
+    "q": "bayern",
+    "traffic": "500+",
+    "news": [
+     "Bayern vs. Arsenal live: Hier wird die Champions League im TV, Stream und Ticker übertragen",
+     "Der dritte Spieltag der UEFA Champions League mit Arsenal gegen Bayern live auf Sky"
+    ]
+   },
+   {
+    "q": "poison",
+    "traffic": "100+",
+    "news": [
+     "Nursery owner in China jailed for life after hundreds of children poisoned",
+     "Chinese kindergarten owner given life sentence over lead paint poisoning scandal"
+    ]
+   },
    {
     "q": "bayern munich",
     "traffic": "2000+",
@@ -179,8 +203,8 @@
     "q": "bayern munich vs rb leipzig stats",
     "traffic": "200+",
     "news": [
-     "Bayern Munich vs. RB Leipzig Lineups, Live Streaming, How & Where to Watch Bundesliga on TV",
-     "Bayern Munich looking to improve performance vs. RB Leipzig"
+     "Kompany vor Leipzig: „Nah an unserer besten Version“",
+     "Bad omen for Bayern Munich? A Bayern Munich tormentor plays for RB Leipzig"
     ]
    },
    {
@@ -193,10 +217,10 @@
    },
    {
     "q": "bundesliga",
-    "traffic": "1000+",
+    "traffic": "200+",
     "news": [
-     "!!+[sTrEaMs/Live] Union Berlin v Borussia Dortmund 𝐋𝐈𝐕𝐄 Ｋｏｓｔｅｎｌｏｓ",
-     "Nächster Rückschlag für BVB - Füllkrug rettet Bremen Punkt"
+     "Fußball-Bundesliga: Füllkrug-Tore, Werder-Wende und der HSV gewinnt wieder",
+     "Werders Füllkrug auf den Spuren von Rudi Völler"
     ]
    },
    {
@@ -217,34 +241,10 @@
    },
    {
     "q": "roma vs genoa",
-    "traffic": "200+",
+    "traffic": "500+",
     "news": [
      "Roma vs Genoa: Italian Serie A stats & head-to-head",
-     "A 36-year-old curse: will Roma continue to humiliate Genoa at the Olimpico?"
-    ]
-   },
-   {
-    "q": "everton vs chelsea highlights",
-    "traffic": "5000+",
-    "news": [
-     "Everton 0-2 Chelsea - recap and commentary",
-     "Confirmed Chelsea line up vs Everton | News | Official Site"
-    ]
-   },
-   {
-    "q": "fc barcelona",
-    "traffic": "1000+",
-    "news": [
-     "Lamine Yamal is undoubtedly leading the new era of Spanish football ✨",
-     "Lamine Yamal opens scoring for FC Barcelona with outside-the-box stunner"
-    ]
-   },
-   {
-    "q": "fcb",
-    "traffic": "200+",
-    "news": [
-     "Real Betis vs Barcelona LIVE Score Updates (0-0)",
-     "!+[*𝐋𝐈𝐕𝐄 FOOTBALL*] Real Betis vs Barcelona UEFA Champions League Coverage 71430"
+     "Roma vs Genoa Prediction, Betting Tips, Lineups & Odds | 17 Oct 2026"
     ]
    }
   ],
@@ -269,8 +269,8 @@
     "q": "suv",
     "traffic": "200+",
     "news": [
-     "Mercedes-AMG’s First Stand-Alone SUV Is an 1153-HP EV That’ll Hit 60 MPH Quicker Than a Corvette",
-     "Mercedes-AMG GT 63 SUV: A New Pinnacle In Electric High-Performance"
+     "View Exterior Photos of the 2028 Mercedes-AMG GT SUV",
+     "Mercedes-AMG’s first ground-up SUV is a 1,150hp electric beast"
     ]
    },
    {
@@ -310,7 +310,7 @@
     "traffic": "10000+",
     "news": [
      "Paris St-Germain come back against Strasbourg to make it six wins in a row",
-     "Exciting move from Enrique before the Paris and Barcelona battle"
+     "Video: Dembele turns the game on its head in minutes: Paris survive with a stunning comeback before Barcelona"
     ]
    },
    {
@@ -326,7 +326,7 @@
     "traffic": "5000+",
     "news": [
      "“An application for the Ballon d’Or”: Lamine Yamal sends Hansi Flick wild with an incredible goal for Barcelona",
-     "Lamine Yamal is undoubtedly leading the new era of Spanish football ✨"
+     "Lamine Yamal opens scoring for FC Barcelona with outside-the-box stunner"
     ]
    }
   ]
@@ -349,34 +349,34 @@
  },
  "hn": [
   {
-   "title": "Linux bugs fixed per release over time: >2× rise since 2026-04",
-   "score": 30,
-   "comments": 5
+   "title": "Development statistics for the 7.2 kernel",
+   "score": 40,
+   "comments": 12
   },
   {
    "title": "Making chicken transparent using Dorito dust",
-   "score": 151,
-   "comments": 46
+   "score": 155,
+   "comments": 48
   },
   {
    "title": "Furifont, a Japanese font that shows furigana",
-   "score": 56,
+   "score": 61,
    "comments": 10
   },
   {
    "title": "DeepSeek-v4.1-Flash-1017",
-   "score": 462,
-   "comments": 456
+   "score": 470,
+   "comments": 462
   },
   {
    "title": "The Commodore 64 hardware simulator: break chips and pins, see the results",
-   "score": 11,
+   "score": 16,
    "comments": 1
   },
   {
    "title": "Solar surpasses nuclear power globally for first time",
-   "score": 273,
-   "comments": 153
+   "score": 279,
+   "comments": 158
   },
   {
    "title": "Rendering pretty sky in Around The World game",
@@ -390,27 +390,27 @@
   },
   {
    "title": "OpenAI discloses four more rogue incidents",
-   "score": 55,
-   "comments": 21
-  },
-  {
-   "title": "GLP-1 may slow biological aging",
-   "score": 116,
-   "comments": 96
+   "score": 61,
+   "comments": 29
   },
   {
    "title": "A Tudor life in the time of plague (2020)",
-   "score": 27,
+   "score": 28,
    "comments": 0
   },
   {
    "title": "You could have invented transformers from memory",
    "score": 425,
-   "comments": 99
+   "comments": 100
+  },
+  {
+   "title": "Show HN: High-quality duck audio synthesizer",
+   "score": 6,
+   "comments": 0
   },
   {
    "title": "Ultramarine 1 Flash",
-   "score": 354,
+   "score": 356,
    "comments": 103
   },
   {
@@ -419,14 +419,24 @@
    "comments": 8
   },
   {
+   "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser",
+   "score": 51,
+   "comments": 9
+  },
+  {
    "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
    "score": 204,
    "comments": 66
   },
   {
-   "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser",
-   "score": 48,
-   "comments": 9
+   "title": "GLP-1 may slow biological aging",
+   "score": 122,
+   "comments": 103
+  },
+  {
+   "title": "MapQuest will now show you where Flock cameras are in your neighborhood",
+   "score": 192,
+   "comments": 26
   },
   {
    "title": "Vintage Cassettes: 1963-2010",
@@ -434,13 +444,8 @@
    "comments": 1
   },
   {
-   "title": "MapQuest will now show you where Flock cameras are in your neighborhood",
-   "score": 183,
-   "comments": 26
-  },
-  {
    "title": "The history of development of Norton Commander (2011)",
-   "score": 53,
+   "score": 55,
    "comments": 16
   },
   {
@@ -450,13 +455,13 @@
   },
   {
    "title": "Tell HN: Remember to migrate away from .name domain",
-   "score": 104,
-   "comments": 68
+   "score": 105,
+   "comments": 69
   },
   {
    "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
    "score": 352,
-   "comments": 84
+   "comments": 83
   },
   {
    "title": "0/1 Knapsack Problem in PyTorch",
@@ -465,8 +470,8 @@
   },
   {
    "title": "Amazon uses AI to monitor union risk in UK warehouses",
-   "score": 92,
-   "comments": 22
+   "score": 93,
+   "comments": 25
   },
   {
    "title": "A story of WiFi secrets, UART lockdowns and a damaged flash memory chip",
@@ -475,28 +480,23 @@
   },
   {
    "title": "\"Tame\" boar and deer are instinctively adapting to the wolf in the Netherlands",
-   "score": 42,
-   "comments": 76
+   "score": 44,
+   "comments": 77
+  },
+  {
+   "title": "Pele – Mermaid diagrams as themeable SVG",
+   "score": 9,
+   "comments": 1
   },
   {
    "title": "Claude reveals ECDSA curve origins",
    "score": 989,
-   "comments": 361
+   "comments": 363
   },
   {
    "title": "Intuitive concurrent programming in any language",
    "score": 120,
-   "comments": 29
-  },
-  {
-   "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
-   "score": 355,
-   "comments": 189
-  },
-  {
-   "title": "FLUX 3 Image Klein",
-   "score": 201,
-   "comments": 57
+   "comments": 30
   }
  ],
  "questions": {
@@ -558,8 +558,8 @@
    "how to chatgpt video",
    "how to chatgpt voice mode",
    "how to chatgpt projects work",
-   "how to chatgpt work",
    "how to chatgpt credits work",
+   "how to chatgpt work",
    "how to chatgpt voice",
    "how to chatgpt for free",
    "how do i chatgpt",
@@ -582,8 +582,8 @@
    "is it safe to use chatgpt as a therapist",
    "is it safe to send chatgpt your face",
    "is it safe to ask chatgpt personal questions",
-   "best chatgpt app",
    "best chatgpt prompts",
+   "best chatgpt app",
    "best chatgpt model",
    "best chatgpt plugins",
    "best chatgpt",
@@ -597,11 +597,11 @@
    "why is chatgpt bad",
    "why is chatgpt so slow today",
    "why is chatgpt bad for the environment",
+   "why is chatgpt so slow right now",
    "why is chatgpt not working today",
+   "why is chatgpt so slow on my computer",
    "why is chatgpt taking so long",
-   "why is chatgpt not working on my phone",
-   "why is chatgpt not loading",
-   "why is chatgpt down",
+   "why is chatgpt so slow now",
    "can i chatgpt",
    "can i chatgpt that for you",
    "can i use chatgpt for free",
@@ -616,14 +616,14 @@
   "claude": [
    "how to claude code",
    "how to claude",
-   "how to claude tokens work",
    "how to claude code from phone",
+   "how to claude tokens work",
    "how to claude cowork",
    "how to claude projects work",
    "how to claude ai",
+   "how to claude credits work",
    "how to claude skills",
    "how to claude skills work",
-   "how to claude code in terminal",
    "how do i use claude",
    "how do i use claude design",
    "how do i use claude code",
@@ -647,22 +647,22 @@
    "best claude model",
    "best claude skills",
    "best claude model for coding",
-   "best claude code skills",
-   "best claude mods",
    "best claude model for writing",
+   "best claude mods",
    "best claude plugins",
+   "best claude code skills",
    "best claude model for creative writing",
    "best claude connectors",
    "best claude code plugins",
    "why is claude so slow",
-   "why is claude not working",
    "why is claude called claude",
-   "why is claude taking so long",
+   "why is claude not working",
    "why is claude named claude",
+   "why is claude taking so long",
    "why is claude 18+",
    "why is claude slower than chatgpt",
    "why is claude so slow today",
-   "why is claude better than gemini",
+   "why is claude code so slow",
    "why is claude so expensive",
    "can i claude code from my phone",
    "can i claude",
@@ -698,15 +698,15 @@
    "is it safe to use ai tools",
    "are ai safe",
    "best ai tools",
-   "best ai tools for powerpoint presentation",
    "best ai tools for video editing free",
    "best ai tools for business",
    "best ai tools for image generation",
-   "best ai tools for research",
    "best ai tools for students",
-   "best ai tools for college students",
-   "best ai tools for teachers",
+   "best ai tools for research",
    "best ai tools for interior design",
+   "best ai tools for teachers",
+   "best ai tools for college students",
+   "best ai tools for video creation",
    "why ai tools are free",
    "why ai tools",
    "why use ai tools",
@@ -750,8 +750,8 @@
    "best vibe coding website builder",
    "best vibe coding app builder",
    "best vibe coding software",
+   "best vibe coding tools reddit",
    "best vibe coding courses",
-   "best vibe coding websites",
    "why is vibe coding bad",
    "why is vibe coding called vibe coding",
    "why is vibe coding",
@@ -812,8 +812,8 @@
    "best bitcoin to buy",
    "best bitcoin wallet app",
    "best bitcoin etf to buy",
-   "best bitcoin stocks",
    "best bitcoin miner app",
+   "best bitcoin to invest in",
    "why is bitcoin dropping",
    "why is bitcoin down",
    "why is bitcoin going up",
@@ -842,9 +842,9 @@
    "how to crypto farm",
    "how to crypto mine in ghost of tabor",
    "how to cryptogram",
+   "how to crypto scams work",
    "how to cryptograms work",
    "how to cryptocurrency",
-   "how to crypto scams work",
    "how to crypto wallets work",
    "how do i crypto mine",
    "how do i crypto trade",
@@ -875,15 +875,15 @@
    "best crypto casino",
    "best crypto trading platform",
    "best crypto exchange",
-   "best crypto",
+   "best crypto wallet app",
    "why is crypto down",
    "why is crypto crashing",
    "why is crypto up today",
    "why is crypto going up today",
    "why is crypto down today",
    "why is crypto going up",
-   "why is crypto dropping",
    "why is crypto down right now",
+   "why is crypto dropping",
    "why is crypto going down",
    "why is crypto up",
    "can i crypto mine",
@@ -951,25 +951,25 @@
   ],
   "start a business": [
    "how to start a business",
-   "how to start a business in illinois",
    "how to start a business with no money",
+   "how to start a business in texas",
+   "how to start a business in florida",
    "how to start a business page on facebook",
    "how to start a business for beginners",
-   "how to start a business in indiana",
    "how to start a business from home with no money",
-   "how to start a business for dummies",
-   "how to start a business from home",
-   "how to start a business on etsy",
+   "how to start a business in california",
+   "how to start a business in nc",
+   "how to start a business in ohio",
    "how do i start a business",
    "how do i start a business with no money",
-   "how do i start a business in illinois",
    "how do i start a business page on facebook",
    "how do i start a business account on facebook",
+   "how do i start a business in texas",
+   "how do i start a business in florida",
    "how do i start a business on etsy",
+   "how do i start a business in california",
    "how do i start a business email",
    "how do i start a business on amazon",
-   "how do i start a business online",
-   "how do i start a business bank account",
    "is it safe to start a business now",
    "is it safe to start a business in mexico",
    "is it ok to start a business with no money",
@@ -1003,13 +1003,13 @@
    "can i start a business with no money",
    "can i start a business without an llc",
    "can i start a business while in chapter 13",
-   "can i start a business while on unemployment",
    "can i start a business with bad credit",
    "can i start a business",
    "can i start a business with 10k",
    "can i start a business bank account online",
    "can i start a business without a degree",
-   "can i start a business on h1b"
+   "can i start a business on h1b",
+   "can i start a business with 50k"
   ],
   "small business ai": [
    "how to start a small airbnb business",
@@ -1034,15 +1034,15 @@
   ],
   "automate": [
    "how to automate food palworld",
-   "how to automate ingots palworld",
    "how to automate cooking palworld",
+   "how to automate ingots palworld",
    "how to automate emails in outlook",
    "how to automate fiber palworld",
-   "how to automate text messages iphone",
    "how to automate in palworld",
    "how to automate ore in palworld",
+   "how to automate text messages iphone",
    "how to automate food production palworld",
-   "how to automate pitch in fl studio",
+   "how to automate paldium palworld",
    "how do i automate messages on instagram",
    "how do i automate dates in excel",
    "how do i automate my savings",
@@ -1064,8 +1064,8 @@
    "best automated training plan fc26",
    "best automatic litter box",
    "best automated investing",
-   "best automated ai investing app",
    "best automated vacuum",
+   "best automated ai investing app",
    "best automated lawn mower",
    "best automatic cat litter box",
    "best automated trading app",
@@ -1097,8 +1097,8 @@
    "how to cloud play on xbox",
    "how to cloud game xbox on android",
    "how to cloud game xbox on phone",
-   "how to clouds form",
    "how to cloud play xbox on phone",
+   "how to clouds form",
    "how to cloud game",
    "how to cloud seed",
    "how to cloud stream on ps5",
@@ -1128,20 +1128,20 @@
    "best cloud couch",
    "best cloud gaming service",
    "best cloud couch dupe",
-   "best cloud sofa",
    "best cloud storage for photos and videos",
    "best cloud islands pokopia",
    "best cloud gaming",
-   "why is cloud gate famous",
+   "best cloud bread recipe",
+   "why is cloudflare stock down today",
    "why is cloud gaming so laggy",
    "why is cloud in kingdom hearts",
-   "why is cloudflare stock down today",
    "why is cloudflare blocking me",
    "why is cloudflare stock down",
-   "why is cloud gaming not working",
+   "why is cloud and willis calling me",
    "why is cloudflare not working",
-   "why is cloud in final fantasy resonance",
+   "why is cloud gaming not working",
    "why is cloud seeding bad",
+   "why is cloud in final fantasy resonance",
    "can i cloud game on my phone",
    "can i cloud play 2k27",
    "can i cloud game gta 5",
@@ -1187,13 +1187,13 @@
    "best data center stocks",
    "best data center stocks to buy",
    "best data center etf",
-   "best data center energy stocks",
    "best data center ffxiv",
    "best data center stocks to buy now",
    "best data center reits",
    "best data centers to invest in",
-   "best data center companies",
    "best data center companies to work for",
+   "best data center energy stocks",
+   "best data center companies",
    "why is data center bad",
    "why is data centers using water bad",
    "why is data center bad for the environment",
@@ -1244,12 +1244,12 @@
    "best cybersecurity certifications",
    "best cybersecurity etf",
    "best cybersecurity companies",
-   "best cybersecurity bootcamps",
    "best cybersecurity programs",
    "best cybersecurity schools",
    "best cybersecurity stocks to buy now",
-   "best cybersecurity podcasts",
+   "best cybersecurity colleges",
    "best cybersecurity masters programs",
+   "best cybersecurity companies to work for",
    "why is cybersecurity important",
    "why is cybersecurity important in today's digital world",
    "why is cybersecurity so hard",
@@ -1301,7 +1301,7 @@
     "like_count": 0,
     "comments_count": 0,
     "caption": "This viral selfie was FAKE. Made with AI. Posted by a verified account",
-    "reach": 2,
+    "reach": 3,
     "saved": 0,
     "shares": 0,
     "views": 4,
@@ -1371,7 +1371,7 @@
     "like_count": 1,
     "comments_count": 0,
     "caption": "5 jobs you can hand off this weekend. For free. ⏳\n\nBookings, WhatsApp ",
-    "reach": 6,
+    "reach": 7,
     "saved": 0,
     "shares": 0,
     "views": 22,

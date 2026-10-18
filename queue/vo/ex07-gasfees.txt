@@ -1,0 +1,6 @@
+Hey, Kobo here. You send crypto, and there's a fee. Sometimes cents, sometimes many dollars. Why?
+On networks like Ethereum, every transaction needs computers to process it. The fee you pay is called gas. It goes to the people who run the network, not to your wallet app.
+Gas works like a busy road. Each block has limited space. When lots of people want in at once, during a hyped launch or a crash, fees rise because people bid to get in first.
+Three tips. One: check the fee before you confirm. Your wallet shows it. Two: if it isn't urgent, wait for a quieter time. Three: layer two networks, like Arbitrum, Base, or Optimism, usually cost much less for the same kind of transaction.
+And watch out. A failed transaction can still cost gas. So double-check the network and the address.
+Know the fee before you click. See ya.

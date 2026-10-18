@@ -1,0 +1,7 @@
+Hey, Kobo here. Before FTX, there was Mt. Gox.
+In the early 2010s, Mt. Gox, based in Tokyo, was the biggest Bitcoin exchange in the world. At its peak, it handled most of all Bitcoin trades.
+In February 2014, it stopped withdrawals and then filed for bankruptcy. About eight hundred and fifty thousand bitcoin were missing, lost to hacks that had gone on for years. Some were found later, but most were gone.
+Customers waited a decade. Repayments only started in 2024.
+What went wrong? Customers didn't hold their own keys. The exchange did. And nobody could check if the coins were really there.
+The lesson hasn't changed. An exchange is a place to buy and sell, not a vault. If you hold for the long term, learn self-custody, and keep your seed phrase safe.
+Not your keys, not your coins. See ya.

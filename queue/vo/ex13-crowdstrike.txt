@@ -1,0 +1,5 @@
+Hey, Kobo here. On July nineteenth, 2024, airports, banks, hospitals, and TV stations went down around the world. Screens showed the blue screen of death.
+It wasn't a hack. It was a faulty software update from CrowdStrike, a security company. Their software runs deep inside Windows. One bad file made about eight and a half million Windows computers crash, according to Microsoft.
+Flights were cancelled. Payments failed. Many machines had to be fixed one by one, by hand.
+What's the lesson for the rest of us? One: when so many systems depend on the same company, one mistake spreads everywhere. Two: updates should roll out slowly, to a few machines first. Three: always have a backup plan. Offline copies of important files, and a way to keep working when the tech fails.
+Backups are boring until the day they save you. See ya.

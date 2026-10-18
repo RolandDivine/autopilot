@@ -1,0 +1,6 @@
+Hey, Kobo here. What if you never had to type a password again? That's what passkeys do.
+A passkey is a login that lives on your device. When you sign in, your phone or laptop asks for your fingerprint, face, or screen lock. Then it proves who you are to the website, without sending a password.
+Why is that safer? There's nothing to steal in a data leak. And a fake website can't trick you into typing it, because a passkey only works on the real site it was made for. That stops most phishing.
+Google, Apple, Microsoft, and many banks and apps already support them.
+How to start. Open your Google or Apple account security settings and create a passkey. Then add them on other apps when they offer it. Keep your phone's screen lock strong, and make sure your account recovery options are up to date.
+Fewer passwords, fewer problems. See ya.

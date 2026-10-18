@@ -1,0 +1,5 @@
+Hey, Kobo here. You scan a QR code on a parking meter to pay. Easy, right? But what if someone stuck their own code on top?
+It's called quishing. QR code phishing. A fake code takes you to a page that looks real, a parking app, a bank, a delivery company, and asks for your card details or login.
+It also arrives by email. A message says your account is locked, scan this code to fix it. Because it's an image, some email filters don't catch the link.
+How to stay safe. Check public QR codes for stickers placed on top. Before you open the link, look at the web address your camera shows. Is it the real company? When you can, pay through the official app you already have instead. And never log in through a code that came in an unexpected email.
+A QR code is just a link. Treat it like one. See ya.

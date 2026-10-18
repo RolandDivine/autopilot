@@ -1,0 +1,6 @@
+Hey, Kobo here. In January 2024, the US securities regulator approved spot Bitcoin ETFs. What does that mean?
+An ETF is a fund you buy on the stock market, like a share. A spot Bitcoin ETF holds real bitcoin. When you buy a share, you get exposure to the price without holding the coins yourself.
+Why it mattered. Big investors, pension funds, and regular people with a brokerage account could now get Bitcoin exposure through a familiar, regulated product. Big asset managers like BlackRock and Fidelity launched them.
+The trade-offs. You pay a yearly fee. You can only trade during market hours. And you don't hold the keys, so you can't send that bitcoin anywhere.
+So, ETF or self-custody? It depends on what you want: simplicity, or control.
+Either way, the price can still drop hard. A wrapper doesn't remove the risk. See ya.

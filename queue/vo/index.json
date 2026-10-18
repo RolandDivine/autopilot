@@ -58,5 +58,125 @@
   "type": "kobo",
   "voice": "fish-elite",
   "status": "scripted"
+ },
+ "ex01-halving": {
+  "title": "Explained: the Bitcoin halving",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex02-drainers": {
+  "title": "Explained: wallet drainers",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex03-pigbutchering": {
+  "title": "Explained: pig butchering scams",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex04-addresspoisoning": {
+  "title": "Explained: address poisoning",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex05-terra": {
+  "title": "Explained: how Terra and LUNA collapsed",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex06-mtgox": {
+  "title": "Explained: Mt. Gox, the first big crypto collapse",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex07-gasfees": {
+  "title": "Explained: what gas fees are",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex08-etf": {
+  "title": "Explained: spot Bitcoin ETFs",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex09-voiceclone": {
+  "title": "Explained: AI voice clone scams",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex10-arup": {
+  "title": "Explained: the 25 million dollar deepfake call",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex11-hallucination": {
+  "title": "Explained: why AI makes things up",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex12-llm": {
+  "title": "Explained: how ChatGPT actually works",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex13-crowdstrike": {
+  "title": "Explained: the day one update broke 8.5 million computers",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex14-simswap": {
+  "title": "Explained: SIM swap attacks",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex15-passkeys": {
+  "title": "Explained: passkeys, the end of passwords",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex16-business": {
+  "title": "Explained: why most new businesses fail",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex17-quishing": {
+  "title": "Explained: QR code scams",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex18-rugpull": {
+  "title": "Explained: rug pulls and honeypot tokens",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex19-inflation": {
+  "title": "Explained: inflation, the silent tax",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "ex20-fakegiveaway": {
+  "title": "Explained: fake crypto giveaway livestreams",
+  "type": "explainer",
+  "voice": "fish-elite",
+  "status": "scripted"
  }
 }

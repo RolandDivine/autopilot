@@ -1,0 +1,6 @@
+Hey, Kobo here. You can lose all your crypto without ever sharing your seed phrase. Here's how.
+A wallet drainer is a fake website. It looks like a free airdrop, a mint, or a popular app. You connect your wallet, and it asks you to sign something.
+That signature can be a permission. It says: this contract may spend my tokens. Unlimited. Forever. Once you sign it, the scammer doesn't need your password. They just move the tokens.
+Kobo's rules. Never connect your wallet to a link you got in a DM or a reply. Type the address yourself. Read what you're signing. If it says approve, or set approval for all, and you didn't expect it, reject it.
+Keep a separate wallet with little money for trying new apps. And check your old approvals with a tool like revoke dot cash, then remove the ones you don't use.
+One click can cost everything. Slow down. See ya.

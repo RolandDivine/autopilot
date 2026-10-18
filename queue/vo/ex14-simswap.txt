@@ -1,0 +1,5 @@
+Hey, Kobo here. One phone call to your mobile network can let someone take over your bank, your email, and your crypto. It's called a SIM swap.
+Here's how. A scammer collects your details: name, birthday, address, often from leaks or social media. Then they contact your network, pretend to be you, and ask to move your number to a new SIM.
+Your phone loses signal. Their phone now gets your calls and texts, including every login code sent by SMS. They reset your passwords and empty your accounts.
+How to protect yourself. Ask your network to add a PIN or a port-out lock to your account. Move important accounts from SMS codes to an authenticator app or a passkey. Keep your birthday and phone number off public profiles.
+And if your phone suddenly says no service for no reason, call your network right away from another phone. See ya.

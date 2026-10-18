@@ -1,0 +1,6 @@
+Hey, Kobo here. In May 2022, a coin that was supposed to always be worth one dollar fell to almost zero in days. It was called UST.
+Most stablecoins hold cash or bonds in reserve. UST didn't. It used an algorithm and a sister token, LUNA. One UST could always be swapped for one dollar's worth of LUNA.
+It worked while people trusted it. A platform called Anchor paid close to twenty percent a year on UST, and billions flowed in.
+Then big withdrawals hit. UST slipped below a dollar. People swapped UST for LUNA and sold. LUNA crashed, which made UST weaker, which made more people sell. A death spiral.
+Tens of billions of dollars in value disappeared.
+The lesson. If a yield looks too good, ask where it comes from. And stable is a promise. Check what's backing it. See ya.

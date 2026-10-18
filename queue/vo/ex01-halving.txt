@@ -1,0 +1,6 @@
+Hey, Kobo here. Every four years or so, Bitcoin does something no central bank does. It cuts its own money printing in half.
+New bitcoin is created as a reward for miners, the computers that secure the network. Every two hundred and ten thousand blocks, roughly four years, that reward halves.
+In 2009 it was fifty bitcoin per block. Then twenty-five. Then twelve and a half. Then six point two five. In April 2024 it dropped to three point one two five. The next halving is expected around 2028.
+Why does it matter? Fewer new coins come into the market each day. That's why there will never be more than twenty-one million.
+But careful. Past halvings came before big price runs, and people treat that like a rule. It isn't. Markets change, and the halving is known years in advance.
+So learn how it works. Don't bet your rent on a pattern. See ya.

@@ -1,0 +1,6 @@
+Hey, Kobo here. How does ChatGPT write an answer? It plays a very advanced guessing game.
+During training, a large language model reads a huge amount of text. It learns patterns: which words tend to follow which, how ideas connect, how questions get answered.
+When you ask something, it doesn't search a database of answers. It predicts the next small piece of text, called a token. Then the next. Then the next. Thousands of times, very fast.
+That's why it can write a poem, explain code, and summarise a report. It has seen patterns for all of them.
+It's also why it makes mistakes. It predicts what sounds likely, not what is checked true. Newer tools can search the web or read your files, which helps, but you still need to check.
+Think of it as a brilliant intern. Fast and helpful, but you sign off on the work. See ya.

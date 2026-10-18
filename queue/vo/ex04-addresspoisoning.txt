@@ -1,0 +1,6 @@
+Hey, Kobo here. Here's a crypto scam that doesn't need you to click anything.
+Crypto addresses are long. So most people only check the first few and the last few characters.
+Scammers know this. They create an address that starts and ends exactly like one you've used before. Then they send you a tiny transaction, sometimes zero, from that look-alike address. Now it sits in your history.
+Next time you want to send money, you copy an address from your history. You check the start, you check the end. Looks right. But you just copied the scammer's address. And crypto transfers can't be reversed.
+Kobo's rules. Never copy addresses from your transaction history. Save trusted addresses in your wallet's address book. For big amounts, send a small test first and confirm it arrived. And check the whole address, not just the ends.
+Ten extra seconds can save everything. See ya.

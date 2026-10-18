@@ -1,0 +1,6 @@
+Hey, Kobo here. AI chatbots can sound sure and still be completely wrong. That's called a hallucination.
+In 2023, lawyers in a New York case, Mata versus Avianca, filed a brief with court cases ChatGPT gave them. The cases didn't exist. The judge fined the lawyers five thousand dollars.
+Why does it happen? A chatbot doesn't look things up by default. It predicts what words should come next, based on patterns it learned. If the real answer isn't clear, it can produce something that sounds right instead.
+Kobo's rules. Use AI for drafts, ideas, and explanations. But for facts, names, numbers, laws, and medical advice, check a real source. Ask it to show sources, then open them yourself.
+And if it gives you a quote or a statistic, assume it needs checking until you've seen it somewhere else.
+AI is a fast assistant, not an expert witness. See ya.

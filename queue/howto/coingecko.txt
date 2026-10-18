@@ -1,0 +1,15 @@
+Hey, Kobo here. Before you buy any coin, spend two minutes on CoinGecko. It's free, and it can save you from a bad decision. Six steps.
+
+Step one. Go to coingecko.com and search the coin's name. Check you've got the right one. Many fake coins copy famous names.
+
+Step two. Look at market cap, not just price. A coin at one cent isn't cheap if there are trillions of them. Market cap is price times supply.
+
+Step three. Check the supply. Circulating supply is what's out now. Max supply is what could exist. A big gap means more coins may hit the market later.
+
+Step four. Check the trading volume. Very low volume means it can be hard to sell without moving the price.
+
+Step five. Open the markets tab. Is it traded on big, well-known exchanges, or only on one small one?
+
+Step six. Read the contract address and official links, and copy the contract only from there, never from a random post.
+
+Two minutes of homework beats months of regret. Education, not financial advice. Subscribe for more.

@@ -1,0 +1,15 @@
+Hey, Kobo here. Every crypto transaction is public. A block explorer lets you see it for yourself. Here's how to use one, in six steps.
+
+Step one. Pick the right explorer for the network. Etherscan for Ethereum. Mempool dot space for Bitcoin. Solscan for Solana.
+
+Step two. Paste in a transaction hash, the long ID your wallet gives you after you send something.
+
+Step three. Check the status. Success, pending, or failed. If someone says they sent you money, this is where you check, not a screenshot.
+
+Step four. Read the details. From, to, amount, and the fee you paid. Make sure the to address is exactly the one you meant.
+
+Step five. Paste in a wallet address to see its balance and history. Useful for checking a project's wallet, or your own.
+
+Step six. Check token approvals. On Etherscan, the token approval checker shows which apps can spend your tokens. Remove the ones you don't use.
+
+Everything is public, so never share a wallet you want to keep private. Education, not financial advice. Subscribe for the next how-to.

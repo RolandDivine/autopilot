@@ -1,0 +1,15 @@
+Hey, Kobo here. Every crypto chart is made of candles. Once you can read one, the chart stops looking like noise. Two minutes, six steps.
+
+Step one. One candle is one slice of time. On the four-hour chart, each candle is four hours of trading.
+
+Step two. The body. It shows where price opened and where it closed. Green means it closed higher than it opened. Red means it closed lower.
+
+Step three. The wicks. Those thin lines above and below show the highest and lowest prices reached. A long wick means price went there, but got pushed back.
+
+Step four. Size tells you strength. A big body means one side was in control. A tiny body with long wicks means buyers and sellers were fighting, and nobody won.
+
+Step five. Context beats patterns. A long lower wick at a level you marked means more than the same candle in the middle of nowhere.
+
+Step six. Zoom out. Check the daily candle before you judge a four-hour one.
+
+One candle is a clue, not a signal. Education, not financial advice. Subscribe for the daily market read.

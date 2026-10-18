@@ -1,0 +1,15 @@
+Hey, Kobo here. Scammers launch fake versions of popular tokens every day. Same name, same logo, worthless. Here's how to check a token before you buy, in six steps.
+
+Step one. Get the real contract address from the project's official site or CoinGecko. Never from a comment, a DM, or a group chat.
+
+Step two. Compare it, character by character, with the token you're about to buy. Same name means nothing. Only the contract address counts.
+
+Step three. Open the token on a block explorer, like Etherscan or BscScan. Check the holders tab. If a few wallets own most of the supply, be careful.
+
+Step four. Run it through a free token scanner. They flag things like honeypot code, which lets you buy but not sell, or hidden taxes on every sale.
+
+Step five. Check liquidity. If the trading pool is tiny or not locked, the creator can pull it and the price goes to zero.
+
+Step six. Search the token name plus the word scam. Someone may have already been hit.
+
+If you can't verify it, don't buy it. Education, not financial advice. Subscribe for more.

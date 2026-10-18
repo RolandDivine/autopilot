@@ -1,0 +1,15 @@
+Hey, Kobo here. Every professional trader decides where they're wrong before they enter. That decision is called a stop loss. Here's how it works, in six steps.
+
+Step one. A stop loss is an order that closes your position if price reaches a level you chose. It limits how much one idea can cost you.
+
+Step two. Put it where your idea is proven wrong, not at a random percentage. If your idea was that price holds above a level, the stop goes below that level.
+
+Step three. Size the trade from the stop. Decide the most you're willing to lose on one idea. Many traders use one percent of their account. The distance to your stop then tells you how big the position can be.
+
+Step four. Know the limits. In a fast crash, price can jump past your stop, so you may get filled lower than you planned.
+
+Step five. Don't move your stop further away because you hope. That's how small losses become big ones.
+
+Step six. Write it down before you click buy: entry, stop, and why.
+
+Scenarios, not certainties. Education, not financial advice. Subscribe for the next how-to.

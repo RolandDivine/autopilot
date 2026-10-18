@@ -1,0 +1,7 @@
+Hey, it's Kobo. Ada bought a little Bitcoin. Now, where does she keep it?
+Option one: on the exchange where she bought it. Easy. But the exchange holds the keys. If it gets hacked or goes bust, like FTX in 2022, her coins can get stuck.
+Option two: her own wallet. A wallet doesn't hold coins. It holds keys, the passwords that prove the coins are yours. When she creates one, she gets a seed phrase: twelve or twenty-four words.
+Those words are everything. Whoever has them, has the money.
+So, Kobo's rules. Write the seed phrase on paper. Never in a screenshot, never in the cloud, never in a chat. Keep it somewhere safe. And never, ever type it into a website or give it to anyone. No real support agent will ever ask for it.
+Not your keys, not your coins. But also: lose your keys, lose your coins.
+Next time: the digital dollar that Ada's cousin uses to get paid from abroad. See ya.

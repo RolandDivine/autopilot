@@ -1,0 +1,6 @@
+Hey, it's Kobo. Ada keeps hearing about Bitcoin. Today she asks: what is it, really?
+Imagine a notebook that records every payment. Now imagine thousands of computers around the world, each holding a copy of that notebook. No bank owns it. No government controls it. To cheat, you'd have to fool most of those computers at once.
+That shared notebook is called a blockchain. Bitcoin is the money that lives on it.
+Two things make Bitcoin different. One: there will only ever be twenty-one million bitcoin. Nobody can print more. Two: you can send it to anyone, anywhere, without asking a bank.
+But here's the honest part. Bitcoin's price moves a lot. It has dropped more than seventy percent before. So it can be part of a plan, but never your rent money, and never your emergency fund.
+Next time: if you own crypto, where do you keep it? The answer matters more than you think. See ya.

@@ -1,0 +1,62 @@
+{
+ "kobo06": {
+  "title": "Kobo's Money Story, Part 6: Where does your money go?",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo07": {
+  "title": "Kobo's Money Story, Part 7: The emergency fund",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo08": {
+  "title": "Kobo's Money Story, Part 8: Good debt, bad debt",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo09": {
+  "title": "Kobo's Money Story, Part 9: What is Bitcoin, really?",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo10": {
+  "title": "Kobo's Money Story, Part 10: Your keys, your coins",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo11": {
+  "title": "Kobo's Money Story, Part 11: The digital dollar",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo12": {
+  "title": "Kobo's Money Story, Part 12: A little every month",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo13": {
+  "title": "Kobo's Money Story, Part 13: Don't put all your eggs in one basket",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo14": {
+  "title": "Kobo's Money Story, Part 14: A second stream",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ },
+ "kobo15": {
+  "title": "Kobo's Money Story, Part 15: The new scams",
+  "type": "kobo",
+  "voice": "fish-elite",
+  "status": "scripted"
+ }
+}

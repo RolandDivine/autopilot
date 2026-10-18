@@ -143,121 +143,281 @@
   "title": "Explained: the Bitcoin halving",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex01-halving.mp3",
+  "alt_take": "assets/vo/ex01-halving-b.mp3",
+  "transcript": "assets/vo/ex01-halving.json",
+  "duration": 72.3,
+  "fish_tasks": [
+   "2e160b90c0c64f51946ab6f17a68923d",
+   "6ec4dad5e5944e6395e40c7f2ff3d380"
+  ]
  },
  "ex02-drainers": {
   "title": "Explained: wallet drainers",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex02-drainers.mp3",
+  "alt_take": "assets/vo/ex02-drainers-b.mp3",
+  "transcript": "assets/vo/ex02-drainers.json",
+  "duration": 70.3,
+  "fish_tasks": [
+   "8a8687e9c60b49adbd12b53fc28a29ed",
+   "c2c53702e7084bbdbe11677274d346a0"
+  ]
  },
  "ex03-pigbutchering": {
   "title": "Explained: pig butchering scams",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex03-pigbutchering.mp3",
+  "alt_take": "assets/vo/ex03-pigbutchering-b.mp3",
+  "transcript": "assets/vo/ex03-pigbutchering.json",
+  "duration": 71.6,
+  "fish_tasks": [
+   "fd84b7255db8487991b69c9a883d617c",
+   "8ad2ef3a3cae4d0aa038d8de50530368"
+  ]
  },
  "ex04-addresspoisoning": {
   "title": "Explained: address poisoning",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex04-addresspoisoning.mp3",
+  "alt_take": "assets/vo/ex04-addresspoisoning-b.mp3",
+  "transcript": "assets/vo/ex04-addresspoisoning.json",
+  "duration": 68.6,
+  "fish_tasks": [
+   "46b055018ad94a18b4fdd2bf51e2d2cc",
+   "09f68844f7844217ad54d3651dbeec1b"
+  ]
  },
  "ex05-terra": {
   "title": "Explained: how Terra and LUNA collapsed",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex05-terra.mp3",
+  "alt_take": "assets/vo/ex05-terra-b.mp3",
+  "transcript": "assets/vo/ex05-terra.json",
+  "duration": 69.5,
+  "fish_tasks": [
+   "c183e5a1a5034919b0ad884455dafbc7",
+   "9b89738bc1a3458e8bb4aa44f2a2290b"
+  ]
  },
  "ex06-mtgox": {
   "title": "Explained: Mt. Gox, the first big crypto collapse",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex06-mtgox.mp3",
+  "alt_take": "assets/vo/ex06-mtgox-b.mp3",
+  "transcript": "assets/vo/ex06-mtgox.json",
+  "duration": 68.2,
+  "fish_tasks": [
+   "f9cfec375458444fa21e3a5352a0e32b",
+   "0f150a3023604d6db30e280a0acb0ee2"
+  ]
  },
  "ex07-gasfees": {
   "title": "Explained: what gas fees are",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex07-gasfees.mp3",
+  "alt_take": "assets/vo/ex07-gasfees-b.mp3",
+  "transcript": "assets/vo/ex07-gasfees.json",
+  "duration": 67.9,
+  "fish_tasks": [
+   "969ec22247924bbba17caa35a4304d29",
+   "8181c94324484f159d4c0481d9833265"
+  ]
  },
  "ex08-etf": {
   "title": "Explained: spot Bitcoin ETFs",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex08-etf.mp3",
+  "alt_take": "assets/vo/ex08-etf-b.mp3",
+  "transcript": "assets/vo/ex08-etf.json",
+  "duration": 64.0,
+  "fish_tasks": [
+   "e49117be330f46119296f683767d35ac",
+   "1138a518c45242f5b004f948b8244043"
+  ]
  },
  "ex09-voiceclone": {
   "title": "Explained: AI voice clone scams",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex09-voiceclone.mp3",
+  "alt_take": "assets/vo/ex09-voiceclone-b.mp3",
+  "transcript": "assets/vo/ex09-voiceclone.json",
+  "duration": 60.2,
+  "fish_tasks": [
+   "e7e0de0b80c741219835a0c1ad10db5d",
+   "5cbae7cc9e5741069f68a5879635b30e"
+  ]
  },
  "ex10-arup": {
   "title": "Explained: the 25 million dollar deepfake call",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex10-arup.mp3",
+  "alt_take": "assets/vo/ex10-arup-b.mp3",
+  "transcript": "assets/vo/ex10-arup.json",
+  "duration": 61.7,
+  "fish_tasks": [
+   "a9567bd9668e470a8313bece329aff51",
+   "8ace87555a27419fb3ede048a9a97701"
+  ]
  },
  "ex11-hallucination": {
   "title": "Explained: why AI makes things up",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex11-hallucination.mp3",
+  "alt_take": "assets/vo/ex11-hallucination-b.mp3",
+  "transcript": "assets/vo/ex11-hallucination.json",
+  "duration": 72.2,
+  "fish_tasks": [
+   "bce6a985421d4d7c96c68c34bf5e940f",
+   "9e76b936c4e048adbaa79ad6f41dd0dd"
+  ]
  },
  "ex12-llm": {
   "title": "Explained: how ChatGPT actually works",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex12-llm.mp3",
+  "alt_take": "assets/vo/ex12-llm-b.mp3",
+  "transcript": "assets/vo/ex12-llm.json",
+  "duration": 61.2,
+  "fish_tasks": [
+   "ffdd68dcf08e4fbdbb4895bc4b67b955",
+   "6b249e811e884b688e64a17a30ed2d02"
+  ]
  },
  "ex13-crowdstrike": {
   "title": "Explained: the day one update broke 8.5 million computers",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex13-crowdstrike.mp3",
+  "alt_take": "assets/vo/ex13-crowdstrike-b.mp3",
+  "transcript": "assets/vo/ex13-crowdstrike.json",
+  "duration": 66.1,
+  "fish_tasks": [
+   "2ce498e5db0a4edebe1de5cc33546535",
+   "edb9894964d1434897964d532fedfc1b"
+  ]
  },
  "ex14-simswap": {
   "title": "Explained: SIM swap attacks",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex14-simswap.mp3",
+  "alt_take": "assets/vo/ex14-simswap-b.mp3",
+  "transcript": "assets/vo/ex14-simswap.json",
+  "duration": 63.3,
+  "fish_tasks": [
+   "e3c29d4443194ca1b0b67ab10edddd24",
+   "1daf8259ca444e81996b373f835acf94"
+  ]
  },
  "ex15-passkeys": {
   "title": "Explained: passkeys, the end of passwords",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex15-passkeys.mp3",
+  "alt_take": "assets/vo/ex15-passkeys-b.mp3",
+  "transcript": "assets/vo/ex15-passkeys.json",
+  "duration": 61.6,
+  "fish_tasks": [
+   "7e2c924515034aa9a2af0c4ad6a793ad",
+   "16c5b2c9dbca4c38bfd4314f788e9059"
+  ]
  },
  "ex16-business": {
   "title": "Explained: why most new businesses fail",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex16-business.mp3",
+  "alt_take": "assets/vo/ex16-business-b.mp3",
+  "transcript": "assets/vo/ex16-business.json",
+  "duration": 65.3,
+  "fish_tasks": [
+   "807e1a019e94436087eed001864e7ba3",
+   "2bf8e87faf0644a3beea1ab2e08b3244"
+  ]
  },
  "ex17-quishing": {
   "title": "Explained: QR code scams",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex17-quishing.mp3",
+  "alt_take": "assets/vo/ex17-quishing-b.mp3",
+  "transcript": "assets/vo/ex17-quishing.json",
+  "duration": 63.1,
+  "fish_tasks": [
+   "b13cd7a821d7406181ec6694e284faee",
+   "b04557eafeff468bb35ac1d73e212e16"
+  ]
  },
  "ex18-rugpull": {
   "title": "Explained: rug pulls and honeypot tokens",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex18-rugpull.mp3",
+  "alt_take": "assets/vo/ex18-rugpull-b.mp3",
+  "transcript": "assets/vo/ex18-rugpull.json",
+  "duration": 61.1,
+  "fish_tasks": [
+   "a52f9a38d2464ca4a0dbfdf1c7d692cc",
+   "e81038460ea94a84b9d3ab29e8a227bf"
+  ]
  },
  "ex19-inflation": {
   "title": "Explained: inflation, the silent tax",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex19-inflation.mp3",
+  "alt_take": "assets/vo/ex19-inflation-b.mp3",
+  "transcript": "assets/vo/ex19-inflation.json",
+  "duration": 67.7,
+  "fish_tasks": [
+   "2ad8f6839d79403bb9a42c204052e95d",
+   "d61fdb89f5dc4c05b6f0dbdc221c8a52"
+  ]
  },
  "ex20-fakegiveaway": {
   "title": "Explained: fake crypto giveaway livestreams",
   "type": "explainer",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/ex20-fakegiveaway.mp3",
+  "alt_take": "assets/vo/ex20-fakegiveaway-b.mp3",
+  "transcript": "assets/vo/ex20-fakegiveaway.json",
+  "duration": 65.4,
+  "fish_tasks": [
+   "09626aa68d7743faa74a1d19ee0ef9b5",
+   "f453f38b32b34561992be2b76fe9d405"
+  ]
  },
  "howto-candlesticks": {
   "title": "How to read candlesticks",

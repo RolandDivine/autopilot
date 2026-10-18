@@ -81,3 +81,8 @@ Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key
 - **Landscape videos = how-tos** (apps, exchanges, wallets, TradingView), trading like an institution (risk, sizing, funding, open interest), crypto terms explained. Roland will also send screen recordings (Google Drive or the desktop link) for editing.
 - **Voice (Roland, 17 Oct 2026, final):** ElevenLabs "Oluwadamilare" `VzScgb5Pi0A6lafMNQpm`, the voice in the FTX and hardware-wallet videos, for every new video on every platform. Don't switch voices or ask again.
 - Playlists: Daily Market Read, How To: Crypto Apps & Tools, Trade Like an Institution, Crypto Terms Explained, Crypto Safety. Manage the channel with `youtube-admin` (never delete; set private instead).
+
+## Audio bank (voiced 18 Oct 2026, before Fish plan ends 22 Oct)
+- 30 Fish ELITE voiceovers in assets/vo/: kobo06–kobo15 (Kobo S2) + ex01–ex20 explainers. Each has an alt take (<name>-b.mp3) and Whisper word timings (<name>.json). Index: queue/vo/index.json.
+- 5 ElevenLabs how-to voiceovers: assets/vo/howto-*.mp3 (scripts in queue/howto/).
+- Notion rows exist (Needs review), 2 a day 19 Oct–2 Nov at 12:00 and 18:00 WAT. Build each video from its mp3 + json the night before, then set the row to Scheduled.

@@ -19,6 +19,9 @@ on:
       out_path:
         description: "repo path for the mp3, under assets/ (tts)"
         required: false
+      query:
+        description: "check: extra model search query string, e.g. tag=narrator&language=en"
+        required: false
       model:
         description: "Fish model"
         required: false
@@ -45,6 +48,7 @@ jobs:
           VOICE_ID: ${{ inputs.voice_id }}
           OUT_PATH: ${{ inputs.out_path }}
           MODEL: ${{ inputs.model }}
+          QUERY: ${{ inputs.query }}
         run: |
           python3 - <<'PY'
           import json, os, pathlib, urllib.request, urllib.error
@@ -62,10 +66,12 @@ jobs:
           if op == "check":
               print("::notice title=api credit::" + json.dumps(get("https://api.fish.audio/wallet/self/api-credit"))[:900])
               print("::notice title=package::" + json.dumps(get("https://api.fish.audio/wallet/self/package"))[:900])
-              for label, q in (("my voices", "self=true&page_size=20"),
-                               ("top english voices", "language=en&sort_by=task_count&page_size=20")):
+              qs = [("my voices", "self=true&page_size=20"), ("top english voices", "language=en&sort_by=task_count&page_size=20")]
+              if os.environ.get("QUERY"):
+                  qs = [("search", os.environ["QUERY"])]
+              for label, q in qs:
                   r = get(f"https://api.fish.audio/model?{q}")
-                  items = [f"{m.get('_id')} | {m.get('title')}" for m in r.get("items", [])] or [json.dumps(r)[:300]]
+                  items = [f"{m.get('_id')} | {m.get('title')} | {','.join(m.get('tags') or [])[:40]} | {m.get('task_count')}" for m in r.get("items", [])] or [json.dumps(r)[:300]]
                   print(f"::notice title={label}::" + " ;; ".join(items)[:2900])
           elif op == "tts":
               text = pathlib.Path(os.environ["TEXT_PATH"]).read_text().strip()

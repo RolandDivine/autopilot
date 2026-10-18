@@ -178,5 +178,50 @@
   "type": "explainer",
   "voice": "fish-elite",
   "status": "scripted"
+ },
+ "howto-candlesticks": {
+  "title": "How to read candlesticks",
+  "type": "howto",
+  "voice": "elevenlabs-oluwadamilare",
+  "script": "queue/howto/candlesticks.txt",
+  "audio": "assets/vo/howto-candlesticks.mp3",
+  "duration": 75.0,
+  "status": "voiced"
+ },
+ "howto-stoploss": {
+  "title": "How a stop loss works",
+  "type": "howto",
+  "voice": "elevenlabs-oluwadamilare",
+  "script": "queue/howto/stoploss.txt",
+  "audio": "assets/vo/howto-stoploss.mp3",
+  "duration": 78.58,
+  "status": "voiced"
+ },
+ "howto-coingecko": {
+  "title": "How to check a coin on CoinGecko",
+  "type": "howto",
+  "voice": "elevenlabs-oluwadamilare",
+  "script": "queue/howto/coingecko.txt",
+  "audio": "assets/vo/howto-coingecko.mp3",
+  "duration": 69.24,
+  "status": "voiced"
+ },
+ "howto-fake-token": {
+  "title": "How to spot a fake token",
+  "type": "howto",
+  "voice": "elevenlabs-oluwadamilare",
+  "script": "queue/howto/fake-token.txt",
+  "audio": "assets/vo/howto-fake-token.mp3",
+  "duration": 83.08,
+  "status": "voiced"
+ },
+ "howto-block-explorer": {
+  "title": "How to use a block explorer",
+  "type": "howto",
+  "voice": "elevenlabs-oluwadamilare",
+  "script": "queue/howto/block-explorer.txt",
+  "audio": "assets/vo/howto-block-explorer.mp3",
+  "duration": 72.82,
+  "status": "voiced"
  }
 }

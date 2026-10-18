@@ -36,10 +36,10 @@ def load(date):
 def scenario(c, short=False):
     t, g, inv = money(c["trigger"]), money(c["target"]), money(c["invalid"]) if c["invalid"] else None
     if c["bias"] == "bullish":
-        return f"If it closes above {t}, the next level to watch is {g}. If it loses {inv}, the idea is wrong."
+        return f"Close above {t}, next level {g}. Lose {inv}, idea wrong."
     if c["bias"] == "bearish":
-        return f"If it breaks below {t}, the next support is near {g}. Back above {inv}, and the idea is wrong."
-    return f"It's stuck between {money(c['lo7'])} and {money(c['hi7'])}. Wait for a close outside that range."
+        return f"Break below {t}, next support {g}. Back above {inv}, idea wrong."
+    return f"Range between {money(c['lo7'])} and {money(c['hi7'])}. Wait for a close outside it."
 
 
 TREND = {"bullish": "bullish", "bearish": "bearish", "range": "sideways"}
@@ -50,9 +50,9 @@ def fund_line(c):
     if f is None:
         return ""
     if f >= 0.03:
-        return " Funding is running hot, so longs are crowded. Careful."
+        return " Funding hot, longs crowded."
     if f <= -0.01:
-        return " Funding is negative, so shorts are paying longs. Watch for a squeeze."
+        return " Funding negative, squeeze risk."
     return ""
 
 
@@ -64,12 +64,12 @@ def build_script(date):
     coins = {c["symbol"]: c for c in m["coins"]}
     picks = [coins[s] for s in m["picks"][:3]]
     btc = m["btc"]
-    parts = [f"Hey, Kobo here. Your daily crypto market read for {d.strftime('%B')} {d.day}.",
-             f"The total market is {'up' if chg >= 0 else 'down'} {abs(chg):.1f} percent today, and Bitcoin dominance is {gl['btc_dom']:.0f} percent.",
-             f"Bitcoin first. It's at {money(btc['price'])}, and the four-hour trend is {TREND[btc['bias']]}. {scenario(btc)}"]
+    parts = [f"Kobo here. Crypto market read, {d.strftime('%B')} {d.day}.",
+             f"Market {'up' if chg >= 0 else 'down'} {abs(chg):.1f} percent.",
+             f"Bitcoin first, at {money(btc['price'])}, trend {TREND[btc['bias']]}. {scenario(btc)}"]
     for c in picks:
-        parts.append(f"Next, {c['name']}. It's at {money(c['price'])}, trend {TREND[c['bias']]}, RSI {c['rsi']:.0f}. {scenario(c)}{fund_line(c)}")
-    parts.append("These are scenarios, not signals. Education, not financial advice. Follow, and I'll check these levels tomorrow.")
+        parts.append(f"Next, {c['name']}, at {money(c['price'])}, {TREND[c['bias']]}. {scenario(c)}{fund_line(c)}")
+    parts.append("Scenarios, not signals. Not financial advice. Follow for tomorrow's levels.")
     text = " ".join(parts)
     out = ROOT / "queue" / "market" / date
     out.mkdir(parents=True, exist_ok=True)
@@ -154,7 +154,7 @@ def spec(date):
     name = f"market-{date}"
 
     def timeline(at, dur):
-        t_btc = at("bitcoin", nth=2)
+        t_btc = at("bitcoin")
         starts = [t_btc]
         after = t_btc + 1
         for sym in plan["coins"][1:]:

@@ -3,61 +3,141 @@
   "title": "Kobo's Money Story, Part 6: Where does your money go?",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo06.mp3",
+  "alt_take": "assets/vo/kobo06-b.mp3",
+  "transcript": "assets/vo/kobo06.json",
+  "duration": 70.2,
+  "fish_tasks": [
+   "28f606d1c9b14ecfa1d8c1c47d21d376",
+   "97d8bba9e7fb42a79fdbc606d2cec943"
+  ]
  },
  "kobo07": {
   "title": "Kobo's Money Story, Part 7: The emergency fund",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo07.mp3",
+  "alt_take": "assets/vo/kobo07-b.mp3",
+  "transcript": "assets/vo/kobo07.json",
+  "duration": 68.8,
+  "fish_tasks": [
+   "aa054a4557be4dd685bec1d77155df36",
+   "3303de20c760428db2c963a8b354c081"
+  ]
  },
  "kobo08": {
   "title": "Kobo's Money Story, Part 8: Good debt, bad debt",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo08.mp3",
+  "alt_take": "assets/vo/kobo08-b.mp3",
+  "transcript": "assets/vo/kobo08.json",
+  "duration": 71.2,
+  "fish_tasks": [
+   "918205f9a824415c88e1c3f360cc1a0c",
+   "9e51f0946852403fa4ee0d843a6bcea1"
+  ]
  },
  "kobo09": {
   "title": "Kobo's Money Story, Part 9: What is Bitcoin, really?",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo09.mp3",
+  "alt_take": "assets/vo/kobo09-b.mp3",
+  "transcript": "assets/vo/kobo09.json",
+  "duration": 70.8,
+  "fish_tasks": [
+   "ff3f5a491e40434db8f8a9624f041a51",
+   "fb7c3fa5de384d159ce00b4c596a7347"
+  ]
  },
  "kobo10": {
   "title": "Kobo's Money Story, Part 10: Your keys, your coins",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo10.mp3",
+  "alt_take": "assets/vo/kobo10-b.mp3",
+  "transcript": "assets/vo/kobo10.json",
+  "duration": 76.5,
+  "fish_tasks": [
+   "097ae053d41149eb95af61907ca733fe",
+   "b2ce4e3e1568486ab748c7f641fdf4a3"
+  ]
  },
  "kobo11": {
   "title": "Kobo's Money Story, Part 11: The digital dollar",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo11.mp3",
+  "alt_take": "assets/vo/kobo11-b.mp3",
+  "transcript": "assets/vo/kobo11.json",
+  "duration": 68.9,
+  "fish_tasks": [
+   "80dbe5c00aa947559b7afb19af6d86dd",
+   "e0f1a079b88941fd9d33db3e646556d6"
+  ]
  },
  "kobo12": {
   "title": "Kobo's Money Story, Part 12: A little every month",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo12.mp3",
+  "alt_take": "assets/vo/kobo12-b.mp3",
+  "transcript": "assets/vo/kobo12.json",
+  "duration": 63.6,
+  "fish_tasks": [
+   "18e5aa5521f14eae96418781025fde5d",
+   "52ae6b95b7c0419dba3359969fe15689"
+  ]
  },
  "kobo13": {
   "title": "Kobo's Money Story, Part 13: Don't put all your eggs in one basket",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo13.mp3",
+  "alt_take": "assets/vo/kobo13-b.mp3",
+  "transcript": "assets/vo/kobo13.json",
+  "duration": 65.1,
+  "fish_tasks": [
+   "454f2b009b284c2189355845be21c2ad",
+   "87f015ae8f8a47e597f155e61dd9d967"
+  ]
  },
  "kobo14": {
   "title": "Kobo's Money Story, Part 14: A second stream",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo14.mp3",
+  "alt_take": "assets/vo/kobo14-b.mp3",
+  "transcript": "assets/vo/kobo14.json",
+  "duration": 65.9,
+  "fish_tasks": [
+   "1b6aafef1c124f78ac0a8def4f53d2e5",
+   "ecdafc75488e4e62a788ae9700221efd"
+  ]
  },
  "kobo15": {
   "title": "Kobo's Money Story, Part 15: The new scams",
   "type": "kobo",
   "voice": "fish-elite",
-  "status": "scripted"
+  "status": "voiced",
+  "audio": "assets/vo/kobo15.mp3",
+  "alt_take": "assets/vo/kobo15-b.mp3",
+  "transcript": "assets/vo/kobo15.json",
+  "duration": 65.4,
+  "fish_tasks": [
+   "ca9e3f9ef2ff41a18695896fb4aea0ad",
+   "c500bd399c564503a0f3610c9a9d88ae"
+  ]
  },
  "ex01-halving": {
   "title": "Explained: the Bitcoin halving",
@@ -186,7 +266,8 @@
   "script": "queue/howto/candlesticks.txt",
   "audio": "assets/vo/howto-candlesticks.mp3",
   "duration": 75.0,
-  "status": "voiced"
+  "status": "voiced",
+  "transcript": "assets/vo/howto-candlesticks.json"
  },
  "howto-stoploss": {
   "title": "How a stop loss works",
@@ -195,7 +276,8 @@
   "script": "queue/howto/stoploss.txt",
   "audio": "assets/vo/howto-stoploss.mp3",
   "duration": 78.58,
-  "status": "voiced"
+  "status": "voiced",
+  "transcript": "assets/vo/howto-stoploss.json"
  },
  "howto-coingecko": {
   "title": "How to check a coin on CoinGecko",
@@ -204,7 +286,8 @@
   "script": "queue/howto/coingecko.txt",
   "audio": "assets/vo/howto-coingecko.mp3",
   "duration": 69.24,
-  "status": "voiced"
+  "status": "voiced",
+  "transcript": "assets/vo/howto-coingecko.json"
  },
  "howto-fake-token": {
   "title": "How to spot a fake token",
@@ -213,7 +296,8 @@
   "script": "queue/howto/fake-token.txt",
   "audio": "assets/vo/howto-fake-token.mp3",
   "duration": 83.08,
-  "status": "voiced"
+  "status": "voiced",
+  "transcript": "assets/vo/howto-fake-token.json"
  },
  "howto-block-explorer": {
   "title": "How to use a block explorer",
@@ -222,6 +306,7 @@
   "script": "queue/howto/block-explorer.txt",
   "audio": "assets/vo/howto-block-explorer.mp3",
   "duration": 72.82,
-  "status": "voiced"
+  "status": "voiced",
+  "transcript": "assets/vo/howto-block-explorer.json"
  }
 }

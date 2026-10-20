@@ -1,0 +1,61 @@
+Most crypto wallets that get drained never leak a seed phrase. The owner signs the theft themselves, with one click. By the end of this video, you'll know exactly which apps can spend your tokens right now, and how to cut them off in about two minutes. I'm Roland. I build in DeFi and I've audited smart contracts, and this is the first check I run on any wallet.
+
+Quick note: this is education, not financial advice. And this video is about Ethereum and the chains that work like it: BNB Chain, Base, Arbitrum, Polygon and so on.
+
+Chapter one. What an approval actually is.
+
+When you swap a token on an exchange like Uniswap, the exchange's smart contract needs permission to move that token out of your wallet. So before the first swap, your wallet asks you to approve. That approval is written on the blockchain. It says: this contract may spend this token from my wallet, up to this amount.
+
+Here's the problem. To save you fees on future swaps, many apps ask for an unlimited amount. And that permission doesn't expire. It stays live after you close the app, after you disconnect your wallet, even years later. If that contract is ever hacked, or if the contract was malicious from the start, it can move every token you approved. No password needed.
+
+Chapter two. How drainers use this against you.
+
+A wallet drainer is a fake website. It looks like a free airdrop, a new mint, a copy of a popular app, or a link someone replied to you with on X or Telegram. You connect your wallet. Then it asks you to sign something.
+
+That signature is the trap. It might be a normal approve, giving their contract an unlimited allowance. For NFTs, it might be set approval for all, which hands over a whole collection. Or it might be a permit. A permit is an off-chain signature. It costs you no gas, it doesn't look like a transaction, and that's exactly why it works. Once they have the signature, they submit it themselves and move your tokens.
+
+How big is this? The security firm Scam Sniffer counted about eighty-four million dollars stolen by wallet drainer phishing in 2025, from more than one hundred and six thousand victims. The single biggest theft that year was six and a half million dollars, from one permit signature. That's actually down a lot from 2024, when losses were close to half a billion. But the method hasn't changed. It still works because people don't read what they sign.
+
+Chapter three. Check who can spend your tokens right now.
+
+Open revoke dot cash in your browser. Type it yourself, don't click a link. You don't even need to connect your wallet to look. Paste your wallet address into the search bar at the top and pick your network.
+
+You'll see a list. Each row is an asset, the app or contract that's allowed to spend it, and the amount it's allowed to spend. Look for three things. One: anything that says unlimited. Two: any spender you don't recognise. Three: apps you used once, months ago, and never went back to.
+
+Prefer a block explorer? Etherscan has a free Token Approval Checker that does the same thing for Ethereum. BscScan and the other explorers have their own versions. Same idea: paste your address, read the list.
+
+Do this for every network you've used. An approval on Base doesn't show up on Ethereum, and the other way round.
+
+Chapter four. Revoke what you don't use.
+
+Now connect the wallet that owns those approvals. On revoke dot cash, each row has a revoke button. Click it, and your wallet will ask you to confirm a transaction. That transaction sets the allowance back to zero.
+
+Revoking costs a small gas fee, because it's a real transaction. On networks like Base or Arbitrum, that's usually cents. On Ethereum mainnet it can be more, so start with the dangerous ones.
+
+Here's the order I use. First, unlimited approvals to anything I don't recognise. Second, unlimited approvals to apps I no longer use. Third, everything else that's older than a few months. Keep the ones you actively use, or revoke them too and simply approve again next time. That's the safest habit.
+
+One important limit. If you already signed a malicious permit and the attacker has used it, revoking now won't bring the tokens back. Revoking protects you from the next theft, not the last one. If you think you've been drained, move whatever is left to a brand new wallet straight away.
+
+Chapter five. Read the pop-up before you click.
+
+Most people lose money in the half second between the pop-up and the click. So slow down and read three things.
+
+What type of request is it? A connect request alone is harmless. An approve, set approval for all, permit, or increase allowance is a spending permission.
+
+Who is the spender? Your wallet shows the contract address. If you were trying to mint an NFT and the request wants permission over your stablecoins, stop.
+
+How much? Wallets like MetaMask let you edit the spending cap. If you're swapping one hundred dollars, approve one hundred, not unlimited.
+
+If you can't tell what something does, reject it. A real app will ask again. A scam is hoping you won't look.
+
+Chapter six. Habits that make this boring.
+
+Keep two wallets. A small hot wallet for trying new apps, airdrops and mints, with only what you can afford to lose. And a vault wallet, ideally a hardware wallet, that only ever talks to a few apps you trust.
+
+Bookmark the apps you use, and only open them from your bookmarks. Never connect from a link in a DM, a reply, or a sponsored search result.
+
+And put a reminder in your calendar: once a month, open revoke dot cash, paste your address, and clean up. Two minutes.
+
+So here's the whole thing in one breath. Approvals let apps spend your tokens. Drainers trick you into signing them. Check your approvals on revoke dot cash, revoke what you don't use, read every pop-up, and keep your savings in a separate wallet.
+
+The full checklist is pinned in the comments. In the next video, I'll show you how to set up a hardware wallet properly, including the one mistake that makes it useless. Education, not financial advice. See you there.

@@ -12,6 +12,8 @@
   {"op": "caption", "id": "<video id>", "path": "<.srt or .vtt>", "language": "en"}
   {"op": "analytics", "days": 28}                         -> views, watch time, subs per video
   {"op": "list_comments", "max": 50} / {"op": "reply", "comment_id": "...", "text": "..."}
+  {"op": "thumbnail", "id": "<video id>", "path": "<.jpg>"}   (channel must be phone-verified)
+  {"op": "comment", "id": "<our video id>", "text": "..."}  (top-level comment on our own video; pin it in Studio)
   {"op": "hide_comment", "comment_id": "..."}             (sets moderation status to heldForReview)
 Results go to the job summary and to log/youtube/<date>-<op>.json is NOT written (repo is public): summary only.
 """
@@ -162,6 +164,16 @@ def run(o):
         if not r.ok:
             raise RuntimeError(f"watermark: HTTP {r.status_code} {r.text[:300]}")
         say("watermark set", {"path": o["path"]})
+    elif op == "thumbnail":  # needs a phone-verified channel
+        r = requests.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set", headers={**c.h, "Content-Type": "image/jpeg"}, timeout=120,
+                          params={"videoId": o["id"], "uploadType": "media"}, data=open(o["path"], "rb").read())
+        if not r.ok:
+            raise RuntimeError(f"thumbnail: HTTP {r.status_code} {r.text[:300]}")
+        say("thumbnail set", {"id": o["id"]})
+    elif op == "comment":  # a top-level comment on OUR OWN video (pinning is manual in Studio)
+        r = c.api("POST", "commentThreads", {"part": "snippet"}, {"snippet": {"channelId": CID, "videoId": o["id"],
+                  "topLevelComment": {"snippet": {"textOriginal": o["text"]}}}})
+        say("comment posted", {"id": r.get("id")})
     elif op == "caption":
         r = requests.post("https://www.googleapis.com/upload/youtube/v3/captions", headers=c.h, timeout=120,
                           params={"part": "snippet", "uploadType": "multipart"},

@@ -235,13 +235,13 @@ def build(spec):
     env = np.clip(env / (np.percentile(env, 95) + 1e-6), 0, 1)
     env[env < 0.12] = 0
     host = spec.get("host", [])
-    data = {"dur": dur, "chunks": chunks(words), "bgs": [{"a": a, "b": b} for a, b, _ in bgs], "cards": cards,
+    data = {"dur": dur, "chunks": [] if spec.get("nocap") else chunks(words), "bgs": [{"a": a, "b": b} for a, b, _ in bgs], "cards": cards,
             "env": [round(float(v), 3) for v in env], "host": host}
     bg_html = "".join(f"<div class='bg' id='bg{i}' style=\"background-image:url('{b64(p)}')\"></div>" for i, (_, _, p) in enumerate(bgs))
     body = (bg_html + "<div class='shade'></div>" + "".join(card_html(i, c) for i, c in enumerate(cards)) +
             (f"<div id='host'>{duo.bunny_svg('kobo', duo.KOBO_COLORS)}</div><div id='hostname'>Kobo</div>" if host else "") +
             spec.get("brand", "<div class='brand'><b>@</b>defi_ring_master</div>") + "<div class='prog'><i id='prog'></i></div><div class='cap' id='cap'></div>")
-    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{CSS}{LAND_CSS if spec.get('land') else ''}</style></head><body>{body}"
+    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{FONT_CSS}{CSS}{LAND_CSS if spec.get('land') else ''}{spec.get('css', '')}</style></head><body>{body}"
             f"<script>{JS.replace('__DATA__', json.dumps(data))}</script></body></html>")
 
 

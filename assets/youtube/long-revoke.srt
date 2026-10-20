@@ -1,0 +1,610 @@
+1
+00:00:00,000 --> 00:00:04,336
+Most crypto wallets that get drained never
+leak a seed phrase.
+
+2
+00:00:04,336 --> 00:00:08,043
+The owner signs the theft themselves, with
+one click.
+
+3
+00:00:08,043 --> 00:00:13,499
+By the end of this video, you'll know
+exactly which apps can spend your tokens
+
+4
+00:00:13,499 --> 00:00:17,416
+right now, and how to cut them off in
+about two minutes.
+
+5
+00:00:17,416 --> 00:00:18,185
+I'm Roland.
+
+6
+00:00:18,185 --> 00:00:23,710
+I build in DeFi and I've audited smart
+contracts, and this is the first check I
+
+7
+00:00:23,710 --> 00:00:24,969
+run on any wallet.
+
+8
+00:00:24,969 --> 00:00:25,739
+Quick note:
+
+9
+00:00:25,739 --> 00:00:28,536
+this is education, not financial advice.
+
+10
+00:00:28,536 --> 00:00:33,153
+And this video is about Ethereum and the
+chains that work like it:
+
+11
+00:00:33,153 --> 00:00:36,300
+BNB Chain, Base, Arbitrum, Polygon and so
+on.
+
+12
+00:00:36,600 --> 00:00:37,416
+Chapter one.
+
+13
+00:00:37,416 --> 00:00:39,388
+What an approval actually is.
+
+14
+00:00:39,388 --> 00:00:44,827
+When you swap a token on an exchange like
+Uniswap, the exchange's smart contract
+
+15
+00:00:44,827 --> 00:00:48,566
+needs permission to move that token out of
+your wallet.
+
+16
+00:00:48,566 --> 00:00:52,509
+So before the first swap, your wallet asks
+you to approve.
+
+17
+00:00:52,509 --> 00:00:55,433
+That approval is written on the
+blockchain.
+
+18
+00:00:55,433 --> 00:00:55,977
+It says:
+
+19
+00:00:55,977 --> 00:01:00,668
+this contract may spend this token from my
+wallet, up to this amount.
+
+20
+00:01:00,668 --> 00:01:01,960
+Here's the problem.
+
+21
+00:01:01,960 --> 00:01:06,855
+To save you fees on future swaps, many
+apps ask for an unlimited amount.
+
+22
+00:01:06,855 --> 00:01:09,235
+And that permission doesn't expire.
+
+23
+00:01:09,235 --> 00:01:14,470
+It stays live after you close the app,
+after you disconnect your wallet, even
+
+24
+00:01:14,470 --> 00:01:15,286
+years later.
+
+25
+00:01:15,286 --> 00:01:20,997
+If that contract is ever hacked, or if the
+contract was malicious from the start, it
+
+26
+00:01:20,997 --> 00:01:23,308
+can move every token you approved.
+
+27
+00:01:23,308 --> 00:01:24,600
+No password needed.
+
+28
+00:01:24,900 --> 00:01:25,717
+Chapter two.
+
+29
+00:01:25,717 --> 00:01:28,033
+How drainers use this against you.
+
+30
+00:01:28,033 --> 00:01:30,417
+A wallet drainer is a fake website.
+
+31
+00:01:30,417 --> 00:01:36,138
+It looks like a free airdrop, a new mint,
+a copy of a popular app, or a link someone
+
+32
+00:01:36,138 --> 00:01:38,658
+replied to you with on X or Telegram.
+
+33
+00:01:38,658 --> 00:01:40,292
+You connect your wallet.
+
+34
+00:01:40,292 --> 00:01:42,676
+Then it asks you to sign something.
+
+35
+00:01:42,676 --> 00:01:44,515
+That signature is the trap.
+
+36
+00:01:44,515 --> 00:01:49,623
+It might be a normal approve, giving their
+contract an unlimited allowance.
+
+37
+00:01:49,623 --> 00:01:55,072
+For NFTs, it might be set approval for
+all, which hands over a whole collection.
+
+38
+00:01:55,072 --> 00:01:56,706
+Or it might be a permit.
+
+39
+00:01:56,706 --> 00:01:59,090
+A permit is an off-chain signature.
+
+40
+00:01:59,090 --> 00:02:04,675
+It costs you no gas, it doesn't look like
+a transaction, and that's exactly why it
+
+41
+00:02:04,675 --> 00:02:05,084
+works.
+
+42
+00:02:05,084 --> 00:02:10,328
+Once they have the signature, they submit
+it themselves and move your tokens.
+
+43
+00:02:10,328 --> 00:02:11,418
+How big is this?
+
+44
+00:02:11,418 --> 00:02:16,798
+The security firm Scam Sniffer counted
+about eighty-four million dollars stolen
+
+45
+00:02:16,798 --> 00:02:22,179
+by wallet drainer phishing in 2025, from
+more than one hundred and six thousand
+
+46
+00:02:22,179 --> 00:02:22,724
+victims.
+
+47
+00:02:22,724 --> 00:02:28,104
+The single biggest theft that year was six
+and a half million dollars, from one
+
+48
+00:02:28,104 --> 00:02:29,262
+permit signature.
+
+49
+00:02:29,262 --> 00:02:34,643
+That's actually down a lot from 2024, when
+losses were close to half a billion.
+
+50
+00:02:34,643 --> 00:02:36,686
+But the method hasn't changed.
+
+51
+00:02:36,686 --> 00:02:40,500
+It still works because people don't read
+what they sign.
+
+52
+00:02:40,800 --> 00:02:41,761
+Chapter three.
+
+53
+00:02:41,761 --> 00:02:44,645
+Check who can spend your tokens right now.
+
+54
+00:02:44,645 --> 00:02:47,186
+Open revoke dot cash in your browser.
+
+55
+00:02:47,186 --> 00:02:49,726
+Type it yourself, don't click a link.
+
+56
+00:02:49,726 --> 00:02:53,228
+You don't even need to connect your wallet
+to look.
+
+57
+00:02:53,228 --> 00:02:58,652
+Paste your wallet address into the search
+bar at the top and pick your network.
+
+58
+00:02:58,652 --> 00:02:59,888
+You'll see a list.
+
+59
+00:02:59,888 --> 00:03:05,656
+Each row is an asset, the app or contract
+that's allowed to spend it, and the amount
+
+60
+00:03:05,656 --> 00:03:07,166
+it's allowed to spend.
+
+61
+00:03:07,166 --> 00:03:08,677
+Look for three things.
+
+62
+00:03:08,677 --> 00:03:08,951
+One:
+
+63
+00:03:08,951 --> 00:03:10,943
+anything that says unlimited.
+
+64
+00:03:10,943 --> 00:03:11,217
+Two:
+
+65
+00:03:11,217 --> 00:03:13,414
+any spender you don't recognise.
+
+66
+00:03:13,414 --> 00:03:13,826
+Three:
+
+67
+00:03:13,826 --> 00:03:17,603
+apps you used once, months ago, and never
+went back to.
+
+68
+00:03:17,603 --> 00:03:19,251
+Prefer a block explorer?
+
+69
+00:03:19,251 --> 00:03:24,194
+Etherscan has a free Token Approval
+Checker that does the same thing for
+
+70
+00:03:24,194 --> 00:03:24,812
+Ethereum.
+
+71
+00:03:24,812 --> 00:03:28,657
+BscScan and the other explorers have their
+own versions.
+
+72
+00:03:28,657 --> 00:03:29,344
+Same idea:
+
+73
+00:03:29,344 --> 00:03:31,679
+paste your address, read the list.
+
+74
+00:03:31,679 --> 00:03:34,288
+Do this for every network you've used.
+
+75
+00:03:34,288 --> 00:03:39,300
+An approval on Base doesn't show up on
+Ethereum, and the other way round.
+
+76
+00:03:39,600 --> 00:03:40,457
+Chapter four.
+
+77
+00:03:40,457 --> 00:03:42,172
+Revoke what you don't use.
+
+78
+00:03:42,172 --> 00:03:45,403
+Now connect the wallet that owns those
+approvals.
+
+79
+00:03:45,403 --> 00:03:48,634
+On revoke dot cash, each row has a revoke
+button.
+
+80
+00:03:48,634 --> 00:03:52,855
+Click it, and your wallet will ask you to
+confirm a transaction.
+
+81
+00:03:52,855 --> 00:03:56,086
+That transaction sets the allowance back
+to zero.
+
+82
+00:03:56,086 --> 00:04:00,307
+Revoking costs a small gas fee, because
+it's a real transaction.
+
+83
+00:04:00,307 --> 00:04:03,000
+On networks like Base or Arbitrum, that's
+usually cents.
+
+84
+00:04:03,000 --> 00:04:08,550
+On Ethereum mainnet it can be more, so
+start with the dangerous ones.
+
+85
+00:04:08,550 --> 00:04:10,067
+Here's the order I use.
+
+86
+00:04:10,067 --> 00:04:13,825
+First, unlimited approvals to anything I
+don't recognise.
+
+87
+00:04:13,825 --> 00:04:17,255
+Second, unlimited approvals to apps I no
+longer use.
+
+88
+00:04:17,255 --> 00:04:20,816
+Third, everything else that's older than a
+few months.
+
+89
+00:04:20,816 --> 00:04:26,091
+Keep the ones you actively use, or revoke
+them too and simply approve again next
+
+90
+00:04:26,091 --> 00:04:26,421
+time.
+
+91
+00:04:26,421 --> 00:04:28,004
+That's the safest habit.
+
+92
+00:04:28,004 --> 00:04:29,322
+One important limit.
+
+93
+00:04:29,322 --> 00:04:34,796
+If you already signed a malicious permit
+and the attacker has used it, revoking now
+
+94
+00:04:34,796 --> 00:04:36,642
+won't bring the tokens back.
+
+95
+00:04:36,642 --> 00:04:40,599
+Revoking protects you from the next theft,
+not the last one.
+
+96
+00:04:40,599 --> 00:04:45,677
+If you think you've been drained, move
+whatever is left to a brand new wallet
+
+97
+00:04:45,677 --> 00:04:46,600
+straight away.
+
+98
+00:04:46,900 --> 00:04:47,798
+Chapter five.
+
+99
+00:04:47,798 --> 00:04:50,078
+Read the pop-up before you click.
+
+100
+00:04:50,078 --> 00:04:55,260
+Most people lose money in the half second
+between the pop-up and the click.
+
+101
+00:04:55,260 --> 00:04:57,678
+So slow down and read three things.
+
+102
+00:04:57,678 --> 00:04:59,543
+What type of request is it?
+
+103
+00:04:59,543 --> 00:05:02,030
+A connect request alone is harmless.
+
+104
+00:05:02,030 --> 00:05:07,350
+An approve, set approval for all, permit,
+or increase allowance is a spending
+
+105
+00:05:07,350 --> 00:05:08,110
+permission.
+
+106
+00:05:08,110 --> 00:05:09,423
+Who is the spender?
+
+107
+00:05:09,423 --> 00:05:12,117
+Your wallet shows the contract address.
+
+108
+00:05:12,117 --> 00:05:17,368
+If you were trying to mint an NFT and the
+request wants permission over your
+
+109
+00:05:17,368 --> 00:05:18,612
+stablecoins, stop.
+
+110
+00:05:18,612 --> 00:05:19,233
+How much?
+
+111
+00:05:19,233 --> 00:05:22,826
+Wallets like MetaMask let you edit the
+spending cap.
+
+112
+00:05:22,826 --> 00:05:28,008
+If you're swapping one hundred dollars,
+approve one hundred, not unlimited.
+
+113
+00:05:28,008 --> 00:05:31,393
+If you can't tell what something does,
+reject it.
+
+114
+00:05:31,393 --> 00:05:33,189
+A real app will ask again.
+
+115
+00:05:33,189 --> 00:05:35,400
+A scam is hoping you won't look.
+
+116
+00:05:35,700 --> 00:05:36,520
+Chapter six.
+
+117
+00:05:36,520 --> 00:05:38,501
+Habits that make this boring.
+
+118
+00:05:38,501 --> 00:05:39,663
+Keep two wallets.
+
+119
+00:05:39,663 --> 00:05:45,266
+A small hot wallet for trying new apps,
+airdrops and mints, with only what you can
+
+120
+00:05:45,266 --> 00:05:46,291
+afford to lose.
+
+121
+00:05:46,291 --> 00:05:51,825
+And a vault wallet, ideally a hardware
+wallet, that only ever talks to a few apps
+
+122
+00:05:51,825 --> 00:05:52,508
+you trust.
+
+123
+00:05:52,508 --> 00:05:57,018
+Bookmark the apps you use, and only open
+them from your bookmarks.
+
+124
+00:05:57,018 --> 00:06:02,006
+Never connect from a link in a DM, a
+reply, or a sponsored search result.
+
+125
+00:06:02,006 --> 00:06:04,466
+And put a reminder in your calendar:
+
+126
+00:06:04,466 --> 00:06:09,180
+once a month, open revoke dot cash, paste
+your address, and clean up.
+
+127
+00:06:09,180 --> 00:06:10,000
+Two minutes.
+
+128
+00:06:10,300 --> 00:06:12,888
+So here's the whole thing in one breath.
+
+129
+00:06:12,888 --> 00:06:15,281
+Approvals let apps spend your tokens.
+
+130
+00:06:15,281 --> 00:06:17,675
+Drainers trick you into signing them.
+
+131
+00:06:17,675 --> 00:06:22,721
+Check your approvals on revoke dot cash,
+revoke what you don't use, read every
+
+132
+00:06:22,721 --> 00:06:26,020
+pop-up, and keep your savings in a
+separate wallet.
+
+133
+00:06:26,020 --> 00:06:28,932
+The full checklist is pinned in the
+comments.
+
+134
+00:06:28,932 --> 00:06:33,719
+In the next video, I'll show you how to
+set up a hardware wallet properly,
+
+135
+00:06:33,719 --> 00:06:36,824
+including the one mistake that makes it
+useless.
+
+136
+00:06:36,824 --> 00:06:38,894
+Education, not financial advice.
+
+137
+00:06:38,894 --> 00:06:39,800
+See you there.
+

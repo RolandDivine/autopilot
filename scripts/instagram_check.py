@@ -1,4 +1,5 @@
-"""Check the Instagram connection without posting: prints the account the token belongs to."""
+"""Check the Instagram connection without posting: prints the account, profile fields and 28-day account insights (read-only)."""
+import json
 import os
 import sys
 
@@ -11,3 +12,16 @@ try:
 except Exception as e:
     print(f"::error title=instagram check failed::{str(e)[:500]}".replace("\n", " "))
     sys.exit(1)
+
+def show(title, fn):
+    try:
+        print(f"::notice title={title}::" + json.dumps(fn(), ensure_ascii=False)[:3500])
+    except Exception as e:
+        print(f"::warning title={title} unavailable::{str(e)[:300]}")
+
+show("profile", lambda: c._req("get", "me", params={"fields": "username,name,account_type,biography,website,followers_count,follows_count,media_count,profile_picture_url"}))
+for m, extra in [("reach,views,accounts_engaged,total_interactions,profile_links_taps,follows_and_unfollows", {"metric_type": "total_value"}),
+                 ("reach", {"breakdown": "media_product_type", "metric_type": "total_value"}),
+                 ("reach", {"breakdown": "follow_type", "metric_type": "total_value"})]:
+    show(f"insights {m} {extra.get('breakdown','')}".strip(), lambda m=m, extra=extra: c._req("get", f"{c.user_id}/insights", params={"metric": m, "period": "day", "since": "2026-10-01", "until": "2026-10-20", **extra}).get("data"))
+show("audience country", lambda: c._req("get", f"{c.user_id}/insights", params={"metric": "follower_demographics", "period": "lifetime", "metric_type": "total_value", "breakdown": "country"}).get("data"))

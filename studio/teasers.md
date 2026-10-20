@@ -13,3 +13,4 @@ image that opens a curiosity gap about tomorrow's 8 AM post. Rules:
 | 2026-10-17 | Do you know why ChatGPT keeps forgetting your business? It has no home. | 2026-10-18 0800: ChatGPT Projects (project instructions + files) so you stop re-explaining your business |
 | 2026-10-18 | Do you know you can start learning cybersecurity this week, free, with no experience? | 2026-10-20 1900 (late: no build on 19 Oct): free from-zero cybersecurity path |
 | 2026-10-20 | Do you know one signature can empty your crypto wallet? | 2026-10-21 0800: token approvals / wallet drainers, and how to check and revoke them |
+| 2026-10-21 | Do you know your phone can show you which apps were listening? | 2026-10-22 0800: iPhone App Privacy Report + Android Privacy dashboard (mic/camera access), step by step |

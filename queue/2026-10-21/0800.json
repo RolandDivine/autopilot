@@ -1,0 +1,28 @@
+{
+ "title": "How to: check and revoke token approvals",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Most crypto wallets that get drained never leak a seed phrase. The owner signs the theft themselves.\n\nHere's how it works, and the two-minute check I'd do tonight.\n\nWhen a crypto app asks you to \"approve\", you give its smart contract permission to move your tokens. Often that permission is unlimited, and it stays live until you revoke it.\n\nDrainer sites use this. A fake airdrop or mint page asks you to connect and sign. The signature is an approval or a Permit, and they move your tokens whenever they like.\n\nThe scale: Scam Sniffer counted $83.85 million stolen by wallet-drainer phishing in 2025, across 106,106 victims. The biggest single theft was $6.5 million, from one Permit signature.\n\nThe check:\n1. Open revoke.cash or Etherscan's Token Approval Checker\n2. Paste your wallet address\n3. Revoke anything you don't use or don't recognise, starting with unlimited approvals\n4. Expect a small gas fee per revoke, because each one is a transaction\n\nTo avoid it next time: never sign from a link in a DM or a reply, read the wallet pop-up before you click, and keep a small separate wallet for trying new apps.\n\nThe mistake I'd avoid: thinking \"I only connected, I didn't send anything.\" Connecting is harmless. Signing an approval is not.\n\nWhen did you last check your approvals?\n\nEducation, not financial advice.\n\nSources: Scam Sniffer 2025 Crypto Phishing Report; Trust Wallet, \"Token approvals and wallet drainers\".",
+  "media": "media/appr.pdf",
+  "media_title": "How to: check and revoke token approvals"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "One click on \"approve\" can empty your wallet. Check yours. ✍️\n\nHow approval scams work, the 2025 numbers, and the 2-minute check that shows who can still spend your tokens. Swipe →\n\n📌 Save it\n📤 Send it to the friend who connects their wallet to everything\nEducation, not financial advice.\n\n#crypto #web3 #cryptosecurity #defi",
+  "media": [
+   "instagram/appr-0.jpg",
+   "instagram/appr-1.jpg",
+   "instagram/appr-2.jpg",
+   "instagram/appr-3.jpg",
+   "instagram/appr-4.jpg",
+   "instagram/appr-5.jpg",
+   "instagram/appr-6.jpg",
+   "instagram/appr-7.jpg"
+  ],
+  "music": "Phil Collins – Another Day in Paradise"
+ }
+}

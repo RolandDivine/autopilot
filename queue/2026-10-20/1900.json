@@ -1,0 +1,28 @@
+{
+ "title": "How to: learn cybersecurity free, from zero",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "You can start learning cybersecurity this week. Free. No experience needed.\n\nHere's the path I'd follow from zero, in order.\n\n1. Basics: Cisco Networking Academy's Introduction to Cybersecurity. Free and self-paced. Pass the final exam for a free Credly badge\n\n2. How attacks work: Fortinet's NSE 1 and NSE 2 are free self-paced courses, each ending with an online exam. IBM's Cybersecurity Fundamentals adds a second free badge\n\n3. Hands-on practice: TryHackMe's free rooms run in your browser, no setup. OverTheWire's Bandit teaches you the Linux command line through puzzles\n\n4. Web security: PortSwigger's Web Security Academy has free lessons and labs on how websites actually get hacked\n\n5. Google's Cybersecurity Certificate is free to audit on Coursera. The certificate itself costs $49 a month\n\n6. Write up everything you solve. That's your portfolio\n\nOne update: ISC2's free Certified in Cybersecurity program closed to new enrolments in May 2026, so ignore older posts that still promise it.\n\nThe mistake I'd avoid: collecting badges and calling it experience. Free certificates won't get you hired on their own. A small home lab and clear write-ups of what you broke and fixed will.\n\nWhich part of security would you want to learn first: defending networks, or breaking into websites?\n\nSources: Cisco Networking Academy; Fortinet Training Institute; IBM SkillsBuild; PortSwigger; Coursera; ISC2 (April 2026); StationX (Aug 2026).",
+  "media": "media/cyb.pdf",
+  "media_title": "How to: learn cybersecurity free, from zero"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Learn cybersecurity from zero. Free. Starting tonight. 🔐\n\nThe 4-step free path I'd follow, and the catch nobody tells beginners. Swipe →\n\n📌 Save it\n📤 Send it to the friend who keeps saying they want to get into tech\n\n#cybersecurity #tech #learning #careers",
+  "media": [
+   "instagram/cyb-0.jpg",
+   "instagram/cyb-1.jpg",
+   "instagram/cyb-2.jpg",
+   "instagram/cyb-3.jpg",
+   "instagram/cyb-4.jpg",
+   "instagram/cyb-5.jpg",
+   "instagram/cyb-6.jpg",
+   "instagram/cyb-7.jpg"
+  ],
+  "music": "Luther Vandross – Never Too Much"
+ }
+}

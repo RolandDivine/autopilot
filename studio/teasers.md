@@ -11,4 +11,5 @@ image that opens a curiosity gap about tomorrow's 8 AM post. Rules:
 |---|---|---|
 | 2026-10-16 | Do you know your business is stuck because you're doing work a free tool could do? | 2026-10-17 0800: tasks a small business can automate this weekend + free tools |
 | 2026-10-17 | Do you know why ChatGPT keeps forgetting your business? It has no home. | 2026-10-18 0800: ChatGPT Projects (project instructions + files) so you stop re-explaining your business |
-| 2026-10-18 | Do you know you can start learning cybersecurity this week, free, with no experience? | 2026-10-19 0800: a free from-zero cybersecurity learning path (verify each course is free) |
+| 2026-10-18 | Do you know you can start learning cybersecurity this week, free, with no experience? | 2026-10-20 1900 (late: no build on 19 Oct): free from-zero cybersecurity path |
+| 2026-10-20 | Do you know one signature can empty your crypto wallet? | 2026-10-21 0800: token approvals / wallet drainers, and how to check and revoke them |

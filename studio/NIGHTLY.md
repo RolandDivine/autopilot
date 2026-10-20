@@ -85,4 +85,9 @@ Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key
 ## Audio bank (voiced 18 Oct 2026, before Fish plan ends 22 Oct)
 - 30 Fish ELITE voiceovers in assets/vo/: kobo06–kobo15 (Kobo S2) + ex01–ex20 explainers. Each has an alt take (<name>-b.mp3) and Whisper word timings (<name>.json). Index: queue/vo/index.json.
 - 5 ElevenLabs how-to voiceovers: assets/vo/howto-*.mp3 (scripts in queue/howto/).
-- Notion rows exist (Needs review), 2 a day 19 Oct–2 Nov at 12:00 and 18:00 WAT. Build each video from its mp3 + json the night before, then set the row to Scheduled.
+- Notion rows exist, 2 a day at 12:00 (explainer) and 18:00 (Kobo) WAT, shifted to 20 Oct–3 Nov after the missed 19 Oct build. Order: ex01+kobo06 (20 Oct, posted), ex02+kobo07 (21 Oct), then ex03+kobo08 (22 Oct) … ex10+kobo15 (29 Oct), then two explainers a day ex11–ex20 (30 Oct–3 Nov). The Notion row's When is the source of truth.
+- **Nightly video step (every night, before step 7):** build tomorrow's two videos.
+  - Kobo part N: add `duo.CARDS[N]` in `studio/money2.py` (5–8 cards timed from `assets/vo/koboNN.json`), preview with `python3 studio/money2.py N 3 20 40 60`, look at the frames, then render `python3 studio/money2.py N`.
+  - Explainer exNN: add a `*_spec()` to `studio/explainers.py` (cards anchored on words with `at()`, one generated vertical background image in assets/gen), preview, look, render.
+  - Write `queue/vo/posts-<date>.json` (video, title, youtube true only for crypto, playlist, reel_caption, li_text) like `posts-2026-10-21.json`, commit the mp4s, set both Notion rows to Scheduled.
+  - Book send_later at 11:01 UTC (explainer) and 17:01 UTC (Kobo): `python3 studio/post_video.py queue/vo/posts-<date>.json <key>`, then update the Notion row. Skip the IG story version (videos over 60 s fail as stories).

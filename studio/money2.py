@@ -31,6 +31,14 @@ duo.CARDS = {
         (43.6, 56.0, "📝", "Track one month", "She found $300 a year she forgot about"),
         (56.2, 65.5, "🗺️", "A budget is a map", "Not a cage"),
         (65.6, 71.0, "⏭️", "Next: the surprise bill", "Follow so you don't miss it")],
+    7: [(5.0, 14.9, "📱", "The phone breaks", "Repair: $400"),
+        (14.9, 21.0, "📈", "Tunde borrowed", "With interest, $400 became $600"),
+        (21.0, 31.9, "🛟", "Ada has an emergency fund", "Money only for surprises"),
+        (32.0, 35.6, "🚫", "Not for sales or parties", "Job loss · hospital · broken phone"),
+        (35.6, 45.6, "📏", "How much?", "3–6 months of basic expenses. Start with 1"),
+        (45.6, 55.1, "🏦", "Where?", "Safe and easy to reach. Not crypto, not shares"),
+        (55.2, 64.6, "✅", "Crisis → inconvenience", "That's what the fund does"),
+        (64.6, 69.0, "⏭️", "Next: good debt vs bad debt", "Follow so you don't miss it")],
 }
 
 

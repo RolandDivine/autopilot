@@ -67,7 +67,43 @@ def halving_spec():
     return viral.std("ex01-halving", timeline)
 
 
-SPECS = {"ex01-halving": halving_spec}
+def drainers_spec():
+    def timeline(at, dur):
+        t_wallet, t_connect, t_says, t_once = at("wallet", 7), at("connect"), at("says"), at("once")
+        t_rules, t_type, t_read, t_if = at("kobo's"), at("type"), at("read"), at("if", 44)
+        t_keep, t_check, t_one, t_see = at("keep"), at("check"), at("one", 60), at("see", 65)
+        bgs = [(-1, dur + 1, GEN / "coin-siphon.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": t_wallet - .1,
+             "html": "<div class='kick'>Crypto · safety</div><div class='mid'>Lose everything<br><span class='red'>without sharing your seed phrase.</span></div>"},
+            {"kind": "html", "a": t_wallet, "b": t_connect - .1,
+             "html": "<div class='kick'>A wallet drainer</div><div class='mid'>A fake website</div>"
+                     "<div class='sm' style='margin-top:16px'>Free airdrop · new mint · a copy of a popular app</div>"},
+            {"kind": "html", "a": t_connect, "b": t_says - .1,
+             "html": "<div class='kick'>The trap</div><div class='mid'>Connect, then <span class='yel'>sign</span></div>"
+                     "<div class='sm' style='margin-top:16px'>That signature can be a permission.</div>"},
+            {"kind": "stat", "a": t_says, "b": t_once - .1, "kick": "What you just approved", "value": "Unlimited", "cls": "red",
+             "label": "\"This contract may spend my tokens.\"", "sub": "Until you revoke it"},
+            {"kind": "html", "a": t_once, "b": t_rules - .1,
+             "html": "<div class='kick'>Then</div><div class='mid'>No password needed.<br><span class='red'>They just move the tokens.</span></div>"},
+            {"kind": "checks", "a": t_rules, "b": t_keep - .1, "kick": "Kobo's rules", "title": "Before you sign",
+             "items": [{"t": "Never connect from a DM or a reply link", "d": .4},
+                       {"t": "Type the address yourself", "d": t_type - t_rules},
+                       {"t": "Read it. \"Approve\" you didn't expect? Reject", "d": t_read - t_rules}]},
+            {"kind": "checks", "a": t_keep, "b": t_one - .1, "kick": "Kobo's rules", "title": "Protect what you have",
+             "items": [{"t": "A separate small wallet for new apps", "d": .3},
+                       {"t": "Check approvals on revoke.cash", "d": t_check - t_keep},
+                       {"t": "Revoke what you don't use", "d": t_check - t_keep + 3}]},
+            {"kind": "html", "a": t_one, "b": t_see - .3,
+             "html": "<div class='mid'>One click can cost everything.<br><span class='yel'>Slow down.</span></div>"},
+            {"kind": "html", "a": t_see - .3, "b": dur + 1, "html": FOLLOW.format("Crypto, explained straight.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex02-drainers", timeline)
+
+
+SPECS = {"ex01-halving": halving_spec, "ex02-drainers": drainers_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

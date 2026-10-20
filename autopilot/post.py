@@ -104,7 +104,7 @@ def run(dry_run=False, now_utc=None):
                     notes.append(f"X posted: {url}")
                 elif platform == "instagram":
                     urls = [public_url(s.path, m) for m in cfgp["media"]]
-                    mid, link = client("instagram").publish(urls, cfgp["caption"])
+                    mid, link = client("instagram").publish(urls, cfgp["caption"], cfgp.get("alt"))
                     if not dry_run:
                         record(s.key, "instagram", {"status": "posted", "id": mid, "url": link})
                     notes.append(f"Instagram posted: {link}")

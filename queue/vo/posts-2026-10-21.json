@@ -1,18 +1,19 @@
 {
  "ex02": {
-  "video": "assets/reels/ex02-drainers.mp4",
+  "video": "assets/reels/ex02-drainers-hook.mp4",
   "title": "Wallet drainers: how one signature empties your crypto",
   "youtube": true,
   "playlist": "Crypto Safety",
-  "reel_caption": "You can lose all your crypto without ever sharing your seed phrase. 🧪\n\nHow wallet drainers work, and Kobo's rules for signing safely.\n\n📌 Save it\n📤 Send it to the friend who clicks every airdrop link\n\nEducation, not financial advice.\n\n#crypto #web3 #cryptosecurity #scamawareness",
+  "reel_caption": "Wallet drainers explained: you can lose all your crypto without ever sharing your seed phrase. 🧪\n\nHow wallet drainers work, and Kobo's rules for signing safely.\n\n📌 Save it\n📤 Send it to the friend who clicks every airdrop link\n\nEducation, not financial advice.\n\n#crypto #web3 #cryptosecurity #scamawareness",
   "li_text": "You can lose all your crypto without ever sharing your seed phrase.\n\nA wallet drainer is a fake website: a free airdrop, a new mint, a copy of a popular app. You connect, it asks you to sign, and that signature is a permission: this contract may spend my tokens. Often unlimited, until you revoke it.\n\nAfter that, nobody needs your password. They just move the tokens.\n\nKobo's rules:\n→ Never connect your wallet from a link in a DM or a reply. Type the address yourself\n→ Read what you're signing. An unexpected \"approve\" or \"set approval for all\"? Reject it\n→ Keep a separate wallet with little money for trying new apps\n→ Check your old approvals on revoke.cash and remove the ones you don't use\n\nOne click can cost everything. Slow down.\n\nHave you ever revoked an approval, or is this the first time you're hearing about it?\n\nEducation, not financial advice."
  },
  "kobo07": {
-  "video": "assets/reels/kobo-money-part-7.mp4",
+  "video": "assets/reels/kobo-money-part-7-hook.mp4",
   "title": "Kobo's Money Story, Part 7: The emergency fund",
   "youtube": false,
   "playlist": "Kobo's Money Story",
   "reel_caption": "A $400 phone repair. Tunde borrowed and paid $600. Ada didn't. 📱\n\nKobo's Money Story, Part 7: the emergency fund. How much, where to keep it, and where never to keep it.\n\n📌 Save it\n📤 Send it to the friend who borrows every time something breaks\n\nEducation, not financial advice.\n\n#personalfinance #emergencyfund #savings #moneytips",
-  "li_text": "Ada's phone breaks. The repair costs $400.\n\nHer friend Tunde had the same problem last year. No savings, so he borrowed, and with interest the $400 became $600.\n\nAda doesn't borrow. She has an emergency fund. That's Part 7 of Kobo's Money Story.\n\nAn emergency fund is money you keep only for surprises: job loss, hospital, a broken phone. Not for sales, not for parties.\n\n→ How much: a common target is three to six months of basic expenses. If that sounds huge, start with one month\n→ Where: somewhere safe and easy to reach, like a savings account or a money market fund\n→ Where not: crypto or shares. Emergencies don't wait for the market to recover\n\nAn emergency fund turns a crisis into an inconvenience.\n\nHow many months of expenses would make you feel safe?\n\nEducation, not financial advice."
+  "li_text": "Ada's phone breaks. The repair costs $400.\n\nHer friend Tunde had the same problem last year. No savings, so he borrowed, and with interest the $400 became $600.\n\nAda doesn't borrow. She has an emergency fund. That's Part 7 of Kobo's Money Story.\n\nAn emergency fund is money you keep only for surprises: job loss, hospital, a broken phone. Not for sales, not for parties.\n\n→ How much: a common target is three to six months of basic expenses. If that sounds huge, start with one month\n→ Where: somewhere safe and easy to reach, like a savings account or a money market fund\n→ Where not: crypto or shares. Emergencies don't wait for the market to recover\n\nAn emergency fund turns a crisis into an inconvenience.\n\nHow many months of expenses would make you feel safe?\n\nEducation, not financial advice.",
+  "instagram_reel": false
  }
 }

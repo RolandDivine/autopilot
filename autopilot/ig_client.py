@@ -130,18 +130,30 @@ class InstagramClient:
             link = None
         return mid, link
 
-    def publish(self, image_urls, caption):
-        """1 URL = single image post; 2-10 = carousel. Returns (media_id, permalink)."""
+    def _media(self, data, alt=None):
+        """Create a media container, with alt text when given (Roland, 21 Oct 2026: alt text is a search signal).
+        If Instagram rejects the alt_text field, retry once without it so the post still goes out."""
+        if alt:
+            try:
+                return self._req("post", f"{self.user_id}/media", data={**data, "alt_text": alt[:1000]})["id"]
+            except InstagramError as e:
+                if "alt_text" not in str(e) and "param" not in str(e).lower():
+                    raise
+        return self._req("post", f"{self.user_id}/media", data=data)["id"]
+
+    def publish(self, image_urls, caption, alt=None):
+        """1 URL = single image post; 2-10 = carousel. alt = list of alt texts (one per image) or None.
+        Returns (media_id, permalink)."""
         if self.dry_run:
             print("[dry-run] Instagram:", len(image_urls), "images;", image_urls[:2], "caption:", caption[:120])
             return "DRYRUN", None
+        alt = alt or []
         if len(image_urls) == 1:
-            cid = self._req("post", f"{self.user_id}/media", data={"image_url": image_urls[0], "caption": caption})["id"]
+            cid = self._media({"image_url": image_urls[0], "caption": caption}, alt[0] if alt else None)
         else:
             children = []
-            for u in image_urls[:10]:
-                children.append(self._req("post", f"{self.user_id}/media",
-                                          data={"image_url": u, "is_carousel_item": "true"})["id"])
+            for i, u in enumerate(image_urls[:10]):
+                children.append(self._media({"image_url": u, "is_carousel_item": "true"}, alt[i] if i < len(alt) else None))
             for c in children:
                 self._wait(c)
             cid = self._req("post", f"{self.user_id}/media",

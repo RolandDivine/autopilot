@@ -35,7 +35,8 @@ def yt():
     return res
 if "ytonly" in sys.argv:
     print(yt()); sys.exit()
-print(run("instagram-publish.yml", {"kind": "reel", "paths": d["video"], "caption": d["reel_caption"]}))
+if d.get("instagram_reel", True):  # 1 Reel a day on Instagram (21 Oct review): the second video goes to Stories + LinkedIn only
+    print(run("instagram-publish.yml", {"kind": "reel", "paths": d["video"], "caption": d["reel_caption"]}))
 print(run("linkedin-publish.yml", {"media": d["video"], "text": d["li_text"], "title": d["title"]}))
 def story_parts(video):
     """Instagram story videos must be 60 s or less (Roland, 20 Oct 2026: split, don't skip).

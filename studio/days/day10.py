@@ -39,7 +39,7 @@ appr_ig = [
      ("r", "📌 Save this. 📤 Send it to the friend who connects their wallet to everything."),
      ("r", "Education, not financial advice. Follow **@defi_ring_master**.")],
 ]
-appr_cap = """One click on "approve" can empty your wallet. Check yours. ✍️
+appr_cap = """How to check and revoke token approvals in your crypto wallet. One click on "approve" can empty it. ✍️
 
 How approval scams work, the 2025 numbers, and the 2-minute check that shows who can still spend your tokens. Swipe →
 
@@ -198,8 +198,8 @@ It's built into your iPhone and Android, and most people have never opened it. T
 STORIES = {
     "s0900": ("glass-pen-coins.jpg", "Who can still spend your crypto? ==The 2-minute check is on my page.==", "New post · tap my profile"),
     "s1100": ("glass-pen-coins.jpg", "Have you ever signed something in your wallet ==without reading it?==", "Reply 👇"),
-    "s1400": ("glass-dome-brain.jpg", "Free Gemini got smaller. ==What to use instead is on my page.==", "New post · tap my profile"),
-    "s1700": ("map-shop.jpg", "How do new customers ==find your business?==", "Reply 👇"),
+    "s1400": ("glass-dome-brain.jpg", "Which AI do you use most: ==ChatGPT, Gemini or Claude?==", "Reply 👇"),
+    "s1700": ("glass-pen-coins.jpg", "Checked your wallet approvals yet? ==It takes 2 minutes.==", "Tap my profile · today's post"),
     "s2100": None,
 }
 
@@ -256,3 +256,31 @@ def build():
 if __name__ == "__main__":
     build()
     print("built", Q)
+
+
+# ── Instagram rules (Roland, 21 Oct 2026 review): 1 carousel + 1 Reel a day on Instagram, two lanes
+#    (crypto safety & money, AI tools), teasers as stories only, alt text on every image. LinkedIn keeps all 3 posts.
+IG_OFF = {"1300", "1900", "2100"}
+ALT = {"0800": ["A glass fountain pen signs a dark contract and the ink turns into a stream of gold coins. Text: One click on approve can empty your wallet. Check yours.",
+                "Chat: how can someone drain my wallet without my seed phrase? With your permission: an approve lets a contract move your tokens.",
+                "Chat: how the scam works. A fake airdrop or mint site asks you to sign an approval, often unlimited.",
+                "Chat: the numbers. Scam Sniffer counted 83.85 million dollars stolen by wallet drainers in 2025 from 106,106 victims.",
+                "Chat: the 2-minute check. Paste your wallet address into revoke.cash or Etherscan's Token Approval Checker.",
+                "Chat: revoke approvals you don't use. Each revoke costs a little gas.",
+                "Chat: never sign from a link in a DM. Approve or permit means spend permission. Use a separate small wallet.",
+                "Chat: do the check tonight. Save this and send it to a friend. Education, not financial advice."]}
+
+
+def ig_rules():
+    for slot in ("0800", "1300", "1900", "2100"):
+        f = Q / f"{slot}.json"
+        d = json.loads(f.read_text())
+        if slot in IG_OFF:
+            d["instagram"]["enabled"] = False
+        if slot in ALT:
+            d["instagram"]["alt"] = ALT[slot]
+        f.write_text(json.dumps(d, indent=1, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    ig_rules()

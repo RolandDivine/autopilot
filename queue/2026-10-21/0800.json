@@ -12,7 +12,7 @@
  },
  "instagram": {
   "enabled": true,
-  "caption": "One click on \"approve\" can empty your wallet. Check yours. ✍️\n\nHow approval scams work, the 2025 numbers, and the 2-minute check that shows who can still spend your tokens. Swipe →\n\n📌 Save it\n📤 Send it to the friend who connects their wallet to everything\nEducation, not financial advice.\n\n#crypto #web3 #cryptosecurity #defi",
+  "caption": "How to check and revoke token approvals in your crypto wallet. One click on \"approve\" can empty it. ✍️\n\nHow approval scams work, the 2025 numbers, and the 2-minute check that shows who can still spend your tokens. Swipe →\n\n📌 Save it\n📤 Send it to the friend who connects their wallet to everything\nEducation, not financial advice.\n\n#crypto #web3 #cryptosecurity #defi",
   "media": [
    "instagram/appr-0.jpg",
    "instagram/appr-1.jpg",
@@ -23,6 +23,16 @@
    "instagram/appr-6.jpg",
    "instagram/appr-7.jpg"
   ],
-  "music": "Phil Collins – Another Day in Paradise"
+  "music": "Phil Collins – Another Day in Paradise",
+  "alt": [
+   "A glass fountain pen signs a dark contract and the ink turns into a stream of gold coins. Text: One click on approve can empty your wallet. Check yours.",
+   "Chat: how can someone drain my wallet without my seed phrase? With your permission: an approve lets a contract move your tokens.",
+   "Chat: how the scam works. A fake airdrop or mint site asks you to sign an approval, often unlimited.",
+   "Chat: the numbers. Scam Sniffer counted 83.85 million dollars stolen by wallet drainers in 2025 from 106,106 victims.",
+   "Chat: the 2-minute check. Paste your wallet address into revoke.cash or Etherscan's Token Approval Checker.",
+   "Chat: revoke approvals you don't use. Each revoke costs a little gas.",
+   "Chat: never sign from a link in a DM. Approve or permit means spend permission. Use a separate small wallet.",
+   "Chat: do the check tonight. Save this and send it to a friend. Education, not financial advice."
+  ]
  }
 }

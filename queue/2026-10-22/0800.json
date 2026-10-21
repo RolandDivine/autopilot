@@ -1,0 +1,35 @@
+{
+ "title": "How to: see which apps used your mic and camera",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "How to see which apps used your microphone and camera, on iPhone and Android. 🎙️\n\nYour phone already keeps the log: the App Privacy Report and the Privacy dashboard. Where to find them, what the warning dots mean, and how to cut an app off. Swipe →\n\n📌 Save it\n📤 Send it to the friend who thinks their phone is spying on them\n\n#privacy #iphone #android #cybersecurity",
+  "media": [
+   "instagram/phone-0.jpg",
+   "instagram/phone-1.jpg",
+   "instagram/phone-2.jpg",
+   "instagram/phone-3.jpg",
+   "instagram/phone-4.jpg",
+   "instagram/phone-5.jpg",
+   "instagram/phone-6.jpg",
+   "instagram/phone-7.jpg"
+  ],
+  "music": "Michael Jackson – Human Nature",
+  "alt": [
+   "A glowing smartphone in the dark. Text: Your phone keeps a log of which apps were listening.",
+   "Chat: is my phone listening? iPhone and Android both record which apps used your mic and camera.",
+   "Chat: iPhone. Settings, Privacy and Security, App Privacy Report, Turn On App Privacy Report.",
+   "Chat: it shows the last 7 days of mic, camera, location, photos and contacts use, and websites contacted.",
+   "Chat: Android. Settings, Security and privacy, Privacy, Privacy dashboard.",
+   "Chat: orange dot means mic in use and green dot means camera on iPhone; green icon on Android.",
+   "Chat: turn off the microphone permission for an app on iPhone or Android.",
+   "Chat: check it tonight, save this and send it to a friend. Follow defi_ring_master."
+  ]
+ }
+}

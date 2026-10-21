@@ -39,6 +39,14 @@ duo.CARDS = {
         (45.6, 55.1, "🏦", "Where?", "Safe and easy to reach. Not crypto, not shares"),
         (55.2, 64.6, "✅", "Crisis → inconvenience", "That's what the fund does"),
         (64.6, 69.0, "⏭️", "Next: good debt vs bad debt", "Follow so you don't miss it")],
+    8: [(3.6, 14.4, "⚖️", "Not all debt is the same", "Some pays you. Some eats you"),
+        (14.4, 17.5, "✅", "Good debt", "Cheetie's loan buys a machine that earns more"),
+        (17.5, 30.9, "❌", "Bad debt", "Emeka: 40% interest for sneakers"),
+        (30.9, 42.4, "🧪", "The simple test", "Will it help me earn or save more than it costs?"),
+        (42.4, 49.5, "🪤", "Trap 1: minimum payments", "Pay only the minimum and you pay for years"),
+        (49.5, 56.2, "📱", "Trap 2: loan apps", "Huge fees, harassment when you miss a payment"),
+        (56.2, 64.9, "📋", "Already in debt?", "List them all. Pay the most expensive first"),
+        (64.9, 70.7, "⏭️", "Next: what is Bitcoin, really?", "Follow so you don't miss it")],
 }
 
 

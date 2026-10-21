@@ -103,7 +103,36 @@ def drainers_spec():
     return viral.std("ex02-drainers", timeline)
 
 
-SPECS = {"ex01-halving": halving_spec, "ex02-drainers": drainers_spec}
+def pig_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "pig-phone.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 6.6,
+             "html": "<div class='kick'>Crypto · scams</div><div class='mid'>It starts with<br><span class='yel'>a wrong-number text.</span></div>"},
+            {"kind": "html", "a": 6.6, "b": 13.3,
+             "html": "<div class='kick'>Weeks of chatting</div><div class='mid'>A friend.<br><span class='yel'>Sometimes more.</span></div>"},
+            {"kind": "html", "a": 13.3, "b": 23.0,
+             "html": "<div class='kick'>Then, casually</div><div class='mid'>\"This crypto app<br>is making me rich.\"</div>"
+                     "<div class='sm' style='margin-top:16px'>Screenshots · offers to teach you</div>"},
+            {"kind": "checks", "a": 23.0, "b": 38.9, "kick": "The trap", "title": "You deposit",
+             "items": [{"t": "A little. The app shows profits", "d": .3}, {"t": "More. Then you try to withdraw", "d": 3.5},
+                       {"t": "\"Taxes\", \"fees\", a \"verification charge\"", "d": 8.4}]},
+            {"kind": "html", "a": 38.9, "b": 48.0,
+             "html": "<div class='kick'>The app was fake from day one</div><div class='mid'>They call it<br><span class='red'>pig butchering.</span></div>"
+                     "<div class='sm' style='margin-top:16px'>Fatten the victim with trust, then take everything.</div>"},
+            {"kind": "stat", "a": 48.0, "b": 61.0, "kick": "FBI IC3, 2024", "value": "$9.3B", "cls": "red",
+             "label": "lost by Americans to crypto fraud", "sub": "Investment scams were the biggest share", "src": "FBI IC3 2024 report"},
+            {"kind": "checks", "a": 61.0, "b": 70.5, "kick": "Kobo's rules", "title": "Stay safe",
+             "items": [{"t": "Never invest through someone you met online", "d": .4},
+                       {"t": "Can't withdraw? Stop sending", "d": 7.0}]},
+            {"kind": "html", "a": 70.5, "b": dur + 1, "html": FOLLOW.format("Crypto, explained straight.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex03-pigbutchering", timeline)
+
+
+SPECS = {"ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

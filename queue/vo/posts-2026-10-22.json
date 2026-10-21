@@ -1,0 +1,30 @@
+{
+ "liclip": {
+  "video": "assets/youtube/clips/revoke-check.mp4",
+  "title": "Check who can spend your crypto, in 60 seconds",
+  "youtube": false,
+  "instagram_reel": false,
+  "linkedin": true,
+  "reel_caption": "",
+  "li_text": "Who can spend your crypto right now? Most people have never checked.\n\nEvery time you use a crypto app, you may give its smart contract permission to move your tokens. Many of those permissions are unlimited, and they stay live until you remove them.\n\nThis one-minute clip from my new YouTube video shows the check:\n→ Open revoke.cash (type it yourself, don't click a link)\n→ Paste your wallet address. You don't even need to connect to look\n→ Look for three things: anything unlimited, a spender you don't recognise, and apps you used once months ago\n→ Do it on every network you've used. An approval on Base doesn't show up on Ethereum\n\nThe full six-minute walkthrough, including how to revoke and what it costs, is on my YouTube channel.\n\nEducation, not financial advice.\n\nWhich network do you use most: Ethereum, Base, BNB Chain, Solana or something else?"
+ },
+ "ex03": {
+  "video": "assets/reels/ex03-pigbutchering-hook.mp4",
+  "title": "Pig butchering: the wrong-number crypto scam",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "Pig butchering scam explained: it starts with a \"wrong number\" text and ends with a crypto app that never lets you withdraw. 🐷\n\nHow the scam works, the FBI's 2024 numbers, and Kobo's two rules.\n\n📌 Save it\n📤 Send it to the friend who chats with every stranger who texts them\n\nEducation, not financial advice.\n\n#crypto #scamawareness #cryptosecurity #fraud",
+  "li_text": ""
+ },
+ "kobo08": {
+  "video": "assets/reels/kobo-money-part-8-hook.mp4",
+  "title": "Kobo's Money Story, Part 8: Good debt vs bad debt",
+  "youtube": false,
+  "playlist": "Kobo's Money Story",
+  "instagram_reel": false,
+  "linkedin": false,
+  "reel_caption": "Kobo's Money Story, Part 8: good debt vs bad debt. 💳\n\n#personalfinance #debt #moneytips",
+  "li_text": ""
+ }
+}

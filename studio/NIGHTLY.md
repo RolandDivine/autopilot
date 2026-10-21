@@ -18,6 +18,21 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
 - **Alt text:** every Instagram image gets alt text (`instagram.alt` = one line per image: what it shows + the slide's words). ig_client sends it and falls back if Instagram rejects it.
 - **Real Roland beats everything:** his voice-note stories (no camera needed) become Reels with captions; build one whenever he sends a recording.
 
+## LinkedIn rules (Roland, 21 Oct 2026: "go with your recommended fix... one daily, 5 a week")
+Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split every golden hour; posts read as generic explainers, not a founder.
+- **1 post a day, Monday to Friday only, at 0800 Lagos (07:00 UTC)** — the 0800 slot. Every other slot has `"linkedin": {"enabled": false}`. No LinkedIn on Sat/Sun.
+- Videos (`post_video.py`) skip LinkedIn unless the entry sets `"linkedin": true` (use it for the Thursday clip). Kobo cartoons and teasers never go to LinkedIn.
+- **Weekly plan:**
+  - **Mon — what I built or broke this week:** Community Square, Autopilot, Klærus, Farm Ledger (farm manager); Gabriel only if it fits. Not Nebula-Q. Klærus posts are builder updates only (no "house edge" terms, no product pitches).
+  - **Tue — PDF carousel:** reuse that week's Instagram carousel as a LinkedIn document post.
+  - **Wed — AI or crypto explainer with Roland's own take** ("here's what I'd do"), not a neutral summary.
+  - **Thu — native video clip** from that week's YouTube long-form (≤90 s, captions on).
+  - **Fri — Nigeria innovating + motivation:** inspiring and educating young Nigerians (not Edo only); hard truths about life, discipline, consistency, building together.
+- **Voice:** first person, Roland's real work and real opinions. **Never invent stories, results, or "I did X this week" claims.** If a Mon/Fri post needs a real moment, ask Roland for two lines in the evening message; if none arrives, write a principle-led post with no fake anecdote.
+- **Ending:** the last line is a specific question people want to answer. Sources and links go in `"first_comment"` (post.py posts it). "Education, not financial advice" goes above the question on crypto posts.
+- Two lanes only: building tech (AI + crypto infrastructure) and Nigeria innovation/motivation. Drop CV tips, local SEO, generic small-business tips on LinkedIn (they can stay on Instagram).
+- Roland does live engagement himself (reply to every comment in the first hour; 5 comments/day on 10-15 bigger AI/Web3/African tech accounts). If he asks, draft comments; never post them automatically.
+
 ## Formats (15 Oct 2026)
 - **Cover image:** every post opens with a generated realistic-abstract image that makes people stop ("what is that?"): odd objects, odd materials, dramatic light, linked to the topic. Generate it with Figma (`mcp__Figma__generate_image`, planKey `team::1302716308970441796`, 1080×1350, prompt ends "no text, no logos, no people"), then run the `fetch-images` workflow with `[{"url": ..., "path": "assets/gen/<name>.jpg"}]` and `git pull`. Never use Pinterest or other people's images. Figma credits are limited: 3 images a night, reuse them for stories. (17 Oct: `generate_image` now needs a `fileKey`; make one with `create_new_file`, then `download_assets` for the raw image URL and pass it to `fetch-images` with `gh api .../fetch-images.yml/dispatches -f "inputs[items]=..."`, because this machine can't reach figma.com directly. Credits reset at 00:00 UTC; if they run out, never build the day on Canva thumbnails. Generate the images first so the queue is never left waiting on them.)
 - **Hook overlay:** `studio/cover.py` → `cover(img, hook, out, kicker=...)`. Hook 4–10 words with one ==highlight==.

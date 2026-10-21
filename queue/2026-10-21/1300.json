@@ -1,27 +1,27 @@
 {
- "title": "Explained: free Gemini is now Flash-Lite only",
- "kind": "lesson",
- "x": {
-  "enabled": false
- },
- "linkedin": {
-  "enabled": true,
-  "text": "Free Gemini quietly got a lot smaller this month.\n\nSince 9 October 2026, free Gemini users only get Gemini 3.5 Flash-Lite, Google's lightest model. Free accounts lost 3.6 Flash and 3.1 Pro. It surfaced through a change in Google's support pages, reported by 9to5Google, not a big launch event.\n\nWhat it costs to get it back:\n→ Google AI Plus, $4.99 a month: keeps Flash, but loses Pro on a date Google emails you\n→ Google AI Pro, $19.99 a month: every model, plus Deep Think\n\nIf you don't want to pay, this is the free setup I'd use:\n→ Writing, planning and thinking: the ChatGPT or Claude free plans\n→ Research with sources: Perplexity's free plan\n→ Quick help inside Gmail and Docs: Flash-Lite is still fine for that\n\nThe bigger lesson is about free tiers. They change without warning, and this one changed in about a week. If a free AI tool sits inside your daily work, keep a second option ready.\n\nThe mistake I'd avoid: paying for three AI subscriptions at once. Pick one paid tool for the work that matters and use free tiers for the rest.\n\nWhich AI tool do you use most for work right now, and is it free or paid?\n\nSources: Google Gemini Apps Help, via 9to5Google (3 Oct 2026); Tom's Guide (6 Oct 2026); findskill.ai.",
-  "media": "media/gem-cover.jpg"
- },
- "instagram": {
-  "enabled": false,
-  "caption": "Free Gemini just got a lot smaller. Here's what to use. 📉\n\nWhat Google removed on 9 October, what it costs to get it back, and the free tools I'd use instead. Swipe →\n\n📌 Save it\n📤 Send it to the friend who uses Gemini for everything\n\n#ai #gemini #chatgpt #productivity",
-  "media": [
-   "instagram/gem-0.jpg",
-   "instagram/gem-1.jpg",
-   "instagram/gem-2.jpg",
-   "instagram/gem-3.jpg",
-   "instagram/gem-4.jpg",
-   "instagram/gem-5.jpg",
-   "instagram/gem-6.jpg",
-   "instagram/gem-7.jpg"
-  ],
-  "music": "George Michael – Careless Whisper"
- }
+  "title": "Explained: free Gemini is now Flash-Lite only",
+  "kind": "lesson",
+  "x": {
+    "enabled": false
+  },
+  "linkedin": {
+    "enabled": false,
+    "text": "Free Gemini quietly got a lot smaller this month.\n\nSince 9 October 2026, free Gemini users only get Gemini 3.5 Flash-Lite, Google's lightest model. Free accounts lost 3.6 Flash and 3.1 Pro. It surfaced through a change in Google's support pages, reported by 9to5Google, not a big launch event.\n\nWhat it costs to get it back:\n→ Google AI Plus, $4.99 a month: keeps Flash, but loses Pro on a date Google emails you\n→ Google AI Pro, $19.99 a month: every model, plus Deep Think\n\nIf you don't want to pay, this is the free setup I'd use:\n→ Writing, planning and thinking: the ChatGPT or Claude free plans\n→ Research with sources: Perplexity's free plan\n→ Quick help inside Gmail and Docs: Flash-Lite is still fine for that\n\nThe bigger lesson is about free tiers. They change without warning, and this one changed in about a week. If a free AI tool sits inside your daily work, keep a second option ready.\n\nThe mistake I'd avoid: paying for three AI subscriptions at once. Pick one paid tool for the work that matters and use free tiers for the rest.\n\nWhich AI tool do you use most for work right now, and is it free or paid?\n\nSources: Google Gemini Apps Help, via 9to5Google (3 Oct 2026); Tom's Guide (6 Oct 2026); findskill.ai.",
+    "media": "media/gem-cover.jpg"
+  },
+  "instagram": {
+    "enabled": false,
+    "caption": "Free Gemini just got a lot smaller. Here's what to use. 📉\n\nWhat Google removed on 9 October, what it costs to get it back, and the free tools I'd use instead. Swipe →\n\n📌 Save it\n📤 Send it to the friend who uses Gemini for everything\n\n#ai #gemini #chatgpt #productivity",
+    "media": [
+      "instagram/gem-0.jpg",
+      "instagram/gem-1.jpg",
+      "instagram/gem-2.jpg",
+      "instagram/gem-3.jpg",
+      "instagram/gem-4.jpg",
+      "instagram/gem-5.jpg",
+      "instagram/gem-6.jpg",
+      "instagram/gem-7.jpg"
+    ],
+    "music": "George Michael – Careless Whisper"
+  }
 }

@@ -1,18 +1,18 @@
 {
- "title": "Teaser: tomorrow 8 AM",
- "kind": "story",
- "x": {
-  "enabled": false
- },
- "linkedin": {
-  "enabled": false
- },
- "instagram": {
-  "enabled": false,
-  "caption": "Do you know your phone can show you which apps were listening? 🎙️\n\nIt's built into your iPhone and Android, and most people have never opened it. Tomorrow at 8 AM: where to find it, step by step.\n\n🔔 Turn on notifications so you don't miss it\n📤 Send this to the friend who thinks their phone is spying on them\n\n#privacy #iphone #android #tech",
-  "media": [
-   "instagram/teaser-0.jpg"
-  ],
-  "music": "Lionel Richie – Stuck on You"
- }
+  "title": "Teaser: tomorrow 8 AM",
+  "kind": "story",
+  "x": {
+    "enabled": false
+  },
+  "linkedin": {
+    "enabled": false
+  },
+  "instagram": {
+    "enabled": false,
+    "caption": "Do you know your phone can show you which apps were listening? 🎙️\n\nIt's built into your iPhone and Android, and most people have never opened it. Tomorrow at 8 AM: where to find it, step by step.\n\n🔔 Turn on notifications so you don't miss it\n📤 Send this to the friend who thinks their phone is spying on them\n\n#privacy #iphone #android #tech",
+    "media": [
+      "instagram/teaser-0.jpg"
+    ],
+    "music": "Lionel Richie – Stuck on You"
+  }
 }

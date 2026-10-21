@@ -14,7 +14,10 @@ ever is a 2024 long-form wallet-safety how-to (158 views). Search-driven long-fo
 - Scripts may say "I'm Roland" and state his real background (DeFi builder, smart contract auditor, Lagos). **Never invent
   personal stories, results or anecdotes.** Teach; don't narrate a life.
 - One TTS call takes at most **5,000 characters**: split long scripts at a chapter line, then join the halves with
-  0.8 s of silence (see `assets/vo/revoke-a.mp3` + `-b.mp3` → `assets/viral/howto-revoke/voice.mp3`).
+  0.8 s of silence. **Every concat input must have the same sample format** (`aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=mono`
+  on all three, including the anullsrc silence), then `loudnorm=I=-14:TP=-1.5`. On 21 Oct a mismatched join turned the voice into
+  noise and long-form #1 had to be re-uploaded. **Before publishing, compare a spectrogram of the final video's audio with the
+  ElevenLabs original** (`showspectrumpic`): speech must show clear harmonic stripes, not flat noise.
 
 ## Weekly loop (the "Roland agent")
 1. **Monday, pick the topic:** a question people actually search (crypto safety first, AI tools second). Check YouTube

@@ -22,7 +22,7 @@ duo.SOLO = True
 duo.TURNS = {n: [(0.0, "K")] for n in range(6, 16)}
 duo.FIX = {r"\bCobo\b": "Kobo", r"\bKubo\b": "Kobo", r"\bKubo's": "Kobo's"}
 GEN = ROOT / "assets" / "gen"
-duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg"}
+duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg"}
 duo.CARDS = {
     6: [(4.9, 12.8, "💸", "Paid Friday, broke Wednesday", "Where does the money go?"),
         (13.3, 17.6, "🧾", "Small things add up", "Snacks · data · rides · little transfers"),
@@ -47,6 +47,14 @@ duo.CARDS = {
         (49.5, 56.2, "📱", "Trap 2: loan apps", "Huge fees, harassment when you miss a payment"),
         (56.2, 64.9, "📋", "Already in debt?", "List them all. Pay the most expensive first"),
         (64.9, 70.7, "⏭️", "Next: what is Bitcoin, really?", "Follow so you don't miss it")],
+    9: [(7.4, 17.4, "📒", "A shared notebook", "Every payment, copied on thousands of computers"),
+        (17.4, 25.6, "🚫", "No bank owns it", "To cheat, you'd have to fool most of them at once"),
+        (25.6, 32.6, "⛓️", "That notebook = a blockchain", "Bitcoin is the money that lives on it"),
+        (35.5, 42.6, "🔢", "Only 21 million, ever", "Nobody can print more"),
+        (42.6, 48.4, "🌍", "Send to anyone, anywhere", "No bank needed"),
+        (48.4, 57.0, "📉", "The honest part", "It has dropped more than 70% before"),
+        (57.0, 63.6, "🏠", "Never your rent money", "Never your emergency fund"),
+        (63.6, 70.0, "⏭️", "Next: where do you keep crypto?", "Follow so you don't miss it")],
 }
 
 

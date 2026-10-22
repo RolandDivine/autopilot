@@ -1,0 +1,21 @@
+{
+ "ex04": {
+  "video": "assets/reels/ex04-addresspoisoning-hook.mp4",
+  "title": "Address poisoning: the crypto scam that needs zero clicks",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "Address poisoning explained: the crypto scam that needs zero clicks. 🔑\n\nHow a look-alike address sneaks into your history, and Kobo's 4 rules before you send.\n\n📌 Save it\n📤 Send it to the friend who copies addresses from their history\n\nEducation, not financial advice.\n\n#crypto #cryptosecurity #scamawareness #web3",
+  "li_text": ""
+ },
+ "kobo09": {
+  "video": "assets/reels/kobo-money-part-9-hook.mp4",
+  "title": "Kobo's Money Story, Part 9: What is Bitcoin, really?",
+  "youtube": false,
+  "playlist": "Kobo's Money Story",
+  "instagram_reel": false,
+  "linkedin": false,
+  "reel_caption": "Kobo's Money Story, Part 9: what is Bitcoin, really? 📒\n\n#bitcoin #personalfinance #crypto",
+  "li_text": ""
+ }
+}

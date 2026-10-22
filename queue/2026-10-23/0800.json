@@ -1,0 +1,37 @@
+{
+ "title": "How to: stop ChatGPT, Claude and Gemini training on your chats",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Nigeria isn't short of talent. It's short of finishing.\n\nYoung Nigerians are some of the most creative builders anywhere. The gap is rarely ideas or intelligence. It's what happens after the excitement wears off.\n\nThree hard truths about building here:\n\n→ Nobody is coming to save the project. Power, data, funding: plan around what you can't control, then do the part you can control, every day.\n\n→ Discipline beats motivation. Motivation gets you to start. A daily routine, even one focused hour, is what gets you to version one.\n\n→ Alone is slower than together. Find two or three people who actually ship, show each other your work every week, and hold each other to dates.\n\nNigeria will be built by people who keep showing up when nobody is clapping.\n\nWhat's one habit that kept you consistent when the motivation ran out?",
+  "media": "media/finish-cover.jpg"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "How to stop ChatGPT, Claude and Gemini from training on your chats. 🧠\n\nThe exact setting in each app, the one that keeps a private chat private, and what you should never paste in. Swipe →\n\n📌 Save it\n📤 Send it to the friend who pastes everything into ChatGPT\n\n#ai #chatgpt #privacy #productivity",
+  "media": [
+   "instagram/aipriv-0.jpg",
+   "instagram/aipriv-1.jpg",
+   "instagram/aipriv-2.jpg",
+   "instagram/aipriv-3.jpg",
+   "instagram/aipriv-4.jpg",
+   "instagram/aipriv-5.jpg",
+   "instagram/aipriv-6.jpg",
+   "instagram/aipriv-7.jpg"
+  ],
+  "music": "Stevie Wonder – Isn't She Lovely",
+  "alt": [
+   "A glowing brain under a glass dome. Text: Your AI chats may be training the AI. Turn it off.",
+   "Chat: does ChatGPT learn from what I type? ChatGPT, Claude and Gemini can use chats to improve models unless switched off.",
+   "Chat: ChatGPT, Settings, Data controls, Improve the model for everyone, off. Temporary Chat is not used for training.",
+   "Chat: Claude, Settings, Privacy, Help improve Claude, off.",
+   "Chat: Gemini, Activity, turn off Gemini Apps Activity. Google keeps chats up to 72 hours.",
+   "Chat: the catch. Turning it off works from now on; delete old chats you regret.",
+   "Chat: never paste passwords, ID numbers, bank details, seed phrases or client data.",
+   "Chat: do it tonight, save this and send it to a friend. Follow defi_ring_master."
+  ]
+ }
+}

@@ -132,7 +132,37 @@ def pig_spec():
     return viral.std("ex03-pigbutchering", timeline)
 
 
-SPECS = {"ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def poison_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "twin-keys.jpg")]
+        addr = "<div class='sm' style='margin-top:18px;font-family:monospace;font-size:54px'>{}</div>"
+        cards = [
+            {"kind": "html", "a": -1, "b": 5.8,
+             "html": "<div class='kick'>Crypto · scams</div><div class='mid'>A scam that needs<br><span class='red'>zero clicks.</span></div>"},
+            {"kind": "html", "a": 5.8, "b": 13.0,
+             "html": "<div class='kick'>What most people check</div><div class='mid'>The first and last<br>few characters</div>"
+                     + addr.format("<span class='yel'>0x7a3f</span>…e91c4b<span class='yel'>d2f9</span>")},
+            {"kind": "html", "a": 13.0, "b": 20.3,
+             "html": "<div class='kick'>The scammer's copy</div><div class='mid'>Same start. Same end.</div>"
+                     + addr.format("<span class='yel'>0x7a3f</span>" + "<span class='red'>…08bb12</span>" + "<span class='yel'>d2f9</span>")},
+            {"kind": "html", "a": 20.3, "b": 30.0,
+             "html": "<div class='kick'>Address poisoning</div><div class='mid'>A tiny (or $0) transfer<br>lands in <span class='red'>your history.</span></div>"},
+            {"kind": "html", "a": 30.0, "b": 45.4,
+             "html": "<div class='kick'>Next time you send</div><div class='mid'>You copy from history.<br><span class='red'>It's their address.</span></div>"
+                     "<div class='sm' style='margin-top:16px'>Crypto transfers can't be reversed.</div>"},
+            {"kind": "checks", "a": 45.4, "b": 64.3, "kick": "Kobo's rules", "title": "Before you send",
+             "items": [{"t": "Never copy from transaction history", "d": 1.6}, {"t": "Use your wallet's address book", "d": 5.4},
+                       {"t": "Big amount? Send a small test first", "d": 9.2}, {"t": "Check the WHOLE address", "d": 14.7}]},
+            {"kind": "html", "a": 64.3, "b": 67.6,
+             "html": "<div class='mid'>10 extra seconds<br><span class='yel'>can save everything.</span></div>"},
+            {"kind": "html", "a": 67.6, "b": dur + 1, "html": FOLLOW.format("Crypto, explained straight.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex04-addresspoisoning", timeline)
+
+
+SPECS = {"ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

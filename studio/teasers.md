@@ -15,3 +15,4 @@ image that opens a curiosity gap about tomorrow's 8 AM post. Rules:
 | 2026-10-20 | Do you know one signature can empty your crypto wallet? | 2026-10-21 0800: token approvals / wallet drainers, and how to check and revoke them |
 | 2026-10-21 | Do you know your phone can show you which apps were listening? | 2026-10-22 0800: iPhone App Privacy Report + Android Privacy dashboard (mic/camera access), step by step |
 | 2026-10-22 | Do you know your AI chats may be training the AI? | 2026-10-23 0800: turn off training in ChatGPT (Data controls → Improve the model for everyone), Claude (Privacy → Help improve Claude), Gemini (Gemini Apps Activity / Keep Activity off), plus Temporary Chat |
+| 2026-10-23 | Do you know where your seed phrase should never be? | 2026-10-24 0800: where never to keep a seed phrase (screenshots, cloud notes, email, password-less apps, photos) and safer options (paper/metal backup, offline, two locations) |

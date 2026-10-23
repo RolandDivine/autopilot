@@ -162,7 +162,34 @@ def poison_spec():
     return viral.std("ex04-addresspoisoning", timeline)
 
 
-SPECS = {"ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def terra_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "coin-collapse.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 10.5,
+             "html": "<div class='kick'>Crypto · history · May 2022</div><div class='mid'>A \"$1 coin\" fell<br><span class='red'>to almost zero in days.</span></div>"},
+            {"kind": "html", "a": 10.5, "b": 18.6,
+             "html": "<div class='kick'>UST</div><div class='mid'>Most stablecoins hold<br>cash or bonds.<br><span class='red'>UST didn't.</span></div>"},
+            {"kind": "html", "a": 18.6, "b": 30.6,
+             "html": "<div class='kick'>How it worked</div><div class='mid'>An algorithm +<br>a sister token, <span class='yel'>Luna</span></div>"
+                     "<div class='sm' style='margin-top:16px'>1 UST could always be swapped for $1 of Luna. Fine, while people trusted it.</div>"},
+            {"kind": "stat", "a": 30.6, "b": 37.6, "kick": "Anchor protocol", "value": "~20%", "cls": "yel",
+             "label": "a year paid on UST", "sub": "Billions flowed in"},
+            {"kind": "checks", "a": 37.6, "b": 54.8, "kick": "The death spiral", "title": "Then",
+             "items": [{"t": "Big withdrawals: UST slips below $1", "d": .3}, {"t": "People swap UST for Luna and sell", "d": 5.6},
+                       {"t": "Luna crashes, UST gets weaker, repeat", "d": 10.8}]},
+            {"kind": "html", "a": 54.8, "b": 58.9,
+             "html": "<div class='mid'><span class='red'>Tens of billions</span><br>of dollars in value, gone.</div>"},
+            {"kind": "checks", "a": 58.9, "b": 68.6, "kick": "Kobo's lesson", "title": "Before you chase a yield",
+             "items": [{"t": "Too good? Ask where it comes from", "d": .3}, {"t": "\"Stable\" is a promise. Check the backing", "d": 5.6}]},
+            {"kind": "html", "a": 68.6, "b": dur + 1, "html": FOLLOW.format("Crypto, explained straight.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex05-terra", timeline)
+
+
+SPECS = {"ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

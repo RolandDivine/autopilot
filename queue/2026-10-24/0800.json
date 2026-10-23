@@ -1,0 +1,37 @@
+{
+ "title": "How to: store your seed phrase (and where it should never be)",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Where to keep your seed phrase, and where it should never be. 🔑\n\nScreenshots, cloud notes, WhatsApp-to-self, \"support\" forms: the places that get wallets drained, and the safe way to store it. Swipe →\n\n💬 Comment: where is your seed phrase right now? No judgement.\n📌 Save it · 📤 Send it to the friend with a screenshot of theirs\n🔔 Follow @defi_ring_master\nEducation, not financial advice.\n\n#crypto #cryptosecurity #seedphrase #web3",
+  "media": [
+   "instagram/seed-0.jpg",
+   "instagram/seed-1.jpg",
+   "instagram/seed-2.jpg",
+   "instagram/seed-3.jpg",
+   "instagram/seed-4.jpg",
+   "instagram/seed-5.jpg",
+   "instagram/seed-6.jpg",
+   "instagram/seed-7.jpg",
+   "instagram/seed-8.jpg"
+  ],
+  "music": "Earth, Wind & Fire – September",
+  "alt": [
+   "Photo: a young man writing a list of words on a paper card. Text: Your seed phrase is your money. Store it like it.",
+   "Chat: Roland, where should I keep my seed phrase? 🤔 Good question. Most people get this wrong, so let's fix it today. First: whoever has those 12 or 24 words has your money. Full stop.",
+   "Chat: I took a screenshot so I won't forget it 😅 Please delete it today 🙏🏾 Screenshots sync to the cloud, get backed up, get shared by accident. Never a screenshot.",
+   "Chat: Where your seed phrase should NEVER be 🚫 Screenshots or photos, Notes apps, Google Drive, iCloud, email WhatsApp \"message to self\", Any website or form that asks for it",
+   "Chat: But what if \"support\" asks for it to fix my wallet? That's a scammer. Every single time. No real exchange, wallet or support agent will ever ask for your seed phrase.",
+   "Chat: Where it SHOULD be ✅ Written on paper (or stamped on a metal backup), offline. Kept somewhere safe from fire, water and curious visitors. Some people keep two copies in two places.",
+   "Chat: Bonus for bigger amounts 🔐 A hardware wallet keeps your keys off your phone and laptop. Your seed phrase is the backup. Guard the paper like cash.",
+   "Chat: Your turn 👇 Be honest: where is your seed phrase right now? Paper, screenshot, or \"I don't know\"? 😅 No judgement. Comment and I'll help you fix it. 💬",
+   "Chat: 📌 Save this · 📤 Send it to the friend with a screenshot of their seed phrase Follow @defi_ring_master and turn on 🔔 to join a community learning crypto safety together. Education, not financial advice."
+  ]
+ }
+}

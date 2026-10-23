@@ -22,7 +22,7 @@ duo.SOLO = True
 duo.TURNS = {n: [(0.0, "K")] for n in range(6, 16)}
 duo.FIX = {r"\bCobo\b": "Kobo", r"\bKubo\b": "Kobo", r"\bKubo's": "Kobo's"}
 GEN = ROOT / "assets" / "gen"
-duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg"}
+duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg", 10: GEN / "kobo-bg-phone.jpg"}
 duo.CARDS = {
     6: [(4.9, 12.8, "💸", "Paid Friday, broke Wednesday", "Where does the money go?"),
         (13.3, 17.6, "🧾", "Small things add up", "Snacks · data · rides · little transfers"),
@@ -55,6 +55,14 @@ duo.CARDS = {
         (48.4, 57.0, "📉", "The honest part", "It has dropped more than 70% before"),
         (57.0, 63.6, "🏠", "Never your rent money", "Never your emergency fund"),
         (63.6, 70.0, "⏭️", "Next: where do you keep crypto?", "Follow so you don't miss it")],
+    10: [(6.1, 12.3, "🏦", "Option 1: the exchange", "Easy, but the exchange holds the keys"),
+         (12.3, 19.9, "⚠️", "If it's hacked or goes bust", "Like FTX in 2022, coins can get stuck"),
+         (19.9, 32.9, "🔑", "Option 2: your own wallet", "A wallet holds keys, not coins"),
+         (32.9, 43.9, "📝", "The seed phrase", "12 or 24 words. Whoever has them has the money"),
+         (43.9, 54.4, "🚫", "Kobo's rules", "Paper only. No screenshot, cloud or chat"),
+         (54.4, 63.0, "🙅🏾", "Never type it into a website", "No real support agent will ever ask"),
+         (63.0, 70.1, "⚖️", "Not your keys, not your coins", "Lose your keys, lose your coins"),
+         (70.1, 74.0, "⏭️", "Next: the digital dollar", "Follow so you don't miss it")],
 }
 
 

@@ -33,6 +33,10 @@ Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split e
 - Two lanes only: building tech (AI + crypto infrastructure) and Nigeria innovation/motivation. Drop CV tips, local SEO, generic small-business tips on LinkedIn (they can stay on Instagram).
 - Roland does live engagement himself (reply to every comment in the first hour; 5 comments/day on 10-15 bigger AI/Web3/African tech accounts). If he asks, draft comments; never post them automatically.
 
+## Zero to One series (Roland, 23 Oct 2026: "extra posts, not the already scheduled ones")
+- Fri 23 – Mon 26 Oct: `queue/<date>/1300.json` already holds a "Zero to One, decoded" Instagram carousel + LinkedIn PDF (built by `studio/days/zto1.py`). **Never overwrite or disable those four 1300 slots**, and keep 12:01 UTC posting runs booked for them. They are extra to the normal plan (so LinkedIn gets 2 posts on those days, including Sat/Sun).
+- Not on YouTube (crypto only). Lessons are paraphrased; at most one short attributed quote per post.
+
 ## Formats (15 Oct 2026)
 - **Cover image:** every post opens with a generated realistic-abstract image that makes people stop ("what is that?"): odd objects, odd materials, dramatic light, linked to the topic. Generate it with Figma (`mcp__Figma__generate_image`, planKey `team::1302716308970441796`, 1080×1350, prompt ends "no text, no logos, no people"), then run the `fetch-images` workflow with `[{"url": ..., "path": "assets/gen/<name>.jpg"}]` and `git pull`. Never use Pinterest or other people's images. Figma credits are limited: 3 images a night, reuse them for stories. (17 Oct: `generate_image` now needs a `fileKey`; make one with `create_new_file`, then `download_assets` for the raw image URL and pass it to `fetch-images` with `gh api .../fetch-images.yml/dispatches -f "inputs[items]=..."`, because this machine can't reach figma.com directly. Credits reset at 00:00 UTC; if they run out, never build the day on Canva thumbnails. Generate the images first so the queue is never left waiting on them.)
 - **Hook overlay:** `studio/cover.py` → `cover(img, hook, out, kicker=...)`. Hook 4–10 words with one ==highlight==.

@@ -4,8 +4,32 @@
  "trends": {
   "US": [
    {
+    "q": "dólar estadounidense",
+    "traffic": "2000+",
+    "news": [
+     "Así está el dólar en México hoy: tipo de cambio y cotizaciones en bancos",
+     "Análisis del USD/MXN: La debilidad del peso se intensifica y el par supera los 18.50 pesos por dólar"
+    ]
+   },
+   {
+    "q": "ric flair",
+    "traffic": "200+",
+    "news": [
+     "Ric Flair Reveals New Health Concerns After Canceling HorrorCon Appearance",
+     "Ric Flair Rushed to Hospital After Falling Outside Restaurant in Florida"
+    ]
+   },
+   {
+    "q": "caleb wilson stats",
+    "traffic": "200+",
+    "news": [
+     "Caleb Wilson’s learning curve begins in bumpy Bulls debut",
+     "Caleb Wilson scores 16 in NBA debut, Bulls blown out by Raptors in Season Opener | Chicago Bulls"
+    ]
+   },
+   {
     "q": "bulls vs bucks",
-    "traffic": "1000+",
+    "traffic": "10000+",
     "news": [
      "Milwaukee Bucks vs. Chicago Bulls Preview & Game Thread: Fans, meet the young Bucks",
      "Milwaukee Bucks Announce Clean Injury Report for Chicago Bulls Game"
@@ -16,23 +40,105 @@
     "traffic": "2000+",
     "news": [
      "Oregon State standout WR Jesse Legree re-signs with Beavers for '27",
-     "Star Oregon State WR Jesse Legree says he won't transfer and will return to Beavers in 2027"
+     "Jesse Legree re-signs with Oregon State after breakout freshman year"
     ]
    },
    {
     "q": "katie price",
     "traffic": "1000+",
     "news": [
-     "Katie Price spotted with wedding ring weeks after Lee Andrews split",
-     "Katie Price seen wearing wedding ring from Lee Andrews despite claim they had split"
+     "Katie Price's ex-husband found not guilty of raping teenage girl",
+     "Katie Price’s ex-husband Kieran Hayler acquitted of raping 13-year-old girl in West Sussex in 2016; judge"
     ]
    },
    {
     "q": "angie nixon",
     "traffic": "500+",
     "news": [
-     "Moody vs. Nixon | Guide to Florida's U.S. Senate special election",
-     "Video Democratic Socialist aims to flip Florida Senate seat"
+     "Angie Nixon",
+     "Moody vs. Nixon | Guide to Florida's U.S. Senate special election"
+    ]
+   },
+   {
+    "q": "torino fc",
+    "traffic": "500+",
+    "news": [
+     "LIVE Alle 20.45 Torino-Monza, le formazioni ufficiali: Abate con Adams-Simeone, Juric punta su Varela",
+     "Il Toro cerca il tris. Segui la partita con il Monza in tempo reale"
+    ]
+   },
+   {
+    "q": "brest vs nice",
+    "traffic": "200+",
+    "news": [
+     "« C'est primordial pour nous » : pourquoi et comment Nice entretient sa mémoire avant de se déplacer à Brest et de rendre hommage à Éric Roy",
+     "Brest-Nice : banderole, brassard de capitaine, gerbe de fleurs… L’hommage émouvant des Niçois à Eric Roy, décédé cet été"
+    ]
+   },
+   {
+    "q": "stuttgart fc",
+    "traffic": "2000+",
+    "news": [
+     "German Bundesliga LIVE: Stuttgart v Borussia M'gladbach - watch, text coverage, scores, stats & head-to-head",
+     "Confirmed Lineups: VfB Stuttgart vs. Borussia Mönchengladbach"
+    ]
+   }
+  ],
+  "GB": [
+   {
+    "q": "joanne mcnally",
+    "traffic": "2000+",
+    "news": [
+     "Joanne McNally is every Irish woman’s best friend. The begrudgers won’t make a dent in her",
+     "Melanie Finn: Women like Joanne McNally should not have to pay the price when men like Conor McGregor aren’t called out"
+    ]
+   },
+   {
+    "q": "bash croft",
+    "traffic": "200+",
+    "news": [
+     "Did 'Heartstopper' star Joe Locke dump Sebastian Croft over the phone?",
+     "Joe Locke’s ex boyfriend opens up about secret high school relationship"
+    ]
+   },
+   {
+    "q": "this country",
+    "traffic": "100+",
+    "news": [
+     "Uninsured rate climbs to 11.2% in 2026: Commonwealth Fund",
+     "The State of Health Insurance Coverage in 2026"
+    ]
+   },
+   {
+    "q": "sharon rooney",
+    "traffic": "2000+",
+    "news": [
+     "“The Dark Horse”: Sharon Rooney’s “quiet” Celebrity Traitors tactic will get her to the final – here’s why",
+     "Sharon Rooney's Celebrity Traitors fate 'sealed' as 'two fatal flaws' exposed"
+    ]
+   },
+   {
+    "q": "neco williams",
+    "traffic": "500+",
+    "news": [
+     "Nottingham Forest already have their Neco Williams successor, he can be a star",
+     "Ipswich Town vs Nottingham Forest: Premier League preview, team news, stats & head-to-head"
+    ]
+   },
+   {
+    "q": "when is the traitors final",
+    "traffic": "1000+",
+    "news": [
+     "“It’s too obvious”: The “baffling” Celebrity Traitors flaw that predicts which 3 players make it to the final",
+     "What time is Celebrity Traitors on tonight? BBC One and iPlayer release schedule"
+    ]
+   },
+   {
+    "q": "bucks vs bulls",
+    "traffic": "200+",
+    "news": [
+     "Bulls Injury Update: Dailyn Swain Debut Incoming? Josh Giddey's Wrist, More",
+     "NBA Matchups: October 23"
     ]
    },
    {
@@ -40,143 +146,61 @@
     "traffic": "200+",
     "news": [
      "LIVE Alle 20.45 Torino-Monza, le formazioni ufficiali: Abate con Adams-Simeone, Juric punta su Varela",
-     "Il Toro cerca il tris. Segui la partita con il Monza in tempo reale"
+     "Torino-Monza, le formazioni ufficiali"
     ]
    },
    {
-    "q": "alavés vs málaga",
-    "traffic": "1000+",
+    "q": "airbus a380",
+    "traffic": "100+",
     "news": [
-     "Alavés-Málaga: duelo albiceleste de necesidades diferentes",
-     "Chupete al banquillo y revolución del once de Funes en su visita al Alavés"
+     "Emirates Cancels 3 Nonstop A380 Routes This Winter: See Full List Now",
+     "Emirates reveals plans to retire its iconic A380 superjumbo"
     ]
    },
-   {
-    "q": "bolton vs middlesbrough",
-    "traffic": "500+",
-    "news": [
-     "Bolton Wanderers vs Middlesbrough: Championship stats & head-to-head",
-     "Straight From the Stands: Positive signs to build on and Super Amario's return"
-    ]
-   },
-   {
-    "q": "stuttgart - mönchengladbach",
-    "traffic": "500+",
-    "news": [
-     "Zweistellige Ausfallliste: Auch Kapitän Diks fehlt Gladbach in Stuttgart",
-     "Bundesliga live: Ein Patzer bringt die frühe VfB-Führung"
-    ]
-   },
-   {
-    "q": "ipswich town vs nottm forest",
-    "traffic": "10000+",
-    "news": [
-     "Ipswich Town vs Nottingham Forest: Premier League preview, team news, stats & head-to-head",
-     "Ipswich vs N Forest LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream"
-    ]
-   },
-   {
-    "q": "torino vs monza",
-    "traffic": "500+",
-    "news": [
-     "Torino vs Monza: Italian Serie A stats & head-to-head",
-     "Torino-Monza, fans respond: pre-sales soar! Torino fans out in force!"
-    ]
-   }
-  ],
-  "GB": [
    {
     "q": "miranda hart illness",
-    "traffic": "10000+",
+    "traffic": "20000+",
     "news": [
      "Doctor explains Miranda Hart’s symptoms as star reveals impact of chronic illness",
-     "Celebrity Traitors star's emotional moment could boost winning chances as odds take a twist"
-    ]
-   },
-   {
-    "q": "miranda hart",
-    "traffic": "10000+",
-    "news": [
-     "“She’s been set up”: Miranda Hart’s “emotional” Celebrity Traitors decision proves she’s about to be deceived",
-     "Celebrity Traitors fans convinced show feud has spilled over into real life after tense moment in castle"
-    ]
-   },
-   {
-    "q": "portadown vs linfield",
-    "traffic": "200+",
-    "news": [
-     "Updates from Shamrock Park as Portadown boss David Jeffrey faces his old club Linfield",
-     "Linfield not expecting another old pal’s act when the make trip to Portadown"
-    ]
-   },
-   {
-    "q": "celebrity race across the world",
-    "traffic": "2000+",
-    "news": [
-     "Celebrity Race Across The World 2026 - Everything you need to know",
-     "I didn't realise just how challenging it would be | Bristol Post - newspaper"
-    ]
-   },
-   {
-    "q": "the northern echo",
-    "traffic": "200+",
-    "news": [
-     "Growing concern for missing woman last seen a week ago in Sunderland city centre",
-     "County Durham driver banned for three years after refusing police blood test"
-    ]
-   },
-   {
-    "q": "liam delap",
-    "traffic": "200+",
-    "news": [
-     "Liam Delap interview: When Konsa started giving it to me, I relished giving it back",
-     "Liam Delap explains what needs to change at Forest to fix ‘every game’ issue"
-    ]
-   },
-   {
-    "q": "john wick",
-    "traffic": "200+",
-    "news": [
-     "Netflix's 81-Minute \"John Wick Meets Bourne\" Action Thriller Is Officially a Global Streaming Smash",
-     "BioWare: Mass Effect and Dragon Age video game studio to close"
-    ]
-   },
-   {
-    "q": "alavés vs málaga",
-    "traffic": "200+",
-    "news": [
-     "Alavés-Málaga: duelo albiceleste de necesidades diferentes",
-     "Chupete al banquillo y revolución del once de Funes en su visita al Alavés"
-    ]
-   },
-   {
-    "q": "torino vs monza",
-    "traffic": "200+",
-    "news": [
-     "Torino vs Monza: Italian Serie A stats & head-to-head",
-     "Torino-Monza, fans respond: pre-sales soar! Torino fans out in force!"
-    ]
-   },
-   {
-    "q": "darts results",
-    "traffic": "200+",
-    "news": [
-     "European Championship Darts: Luke Woodhouse hits nine-darter and sets up second-round clash with defending champion Gian van Veen",
-     "PDC Darts | Darts Live Scores, Darts Results & Darts Tickets"
+     "As Celebrity Traitors' Miranda Hart opens up on health issues - her chronic illness explained"
     ]
    }
   ],
   "NG": [
    {
-    "q": "go ahead eagles vs sc telstar",
-    "traffic": "100+",
+    "q": "go ahead eagles vs telstar",
+    "traffic": "200+",
     "news": [
      "Go Ahead Eagles vs Telstar: Dutch Eredivisie stats & head-to-head",
      "Go Ahead Eagles vs Telstar Prediction, Betting Tips, Lineups & Odds | 23 Oct 2026"
     ]
    },
    {
-    "q": "torino",
+    "q": "bolton vs middlesbrough",
+    "traffic": "100+",
+    "news": [
+     "Bolton Wanderers vs Middlesbrough: Championship stats & head-to-head",
+     "Bolton Wanderers vs Middlesbrough LIVE! Championship match updates, score, stream and free highlights"
+    ]
+   },
+   {
+    "q": "alaves",
+    "traffic": "200+",
+    "news": [
+     "Alavés vs Málaga Prediction, Betting Tips, Lineups & Odds | 23 Oct 2026",
+     "Alaves vs Malaga - La Liga - October 23, 2026 - Match Guide, Data Analysis, Standings - Football"
+    ]
+   },
+   {
+    "q": "enugu rangers",
+    "traffic": "200+",
+    "news": [
+     "Enugu Rangers brace for Ali La Pointe Stadium’s cauldron as CAF throws out protest",
+     "CAF Champions League: Rangers train under floodlights for MC Alger"
+    ]
+   },
+   {
+    "q": "torino fc",
     "traffic": "100+",
     "news": [
      "Effetto Grande Torino: lo stadio Olimpico si accende per il salto di qualità",
@@ -184,8 +208,24 @@
     ]
    },
    {
-    "q": "alavés vs málaga",
+    "q": "real madrid vs barcelona",
+    "traffic": "100+",
+    "news": [
+     "FC Barcelona vs Real Madrid: primer Clásico en Spotify Camp Nou y apuesta gratis de $100",
+     "El Barça, intratable en casa: 23 victorias consecutivas"
+    ]
+   },
+   {
+    "q": "torino",
     "traffic": "200+",
+    "news": [
+     "Women Economic Forum a Torino: dati, sfide e programma del 2026",
+     "Women Economic Forum Italy, Laura Mattarella a Torino"
+    ]
+   },
+   {
+    "q": "alavés vs málaga",
+    "traffic": "500+",
     "news": [
      "Alavés-Málaga: duelo albiceleste de necesidades diferentes",
      "Chupete al banquillo y revolución del once de Funes en su visita al Alavés"
@@ -206,49 +246,33 @@
      "Manchester United: Antonio Conte dismisses 'unfounded' speculation",
      "Antonio Conte, Fabian Hürzeler distance themselves from Man United job"
     ]
-   },
-   {
-    "q": "ipswich town vs nottm forest",
-    "traffic": "5000+",
-    "news": [
-     "Ipswich Town vs Nottingham Forest: Premier League preview, team news, stats & head-to-head",
-     "Ipswich vs N Forest LIVE! Premier League score updates, news, prediction, lineups and how to watch or stream"
-    ]
-   },
-   {
-    "q": "vfb stuttgart vs mönchengladbach",
-    "traffic": "1000+",
-    "news": [
-     "German Bundesliga LIVE: Stuttgart v Borussia M'gladbach - watch, text coverage, scores, stats & head-to-head",
-     "Stuttgart vs Borussia Monchengladbach Prediction, Betting Tips, Lineups & Odds | 23 Oct 2026"
-    ]
-   },
-   {
-    "q": "al ahli",
-    "traffic": "100+",
-    "news": [
-     "Al Ain vs. Shabab AlAhli - Live Score - November 29, 2026",
-     "Ezatolahi scores twice to help Shabab Al Ahli reach President’s Cup quarter-finals [VIDEO]"
-    ]
-   },
-   {
-    "q": "go ahead eagles",
-    "traffic": "200+",
-    "news": [
-     "Live voetbal | Bekijk de tussenstanden bij Go Ahead-Telstar en negen KKD-duels",
-     "VI Live: Tengstedt schrijft geschiedenis voor Go Ahead Eagles"
-    ]
-   },
-   {
-    "q": "anthony gordon barcelona el clasico",
-    "traffic": "200+",
-    "news": [
-     "As Anthony Gordon prepares for El Clásico debut, how have other British stars fared?",
-     "Anthony Gordon, Jude Bellingham and a very English Clasico"
-    ]
    }
   ],
   "IN": [
+   {
+    "q": "brest vs nice",
+    "traffic": "200+",
+    "news": [
+     "Ligue 1 – Brest/Nice : Pathé Mboup et Yehvann Diouf titulaires pour leur duel !",
+     "DIRECT - Brest - Nice : les Aiglons pas loin d'égaliser, suivez le match"
+    ]
+   },
+   {
+    "q": "gabriel martinelli",
+    "traffic": "100+",
+    "news": [
+     "Watch: Martinelli crowns Ollie Watkins as king of happiness in the Roshn League",
+     "Martinelli has knee arthroscopy and is not expected to play again in 2026"
+    ]
+   },
+   {
+    "q": "torino vs monza",
+    "traffic": "200+",
+    "news": [
+     "Serie A, Torino v Monza LIVE",
+     "Torino-Monza, Torino chase first hat-trick of wins since 2019"
+    ]
+   },
    {
     "q": "chandigarh",
     "traffic": "200+",
@@ -301,31 +325,8 @@
     "q": "fc goa",
     "traffic": "500+",
     "news": [
-     "Chiki fires Gaurs past Fortis FC",
-     "AFC Challenge League 2026-27: FC Goa score late winner in 2-1 win over Fortis FC"
-    ]
-   },
-   {
-    "q": "கொடைக்கானல்",
-    "traffic": "500+",
-    "news": [
-     "Kodaikanal Rain | திடீரென ரோட்டில் சாய்ந்த மின்கம்பம் - ஆட்டம் காட்டிய கனமழை..",
-     "கொடைக்கானலுக்கு சுற்றுலா வருவதை தவிர்க்க பொதுமக்களுக்கு அறிவுறுத்தல்"
-    ]
-   },
-   {
-    "q": "ranbir kapoor",
-    "traffic": "500+",
-    "news": [
-     "Ramayana Advance Booking Update: Film Inches Closer To Rs 10-Crore Mark",
-     "‘Ramayana’ trailer featuring Ranbir Kapoor and Yash takes over Times Square; audience applauds after action-packed preview - WATCH"
-    ]
-   },
-   {
-    "q": "എം.എ. യൂസഫലി",
-    "traffic": "500+",
-    "news": [
-     "സാലിമിന് ഇനി പുതിയ ജീവിതം; പ്രതീക്ഷയറ്റ കുടുംബത്തിന് കൈത്താങ്ങായി യൂസഫലി, 10 ലക്ഷം രൂപ കൈമാറി"
+     "All or nothing for FC Goa in showdown against Qadsia",
+     "FC Goa vs Al-Qadsia SC Highlights: AFC Challenge League 2026-27"
     ]
    }
   ]
@@ -349,153 +350,153 @@
  "hn": [
   {
    "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-   "score": 369,
-   "comments": 203
+   "score": 411,
+   "comments": 224
   },
   {
    "title": "Today, we hacked what we'd set out to hack: the iPhone",
-   "score": 474,
-   "comments": 304
+   "score": 507,
+   "comments": 327
   },
   {
    "title": "Apple Music 404 Not Found",
-   "score": 136,
-   "comments": 34
-  },
-  {
-   "title": "UUIDv7 doesn't have the properties you think it does",
-   "score": 56,
-   "comments": 38
-  },
-  {
-   "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-   "score": 1035,
-   "comments": 205
-  },
-  {
-   "title": "The Real Kevin Bacon",
-   "score": 111,
-   "comments": 35
-  },
-  {
-   "title": "I turned my TV into a Game Boy Color with a Pokemon town as my home screen",
-   "score": 24,
-   "comments": 6
+   "score": 180,
+   "comments": 57
   },
   {
    "title": "Kimi K3.1 scores 55 on Artificial Analysis, placed on the Pareto line",
-   "score": 18,
-   "comments": 0
+   "score": 51,
+   "comments": 1
   },
   {
-   "title": "The Missed Opportunities of Sonic 06",
-   "score": 40,
-   "comments": 3
+   "title": "UUIDv7 doesn't have the properties you think it does",
+   "score": 64,
+   "comments": 41
+  },
+  {
+   "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+   "score": 1052,
+   "comments": 206
+  },
+  {
+   "title": "The Real Kevin Bacon",
+   "score": 123,
+   "comments": 39
   },
   {
    "title": "How Is Music Possible",
-   "score": 38,
-   "comments": 22
+   "score": 48,
+   "comments": 32
   },
   {
    "title": "Canadians are running out of time to oppose Bill C-22",
-   "score": 139,
-   "comments": 49
+   "score": 160,
+   "comments": 59
+  },
+  {
+   "title": "The Missed Opportunities of Sonic 06",
+   "score": 44,
+   "comments": 3
+  },
+  {
+   "title": "I turned my TV into a Game Boy Color with a Pokemon town as my home screen",
+   "score": 29,
+   "comments": 8
+  },
+  {
+   "title": "Air Purifiers as White Noise Machines",
+   "score": 20,
+   "comments": 22
+  },
+  {
+   "title": "Docker is weird",
+   "score": 795,
+   "comments": 328
   },
   {
    "title": "Show HN: Impossible Machines: declaratively program the physical world",
-   "score": 32,
-   "comments": 5
+   "score": 36,
+   "comments": 7
   },
   {
    "title": "Time Nuts (2005)",
-   "score": 20,
-   "comments": 13
+   "score": 22,
+   "comments": 16
   },
   {
    "title": "Total Historian",
    "score": 16,
-   "comments": 2
+   "comments": 3
   },
   {
-   "title": "Docker is weird",
-   "score": 790,
-   "comments": 325
-  },
-  {
-   "title": "Show HN: Swurf – Swipe through the real web",
-   "score": 20,
+   "title": "Reforming English Spelling",
+   "score": 5,
    "comments": 4
   },
   {
    "title": "LISP Comes of Age (1980)",
-   "score": 34,
-   "comments": 13
+   "score": 37,
+   "comments": 14
+  },
+  {
+   "title": "Show HN: Swurf – Swipe through the real web",
+   "score": 24,
+   "comments": 7
   },
   {
    "title": "Animations for System Builders",
-   "score": 9,
+   "score": 12,
    "comments": 1
   },
   {
    "title": "Can we replace a $150k Looker with a bucket of HTML files?",
-   "score": 47,
-   "comments": 26
-  },
-  {
-   "title": "Air Purifiers as White Noise Machines",
-   "score": 11,
-   "comments": 10
-  },
-  {
-   "title": "Gemma-4-26B-A4B with 39-69% less thinking at same accuracy",
-   "score": 60,
-   "comments": 7
+   "score": 54,
+   "comments": 34
   },
   {
    "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?",
-   "score": 481,
-   "comments": 532
+   "score": 501,
+   "comments": 552
   },
   {
-   "title": "Show HN: Searching for optimal strategies in a puzzle game with chance (Drop7)",
-   "score": 6,
-   "comments": 0
+   "title": "Gemma-4-26B-A4B with 39-69% less thinking at same accuracy",
+   "score": 65,
+   "comments": 8
   },
   {
    "title": "The foolishness of \"natural language programming\" (1978)",
-   "score": 335,
-   "comments": 226
+   "score": 339,
+   "comments": 230
   },
   {
    "title": "Job loss and cortisone mania",
-   "score": 138,
-   "comments": 71
+   "score": 141,
+   "comments": 75
   },
   {
    "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key",
-   "score": 177,
-   "comments": 75
+   "score": 181,
+   "comments": 77
+  },
+  {
+   "title": "Show HN: Searching for optimal strategies in a puzzle game with chance (Drop7)",
+   "score": 8,
+   "comments": 0
+  },
+  {
+   "title": "We have traits at home",
+   "score": 34,
+   "comments": 9
   },
   {
    "title": "The alien space of science: Coherent but cognitively unavailable directions",
    "score": 186,
-   "comments": 70
-  },
-  {
-   "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-   "score": 483,
-   "comments": 208
-  },
-  {
-   "title": "We have traits at home",
-   "score": 31,
-   "comments": 8
+   "comments": 72
   },
   {
    "title": "How does Fable 5.1 hide messages in images?",
-   "score": 183,
-   "comments": 63
+   "score": 185,
+   "comments": 64
   }
  ],
  "questions": {
@@ -815,8 +816,8 @@
    "why is bitcoin dropping",
    "why is bitcoin down today",
    "why is bitcoin going up",
-   "why is bitcoin down",
    "why is bitcoin up today",
+   "why is bitcoin down",
    "why is bitcoin worth so much",
    "why is bitcoin going up today",
    "why is bitcoin going down",
@@ -1299,7 +1300,7 @@
     "like_count": 5,
     "comments_count": 0,
     "caption": "Address poisoning explained: the crypto scam that needs zero clicks. 🔑",
-    "reach": 104,
+    "reach": 107,
     "saved": 2,
     "shares": 0,
     "views": 125,
@@ -1509,10 +1510,10 @@
     "like_count": 1,
     "comments_count": 0,
     "caption": "Do you know why ChatGPT keeps forgetting your business? 🫙\n\nTomorrow at",
-    "reach": 4,
+    "reach": 5,
     "saved": 0,
     "shares": 0,
-    "views": 16,
+    "views": 17,
     "total_interactions": 1
    },
    {

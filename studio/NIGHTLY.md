@@ -34,7 +34,7 @@ Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split e
 - Roland does live engagement himself (reply to every comment in the first hour; 5 comments/day on 10-15 bigger AI/Web3/African tech accounts). If he asks, draft comments; never post them automatically.
 
 ## Zero to One series (Roland, 23 Oct 2026: "extra posts, not the already scheduled ones")
-- Fri 23 – Mon 26 Oct: `queue/<date>/1300.json` already holds a "Zero to One, decoded" Instagram carousel + LinkedIn PDF (built by `studio/days/zto1.py`). **Never overwrite or disable those four 1300 slots**, and keep 12:01 UTC posting runs booked for them. They are extra to the normal plan (so LinkedIn gets 2 posts on those days, including Sat/Sun).
+- Fri 23 – Mon 26 Oct: `queue/<date>/1300.json` already holds a "Zero to One, decoded" Instagram carousel + LinkedIn PDF (built by `studio/days/zto1.py`, then `zto1_li.py` (LinkedIn people-photo design) and `zto1_ig.py` (Instagram conversational chat). Re-running zto1.py alone would undo the last two). **Never overwrite or disable those four 1300 slots**, and keep 12:01 UTC posting runs booked for them. They are extra to the normal plan (so LinkedIn gets 2 posts on those days, including Sat/Sun).
 - Not on YouTube (crypto only). Lessons are paraphrased; at most one short attributed quote per post.
 
 ## Formats (15 Oct 2026)

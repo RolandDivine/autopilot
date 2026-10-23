@@ -1,3 +1,4 @@
+import datetime as dt
 """Check the Instagram connection without posting: prints the account, profile fields and 28-day account insights (read-only)."""
 import json
 import os
@@ -23,5 +24,5 @@ show("profile", lambda: c._req("get", "me", params={"fields": "username,name,acc
 for m, extra in [("reach,views,accounts_engaged,total_interactions,profile_links_taps,follows_and_unfollows", {"metric_type": "total_value"}),
                  ("reach", {"breakdown": "media_product_type", "metric_type": "total_value"}),
                  ("reach", {"breakdown": "follow_type", "metric_type": "total_value"})]:
-    show(f"insights {m} {extra.get('breakdown','')}".strip(), lambda m=m, extra=extra: c._req("get", f"{c.user_id}/insights", params={"metric": m, "period": "day", "since": "2026-10-01", "until": "2026-10-20", **extra}).get("data"))
+    show(f"insights {m} {extra.get('breakdown','')}".strip(), lambda m=m, extra=extra: c._req("get", f"{c.user_id}/insights", params={"metric": m, "period": "day", "since": os.environ.get("SINCE") or (dt.date.today() - dt.timedelta(days=7)).isoformat(), "until": os.environ.get("UNTIL") or dt.date.today().isoformat(), **extra}).get("data"))
 show("audience country", lambda: c._req("get", f"{c.user_id}/insights", params={"metric": "follower_demographics", "period": "lifetime", "metric_type": "total_value", "breakdown": "country"}).get("data"))

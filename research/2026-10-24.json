@@ -7,7 +7,7 @@
     "q": "vaibhav sooryavanshi",
     "traffic": "200+",
     "news": [
-     "NZ vs IND 2nd T20I live report - Samson, Sooryavanshi fall early in chase of 181",
+     "Vaibhav Sooryavanshi in as India choose to chase in Christchurch",
      "Ishan Kishan ruled out of second T20I; Kumar Kushagra added as cover"
     ]
    },
@@ -64,7 +64,7 @@
     "traffic": "500+",
     "news": [
      "Who has the edge? Making the case for the Ningbo semifinalists",
-     "WTA Ningbo Semifinal Predictions Including Elena Rybakina vs Diana Shnaider"
+     "HERE'S!!* WAY TO WATCH Shnaider v Rybakina 𝐋𝐈𝐕𝐄 Ｓｔｒｅａｍｓ ＯＮ Ｔｖ Ｃｈａｎｎｅｌ free 24.10.2026"
     ]
    },
    {
@@ -76,11 +76,11 @@
     ]
    },
    {
-    "q": "jon gosselin",
-    "traffic": "200+",
+    "q": "ningbo open",
+    "traffic": "1000+",
     "news": [
-     "Jon Gosselin’s Ex Colleen Conrad Says Collin’s Memoir Tribute Brought Her to Tears: ‘I Will Always Be Your Mom’",
-     "Jon Gosselin’s Ex Colleen Conrad Says She'll \"Always\" Be Collin's Mom"
+     "Fernandez's marathon win, Kostyuk's retirement headline Day 3 in Ningbo",
+     "Leylah Fernandez surpasses Mirra Andreeva and Jessica Pegula and sets new 2026 WTA record after latest victory in Ningbo"
     ]
    }
   ],
@@ -98,7 +98,7 @@
     "traffic": "200+",
     "news": [
      "Who has the edge? Making the case for the Ningbo semifinalists",
-     "WTA Ningbo Semifinal Best Bets Including Elena Rybakina vs Diana Shnaider"
+     "WTA Ningbo Semifinal Predictions Including Elena Rybakina vs Diana Shnaider"
     ]
    },
    {
@@ -184,8 +184,8 @@
     "q": "fermin lopez",
     "traffic": "200+",
     "news": [
-     "Jose Mourinho: \"No busco nada más que crédito a mis jugadores y críticas a su entrenador\"",
-     "\"No me molesta saber quién es el árbitro. Lo que me molesta es cuando se rompen las reglas\""
+     "\"No me molesta saber quién es el árbitro. Lo que me molesta es cuando se rompen las reglas\"",
+     "Fermín: \"En el Clásico debemos controlar las emociones\""
     ]
    },
    {
@@ -193,7 +193,7 @@
     "traffic": "500+",
     "news": [
      "IND vs NZ Live Streaming: When and where to watch India vs New Zealand 2nd T20 match free",
-     "India vs New Zealand, 2nd T20I match live score: Shreyas Iyer and co aim to gain 2-0 lead at Christchurch"
+     "India chasing 180-run Black Caps target in second T20I test"
     ]
    },
    {
@@ -238,7 +238,7 @@
     "traffic": "200+",
     "news": [
      "Older, calmer, but still playing the hits: Mourinho and Madrid primed for clásico",
-     "Mourinho returns to El-Clasico spotlight with Barca dominance to end"
+     "Mourinho: I will not change Real Madrid's plan because of Yamal, and Flick's question is incomprehensible"
     ]
    }
   ],
@@ -341,8 +341,8 @@
  "hn": [
   {
    "title": "I Don't Understand Quantum Physics",
-   "score": 33,
-   "comments": 14
+   "score": 39,
+   "comments": 16
   },
   {
    "title": "OBS Studio 33",
@@ -351,18 +351,18 @@
   },
   {
    "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-   "score": 923,
+   "score": 924,
    "comments": 542
   },
   {
    "title": "Physicists trap a single antimatter particle for a month",
-   "score": 56,
+   "score": 58,
    "comments": 19
   },
   {
    "title": "ThinkRail from JetBrains",
-   "score": 30,
-   "comments": 22
+   "score": 31,
+   "comments": 24
   },
   {
    "title": "Today, we hacked what we'd set out to hack: the iPhone",
@@ -381,17 +381,17 @@
   },
   {
    "title": "Apple Music 404 Not Found",
-   "score": 772,
+   "score": 773,
    "comments": 233
   },
   {
    "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
-   "score": 107,
-   "comments": 11
+   "score": 109,
+   "comments": 14
   },
   {
    "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-   "score": 1386,
+   "score": 1387,
    "comments": 236
   },
   {
@@ -401,8 +401,13 @@
   },
   {
    "title": "Bringing uv and ty together",
-   "score": 158,
+   "score": 160,
    "comments": 37
+  },
+  {
+   "title": "How to run a city builder on 16 MHz",
+   "score": 17,
+   "comments": 4
   },
   {
    "title": "Dessa: Conversation Model trained only on speech",
@@ -412,16 +417,11 @@
   {
    "title": "Apple Security Research Device",
    "score": 71,
-   "comments": 22
-  },
-  {
-   "title": "How to run a city builder on 16 MHz",
-   "score": 16,
-   "comments": 4
+   "comments": 24
   },
   {
    "title": "Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended",
-   "score": 155,
+   "score": 157,
    "comments": 35
   },
   {
@@ -480,14 +480,14 @@
    "comments": 23
   },
   {
-   "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
-   "score": 7,
-   "comments": 0
-  },
-  {
    "title": "Rise of collagen-eating microbes may help explain gaps in the fossil record",
    "score": 51,
    "comments": 2
+  },
+  {
+   "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
+   "score": 8,
+   "comments": 0
   }
  ],
  "questions": {
@@ -550,8 +550,8 @@
    "how to chatgpt images",
    "how to chatgpt voice mode",
    "how to chatgpt projects work",
-   "how to chatgpt credits work",
    "how to chatgpt work",
+   "how to chatgpt credits work",
    "how to chatgpt voice",
    "how do i chatgpt",
    "how do i chatgpt a photo",
@@ -589,10 +589,10 @@
    "why is chatgpt bad",
    "why is chatgpt bad for the environment",
    "why is chatgpt not loading",
-   "why is chatgpt so slow right now",
    "why is chatgpt not working today",
    "why is chatgpt not working on my phone",
-   "why is chatgpt so slow now",
+   "why is chatgpt down",
+   "why is chatgpt taking so long",
    "can i chatgpt",
    "can i chatgpt that for you",
    "can i use chatgpt for free",
@@ -607,10 +607,10 @@
   "claude": [
    "how to claude code",
    "how to claude",
-   "how to claude code from phone",
    "how to claude tokens work",
    "how to claude cowork",
    "how to claude projects work",
+   "how to claude code from phone",
    "how to claude ai",
    "how to claude like anthropic",
    "how to claude code in terminal",
@@ -641,8 +641,8 @@
    "best claude plugins",
    "best claude model for writing",
    "best claude model for creative writing",
-   "best claude code mods",
    "best claude connectors",
+   "best claude code mods",
    "best claude code skills",
    "best claude code plugins",
    "why is claude better than chatgpt",
@@ -694,9 +694,9 @@
    "best ai tools for image generation",
    "best ai tools for students",
    "best ai tools for research",
-   "best ai tools for teachers",
-   "best ai tools for interior design",
    "best ai tools for college students",
+   "best ai tools for interior design",
+   "best ai tools for teachers",
    "best ai tools for video creation",
    "why ai tools are free",
    "why ai tools",
@@ -801,13 +801,13 @@
    "best bitcoin app",
    "best bitcoin to buy",
    "best bitcoin wallet app",
-   "best bitcoin etf to buy",
    "best bitcoin stocks",
+   "best bitcoin etf to buy",
    "best bitcoin miner app",
    "why is bitcoin dropping",
    "why is bitcoin going up",
-   "why is bitcoin up today",
    "why is bitcoin down",
+   "why is bitcoin up today",
    "why is bitcoin worth so much",
    "why is bitcoin going up today",
    "why is bitcoin down today",
@@ -826,14 +826,14 @@
    "can i buy bitcoin with credit card"
   ],
   "crypto": [
-   "how to crypto trade",
    "how to crypto mine",
+   "how to crypto trade",
    "how to crypto",
    "how to crypto farm",
-   "how to crypto scams work",
    "how to cryptogram",
    "how to cryptocurrency",
    "how to cryptograms work",
+   "how to crypto scams work",
    "how to crypto day trade",
    "how to crypto wallets work",
    "how do i crypto mine",
@@ -864,13 +864,13 @@
    "best crypto trading platform",
    "best crypto casino",
    "best crypto exchange",
-   "best crypto wallet app",
    "best crypto",
+   "best crypto wallet app",
    "why is crypto down",
    "why is crypto up today",
    "why is crypto crashing",
-   "why is crypto going up today",
    "why is crypto down today",
+   "why is crypto going up today",
    "why is crypto going up",
    "why is crypto up",
    "why is crypto dropping right now",
@@ -941,25 +941,25 @@
   ],
   "start a business": [
    "how to start a business",
+   "how to start a business in washington state",
+   "how to start a business in idaho",
    "how to start a business with no money",
-   "how to start a business in texas",
    "how to start a business for beginners",
-   "how to start a business in florida",
    "how to start a business page on facebook",
    "how to start a business from home with no money",
-   "how to start a business in california",
-   "how to start a business in nc",
-   "how to start a business in ohio",
+   "how to start a business for dummies",
+   "how to start a business from home",
+   "how to start a business on etsy",
    "how do i start a business",
    "how do i start a business with no money",
    "how do i start a business page on facebook",
    "how do i start a business account on facebook",
-   "how do i start a business in florida",
-   "how do i start a business in texas",
    "how do i start a business instagram account",
    "how do i start a business email",
    "how do i start a business on etsy",
-   "how do i start a business in california",
+   "how do i start a business online",
+   "how do i start a business plan",
+   "how do i start a business in texas",
    "is it safe to start a business now",
    "is it safe to start a business in mexico",
    "is it ok to start a business with no money",
@@ -998,8 +998,8 @@
    "can i start a business with 10k",
    "can i start a business bank account online",
    "can i start a business without a degree",
-   "can i start a business on h1b",
-   "can i start a business with 50k"
+   "can i start a business with 50k",
+   "can i start a business at 16"
   ],
   "small business ai": [
    "how to start a small airbnb business",
@@ -1054,13 +1054,13 @@
    "best automated investing app",
    "best automated training plan fc26",
    "best automatic litter box",
-   "best automated vacuum",
    "best automated investing",
+   "best automated vacuum",
    "best automated ai investing app",
-   "best automatic espresso machine",
    "best automatic cat litter box",
+   "best automatic espresso machine",
    "best automated lawn mower",
-   "best automated trading app",
+   "best automated ai trading platform",
    "why is automated testing important",
    "why is automate to sequence greyed out",
    "why is automation important",
@@ -1088,11 +1088,11 @@
    "how to cloud stream on ps portal",
    "how to cloud game xbox on phone",
    "how to cloud play on xbox",
-   "how to cloud stream on ps5",
    "how to clouds form",
+   "how to cloud stream on ps5",
    "how to cloud play xbox on phone",
-   "how to cloud seed",
    "how to cloud game",
+   "how to cloud seed",
    "how do i cloud game on my phone",
    "how do i cloud game on xbox",
    "how do i cloud stream on ps portal",
@@ -1116,8 +1116,8 @@
    "best cloud storage",
    "best cloud couch",
    "best cloud storage for photos",
-   "best cloud storage for personal use",
    "best cloud gaming service",
+   "best cloud storage for personal use",
    "best cloud couch dupe",
    "best cloud storage for photos and videos",
    "best cloud islands pokopia",
@@ -1128,11 +1128,11 @@
    "why is cloud in final fantasy resonance",
    "why is cloudflare blocking me",
    "why is cloud gaming not working",
-   "why is cloud and willis calling me",
    "why is cloudflare not working",
    "why is cloud seeding bad",
-   "why is cloudflare stock down today",
+   "why is cloud and willis calling me",
    "why is cloudy today",
+   "why is cloud so strong",
    "can i cloud game on my phone",
    "can i cloud play 2k27",
    "can i cloud play minecraft",
@@ -1146,9 +1146,9 @@
   ],
   "data center": [
    "how to data centers use water",
-   "how to data centers make money",
    "how to data center travel ffxiv",
    "how to data centers work",
+   "how to data centers make money",
    "how to data centers consume water",
    "how to data centers pollute water",
    "how to data centers affect water",
@@ -1181,10 +1181,10 @@
    "best data center for ffxiv",
    "best data center stocks to buy now",
    "best data center reits",
-   "best data center companies to work for",
    "best data centers to invest in",
-   "best data center energy stocks",
+   "best data center companies to work for",
    "best data center certifications",
+   "best data center stocks to invest in",
    "why is data center bad",
    "why is data centers using water bad",
    "why is data center water dirty",
@@ -1237,8 +1237,8 @@
    "best cybersecurity programs",
    "best cybersecurity schools",
    "best cybersecurity stocks to buy now",
-   "best cybersecurity colleges",
    "best cybersecurity podcasts",
+   "best cybersecurity colleges",
    "best cybersecurity masters programs",
    "why is cybersecurity important",
    "why is cybersecurity important in today's digital world",
@@ -1305,11 +1305,13 @@
     "like_count": 20,
     "comments_count": 0,
     "caption": "Address poisoning explained: the crypto scam that needs zero clicks. 🔑",
-    "reach": 1152,
-    "saved": 18,
-    "shares": 8,
-    "views": 1409,
-    "total_interactions": 48
+    "reach": 1182,
+    "saved": 19,
+    "shares": 9,
+    "views": 1410,
+    "total_interactions": 50,
+    "ig_reels_avg_watch_time": 16310,
+    "ig_reels_video_view_total_time": 20241311
    },
    {
     "timestamp": "2026-10-23T07:04:18+0000",
@@ -1337,7 +1339,9 @@
     "saved": 0,
     "shares": 0,
     "views": 34,
-    "total_interactions": 0
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 5693,
+    "ig_reels_video_view_total_time": 170805
    },
    {
     "timestamp": "2026-10-22T07:03:44+0000",
@@ -1365,7 +1369,9 @@
     "saved": 1,
     "shares": 1,
     "views": 11,
-    "total_interactions": 5
+    "total_interactions": 5,
+    "ig_reels_avg_watch_time": 9470,
+    "ig_reels_video_view_total_time": 85230
    },
    {
     "timestamp": "2026-10-21T07:04:53+0000",
@@ -1407,7 +1413,9 @@
     "saved": 0,
     "shares": 0,
     "views": 6,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 3567,
+    "ig_reels_video_view_total_time": 28537
    },
    {
     "timestamp": "2026-10-20T18:04:15+0000",
@@ -1435,7 +1443,9 @@
     "saved": 0,
     "shares": 0,
     "views": 29,
-    "total_interactions": 3
+    "total_interactions": 3,
+    "ig_reels_avg_watch_time": 3685,
+    "ig_reels_video_view_total_time": 81079
    },
    {
     "timestamp": "2026-10-18T20:39:48+0000",
@@ -1505,7 +1515,9 @@
     "saved": 0,
     "shares": 0,
     "views": 20,
-    "total_interactions": 4
+    "total_interactions": 4,
+    "ig_reels_avg_watch_time": 3202,
+    "ig_reels_video_view_total_time": 60854
    },
    {
     "timestamp": "2026-10-17T20:02:21+0000",
@@ -1533,7 +1545,9 @@
     "saved": 0,
     "shares": 0,
     "views": 12,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 9501,
+    "ig_reels_video_view_total_time": 76009
    },
    {
     "timestamp": "2026-10-17T18:03:16+0000",
@@ -1561,7 +1575,9 @@
     "saved": 0,
     "shares": 0,
     "views": 14,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 4131,
+    "ig_reels_video_view_total_time": 49579
    },
    {
     "timestamp": "2026-10-17T14:02:33+0000",
@@ -1575,7 +1591,9 @@
     "saved": 0,
     "shares": 0,
     "views": 13,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 8083,
+    "ig_reels_video_view_total_time": 88917
    },
    {
     "timestamp": "2026-10-17T12:04:59+0000",
@@ -1603,7 +1621,9 @@
     "saved": 0,
     "shares": 0,
     "views": 22,
-    "total_interactions": 4
+    "total_interactions": 4,
+    "ig_reels_avg_watch_time": 5690,
+    "ig_reels_video_view_total_time": 119495
    },
    {
     "timestamp": "2026-10-17T09:02:14+0000",
@@ -1617,7 +1637,9 @@
     "saved": 0,
     "shares": 0,
     "views": 46,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 6751,
+    "ig_reels_video_view_total_time": 276824
    },
    {
     "timestamp": "2026-10-17T07:49:04+0000",
@@ -1645,7 +1667,9 @@
     "saved": 0,
     "shares": 0,
     "views": 15,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 6553,
+    "ig_reels_video_view_total_time": 72091
    },
    {
     "timestamp": "2026-10-16T20:02:41+0000",
@@ -1687,7 +1711,9 @@
     "saved": 0,
     "shares": 0,
     "views": 20,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 7526,
+    "ig_reels_video_view_total_time": 150524
    },
    {
     "timestamp": "2026-10-16T16:32:25+0000",
@@ -1701,7 +1727,9 @@
     "saved": 0,
     "shares": 0,
     "views": 19,
-    "total_interactions": 2
+    "total_interactions": 2,
+    "ig_reels_avg_watch_time": 2065,
+    "ig_reels_video_view_total_time": 41305
    },
    {
     "timestamp": "2026-10-16T14:02:11+0000",
@@ -1715,7 +1743,9 @@
     "saved": 0,
     "shares": 0,
     "views": 18,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 10119,
+    "ig_reels_video_view_total_time": 141666
    },
    {
     "timestamp": "2026-10-16T12:02:57+0000",
@@ -1743,7 +1773,9 @@
     "saved": 0,
     "shares": 0,
     "views": 13,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 6610,
+    "ig_reels_video_view_total_time": 79326
    },
    {
     "timestamp": "2026-10-16T09:01:55+0000",
@@ -1757,7 +1789,9 @@
     "saved": 0,
     "shares": 0,
     "views": 23,
-    "total_interactions": 1
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 3040,
+    "ig_reels_video_view_total_time": 69932
    },
    {
     "timestamp": "2026-10-16T07:14:20+0000",
@@ -1813,7 +1847,9 @@
     "saved": 0,
     "shares": 0,
     "views": 38,
-    "total_interactions": 10
+    "total_interactions": 10,
+    "ig_reels_avg_watch_time": 13836,
+    "ig_reels_video_view_total_time": 484261
    },
    {
     "timestamp": "2026-10-15T07:03:19+0000",
@@ -1841,7 +1877,9 @@
     "saved": 0,
     "shares": 0,
     "views": 12,
-    "total_interactions": 2
+    "total_interactions": 2,
+    "ig_reels_avg_watch_time": 8614,
+    "ig_reels_video_view_total_time": 129217
    },
    {
     "timestamp": "2026-10-15T02:19:21+0000",
@@ -1855,7 +1893,9 @@
     "saved": 0,
     "shares": 0,
     "views": 10,
-    "total_interactions": 5
+    "total_interactions": 5,
+    "ig_reels_avg_watch_time": 12702,
+    "ig_reels_video_view_total_time": 139722
    },
    {
     "timestamp": "2026-10-15T01:48:08+0000",

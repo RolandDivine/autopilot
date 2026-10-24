@@ -18,6 +18,14 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
 - **Alt text:** every Instagram image gets alt text (`instagram.alt` = one line per image: what it shows + the slide's words). ig_client sends it and falls back if Instagram rejects it.
 - **Real Roland beats everything:** his voice-note stories (no camera needed) become Reels with captions; build one whenever he sends a recording.
 
+## Reel formula (data, 24 Oct 2026: Roland asked "6 views, how? analyze it, retarget")
+Evidence: address poisoning Reel = 1,410 views, 1,182 reach, 19 saves, 9 shares, **16.3 s average watch**. Every other Reel = 6–34 views with **3–6 s average watch** (people swipe in the first 3 seconds). Carousels = 1–7 reach each.
+- **Topic formula that won:** a money-loss threat the viewer didn't know about + a surprising mechanism ("needs zero clicks") + 3 protect-yourself steps. Run this for ~70% of Reels until another format proves itself. Prefer scams young Nigerians actually meet (fake bank/POS alerts, P2P crypto scams, "account blocked" SMS, Ponzi apps, fake giveaways, SIM swap).
+- **First 3 seconds:** the threat in ≤7 words, on screen AND spoken in the first sentence, about the VIEWER ("Your…", "This scam…"). No greeting, no history/date opener, no mascot intro. Hook overlay must be a personal stake ("Your 'stable' coin can go to zero"), not a headline ("The $1 coin that went to zero").
+- **Length 30–45 s** for new scripts (one idea). End on "send this to someone who…" — shares drove the breakout.
+- **Double down on winners within 48 h:** a Part 2 / follow-up Reel on the same topic, the winner shared to stories, Roland pins it and replies to every comment.
+- **Carousels:** max 2 a week on Instagram (save-worthy checklists only, people-photo cover). The daily 0800 slot becomes a Reel or carousel depending on the week's plan; never more than 1 carousel a day.
+
 ## LinkedIn rules (Roland, 21 Oct 2026: "go with your recommended fix... one daily, 5 a week")
 Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split every golden hour; posts read as generic explainers, not a founder.
 - **1 post a day, Monday to Friday only, at 0800 Lagos (07:00 UTC)** — the 0800 slot. Every other slot has `"linkedin": {"enabled": false}`. No LinkedIn on Sat/Sun.

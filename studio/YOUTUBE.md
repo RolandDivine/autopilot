@@ -3,6 +3,8 @@
 Supersedes the daily-Shorts plan. Why: 28 days of daily Shorts got ~19 views and 0 subscribers; the channel's best video
 ever is a 2024 long-form wallet-safety how-to (158 views). Search-driven long-form how-tos are the lane.
 
+> **Read `studio/STORY_GUIDE.md` first (Roland, 24 Oct 2026).** Every piece is designed with ABC (Act, Believe, Care) and delivered with STORY (Stage, Tension, Opportunity, Resolution, Yes), selling the audience's real desire. Run its checklist before anything ships.
+
 ## Identity
 - Name **Roland Divine | Crypto Safety & AI**, handle **@rolanddivine** (Roland changes these in Studio; the API can't).
 - Promise: keep your crypto safe and use AI like a pro, step by step, without the hype. Country NG, audience worldwide English.

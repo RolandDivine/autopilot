@@ -2,6 +2,8 @@
 
 Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post automatically from the queue (`instagram_autopost` is true). X is off: always set `"x": {"enabled": false}`. Never post anything directly.
 
+> **Read `studio/STORY_GUIDE.md` first (Roland, 24 Oct 2026).** Every piece is designed with ABC (Act, Believe, Care) and delivered with STORY (Stage, Tension, Opportunity, Resolution, Yes), selling the audience's real desire. Run its checklist before anything ships.
+
 ## Content direction (Roland, 15 Oct 2026: full rebuild after a week of near-zero reach)
 Old approach is retired: no curriculum lessons, no basic explainers (what is a wallet, how to use a wallet), no daily news card, no terminal-style PDFs on LinkedIn. Those got 2–31 reach per post.
 - **Topics come from tonight's search demand, nothing else.** Categories: AI, crypto, business, tech infrastructure (data centers, cloud, chips, cybersecurity). Audience is worldwide English speakers.

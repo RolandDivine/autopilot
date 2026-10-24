@@ -104,6 +104,12 @@ def instagram():
             row.update({d["name"]: d["values"][0]["value"] for d in ins})
         except Exception as e:
             row["insights_error"] = str(e)[:160]
+        if m.get("media_product_type") == "REELS":  # watch-time signals (ms)
+            try:
+                ins = c._req("get", f"{m['id']}/insights", params={"metric": "ig_reels_avg_watch_time,ig_reels_video_view_total_time"})["data"]
+                row.update({d["name"]: d["values"][0]["value"] for d in ins})
+            except Exception as e:
+                row["reels_error"] = str(e)[:160]
         rows.append(row)
     try:
         acc = c._req("get", c.user_id, params={"fields": "followers_count,media_count"})

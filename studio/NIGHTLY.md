@@ -24,6 +24,7 @@ Evidence: address poisoning Reel = 1,410 views, 1,182 reach, 19 saves, 9 shares,
 - **First 3 seconds:** the threat in ≤7 words, on screen AND spoken in the first sentence, about the VIEWER ("Your…", "This scam…"). No greeting, no history/date opener, no mascot intro. Hook overlay must be a personal stake ("Your 'stable' coin can go to zero"), not a headline ("The $1 coin that went to zero").
 - **Length 30–45 s** for new scripts (one idea). End on "send this to someone who…" — shares drove the breakout.
 - **Double down on winners within 48 h:** a Part 2 / follow-up Reel on the same topic, the winner shared to stories, Roland pins it and replies to every comment.
+- **Explainer order from 25 Oct (Roland: "continue with this pattern"):** scam/money-loss topics first, history last. Use the audio bank in this order regardless of the old Notion dates (move the rows to match): ex14 SIM swap, ex20 fake giveaway, ex17 quishing (QR scams), ex09 voice clone, ex18 rug pull, ex10 Arup deepfake, ex15 passkeys, ex07 gas fees, ex06 Mt Gox, ex08 ETF, ex19 inflation, ex11 hallucination, ex12 LLM, ex13 CrowdStrike, ex16 business. Each one: personal-stake hook overlay + "send this to someone who…" caption.
 - **Carousels:** max 2 a week on Instagram (save-worthy checklists only, people-photo cover). The daily 0800 slot becomes a Reel or carousel depending on the week's plan; never more than 1 carousel a day.
 
 ## LinkedIn rules (Roland, 21 Oct 2026: "go with your recommended fix... one daily, 5 a week")

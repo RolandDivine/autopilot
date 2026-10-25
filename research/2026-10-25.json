@@ -1,0 +1,1276 @@
+{
+ "date": "2026-10-25",
+ "errors": {
+  "instagram": "GET me: HTTP 400 {\"error\":{\"message\":\"Error validating access token: This Instagram account needs to complete a checkpoint before it can access this app. To recover access, log in to www.instagram.com and follow the instructions.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"Ai"
+ },
+ "trends": {
+  "US": [
+   {
+    "q": "49ers score",
+    "traffic": "2000+",
+    "news": [
+     "NFL execs, coaches rank the league's top five MVP candidates entering Week 7",
+     "Where does Bills QB Josh Allen sit in 2026 NFL MVP odds entering Week 7?"
+    ]
+   },
+   {
+    "q": "luke kuechly",
+    "traffic": "200+",
+    "news": [
+     "59 on 59: Luke Kuechly's Hall of Fame career and life, as told by others",
+     "Luke Kuechly to receive Hall of Fame Ring of Excellence"
+    ]
+   },
+   {
+    "q": "astrology full moon",
+    "traffic": "5000+",
+    "news": [
+     "A chance to see the orange hunter’s moon and a peek at Saturn, too",
+     "Here’s what to know about tonight’s Hunter’s Moon"
+    ]
+   },
+   {
+    "q": "usda bird flu egg farm cull",
+    "traffic": "200+",
+    "news": [
+     "Nearly 1 Million Chickens Slaughtered at Second-Largest Egg-Producing Farm in the U.S. amid Bird Flu Outbreak",
+     "Nearly a million chickens killed at Illinois farm amid nation's largest active bird flu outbreak"
+    ]
+   },
+   {
+    "q": "panthers vs blackhawks",
+    "traffic": "2000+",
+    "news": [
+     "Panthers at Blackhawks projected lineups",
+     "Panthers vs Blackhawks Prediction, Picks, NHL Odds for Sunday, October 25"
+    ]
+   },
+   {
+    "q": "joe burrow",
+    "traffic": "2000+",
+    "news": [
+     "“I’ve Barely Been Sleeping”: Bengals QB Joe Burrow’s Girlfriend Olivia Ponton Opens Up on Physical Toll Amid Hectic Schedule",
+     "Joe Burrow’s girlfriend Olivia Ponton reveals the hidden physical cost of her hectic schedule: “I’ve bare"
+    ]
+   },
+   {
+    "q": "thomas fidone",
+    "traffic": "5000+",
+    "news": [
+     "Chase Young, Christen Miller were fined for violent gestures on same play",
+     "NFL fines Giants' Thomas Fidone, 3 Saints for Week 6 transgressions"
+    ]
+   },
+   {
+    "q": "denzel ward",
+    "traffic": "500+",
+    "news": [
+     "Game Inactives | Week 7 Titans vs Browns",
+     "Why Mason Graham’s teammates had to calm him down in practice on Friday as he prepared to return vs. the Titans"
+    ]
+   },
+   {
+    "q": "amal clooney",
+    "traffic": "500+",
+    "news": [
+     "Amal Clooney, Eats This One Food Every Morning, and Here’s Why It Can Boost Your Energy",
+     "Amal Clooney, 48, Has Started Every Day With the Same Surprising Breakfast for Years"
+    ]
+   },
+   {
+    "q": "quinshon judkins",
+    "traffic": "500+",
+    "news": [
+     "NFL Fantasy 2026 Start 'Em, Sit 'Em: Running backs for Week 7",
+     "Week 7 Fantasy Football RB Rankings"
+    ]
+   }
+  ],
+  "GB": [
+   {
+    "q": "f1 start time",
+    "traffic": "1000+",
+    "news": [
+     "United States Grand Prix practice, qualifying and race times, UK times, plus weather forecast",
+     "What are the tyre strategy options for the United States GP?"
+    ]
+   },
+   {
+    "q": "what time is strictly come dancing on tonight",
+    "traffic": "1000+",
+    "news": [
+     "‘Strictly Come Dancing’ 2026 week 5 – who topped the leaderboard?",
+     "Melanie C and the Strictly Come Dancing professionals work up a sweat and Babydoll takes over the ballroom in Week 5's Results Show"
+    ]
+   },
+   {
+    "q": "scottish cup draw",
+    "traffic": "200+",
+    "news": [
+     "Scottish Gas Men's Scottish Cup Second Round 2026/2027: Preview",
+     "Scottish Cup third round draw"
+    ]
+   },
+   {
+    "q": "gary windass",
+    "traffic": "200+",
+    "news": [
+     "Coronation Street airs prison brawl for Gary Windass with concerning Ross Wilkes twist in early ITVX release",
+     "Coronation Street reveals prison hell for Gary in early ITVX episode"
+    ]
+   },
+   {
+    "q": "real sociedad",
+    "traffic": "200+",
+    "news": [
+     "Real Sociedad vs Levante: Spanish La Liga stats & head-to-head",
+     "🚨Confirmed line-ups: Blockbuster clash at the Reale Arena"
+    ]
+   },
+   {
+    "q": "wirtz injury",
+    "traffic": "5000+",
+    "news": [
+     "Florian Wirtz injury update",
+     "Victory with a taste of anxiety: Liverpool emerge from the Brighton clash with a painful blow"
+    ]
+   },
+   {
+    "q": "darts tonight",
+    "traffic": "2000+",
+    "news": [
+     "Littler into Euros last eight, holder Van Veen out",
+     "PDC Darts | Darts Live Scores, Darts Results & Darts Tickets"
+    ]
+   },
+   {
+    "q": "asda £30",
+    "traffic": "200+",
+    "news": [
+     "Asda explains which shoppers can get free £30 spend",
+     "Asda shoppers can get half price shop this week - here's how to claim"
+    ]
+   },
+   {
+    "q": "barcelona real madrid",
+    "traffic": "200+",
+    "news": [
+     "Barcelona - Real Madrid hoy, en directo: previa y última hora del Clásico de LaLiga EA Sports, en vivo",
+     "Joan García, un Clásico de triunfos"
+    ]
+   },
+   {
+    "q": "toulouse fc",
+    "traffic": "200+",
+    "news": [
+     "[DIFFUSION HD] Toulouse - Troyes en direct",
+     "TFC - ESTAC : discutez en direct entre supporters ici !"
+    ]
+   }
+  ],
+  "NG": [
+   {
+    "q": "nacional vs braga",
+    "traffic": "200+",
+    "news": [
+     "Nacional vs Braga Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+     "Preview: Nacional vs Braga - prediction, team news, lineups"
+    ]
+   },
+   {
+    "q": "2026 ballon d'or ceremony date",
+    "traffic": "200+",
+    "news": [
+     "2026 Ballon d'Or ceremony: When and where, all the nominees and how the awards are decided",
+     "French Montana, Jorja Smith to perform at Ballon d’Or 2026"
+    ]
+   },
+   {
+    "q": "real sociedad",
+    "traffic": "200+",
+    "news": [
+     "Real Sociedad vs Levante: Spanish La Liga stats & head-to-head",
+     "Real Sociedad - Levante LIVE. LALIGA EA Sports latest updates"
+    ]
+   },
+   {
+    "q": "laliga",
+    "traffic": "1000+",
+    "news": [
+     "LaLiga: 'His form continues to decline' - Colino on Ademola Lookman after Atletico's 1-0 win",
+     "Ademola Lookman: Hooked at half-time again, so is it form or rotation?"
+    ]
+   },
+   {
+    "q": "florian wirtz",
+    "traffic": "100+",
+    "news": [
+     "Computerprognose für den 8. Spieltag der Premier League: Anfield in Flammen, Sturm im Old Trafford.",
+     "Vuskovic fast mit Eigentor: Ex-HSV-Star verliert Topspiel"
+    ]
+   },
+   {
+    "q": "man utd vs man city",
+    "traffic": "2000+",
+    "news": [
+     "Manchester United vs Manchester City: Women's Super League stats & head-to-head",
+     "Man Utd Women vs Man City Women LIVE! WSL score updates, news, prediction, lineups and how to watch or stream"
+    ]
+   },
+   {
+    "q": "rc celta de vigo vs real betis standings",
+    "traffic": "1000+",
+    "news": [
+     "Celta - Betis LIVE. LALIGA EA Sports latest updates",
+     "4K-ONLINE!] RC CELTA VIGO REAL BETIS LIVE FREE Soccer EVENT 25 October 2026"
+    ]
+   },
+   {
+    "q": "compressed natural gas",
+    "traffic": "500+",
+    "news": [
+     "Kano Leads North-West In CNG Adoption As FG Announces Expansion Of Refuelling Stations",
+     "FG to Nigerians: Compressed Natural Gas, Cooking Gas Prices Won’t Rise Like Petrol"
+    ]
+   },
+   {
+    "q": "the bahamas",
+    "traffic": "200+",
+    "news": [
+     "British mum Leanne Gregory who died in Bahamas was celebrating wedding anniversary",
+     "British woman drowns in Bahamas while trying to save her children"
+    ]
+   },
+   {
+    "q": "leeds united",
+    "traffic": "200+",
+    "news": [
+     "Premier League LIVE: Sunderland host Leeds after Michael Carrick's Man Utd lose to Bournemouth",
+     "Daniel Farke makes three changes made for Sunderland clash"
+    ]
+   }
+  ],
+  "IN": [
+   {
+    "q": "leeds united",
+    "traffic": "100+",
+    "news": [
+     "Sunderland 0-0 Leeds United: Hosts stay bottom of Premier League despite ending losing run",
+     "Daniel Farke gives fitness update on Dominic Calvert-Lewin, Anton Stach & Noah Okafor"
+    ]
+   },
+   {
+    "q": "f1 schedule",
+    "traffic": "1000+",
+    "news": [
+     "What are the tyre strategy options for the United States GP?",
+     "Winners and losers from US GP F1 qualifying 2026"
+    ]
+   },
+   {
+    "q": "carlos prates",
+    "traffic": "100+",
+    "news": [
+     "UFC 336 terá duas disputas de cinturão em Toronto",
+     "Chamado de 'fujão', Makhachev rebate provocação de Prates: \"Não está no meu nível\""
+    ]
+   },
+   {
+    "q": "earthquake",
+    "traffic": "200+",
+    "news": [
+     "Magnitude 5.9 earthquake strikes Tibet region: EMSC",
+     "How a county in Xizang reflects China’s established systems"
+    ]
+   },
+   {
+    "q": "ഓസ്ട്രേലിയ",
+    "traffic": "200+",
+    "news": [
+     "‘ഇനി അടക്കം ചെയ്യേണ്ട, ദഹിപ്പിക്കുകയും വേണ്ട’: മരണശേഷം ‘ടെറാമേഷൻ’, ചരിത്രപരമായ തീരുമാനത്തിന് ന്യൂ സൗത്ത് വെയിൽസ്",
+     "മൃതദേഹം ജൈവവളമാക്കുന്ന ‘ഹ്യൂമൻ കോമ്പോസ്റ്റിങ്’; പുതിയ സംസ്കാരരീതിക്ക് അംഗീകാരം നൽകാൻ ഓസ്‌ട്രേലിയ | Human composting Australia"
+    ]
+   },
+   {
+    "q": "artificial intelligence",
+    "traffic": "200+",
+    "news": [
+     "Put Your A.I. Agents to Work With These 5 Killer Tasks",
+     "Managing a new world of bots and bargain hunters"
+    ]
+   },
+   {
+    "q": "man utd vs man city",
+    "traffic": "500+",
+    "news": [
+     "Man United 0-3 Bournemouth (25 Oct, 2026) Team Stats",
+     "Man United 0-3 Bournemouth (25 Oct, 2026) Player Stats"
+    ]
+   },
+   {
+    "q": "hyundai bayon india launch date",
+    "traffic": "5000+",
+    "news": [
+     "Hyundai Bayon Variant-Wise Features, Dimensions Leaked Ahead Of Launch",
+     "Hyundai Bayon to get Perplexity AI voice assistant, connected tech and safety features: What to expect"
+    ]
+   },
+   {
+    "q": "us iran news",
+    "traffic": "200+",
+    "news": [
+     "Trump Says \"Gotta Stop\" Killing Iran Leaders To Know Who US Is Dealing With",
+     "Trump says US won’t strike Iran today, amid rising tensions"
+    ]
+   },
+   {
+    "q": "us gp",
+    "traffic": "2000+",
+    "news": [
+     "Bemused Wolff celebrates Antonelli’s ‘miracle lap’ in the US",
+     "United States Grand Prix: Kimi Antonelli stands on brink of history in Austin"
+    ]
+   }
+  ]
+ },
+ "reddit": {
+  "artificial": "HTTP 403",
+  "ChatGPT": "HTTP 403",
+  "ClaudeAI": "HTTP 403",
+  "LocalLLaMA": "HTTP 403",
+  "OpenAI": "HTTP 403",
+  "CryptoCurrency": "HTTP 403",
+  "Bitcoin": "HTTP 403",
+  "Entrepreneur": "HTTP 403",
+  "smallbusiness": "HTTP 403",
+  "startups": "HTTP 403",
+  "SideProject": "HTTP 403",
+  "devops": "HTTP 403",
+  "selfhosted": "HTTP 403",
+  "sysadmin": "HTTP 403"
+ },
+ "hn": [
+  {
+   "title": "Dolly Parton's Imagination Library",
+   "score": 16,
+   "comments": 2
+  },
+  {
+   "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
+   "score": 119,
+   "comments": 35
+  },
+  {
+   "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+   "score": 112,
+   "comments": 64
+  },
+  {
+   "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
+   "score": 68,
+   "comments": 5
+  },
+  {
+   "title": "VCF Southwest 2026, but Edited on Silicon Graphics for '90s TV [video]",
+   "score": 20,
+   "comments": 3
+  },
+  {
+   "title": "We should be more ambitious with the software we build",
+   "score": 662,
+   "comments": 624
+  },
+  {
+   "title": "Active incident at Dreamhost forcing password reset",
+   "score": 43,
+   "comments": 17
+  },
+  {
+   "title": "Amazon's \"digital pacifier\" for toddlers",
+   "score": 9,
+   "comments": 7
+  },
+  {
+   "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
+   "score": 62,
+   "comments": 91
+  },
+  {
+   "title": "Recreate the Apollo Guidance Computer",
+   "score": 6,
+   "comments": 0
+  },
+  {
+   "title": "Cerebras Deploys Trillion-Parameter AI Models",
+   "score": 316,
+   "comments": 113
+  },
+  {
+   "title": "Show HN: I put employees inside S&P 500 market-cap bubbles",
+   "score": 137,
+   "comments": 43
+  },
+  {
+   "title": "Sabre Wulf Remastered",
+   "score": 33,
+   "comments": 4
+  },
+  {
+   "title": "Bring Back the Cool Save File Screens",
+   "score": 46,
+   "comments": 11
+  },
+  {
+   "title": "fheroes2: A recreation of Heroes of Might and Magic II game engine",
+   "score": 175,
+   "comments": 60
+  },
+  {
+   "title": "Root shell on Samsung TV",
+   "score": 633,
+   "comments": 498
+  },
+  {
+   "title": "How Japanese Dried Bonito Is Made",
+   "score": 160,
+   "comments": 41
+  },
+  {
+   "title": "Fuck Nuance (2015)",
+   "score": 14,
+   "comments": 2
+  },
+  {
+   "title": "The Goose Programming Language",
+   "score": 528,
+   "comments": 328
+  },
+  {
+   "title": "A Mathematician Reads the AI Future",
+   "score": 30,
+   "comments": 33
+  },
+  {
+   "title": "Reverse engineer of PC-98 Touhou games retires",
+   "score": 58,
+   "comments": 38
+  },
+  {
+   "title": "Flapping Airplanes",
+   "score": 14,
+   "comments": 14
+  },
+  {
+   "title": "SpeedCrunch 1.1",
+   "score": 207,
+   "comments": 47
+  },
+  {
+   "title": "I made a virtual pet fruit fly that Twitch chat can interact with",
+   "score": 3,
+   "comments": 0
+  },
+  {
+   "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+   "score": 1647,
+   "comments": 252
+  },
+  {
+   "title": "Small Programs and Languages",
+   "score": 170,
+   "comments": 26
+  },
+  {
+   "title": "Broccoli2Shell: Brotli decoder RCE in Node.js, Python and more",
+   "score": 384,
+   "comments": 202
+  },
+  {
+   "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
+   "score": 109,
+   "comments": 44
+  },
+  {
+   "title": "Show HN: ReVault – new secure archive format",
+   "score": 6,
+   "comments": 1
+  },
+  {
+   "title": "I don't understand quantum physics (2018)",
+   "score": 361,
+   "comments": 282
+  }
+ ],
+ "questions": {
+  "ai agents": [
+   "how to ai agents work",
+   "how to ai agents",
+   "how to build ai agents",
+   "how to create ai agents",
+   "how to make ai agents",
+   "how to use ai agents",
+   "how to build ai agents from scratch",
+   "how to create ai agents in copilot",
+   "how to create ai agents for free",
+   "how to develop ai agents",
+   "how do ai agents work",
+   "how do ai agents",
+   "how ai agents are build",
+   "how ai agents make money",
+   "how ai agents",
+   "how ai agents learn",
+   "how ai agents are used",
+   "how do i create ai agent",
+   "how do i build ai agent",
+   "how do i get ai agent",
+   "is it safe to use ai agents",
+   "is ai safe",
+   "is ai harmful",
+   "best ai agents",
+   "best ai agents for personal use",
+   "best ai agents for small business",
+   "best ai agents for business",
+   "best ai agents for coding",
+   "best ai agents right now",
+   "best ai agents for stock trading",
+   "best ai agents reddit",
+   "best ai agents course",
+   "best ai agents for work",
+   "why is ai agent",
+   "why ai agents are used",
+   "why build ai agents",
+   "why create ai agents",
+   "why learn ai agents",
+   "what is agent in artificial intelligence",
+   "can i build ai agents for free",
+   "can i use ai agents for free",
+   "can i sell ai agents",
+   "can i build ai agents with gemini",
+   "can i create ai agents with copilot",
+   "can i build ai agents with claude",
+   "can i create ai agents in chatgpt",
+   "can i build ai agents with chatgpt",
+   "can i build ai agents without coding",
+   "can i run ai agents locally"
+  ],
+  "chatgpt": [
+   "how to chatgpt",
+   "how to chatgpt a photo",
+   "how to chatgpt a resume",
+   "how to chatgpt video",
+   "how to chatgpt images",
+   "how to chatgpt voice mode",
+   "how to chatgpt projects work",
+   "how to chatgpt credits work",
+   "how to chatgpt work",
+   "how to chatgpt voice",
+   "how do i chatgpt",
+   "how do i chatgpt a photo",
+   "how do i chatgpt my living room",
+   "how can i chatgpt",
+   "how do i cancel chatgpt subscription",
+   "how do i get chatgpt",
+   "how do i use chatgpt",
+   "how to do chatgpt caricature",
+   "how do i access chatgpt",
+   "how do i use chatgpt for free",
+   "is it safe to chatgpt",
+   "is it okay to chatgpt a cover letter",
+   "is it okay to chatgpt",
+   "is it safe to use chatgpt",
+   "is it safe to tell chatgpt personal information",
+   "is it safe to give chatgpt personal information",
+   "is it safe to show chatgpt your face",
+   "is it safe to use chatgpt as a therapist",
+   "is it safe to send chatgpt your face",
+   "is it safe to ask chatgpt personal questions",
+   "best chatgpt model",
+   "best chatgpt plugins",
+   "best chatgpt prompts",
+   "best chatgpt app",
+   "best chatgpt",
+   "best chatgpt prompts for image editing",
+   "best chatgpt image prompts",
+   "best chatgpt model for image generation",
+   "best chatgpt alternatives",
+   "best chatgpt model for coding",
+   "why is chatgpt not working",
+   "why is chatgpt so slow today",
+   "why is chatgpt bad",
+   "why is chatgpt bad for the environment",
+   "why is chatgpt not loading",
+   "why is chatgpt so slow right now",
+   "why is chatgpt not working today",
+   "why is chatgpt not working on my phone",
+   "why is chatgpt so slow now",
+   "why is chatgpt taking so long",
+   "can i chatgpt",
+   "can i chatgpt that for you",
+   "can i use chatgpt for free",
+   "can i cancel chatgpt plus anytime",
+   "can i use chatgpt for free unlimited",
+   "can i get chatgpt plus for free",
+   "can i download chatgpt on my laptop",
+   "can i send chatgpt a video",
+   "can i delete chatgpt history",
+   "can i use chatgpt to write a book and sell it"
+  ],
+  "claude": [
+   "how to claude code",
+   "how to claude",
+   "how to claude code from phone",
+   "how to claude tokens work",
+   "how to claude cowork",
+   "how to claude projects work",
+   "how to claude ai",
+   "how to claude like anthropic",
+   "how to claude code in terminal",
+   "how to claude remote control",
+   "how do i use claude",
+   "how do i use claude design",
+   "how do i use claude code",
+   "how do i use claude ai",
+   "how do i get claude",
+   "how do i get claude ai",
+   "how do i access claude design",
+   "how do i install claude code",
+   "how can i get claude pro for free",
+   "how to make claude write like a human",
+   "is it safe to use claude ai",
+   "is it safe to install claude desktop",
+   "is it safe to use claude",
+   "is it safe to install claude code",
+   "is it safe to download claude",
+   "is it safe to use claude code",
+   "is it safe to use claude cowork",
+   "is it safe to give claude personal information",
+   "is it safe to connect claude with gmail",
+   "is it safe to use claude code at work",
+   "best claude model",
+   "best claude skills",
+   "best claude model for coding",
+   "best claude model for writing",
+   "best claude plugins",
+   "best claude model for creative writing",
+   "best claude connectors",
+   "best claude code skills",
+   "best claude code plugins",
+   "best claude prompts",
+   "why is claude better than chatgpt",
+   "why is claude so slow",
+   "why is claude called claude",
+   "why is claude named claude",
+   "why is claude 18+",
+   "why is claude taking so long",
+   "why is claude not working",
+   "why is claude slower than chatgpt",
+   "why is claude so slow today",
+   "why is claude so expensive",
+   "can i claude code from my phone",
+   "can i claude code for free",
+   "can i claude",
+   "can i use claude code for free",
+   "can i use claude for free",
+   "can i run claude locally",
+   "can i get claude pro for free as a student",
+   "can i get claude pro for free",
+   "can i use claude without logging in",
+   "can i use claude ai for free"
+  ],
+  "ai tools": [
+   "how to ai tools",
+   "how to ai tools in excel",
+   "how to ai tools work",
+   "how to use ai tools",
+   "how to learn ai tools",
+   "how to learn ai tools for free",
+   "how to build ai tools",
+   "how to design ai tools",
+   "how to study ai tools",
+   "how to compare ai tools",
+   "how ai tools work",
+   "how ai tools",
+   "how ai tools make money",
+   "how ai tools are build",
+   "how ai tools like chatgpt",
+   "how i learn ai tools",
+   "how i use ai tools",
+   "how many ai tools are there",
+   "how many ai tools are there in the world",
+   "is it safe to use ai tools",
+   "is ai safe",
+   "best ai tools",
+   "best ai tools for video editing free",
+   "best ai tools for business",
+   "best ai tools for image generation",
+   "best ai tools for students",
+   "best ai tools for research",
+   "best ai tools for teachers",
+   "best ai tools for interior design",
+   "best ai tools for college students",
+   "best ai tools for video creation",
+   "why ai tools are free",
+   "why ai tools",
+   "why use ai tools",
+   "why learn ai tools",
+   "what are the best ai tools",
+   "which ai platform to use",
+   "ai tools name",
+   "can i learn ai tools for free",
+   "can i claim ai tools on tax",
+   "can i learn ai tools",
+   "can i use ai tools",
+   "can i use ai tools for free",
+   "can ai tools be biased",
+   "can ai tools produce biased results",
+   "can ai tools predict stock market",
+   "can ai tools",
+   "can ai tools edit videos"
+  ],
+  "vibe coding": [
+   "how to vibe coding",
+   "how to vibe coding with claude",
+   "how to vibe coding with cursor",
+   "how to vibe coding with gemini",
+   "how to vibe coding with chatgpt",
+   "how to vibe coding with codex",
+   "how to vibe coding free",
+   "how to vibe coding reddit",
+   "how to vibe coding github",
+   "how to vibe coding in vscode",
+   "how do i vibe code",
+   "how vibe coding works",
+   "how vibe coding",
+   "how much vibe coding cost",
+   "how learn vibe coding",
+   "how safe is vibe coding",
+   "best vibe coding tools",
+   "best vibe coding platform",
+   "best vibe coding app",
+   "best vibe coding ai",
+   "best vibe coding",
+   "best vibe coding website builder",
+   "best vibe coding websites",
+   "best vibe coding app builder",
+   "best vibe coding courses",
+   "best vibe coding software",
+   "why is vibe coding bad",
+   "why is vibe coding called that",
+   "why is vibe coding frowned upon",
+   "why is vibe coding looked down upon",
+   "why is vibe coding",
+   "why is vibe coding hated",
+   "why is vibe coding so addictive",
+   "why is vibe coding so hard",
+   "why is coding so confusing",
+   "can i vibe coding",
+   "can i vibe code with claude",
+   "can i vibe code with chatgpt",
+   "can i vibe code with gemini",
+   "can i vibe code for free",
+   "can i vibe code a game",
+   "can i vibe code an app",
+   "can i vibe code a website",
+   "can i vibe code with copilot",
+   "can i vibe code a video game"
+  ],
+  "bitcoin": [
+   "how to bitcoin mine",
+   "how to bitcoin",
+   "how to bitcoin mine on pc",
+   "how to bitcoin verify cash app",
+   "how to bitcoin mine on phone",
+   "how to bitcoin on cash app",
+   "how to bitcoin work",
+   "how to bitcoin wallet",
+   "how to bitcoin atms work",
+   "how to bitcoin mine on laptop",
+   "how do i bitcoin mine",
+   "how do i bitcoin",
+   "how do i bitcoin on cash app",
+   "how do i crypto",
+   "how do i crypto trading",
+   "how do i buy bitcoin",
+   "how do i get bitcoin",
+   "how do i send bitcoin on cash app",
+   "how do i buy bitcoin on cash app",
+   "how do i use bitcoin",
+   "is it safe to buy bitcoin",
+   "is it safe to buy bitcoin on cash app",
+   "is it safe to buy bitcoin now",
+   "is it safe to buy bitcoin on robinhood",
+   "is it safe to keep bitcoin on coinbase",
+   "is it safe to buy bitcoin on paypal",
+   "is it safe to buy bitcoin on revolut",
+   "is it safe to share bitcoin address",
+   "is it safe to buy bitcoin on venmo",
+   "is it safe to use bitcoin",
+   "best bitcoin etf",
+   "best bitcoin wallet",
+   "best bitcoin miner",
+   "best bitcoin mining app",
+   "best bitcoin app",
+   "best bitcoin to buy",
+   "best bitcoin wallet app",
+   "best bitcoin etf to buy",
+   "best bitcoin stocks",
+   "best bitcoin miner app",
+   "why is bitcoin dropping",
+   "why is bitcoin going up",
+   "why is bitcoin down",
+   "why is bitcoin down today",
+   "why is bitcoin up today",
+   "why is bitcoin crashing",
+   "why is bitcoin worth so much",
+   "why is bitcoin going up today",
+   "why is bitcoin dropping today",
+   "why is bitcoin going down",
+   "can i bitcoin mine on my pc",
+   "can i bitcoin mine for free",
+   "can i bitcoin mine",
+   "can i bitcoin mine with my laptop",
+   "can i bitcoin mine at home",
+   "can i buy bitcoin with paypal",
+   "can i buy bitcoin on fidelity",
+   "can i send bitcoin from paypal",
+   "can i buy bitcoin on chime",
+   "can i buy bitcoin with credit card"
+  ],
+  "crypto": [
+   "how to crypto trade",
+   "how to crypto mine",
+   "how to crypto",
+   "how to crypto farm",
+   "how to crypto scams work",
+   "how to cryptogram",
+   "how to cryptocurrency",
+   "how to cryptograms work",
+   "how to crypto day trade",
+   "how to crypto wallets work",
+   "how do i crypto mine",
+   "how do i crypto trade",
+   "how do i crypto",
+   "how do you crypto",
+   "how can i crypto",
+   "how do i bitcoin mine",
+   "how do i bitcoin",
+   "how do i bitcoin on cash app",
+   "how do i contact crypto com customer service",
+   "how do i buy crypto",
+   "is it safe to keep crypto on coinbase",
+   "is it safe to buy crypto on robinhood",
+   "is it safe to buy crypto on revolut",
+   "is it safe to keep crypto on robinhood",
+   "is it safe to buy crypto",
+   "is it safe to leave crypto on coinbase",
+   "is it safe to buy crypto on venmo",
+   "is it safe to share crypto wallet address",
+   "is it safe to store crypto on coinbase",
+   "is it safe to hold crypto on coinbase",
+   "best crypto to buy now",
+   "best crypto wallet",
+   "best crypto to buy",
+   "best crypto to invest in",
+   "best crypto app",
+   "best crypto trading platform",
+   "best crypto casino",
+   "best crypto exchange",
+   "best crypto wallet app",
+   "best crypto",
+   "why is crypto down",
+   "why is crypto up today",
+   "why is crypto crashing",
+   "why is crypto going up today",
+   "why is crypto down today",
+   "why is crypto falling",
+   "why is crypto going up",
+   "why is crypto up",
+   "why is crypto dropping right now",
+   "why is crypto falling today",
+   "can i crypto mine on my phone",
+   "can i crypto mine",
+   "can i crypto",
+   "can i crypto mine on my pc",
+   "can i buy crypto with a credit card",
+   "can i buy crypto with paypal",
+   "can i buy crypto on fidelity",
+   "can i buy crypto on schwab",
+   "can i buy crypto with a visa gift card",
+   "can i send crypto from revolut to another wallet"
+  ],
+  "stablecoin": [
+   "how to stablecoins work",
+   "how to stablecoin issuers make money",
+   "how to stablecoins make money",
+   "how to buy stablecoins",
+   "how to buy stablecoins in usa",
+   "how to buy stablecoins in india",
+   "how to get stablecoins",
+   "how to use stablecoins",
+   "how to invest stablecoin",
+   "how to create stablecoin",
+   "how do i buy stablecoin",
+   "how do i get stablecoin",
+   "how do i use stablecoins",
+   "how do i invest in stablecoin",
+   "how to make stablecoin",
+   "how do you purchase stablecoin",
+   "how do i buy usd1 stablecoin",
+   "how do you spend stablecoins",
+   "how do you trade stablecoins",
+   "how do i create a stablecoin",
+   "best stablecoin",
+   "best stablecoin to invest in",
+   "best stablecoin yield",
+   "best stablecoin to buy",
+   "best stablecoin stocks",
+   "best stablecoin etf",
+   "best stablecoin wallet",
+   "best stablecoin interest rate",
+   "best stablecoin to buy now",
+   "best stablecoin companies to invest in",
+   "why is stablecoin important",
+   "why is stablecoin better than bitcoin",
+   "why is stablecoin needed",
+   "why is stablecoin stable",
+   "why is stablecoin better than cash",
+   "why is stablecoin so popular",
+   "why is stablecoin better than fiat",
+   "why is stablecoin good",
+   "why are stablecoins used",
+   "why did stablecoin crash",
+   "can i buy stablecoin",
+   "can i buy stablecoin on coinbase",
+   "can i buy stablecoins on robinhood",
+   "can i buy stablecoin in india",
+   "can i buy stablecoin on fidelity",
+   "can i stake stablecoins",
+   "can i trade stablecoin",
+   "can i mine stablecoins",
+   "can i buy stablecoin on wealthsimple",
+   "can i store stablecoins on ledger"
+  ],
+  "start a business": [
+   "how to start a business",
+   "how to start a business with no money",
+   "how to start a business in texas",
+   "how to start a business for beginners",
+   "how to start a business in florida",
+   "how to start a business page on facebook",
+   "how to start a business from home with no money",
+   "how to start a business in california",
+   "how to start a business in nc",
+   "how to start a business in ohio",
+   "how do i start a business",
+   "how do i start a business with no money",
+   "how do i start a business page on facebook",
+   "how do i start a business account on facebook",
+   "how do i start a business in florida",
+   "how do i start a business in texas",
+   "how do i start a business instagram account",
+   "how do i start a business email",
+   "how do i start a business on etsy",
+   "how do i start a business in california",
+   "is it safe to start a business now",
+   "is it safe to start a business in mexico",
+   "is it ok to start a business with no money",
+   "is it okay to start a business",
+   "is it ok to start a business email with dear",
+   "is it safe to open a business account online",
+   "is it safe to run a business from home",
+   "is it ok to open a business during ghost month",
+   "is it okay to open a business on august",
+   "is it ok to run a business from home",
+   "best start a business books",
+   "best start a business",
+   "best start a business podcast",
+   "best way start a business",
+   "best start business ideas",
+   "best start business gta online",
+   "best starting business in philippines",
+   "best starting business big ambitions",
+   "best starting business credit card",
+   "best starting business gta 5",
+   "why start a business",
+   "why start a business in dubai",
+   "why start a business in singapore",
+   "why start a business reddit",
+   "why start a business in canada",
+   "why should start a business",
+   "why is it hard to start a business",
+   "why is it good to start a business",
+   "why open a business bank account",
+   "why set up a business",
+   "can i start a business with no money",
+   "can i start a business while in chapter 13",
+   "can i start a business without an llc",
+   "can i start a business with bad credit",
+   "can i start a business",
+   "can i start a business with 10k",
+   "can i start a business bank account online",
+   "can i start a business without a degree",
+   "can i start a business on h1b",
+   "can i start a business with 50k"
+  ],
+  "small business ai": [
+   "how to start a small airbnb business",
+   "how to start a small ai business",
+   "how to help small business with ai",
+   "how to help small businesses implement ai",
+   "how small business use ai",
+   "how to start a small business using ai",
+   "how to improve my small business with ai tools",
+   "how can ai help small businesses",
+   "how do small business use ai",
+   "how does the small business administration help small businesses",
+   "best small business ai tools",
+   "best small business airline credit card",
+   "best small business ai assistant",
+   "best small business aircraft",
+   "best small business ai apps",
+   "best small company ai stocks",
+   "best small ai companies to invest in",
+   "best small ai companies",
+   "best small business credit card airline miles",
+   "best website builder for small business ai"
+  ],
+  "automate": [
+   "how to automate food palworld",
+   "how to automate cooking palworld",
+   "how to automate ingots palworld",
+   "how to automate emails in outlook",
+   "how to automate fiber palworld",
+   "how to automate in palworld",
+   "how to automate text messages iphone",
+   "how to automate ore in palworld",
+   "how to automate fidelity investments",
+   "how to automate food production palworld",
+   "how do i automate my savings",
+   "how do i automate my trading strategy",
+   "how do i automate messages on instagram",
+   "how do i automate my investments",
+   "how do i automate mixing in schedule 1",
+   "how do i automate a powerpoint presentation",
+   "how do i automate dates in excel",
+   "how do i automate whatsapp messages",
+   "how do i automate my business",
+   "how do i automate emails from excel",
+   "is it safe to use automatic car wash",
+   "is it safe to uninstall power automate",
+   "is it safe to delete power automate",
+   "is it safe to remove power automate",
+   "what jobs are safe from automation",
+   "what to automate and what not to automate in testing",
+   "is power automate secure",
+   "best automated investing app",
+   "best automated training plan fc26",
+   "best automatic litter box",
+   "best automated vacuum",
+   "best automated investing",
+   "best automated ai investing app",
+   "best automatic espresso machine",
+   "best automatic cat litter box",
+   "best automated lawn mower",
+   "best automated trading app",
+   "why is automated testing important",
+   "why is automate to sequence greyed out",
+   "why is automation important",
+   "why is automatic better than quartz",
+   "why is automatic cars more expensive",
+   "why is automatic insurance more expensive",
+   "why is automatic better than manual",
+   "why is automatic repair not working",
+   "why is automation greyed out ableton",
+   "why is automatic transmission more expensive",
+   "can i automate zelle payments",
+   "can i automate emails in outlook",
+   "can i automate a composter in minecraft",
+   "can i automate job applications",
+   "can i automate emails in gmail",
+   "can i automate cooking in palworld",
+   "can i automate labels in gmail",
+   "can i automate fidelity investments",
+   "can i automate chatgpt",
+   "can i automate a message on whatsapp"
+  ],
+  "cloud": [
+   "how to cloud game on xbox",
+   "how to cloud game xbox on android",
+   "how to cloud stream on ps portal",
+   "how to cloud game xbox on phone",
+   "how to cloud play on xbox",
+   "how to cloud stream on ps5",
+   "how to clouds form",
+   "how to cloud play xbox on phone",
+   "how to cloud seed",
+   "how to cloud game",
+   "how do i cloud game on my phone",
+   "how do i cloud game on xbox",
+   "how do i cloud stream on ps portal",
+   "how do i cloud play on xbox",
+   "how do i cloud stream on ps5",
+   "how does i cloud work",
+   "how do i icloud backup",
+   "how do i icloud backup my iphone",
+   "how do i unblock cloudflare challenges",
+   "how do i unblock cloudflare",
+   "is it safe to drink cloudy tap water",
+   "is it safe to use cloudflare dns",
+   "is it safe to drink cloudy water",
+   "is it safe to delete cloudkit cache",
+   "is it safe to drink cloudy tap water uk",
+   "is it safe to drink cloudy filtered water",
+   "is it safe to use cloud storage",
+   "is it safe to use cloudflare warp",
+   "is it safe to use cloudflare 1.1.1.1",
+   "is it safe to use cloudflare",
+   "best cloud storage",
+   "best cloud couch",
+   "best cloud storage for photos",
+   "best cloud storage for personal use",
+   "best cloud gaming service",
+   "best cloud couch dupe",
+   "best cloud storage for photos and videos",
+   "best cloud islands pokopia",
+   "best cloud gaming",
+   "best cloud bread recipe",
+   "why is cloud gaming so laggy",
+   "why is cloud in kingdom hearts",
+   "why is cloud in final fantasy resonance",
+   "why is cloudflare blocking me",
+   "why is cloud gaming not working",
+   "why is cloud and willis calling me",
+   "why is cloudflare not working",
+   "why is cloud seeding bad",
+   "why is cloudflare stock down today",
+   "why is cloudy today",
+   "can i cloud game on my phone",
+   "can i cloud play 2k27",
+   "can i cloud play minecraft",
+   "can i cloud game gta 5",
+   "can i cloud play marvel rivals",
+   "can i cloud stream ps5 games on pc",
+   "can i cloud play madden 27",
+   "can i cloud play steam games",
+   "can i cloud play rocket league",
+   "can i cloud stream 2k27"
+  ],
+  "data center": [
+   "how to data centers use water",
+   "how to data centers make money",
+   "how to data center travel ffxiv",
+   "how to data centers work",
+   "how to data centers consume water",
+   "how to data centers pollute water",
+   "how to data centers affect water",
+   "how to data center",
+   "how to stop data centers from being built",
+   "how to stop data centers",
+   "how do data centers use water",
+   "how do data centers pollute water",
+   "how do data centers make money",
+   "how do data centers work",
+   "how do data centers affect the environment",
+   "how do data centers use so much water",
+   "how do data centers",
+   "how do data centers create jobs",
+   "how do data centers look like",
+   "how do data centers use a lot of water",
+   "is it safe to live near data centers",
+   "is it safe to work in data center",
+   "is it safe to live by data centers",
+   "is it safe to live around data centers",
+   "is it safe to live near ai data centers",
+   "is it safe to live near a data center reddit",
+   "is it dangerous to live near data centers",
+   "is it dangerous to live by data centers",
+   "is it dangerous to work in a data center",
+   "is it ok to live near a data center",
+   "best data center stocks",
+   "best data center stocks to buy",
+   "best data center etf",
+   "best data center for ffxiv",
+   "best data center stocks to buy now",
+   "best data center reits",
+   "best data center companies to work for",
+   "best data centers to invest in",
+   "best data center energy stocks",
+   "best data center certifications",
+   "why is data center bad",
+   "why is data centers using water bad",
+   "why is data center water dirty",
+   "why is data centers important",
+   "why is data center needed",
+   "why is data center water not reusable",
+   "why is data center bad for the environment",
+   "why is data centers using so much water",
+   "why is data centers using water",
+   "why is data centers good",
+   "can i change data centers ffxiv",
+   "can i transfer data centers ffxiv",
+   "can i switch data center ffxiv",
+   "can i open data center",
+   "can i move data centers ffxiv",
+   "can i build data center",
+   "can data centers use sea water",
+   "can data centers use salt water for cooling",
+   "can data centers recycle water",
+   "can data centers use salt water"
+  ],
+  "cybersecurity": [
+   "how to cybersecurity",
+   "how to cybersecurity analyst",
+   "how to cybersecurity experts",
+   "how to cybersecurity make money",
+   "how to network security",
+   "how to computer security",
+   "how to learn cybersecurity",
+   "how to learn cybersecurity from scratch",
+   "how to get cybersecurity certifications",
+   "how to become cybersecurity analyst",
+   "how do you cybersecurity",
+   "how to do cybersecurity",
+   "how do i start cybersecurity with no experience",
+   "how to do cybersecurity course",
+   "how do i learn cybersecurity",
+   "how to do cybersecurity projects",
+   "how do i get cybersecurity certificate",
+   "how do i know cybersecurity is for me",
+   "how do i get into cybersecurity",
+   "how do you spell cybersecurity",
+   "is safe to work cybersecurity",
+   "dangers of cyber security",
+   "do and don'ts of cyber security",
+   "best cybersecurity stocks",
+   "best cybersecurity etf",
+   "best cybersecurity certifications",
+   "best cybersecurity companies",
+   "best cybersecurity programs",
+   "best cybersecurity schools",
+   "best cybersecurity stocks to buy now",
+   "best cybersecurity colleges",
+   "best cybersecurity podcasts",
+   "best cybersecurity masters programs",
+   "why is cybersecurity important",
+   "why is cybersecurity important in today's digital world",
+   "why is cybersecurity so hard",
+   "why is cybersecurity a good career",
+   "why is cybersecurity important in healthcare",
+   "why is cybersecurity stocks down today",
+   "why is cybersecurity interesting",
+   "why is cybersecurity awareness training important",
+   "why is cybersecurity down today",
+   "why is cybersecurity stocks up today",
+   "can i learn cybersecurity on my own",
+   "can i do cybersecurity with a computer science degree",
+   "can i do cybersecurity without maths",
+   "can i learn cybersecurity online",
+   "can i learn cybersecurity with my phone",
+   "can i do cybersecurity after 12th commerce",
+   "can i work cybersecurity from home",
+   "can i do cybersecurity from.home",
+   "can i learn cybersecurity for free",
+   "can i work cybersecurity remotely"
+  ]
+ }
+}

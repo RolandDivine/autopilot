@@ -1,262 +1,315 @@
 {
  "date": "2026-10-27",
  "errors": {
-  "instagram": "GET me: HTTP 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AVhYnDdh8bw8KCpD_YkwI9F\"}}"
+  "instagram": "GET me: HTTP 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"Aq52QmWQ6mTl48n6juMFXGD\"}}"
  },
  "trends": {
   "US": [
    {
-    "q": "hood stock",
+    "q": "danielle parton",
+    "traffic": "500+",
+    "news": [
+     "Dolly Parton’s niece ‘figured out’ singer had cancer after sharing her own diagnosis",
+     "Dolly Parton’s Estate Names Her Niece Danielle Parton as Brand Ambassador: ‘Proud to Be Part of That Legacy’"
+    ]
+   },
+   {
+    "q": "inundación",
+    "traffic": "500+",
+    "news": [
+     "Marea del rey más alta del año provocan inundaciones en el sur de Florida",
+     "Qué son las mareas reales: Te explicamos el fenómeno que deja inundaciones costeras en el país"
+    ]
+   },
+   {
+    "q": "mein schiff 3 canary islands cancelled",
+    "traffic": "1000+",
+    "news": [
+     "Video Cruise liner collides with two docked cargo ships",
+     "Cruise Ship Rams Container Ship, Lifeboats Destroyed and Cruise Canceled"
+    ]
+   },
+   {
+    "q": "gta 6 size",
+    "traffic": "5000+",
+    "news": [
+     "GTA 6 File Size Revealed, And It’s Massive",
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19"
+    ]
+   },
+   {
+    "q": "victor julian duque fbi most wanted",
     "traffic": "2000+",
     "news": [
-     "Robinhood Is Building 13 Businesses at Once. The October 27 Report Tests Whether Margins Pay for It",
-     "Is Robinhood Stock a Buy About a Third Below Its Record High?"
+     "FBI Miami searches for Colombian fugitive in $54M drug-money laundering operation",
+     "SA man accused of laundering drug money now on FBI's most-wanted list"
     ]
    },
    {
-    "q": "stx stock",
+    "q": "danny masterson",
     "traffic": "500+",
     "news": [
-     "STX Stock Surges Over 6% Ahead Of Earnings — Rosenblatt Cuts Target But Sees Near-Term Profit Upside",
-     "Seagate Stock Needs a Boost From Earnings—But the Bar Is High"
+     "Danny Masterson Loses Appeal of Rape Conviction",
+     "Danny Masterson's Appeal On Rape Convictions, Scientology In Trial Rejected"
     ]
    },
    {
-    "q": "roma vs",
-    "traffic": "500+",
+    "q": "garrett wilson",
+    "traffic": "1000+",
     "news": [
-     "Roma vs Cagliari: Italian Serie A stats & head-to-head",
-     "Gasperini: ‘Roma need to keep everyone in top shape, Castro decisive’"
+     "Aaron Glenn says Garrett Wilson's outburst 'overblown,' defends Jets' offense",
+     "Jets' coaching problems go beyond Aaron Glenn. OC Frank Reich needs to involve Garrett Wilson more."
     ]
    },
    {
-    "q": "sporting vs marítimo",
+    "q": "johnny manziel",
+    "traffic": "2000+",
+    "news": [
+     "Trump returns to Texas, turning to former football stars to motivate GOP base",
+     "Trump brings ex-49ers QB to help on midterm campaign trail in Texas"
+    ]
+   },
+   {
+    "q": "bolsonaro flavio",
     "traffic": "200+",
     "news": [
-     "Felicíssimo, Couto, Zekri... uma equipa nova para o Marítimo! (onze provável do Sporting)",
-     "Sporting x Marítimo: data, hora, onzes prováveis, antevisão e favorito no jogo da Taça da Liga"
+     "Flávio Bolsonaro Leaves Brazil for the U.S. After Election Defeat",
+     "US to issue Flávio Bolsonaro and family visas after he defied a travel ban and left Brazil"
     ]
    },
    {
-    "q": "jorge posada",
-    "traffic": "500+",
+    "q": "brush buddies crayola toothpaste recall",
+    "traffic": "2000+",
     "news": [
-     "Jorge Posada doesn't feel welcome with Yankees: 'Don't think they want me there'",
-     "Exclusive | Jorge Posada feels unwelcome around Yankees in shocking reveal: ‘I don’t think they want me there’"
-    ]
-   },
-   {
-    "q": "mike waltz",
-    "traffic": "500+",
-    "news": [
-     "Shouting match erupts at UN as Cuban foreign minister moves toward US ambassador's podium: 'Back up!'",
-     "Mike Waltz gets in shouting match with Cuban delegate at UN as American diplomat assaulted"
-    ]
-   },
-   {
-    "q": "jason statham scott eastwood action movie",
-    "traffic": "500+",
-    "news": [
-     "Jason Statham & Scott Eastwood's 119-Minute Near-Perfect Action Thriller Shoots Onto Free Streaming",
-     "Guy Ritchie & Jason Statham’s R-Rated Action Thriller That Made 2.5x Its Budget Sets Free Streaming Release Date"
-    ]
-   },
-   {
-    "q": "malik beasley",
-    "traffic": "1000+",
-    "news": [
-     "Malik Beasley Agrees To Plead Guilty In Sports Gambling Case",
-     "Malik Beasley agrees to plead guilty for involvement in NBA gambling ring"
-    ]
-   },
-   {
-    "q": "michael weatherly",
-    "traffic": "1000+",
-    "news": [
-     "Why Michael Weatherly Left ‘NCIS’: Star’s Departure & Return Explained",
-     "Why Michael Weatherly Left ‘NCIS’: Star’s Departure & Return Explained"
-    ]
-   },
-   {
-    "q": "drug resistance",
-    "traffic": "500+",
-    "news": [
-     "CDC warns of rising threat of drug-resistant germs, which kill 50,000 people per year",
-     "Superbugs Are Winning—and They’re Now Killing 50,000 Americans a Year"
+     "More Than 4 Million Tubes of Toothpaste Have Been Recalled—Here’s What to Know",
+     "FDA Announces Nationwide Recall of Popular Toothpastes—Here’s Everything You Need to Know"
     ]
    }
   ],
   "GB": [
    {
-    "q": "gta delayed",
+    "q": "shrewsbury town f.c. vs everton u-21 standings",
+    "traffic": "200+",
+    "news": [
+     "Shrewsbury Town vs Everton U21: EFL Trophy stats & head-to-head",
+     "Everton U21s go to Shrewsbury Town in EFL Trophy showdown"
+    ]
+   },
+   {
+    "q": "worthing fc",
     "traffic": "500+",
     "news": [
-     "GTA 6 Standard Edition vs. Ultimate Edition: Which Version Is the Better Deal?",
-     "Use This Trick to Get GTA 6 Ultimate Edition on PS5 for Just $85 (Today Only)"
+     "Worthing v Southend United: National League stats & head-to-head",
+     "Preview: Worthing FC (A)"
     ]
    },
    {
-    "q": "sporting vs marítimo",
-    "traffic": "200+",
-    "news": [
-     "Felicíssimo, Couto, Zekri... uma equipa nova para o Marítimo! (onze provável do Sporting)",
-     "Ouça aqui o relato do Sporting-Marítimo na CM Rádio"
-    ]
-   },
-   {
-    "q": "hank azaria",
-    "traffic": "200+",
-    "news": [
-     "‘The Simpsons’ Surprise: Apu Is Heard for the First Time in Nearly a Decade, as Sunil Malhotra Takes Over for Hank Azaria (EXCLUSIVE)",
-     "The New Apu"
-    ]
-   },
-   {
-    "q": "florida football",
-    "traffic": "200+",
-    "news": [
-     "Florida won't name Philo or Jones as QB1 until later in week",
-     "Georgia linebacker Raylen Wilson on the challenge of Florida's Jadan Baugh"
-    ]
-   },
-   {
-    "q": "cyclist",
-    "traffic": "200+",
-    "news": [
-     "Blood delivery driver jailed for running over cyclist in Lewisham",
-     "‘Road rage’ driver rammed cyclist while delivering blood"
-    ]
-   },
-   {
-    "q": "piast gliwice – górnik zabrze",
-    "traffic": "200+",
-    "news": [
-     "Puchar Polski: Piast Gliwice - Górnik Zabrze [RELACJA NA ŻYWO]",
-     "Piast Gliwice – Górnik Zabrze: oglądaj mecz STS Pucharu Polski"
-    ]
-   },
-   {
-    "q": "landaluce",
-    "traffic": "200+",
-    "news": [
-     "Una moción de censura pondrá fin este miércoles a 15 años de gobierno de Landaluce en Algeciras",
-     "Landaluce, en su última entrevista como alcalde: \"Soy inocente, esto es un pedazo de montaje\""
-    ]
-   },
-   {
-    "q": "martin landaluce",
-    "traffic": "200+",
-    "news": [
-     "Alexander Zverev Martin Landaluce live score and H2H results",
-     "Ekaterina Tupitsyna Minel Naz Kaynak live score and H2H results"
-    ]
-   },
-   {
-    "q": "celebrity traitors series 2 final time",
+    "q": "cast of this city is ours",
     "traffic": "500+",
     "news": [
-     "“An all-Traitor final”: What time the “movie-length” Celebrity Traitors final is on and why it’s so long",
-     "When is The Celebrity Traitors finale on? BBC confirms extended episode and new start time"
+     "This City Is Ours review – the Liverpudlian gang drama is back … and the acting’s as terrific as ever",
+     "This City Is Ours review — BBC’s Liverpool gangland saga is allergic to tedium"
     ]
    },
    {
-    "q": "altrincham vs kid'minster",
+    "q": "league one table",
     "traffic": "200+",
     "news": [
-     "Altrincham v Kidderminster Harriers: National League stats & head-to-head",
-     "Tuesday: Altrincham v Harriers"
+     "Sky Bet League One results, table & stats",
+     "League One table predicted after Owls twist and Doncaster & Huddersfield boosts"
+    ]
+   },
+   {
+    "q": "supermarket boycott",
+    "traffic": "100+",
+    "news": [
+     "We're Not Buying It: Why thousands of people are threatening to boycott supermarkets for one day",
+     "Glasgow foodbank warns demand 'will only get bigger' amid supermarket boycott"
+    ]
+   },
+   {
+    "q": "viktor gyökeres",
+    "traffic": "200+",
+    "news": [
+     "Transfer rumors, news: Arsenal want £55M in any Gyökeres deal",
+     "Emmanuel Petit claims £64m Arsenal star is 'not welcome anymore'"
+    ]
+   },
+   {
+    "q": "jaysley beck",
+    "traffic": "200+",
+    "news": []
+   },
+   {
+    "q": "tony",
+    "traffic": "200+",
+    "news": [
+     "Cheaper Power, Stronger Britain",
+     "Tony Blair calls for approval of Rosebank and other North Sea projects"
+    ]
+   },
+   {
+    "q": "deforest buckner",
+    "traffic": "200+",
+    "news": [
+     "Why the simmering Jaylen Brown and Jayson Tatum feud is good for the NBA -- and the 76ers-Celtics rivalry",
+     "49ers Trading for Defensive Lineman Should Be for Depth, Not Need"
+    ]
+   },
+   {
+    "q": "fa cup",
+    "traffic": "1000+",
+    "news": [
+     "Women’s Report | Harrogate Town 1 Wanderers 3",
+     "Bolton Wanderers Women learn next opponents after making history in FA Cup"
     ]
    }
   ],
   "NG": [
    {
+    "q": "go ahead eagles",
+    "traffic": "100+",
+    "news": [
+     "LIVE | Hoe doet Go Ahead Eagles het met Jasper Cillessen in de basis tegen Koninklijke HFC? Volg het hier",
+     "Adelaarsoog op HFC uit"
+    ]
+   },
+   {
+    "q": "como",
+    "traffic": "1000+",
+    "news": [
+     "Torino vs Como: Italian Serie A stats & head-to-head",
+     "Serie A official line-ups: Torino vs. Como"
+    ]
+   },
+   {
+    "q": "como vs",
+    "traffic": "100+",
+    "news": [
+     "Watch Torino vs Como Serie A soccer game LIVE: Confirmed team news, TV channels, online streams, kick off time",
+     "Watch Arsenal Women vs SL Benfica Women's Champions League soccer game LIVE: Team news, TV channels, online streams, kick off time"
+    ]
+   },
+   {
+    "q": "torino",
+    "traffic": "100+",
+    "news": [
+     "Concorso Comune di Torino Istruttori Tecnici 2026: 7 posti a tempo indeterminato",
+     "Il comune di Torino ha pubblicato due concorsi da 20 posti per tecnici diplomati e laureati"
+    ]
+   },
+   {
+    "q": "larne fc vs limavady united fc",
+    "traffic": "200+",
+    "news": [
+     "Larne vs Limavady United: Irish Premiership - text updates & in-play clips",
+     "Larne chief cites ‘big positive’ as champions attempt to play catch-up in hectic schedule"
+    ]
+   },
+   {
+    "q": "köln vs union berlin",
+    "traffic": "200+",
+    "news": [
+     "Wagner sucht \"die richtigen Spieler\" und kündigt Veränderungen an",
+     "Einsatz von Felix Uduokhai fraglich: Union Berlin muss Abwehr im DFB-Pokal umbauen - Personal-Update"
+    ]
+   },
+   {
+    "q": "mönchengladbach vs karlsruher",
+    "traffic": "200+",
+    "news": [
+     "Borussia Mönchengladbach: Sorgen-Liste von Alexander Blessin wird kürzer",
+     "Durch Zweitligist: Größte Gästekulisse in Mönchengladbach"
+    ]
+   },
+   {
+    "q": "roma fc",
+    "traffic": "200+",
+    "news": [
+     "Lulli breaks scoring record for 2007-born players: the Roma defender joins Xavi Espart with most goals this season",
+     "Lulli breaks scoring record for 2007-born players: the Roma defender joins Xavi Espart with most goals this season"
+    ]
+   },
+   {
+    "q": "roma",
+    "traffic": "500+",
+    "news": [
+     "Roma vs Cagliari: Italian Serie A stats & head-to-head",
+     "Roma’s Unbeaten Run Faces Another Test in Midweek Clash With Cagliari"
+    ]
+   },
+   {
     "q": "sporting vs marítimo",
-    "traffic": "200+",
+    "traffic": "1000+",
     "news": [
-     "Sporting x Marítimo: data, hora, onzes prováveis, antevisão e favorito no jogo da Taça da Liga",
-     "Vítor Pinto: «O jogo de hoje com o Marítimo é uma armadilha terrível para Rui Borges»"
-    ]
-   },
-   {
-    "q": "leicester city vs wigan athletic",
-    "traffic": "200+",
-    "news": [
-     "Leicester City v Wigan Athletic: League One stats & head-to-head",
-     "Leicester vs Wigan Prediction, Betting Tips, Lineups & Odds | 27 Oct 2026"
-    ]
-   },
-   {
-    "q": "harry kane lamine yamal kylian mbappe",
-    "traffic": "20000+",
-    "news": [
-     "Ballon d'Or in London - the most chaotic ever?",
-     "[UPDATED] Kane Edges Yamal, Mbappe To Taste Ballon d’Or Glory"
-    ]
-   },
-   {
-    "q": "espanyol",
-    "traffic": "200+",
-    "news": [
-     "Villarreal vs Espanyol - La Liga Round 11, 2026",
-     "Valencia vs Villarreal - La Liga Round 10, 2026"
-    ]
-   },
-   {
-    "q": "al hilal sfc",
-    "traffic": "200+",
-    "news": [
-     "Summit of frightening numbers: Inzaghi breaks the curse and Kenyans defies Al-Hilal!",
-     "Koulibaly reveals Al-Hilal's turnaround against Al-Qa…"
-    ]
-   },
-   {
-    "q": "torino vs como",
-    "traffic": "2000+",
-    "news": [
-     "Torino FC - Como | pronósticos + mejores cuotas | 27.10.2026",
-     "Torino-Como EN DIRECTO: crónica, goles y jugadas destacadas, alineaciones y ficha del partido"
-    ]
-   },
-   {
-    "q": "slavia praha vs brno",
-    "traffic": "200+",
-    "news": [
-     "MOL Cup: Slavia vs. Zbrojovka Brno - 27.10.2026, preview a kurzy",
-     "Liberec vyhrál v poháru nad Teplicemi 1:0, rozhodl Mašek"
-    ]
-   },
-   {
-    "q": "dortmund vs werder",
-    "traffic": "2000+",
-    "news": [
-     "Werder Bremen: Niclas Füllkrug auf der Bank – „Macht keinen Sinn“",
-     "DFB-Pokal: Dortmunds Guirassy sorgt für die frühe Führung im Duell mit Werder"
-    ]
-   },
-   {
-    "q": "efl",
-    "traffic": "100+",
-    "news": [
-     "Fleetwood Town vs Arsenal live online: score, stats, goals & updates | Carabao Cup 2026/27",
-     "+[#!WATCHLIVE-Tv!]™Fleetwood Town vs Arsenal Live Free Football 27 October 2026"
-    ]
-   },
-   {
-    "q": "dinamo zagreb",
-    "traffic": "100+",
-    "news": [
-     "Dinamo Zagreb v Rijeka Odds",
-     "Dinamo Zagreb vs Rijeka match lineup | Croatian Football League · 27 Oct 2026"
+     "Sporting e Marítimo em aquecimento",
+     "VÍDEO: adeptos assobiam Rui Borges durante apresentação das equipas"
     ]
    }
   ],
   "IN": [
    {
-    "q": "pradeep purnekar news",
+    "q": "ford trophy",
     "traffic": "100+",
+    "news": [
+     "NZC revives single-ball rule for Ford Trophy trial",
+     "New ball trial set to invigorate Ford Trophy"
+    ]
+   },
+   {
+    "q": "thane news",
+    "traffic": "200+",
     "news": [
      "प्रदीप पूर्णेकर प्रकरणात मिनाक्षी शिंदेंची 7 तास चौकशी चौकशीनंतर पहिली प्रतिक्रिया",
      "VIDEO : पूर्णेकर समर्थकांच्या आंदोलनामुळे घोडबंदर ठप्प"
+    ]
+   },
+   {
+    "q": "roma",
+    "traffic": "200+",
+    "news": [
+     "Roma vs Cagliari: Italian Serie A stats & head-to-head",
+     "Roma’s Unbeaten Run Faces Another Test in Midweek Clash With Cagliari"
+    ]
+   },
+   {
+    "q": "dow jones share bazar",
+    "traffic": "200+",
+    "news": [
+     "Nifty Prediction Today – October 27, 2026: Nifty futures: Breakout expected",
+     "First Tick: Top global cues to watch in today's trade"
+    ]
+   },
+   {
+    "q": "ad",
+    "traffic": "100+",
+    "news": [
+     "Advertisers Can't Figure Out If An Ad Is A Google Local Service Ad Or Not",
+     "HigherDose Advertising Claims Referred to Regulators After Noncompliance With NAD Inquiries"
+    ]
+   },
+   {
+    "q": "daylight savings 2026",
+    "traffic": "100+",
+    "news": [
+     "Daylight Saving Time ends this weekend: Here’s what you need to know",
+     "Clocks ‘fall back’ for daylight saving time’s end very soon"
+    ]
+   },
+   {
+    "q": "serie a",
+    "traffic": "500+",
+    "news": [
+     "Luna Park Lazio: 6 gol al Sassuolo (e 2 rigori sbagliati) e notte in testa da sola",
+     "I tifosi regalano un coro a Gattuso, lui dalla panchina reagisce così: la scena che dice tutto della Lazio di oggi"
+    ]
+   },
+   {
+    "q": "सोना चांदी",
+    "traffic": "1000+",
+    "news": [
+     "Silver Crash: 10 महीने में सबसे सस्ती चांदी आज, खरीदने का सुनहरा मौका, लेकिन...",
+     "त्योहारों और सोने के घटे दामों से चमका बाजार, ग्राहकों में उत्साह"
     ]
    },
    {
@@ -269,66 +322,10 @@
    },
    {
     "q": "kimi",
-    "traffic": "1000+",
+    "traffic": "100+",
     "news": [
-     "Who impressed our Power Rankings judges in Austin?",
+     "5 Winners and 5 Losers from Austin",
      "F1 readies Antonelli's title champagne in Austin: 'The race of a champion who isn't champion yet'"
-    ]
-   },
-   {
-    "q": "copa del rey",
-    "traffic": "100+",
-    "news": [
-     "El ‘Gordo’ cae en octubre en Tavernes: más de 25.000 entradas vendidas",
-     "Locura por el cambio de las camisetas"
-    ]
-   },
-   {
-    "q": "roma vs cagliari",
-    "traffic": "2000+",
-    "news": [
-     "Roma-Cagliari, le formazioni ufficiali: Gasperini sceglie Castro; Pisacane lancia Nzola",
-     "FORMAZIONI UFFICIALI - Fuori Malen! La scelta su Baturina, Mancini, Wesley, Maldini, Valle e la porta del Como"
-    ]
-   },
-   {
-    "q": "windy",
-    "traffic": "5000+",
-    "news": [
-     "Weather warning lifted as third storm to hit Scotland eases off",
-     "Coastal communities told to remain vigilant for floods as wind warnings lifted"
-    ]
-   },
-   {
-    "q": "liquor app delhi",
-    "traffic": "100+",
-    "news": [
-     "दिल्ली में घर बैठे होगी शराब की ऑनलाइन बुकिंग, जानें क्या हैं नियम",
-     "दिल्ली के ठेकों पर अब नहीं लगानी होगी कतार, DSIIDC ने लॉन्च किया नया ऐप; ऑनलाइन बुक कर सकेंगे शराब"
-    ]
-   },
-   {
-    "q": "fleetwood vs arsenal",
-    "traffic": "20000+",
-    "news": [
-     "Fleetwood Town v Arsenal: Carabao Cup fourth round – live",
-     "Team news: Dowman starts as two make debuts"
-    ]
-   },
-   {
-    "q": "torino vs como",
-    "traffic": "500+",
-    "news": [
-     "Torino FC - Como | pronósticos + mejores cuotas | 27.10.2026",
-     "Torino-Como EN DIRECTO: crónica, goles y jugadas destacadas, alineaciones y ficha del partido"
-    ]
-   },
-   {
-    "q": "martin landaluce",
-    "traffic": "1000+",
-    "news": [
-     "Alexander Zverev Martin Landaluce live score and H2H results",
-     "Maria Kononova Josephine Kunz live score and H2H results"
     ]
    }
   ]
@@ -352,153 +349,153 @@
  "hn": [
   {
    "title": "Genie 4",
-   "score": 483,
-   "comments": 284
+   "score": 568,
+   "comments": 340
   },
   {
    "title": "Ghostty 1.4.0",
-   "score": 403,
-   "comments": 130
+   "score": 513,
+   "comments": 152
   },
   {
    "title": "Tailscale SSH: Investigation and remediation update",
-   "score": 25,
-   "comments": 5
+   "score": 98,
+   "comments": 46
   },
   {
-   "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-   "score": 18,
+   "title": "Early progress on accelerating drug development with Claude",
+   "score": 30,
    "comments": 6
   },
   {
    "title": "New 14‑inch MacBook Pro with M6",
-   "score": 153,
-   "comments": 173
+   "score": 204,
+   "comments": 236
   },
   {
-   "title": "Three TLS Bugs in GoAhead",
-   "score": 28,
-   "comments": 2
+   "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+   "score": 69,
+   "comments": 51
   },
   {
    "title": "Classification of Finite Simple Groups Formalized in Lean",
-   "score": 104,
-   "comments": 25
-  },
-  {
-   "title": "Python's experimental JIT to be removed",
-   "score": 375,
-   "comments": 198
-  },
-  {
-   "title": "New iMac with M6",
-   "score": 235,
-   "comments": 295
-  },
-  {
-   "title": "Wikipedia's Cleanup of AI-Generated Content",
-   "score": 379,
-   "comments": 171
-  },
-  {
-   "title": "Microsoft and others tell crypto platform not to tokenize their stocks",
-   "score": 75,
-   "comments": 53
-  },
-  {
-   "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
-   "score": 63,
-   "comments": 24
-  },
-  {
-   "title": "US Government is hiding a secret court ruling about how it spies on Americans",
-   "score": 581,
-   "comments": 196
-  },
-  {
-   "title": "Why Micron Is Suddenly Ditching 4F² DRAM as Rivals Double Down",
-   "score": 101,
-   "comments": 14
-  },
-  {
-   "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
-   "score": 285,
-   "comments": 152
-  },
-  {
-   "title": "Here be monsters: What do you still need to know when agents do the work?",
-   "score": 119,
-   "comments": 49
-  },
-  {
-   "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
-   "score": 35,
-   "comments": 1
+   "score": 135,
+   "comments": 30
   },
   {
    "title": "An examination of lost firefly species of the US and Canada",
+   "score": 38,
+   "comments": 1
+  },
+  {
+   "title": "New iMac with M6",
+   "score": 267,
+   "comments": 320
+  },
+  {
+   "title": "Python's experimental JIT to be removed",
+   "score": 393,
+   "comments": 205
+  },
+  {
+   "title": "Wikipedia's Cleanup of AI-Generated Content",
+   "score": 403,
+   "comments": 181
+  },
+  {
+   "title": "Four Months of Zig",
+   "score": 16,
+   "comments": 4
+  },
+  {
+   "title": "Three TLS Bugs in GoAhead",
+   "score": 38,
+   "comments": 4
+  },
+  {
+   "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+   "score": 82,
+   "comments": 31
+  },
+  {
+   "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+   "score": 8,
+   "comments": 1
+  },
+  {
+   "title": "US Government is hiding a secret court ruling about how it spies on Americans",
+   "score": 658,
+   "comments": 231
+  },
+  {
+   "title": "Why Micron Is Suddenly Ditching 4F² DRAM as Rivals Double Down",
+   "score": 117,
+   "comments": 18
+  },
+  {
+   "title": "One year of Dioxus fullstack in production: the good, the painful",
+   "score": 3,
+   "comments": 0
+  },
+  {
+   "title": "Land Value Capture in Practice: Ethiopia's Urban Land Lease System",
    "score": 8,
    "comments": 0
   },
   {
-   "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
-   "score": 262,
-   "comments": 194
+   "title": "Here be monsters: What do you still need to know when agents do the work?",
+   "score": 130,
+   "comments": 63
   },
   {
-   "title": "Discord will soon let anyone find public server messages through Google",
-   "score": 77,
-   "comments": 47
+   "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
+   "score": 156,
+   "comments": 74
   },
   {
-   "title": "OpenLDK: Bringing the Java World into Common Lisp",
-   "score": 56,
+   "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+   "score": 357,
+   "comments": 189
+  },
+  {
+   "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
+   "score": 45,
    "comments": 5
   },
   {
    "title": "Rosettes and Other Hidden Traces of Hamburg's Tram",
-   "score": 12,
-   "comments": 0
+   "score": 18,
+   "comments": 1
   },
   {
-   "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
-   "score": 98,
-   "comments": 38
-  },
-  {
-   "title": "PHP2Shell: Exploitation attempts and remediation trends",
-   "score": 168,
-   "comments": 54
-  },
-  {
-   "title": "Show HN: Specification First Agentic Development Plugin and Prove",
-   "score": 20,
+   "title": "OpenLDK: Bringing the Java World into Common Lisp",
+   "score": 65,
    "comments": 7
   },
   {
-   "title": "Vicious Cycles: Theses on a philosophy of news",
-   "score": 18,
-   "comments": 3
+   "title": "Microsoft and others tell crypto platform not to tokenize their stocks",
+   "score": 90,
+   "comments": 86
   },
   {
-   "title": "The Mythical Man-Month in the Age of AI",
-   "score": 392,
-   "comments": 279
+   "title": "Discord will soon let anyone find public server messages through Google",
+   "score": 131,
+   "comments": 91
+  },
+  {
+   "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
+   "score": 295,
+   "comments": 226
+  },
+  {
+   "title": "PHP2Shell: Exploitation attempts and remediation trends",
+   "score": 174,
+   "comments": 56
   },
   {
    "title": "A Stackless Floodfill Automaton",
-   "score": 38,
-   "comments": 14
-  },
-  {
-   "title": "A $300B 'Debt Wall' Is Looming over Private-Equity Backed Companies",
-   "score": 125,
-   "comments": 41
-  },
-  {
-   "title": "Software may be getting worse, but it used to be horrible",
-   "score": 279,
-   "comments": 262
+   "score": 43,
+   "comments": 19
   }
  ],
  "questions": {
@@ -561,8 +558,8 @@
    "how to chatgpt images",
    "how to chatgpt voice mode",
    "how to chatgpt projects work",
-   "how to chatgpt work",
    "how to chatgpt credits work",
+   "how to chatgpt work",
    "how to chatgpt voice",
    "how do i chatgpt",
    "how do i chatgpt a photo",
@@ -600,10 +597,10 @@
    "why is chatgpt bad",
    "why is chatgpt bad for the environment",
    "why is chatgpt not loading",
+   "why is chatgpt so slow right now",
    "why is chatgpt not working today",
    "why is chatgpt not working on my phone",
-   "why is chatgpt down",
-   "why is chatgpt taking so long",
+   "why is chatgpt so slow now",
    "can i chatgpt",
    "can i chatgpt that for you",
    "can i use chatgpt for free",
@@ -618,10 +615,10 @@
   "claude": [
    "how to claude code",
    "how to claude",
+   "how to claude code from phone",
    "how to claude tokens work",
    "how to claude cowork",
    "how to claude projects work",
-   "how to claude code from phone",
    "how to claude ai",
    "how to claude like anthropic",
    "how to claude code in terminal",
@@ -651,9 +648,9 @@
    "best claude model for coding",
    "best claude model for writing",
    "best claude plugins",
+   "best claude code mods",
    "best claude model for creative writing",
    "best claude connectors",
-   "best claude code mods",
    "best claude code skills",
    "best claude code plugins",
    "why is claude better than chatgpt",
@@ -705,9 +702,9 @@
    "best ai tools for image generation",
    "best ai tools for students",
    "best ai tools for research",
-   "best ai tools for college students",
-   "best ai tools for interior design",
    "best ai tools for teachers",
+   "best ai tools for interior design",
+   "best ai tools for college students",
    "best ai tools for video creation",
    "why ai tools are free",
    "why ai tools",
@@ -812,12 +809,12 @@
    "best bitcoin app",
    "best bitcoin to buy",
    "best bitcoin wallet app",
-   "best bitcoin stocks",
    "best bitcoin etf to buy",
+   "best bitcoin stocks",
    "best bitcoin miner app",
    "why is bitcoin dropping",
-   "why is bitcoin down",
    "why is bitcoin going up",
+   "why is bitcoin down",
    "why is bitcoin up today",
    "why is bitcoin worth so much",
    "why is bitcoin going up today",
@@ -841,10 +838,10 @@
    "how to crypto mine",
    "how to crypto",
    "how to crypto farm",
+   "how to crypto scams work",
    "how to cryptogram",
    "how to cryptocurrency",
    "how to cryptograms work",
-   "how to crypto scams work",
    "how to crypto day trade",
    "how to crypto wallets work",
    "how do i crypto mine",
@@ -876,12 +873,12 @@
    "best crypto trading platform",
    "best crypto casino",
    "best crypto exchange",
-   "best crypto",
+   "best crypto wallet app",
    "why is crypto down",
    "why is crypto up today",
    "why is crypto crashing",
-   "why is crypto down today",
    "why is crypto going up today",
+   "why is crypto down today",
    "why is crypto going up",
    "why is crypto up",
    "why is crypto dropping right now",
@@ -951,26 +948,26 @@
    "can i store stablecoins on ledger"
   ],
   "start a business": [
-   "how to start a business in iowa",
    "how to start a business",
    "how to start a business with no money",
+   "how to start a business in texas",
    "how to start a business for beginners",
+   "how to start a business in florida",
    "how to start a business page on facebook",
    "how to start a business from home with no money",
-   "how to start a business for dummies",
-   "how to start a business from home",
-   "how to start a business on etsy",
-   "how to start a business online",
+   "how to start a business in california",
+   "how to start a business in nc",
+   "how to start a business in ohio",
    "how do i start a business",
    "how do i start a business with no money",
    "how do i start a business page on facebook",
    "how do i start a business account on facebook",
+   "how do i start a business in florida",
+   "how do i start a business in texas",
    "how do i start a business instagram account",
    "how do i start a business email",
    "how do i start a business on etsy",
-   "how do i start a business online",
-   "how do i start a business plan",
-   "how do i start a business in texas",
+   "how do i start a business in california",
    "is it safe to start a business now",
    "is it safe to start a business in mexico",
    "is it ok to start a business with no money",
@@ -1009,8 +1006,8 @@
    "can i start a business with 10k",
    "can i start a business bank account online",
    "can i start a business without a degree",
-   "can i start a business with 50k",
-   "can i start a business at 16"
+   "can i start a business on h1b",
+   "can i start a business with 50k"
   ],
   "small business ai": [
    "how to start a small airbnb business",
@@ -1065,13 +1062,13 @@
    "best automated investing app",
    "best automated training plan fc26",
    "best automatic litter box",
-   "best automated investing",
    "best automated vacuum",
+   "best automated investing",
    "best automated ai investing app",
-   "best automatic cat litter box",
    "best automatic espresso machine",
+   "best automatic cat litter box",
    "best automated lawn mower",
-   "best automated ai trading platform",
+   "best automated trading app",
    "why is automated testing important",
    "why is automate to sequence greyed out",
    "why is automation important",
@@ -1099,11 +1096,11 @@
    "how to cloud stream on ps portal",
    "how to cloud game xbox on phone",
    "how to cloud play on xbox",
-   "how to clouds form",
    "how to cloud stream on ps5",
+   "how to clouds form",
    "how to cloud play xbox on phone",
-   "how to cloud game",
    "how to cloud seed",
+   "how to cloud game",
    "how do i cloud game on my phone",
    "how do i cloud game on xbox",
    "how do i cloud stream on ps portal",
@@ -1127,8 +1124,8 @@
    "best cloud storage",
    "best cloud couch",
    "best cloud storage for photos",
-   "best cloud gaming service",
    "best cloud storage for personal use",
+   "best cloud gaming service",
    "best cloud couch dupe",
    "best cloud storage for photos and videos",
    "best cloud islands pokopia",
@@ -1138,12 +1135,12 @@
    "why is cloud in kingdom hearts",
    "why is cloudflare blocking me",
    "why is cloud gaming not working",
+   "why is cloud and willis calling me",
    "why is cloud in final fantasy resonance",
    "why is cloudflare not working",
    "why is cloud seeding bad",
-   "why is cloud and willis calling me",
+   "why is cloudflare stock down today",
    "why is cloudy today",
-   "why is cloud so strong",
    "can i cloud game on my phone",
    "can i cloud play 2k27",
    "can i cloud play minecraft",
@@ -1157,9 +1154,9 @@
   ],
   "data center": [
    "how to data centers use water",
+   "how to data centers make money",
    "how to data center travel ffxiv",
    "how to data centers work",
-   "how to data centers make money",
    "how to data centers consume water",
    "how to data centers pollute water",
    "how to data centers affect water",
@@ -1192,10 +1189,10 @@
    "best data center for ffxiv",
    "best data center stocks to buy now",
    "best data center reits",
-   "best data centers to invest in",
    "best data center companies to work for",
+   "best data centers to invest in",
+   "best data center energy stocks",
    "best data center certifications",
-   "best data center stocks to invest in",
    "why is data center bad",
    "why is data centers using water bad",
    "why is data center water dirty",
@@ -1248,8 +1245,8 @@
    "best cybersecurity programs",
    "best cybersecurity schools",
    "best cybersecurity stocks to buy now",
-   "best cybersecurity podcasts",
    "best cybersecurity colleges",
+   "best cybersecurity podcasts",
    "best cybersecurity masters programs",
    "why is cybersecurity important",
    "why is cybersecurity important in today's digital world",

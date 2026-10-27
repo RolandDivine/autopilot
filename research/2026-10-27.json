@@ -1,8 +1,6 @@
 {
  "date": "2026-10-27",
- "errors": {
-  "instagram": "GET me: HTTP 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"Aq52QmWQ6mTl48n6juMFXGD\"}}"
- },
+ "errors": {},
  "trends": {
   "US": [
    {
@@ -66,7 +64,7 @@
     "traffic": "2000+",
     "news": [
      "Trump returns to Texas, turning to former football stars to motivate GOP base",
-     "Trump brings ex-49ers QB to help on midterm campaign trail in Texas"
+     "Trump brings ex-49ers QB Colt McCoy to help on midterm campaign trail in Texas"
     ]
    },
    {
@@ -152,8 +150,8 @@
     "q": "deforest buckner",
     "traffic": "200+",
     "news": [
-     "Why the simmering Jaylen Brown and Jayson Tatum feud is good for the NBA -- and the 76ers-Celtics rivalry",
-     "49ers Trading for Defensive Lineman Should Be for Depth, Not Need"
+     "NFL Network: Colts to trade DeForest Buckner to 49ers for fourth-round pick",
+     "49ers agree to acquire DeForest Buckner from Colts"
     ]
    },
    {
@@ -170,8 +168,8 @@
     "q": "go ahead eagles",
     "traffic": "100+",
     "news": [
-     "LIVE | Hoe doet Go Ahead Eagles het met Jasper Cillessen in de basis tegen Koninklijke HFC? Volg het hier",
-     "Adelaarsoog op HFC uit"
+     "LIVE | Bijzonder moment: Nauber maakt rentree bij Go Ahead Eagles in bekerduel",
+     "Praat mee op VP: Cillessen maakt basisdebuut tegen Koninklijke HFC"
     ]
    },
    {
@@ -292,8 +290,8 @@
     "q": "daylight savings 2026",
     "traffic": "100+",
     "news": [
-     "Daylight Saving Time ends this weekend: Here’s what you need to know",
-     "Clocks ‘fall back’ for daylight saving time’s end very soon"
+     "Daylight saving time ends soon: Here's where states stand on making it permanent",
+     "Daylight Saving Time ends this weekend: Here’s what you need to know"
     ]
    },
    {
@@ -349,33 +347,33 @@
  "hn": [
   {
    "title": "Genie 4",
-   "score": 568,
-   "comments": 340
+   "score": 571,
+   "comments": 342
   },
   {
    "title": "Ghostty 1.4.0",
-   "score": 513,
-   "comments": 152
+   "score": 518,
+   "comments": 153
   },
   {
    "title": "Tailscale SSH: Investigation and remediation update",
-   "score": 98,
-   "comments": 46
+   "score": 99,
+   "comments": 50
   },
   {
    "title": "Early progress on accelerating drug development with Claude",
-   "score": 30,
-   "comments": 6
-  },
-  {
-   "title": "New 14‑inch MacBook Pro with M6",
-   "score": 204,
-   "comments": 236
+   "score": 33,
+   "comments": 13
   },
   {
    "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-   "score": 69,
-   "comments": 51
+   "score": 75,
+   "comments": 52
+  },
+  {
+   "title": "New 14‑inch MacBook Pro with M6",
+   "score": 208,
+   "comments": 242
   },
   {
    "title": "Classification of Finite Simple Groups Formalized in Lean",
@@ -384,18 +382,23 @@
   },
   {
    "title": "An examination of lost firefly species of the US and Canada",
-   "score": 38,
+   "score": 40,
    "comments": 1
   },
   {
    "title": "New iMac with M6",
-   "score": 267,
-   "comments": 320
+   "score": 268,
+   "comments": 321
+  },
+  {
+   "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+   "score": 12,
+   "comments": 1
   },
   {
    "title": "Python's experimental JIT to be removed",
-   "score": 393,
-   "comments": 205
+   "score": 394,
+   "comments": 206
   },
   {
    "title": "Wikipedia's Cleanup of AI-Generated Content",
@@ -404,7 +407,7 @@
   },
   {
    "title": "Four Months of Zig",
-   "score": 16,
+   "score": 18,
    "comments": 4
   },
   {
@@ -414,18 +417,18 @@
   },
   {
    "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
-   "score": 82,
+   "score": 84,
    "comments": 31
   },
   {
-   "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
-   "score": 8,
-   "comments": 1
+   "title": "US Government is hiding a secret court ruling about how it spies on Americans",
+   "score": 660,
+   "comments": 231
   },
   {
-   "title": "US Government is hiding a secret court ruling about how it spies on Americans",
-   "score": 658,
-   "comments": 231
+   "title": "Land Value Capture in Practice: Ethiopia's Urban Land Lease System",
+   "score": 9,
+   "comments": 0
   },
   {
    "title": "Why Micron Is Suddenly Ditching 4F² DRAM as Rivals Double Down",
@@ -434,68 +437,63 @@
   },
   {
    "title": "One year of Dioxus fullstack in production: the good, the painful",
-   "score": 3,
-   "comments": 0
+   "score": 5,
+   "comments": 1
   },
   {
-   "title": "Land Value Capture in Practice: Ethiopia's Urban Land Lease System",
-   "score": 8,
-   "comments": 0
+   "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
+   "score": 46,
+   "comments": 5
   },
   {
    "title": "Here be monsters: What do you still need to know when agents do the work?",
    "score": 130,
-   "comments": 63
+   "comments": 65
   },
   {
    "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
-   "score": 156,
-   "comments": 74
+   "score": 159,
+   "comments": 75
   },
   {
    "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
-   "score": 357,
-   "comments": 189
+   "score": 358,
+   "comments": 191
   },
   {
-   "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
-   "score": 45,
-   "comments": 5
+   "title": "Microsoft and others tell crypto platform not to tokenize their stocks",
+   "score": 91,
+   "comments": 86
   },
   {
    "title": "Rosettes and Other Hidden Traces of Hamburg's Tram",
-   "score": 18,
+   "score": 19,
    "comments": 1
   },
   {
    "title": "OpenLDK: Bringing the Java World into Common Lisp",
-   "score": 65,
+   "score": 67,
    "comments": 7
   },
   {
-   "title": "Microsoft and others tell crypto platform not to tokenize their stocks",
-   "score": 90,
-   "comments": 86
+   "title": "Discord will soon let anyone find public server messages through Google",
+   "score": 134,
+   "comments": 93
   },
   {
-   "title": "Discord will soon let anyone find public server messages through Google",
-   "score": 131,
-   "comments": 91
+   "title": "Hex Raises $100M",
+   "score": 5,
+   "comments": 0
   },
   {
    "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
    "score": 295,
-   "comments": 226
+   "comments": 228
   },
   {
    "title": "PHP2Shell: Exploitation attempts and remediation trends",
    "score": 174,
    "comments": 56
-  },
-  {
-   "title": "A Stackless Floodfill Automaton",
-   "score": 43,
-   "comments": 19
   }
  ],
  "questions": {
@@ -558,8 +556,8 @@
    "how to chatgpt images",
    "how to chatgpt voice mode",
    "how to chatgpt projects work",
-   "how to chatgpt credits work",
    "how to chatgpt work",
+   "how to chatgpt credits work",
    "how to chatgpt voice",
    "how do i chatgpt",
    "how do i chatgpt a photo",
@@ -597,10 +595,10 @@
    "why is chatgpt bad",
    "why is chatgpt bad for the environment",
    "why is chatgpt not loading",
-   "why is chatgpt so slow right now",
    "why is chatgpt not working today",
    "why is chatgpt not working on my phone",
-   "why is chatgpt so slow now",
+   "why is chatgpt down",
+   "why is chatgpt taking so long",
    "can i chatgpt",
    "can i chatgpt that for you",
    "can i use chatgpt for free",
@@ -615,10 +613,10 @@
   "claude": [
    "how to claude code",
    "how to claude",
-   "how to claude code from phone",
    "how to claude tokens work",
    "how to claude cowork",
    "how to claude projects work",
+   "how to claude code from phone",
    "how to claude ai",
    "how to claude like anthropic",
    "how to claude code in terminal",
@@ -648,8 +646,8 @@
    "best claude model for coding",
    "best claude model for writing",
    "best claude plugins",
-   "best claude code mods",
    "best claude model for creative writing",
+   "best claude code mods",
    "best claude connectors",
    "best claude code skills",
    "best claude code plugins",
@@ -702,9 +700,9 @@
    "best ai tools for image generation",
    "best ai tools for students",
    "best ai tools for research",
-   "best ai tools for teachers",
-   "best ai tools for interior design",
    "best ai tools for college students",
+   "best ai tools for interior design",
+   "best ai tools for teachers",
    "best ai tools for video creation",
    "why ai tools are free",
    "why ai tools",
@@ -809,8 +807,8 @@
    "best bitcoin app",
    "best bitcoin to buy",
    "best bitcoin wallet app",
-   "best bitcoin etf to buy",
    "best bitcoin stocks",
+   "best bitcoin etf to buy",
    "best bitcoin miner app",
    "why is bitcoin dropping",
    "why is bitcoin going up",
@@ -838,10 +836,10 @@
    "how to crypto mine",
    "how to crypto",
    "how to crypto farm",
-   "how to crypto scams work",
    "how to cryptogram",
    "how to cryptocurrency",
    "how to cryptograms work",
+   "how to crypto scams work",
    "how to crypto day trade",
    "how to crypto wallets work",
    "how do i crypto mine",
@@ -873,12 +871,12 @@
    "best crypto trading platform",
    "best crypto casino",
    "best crypto exchange",
-   "best crypto wallet app",
+   "best crypto",
    "why is crypto down",
    "why is crypto up today",
    "why is crypto crashing",
-   "why is crypto going up today",
    "why is crypto down today",
+   "why is crypto going up today",
    "why is crypto going up",
    "why is crypto up",
    "why is crypto dropping right now",
@@ -948,26 +946,26 @@
    "can i store stablecoins on ledger"
   ],
   "start a business": [
+   "how to start a business in iowa",
    "how to start a business",
-   "how to start a business with no money",
-   "how to start a business in texas",
+   "how to start a business without money",
    "how to start a business for beginners",
-   "how to start a business in florida",
    "how to start a business page on facebook",
    "how to start a business from home with no money",
-   "how to start a business in california",
-   "how to start a business in nc",
-   "how to start a business in ohio",
+   "how to start a business for dummies",
+   "how to start a business from home",
+   "how to start a business on etsy",
+   "how to start a business online",
    "how do i start a business",
    "how do i start a business with no money",
    "how do i start a business page on facebook",
    "how do i start a business account on facebook",
-   "how do i start a business in florida",
-   "how do i start a business in texas",
    "how do i start a business instagram account",
    "how do i start a business email",
    "how do i start a business on etsy",
-   "how do i start a business in california",
+   "how do i start a business online",
+   "how do i start a business plan",
+   "how do i start a business in texas",
    "is it safe to start a business now",
    "is it safe to start a business in mexico",
    "is it ok to start a business with no money",
@@ -1006,8 +1004,8 @@
    "can i start a business with 10k",
    "can i start a business bank account online",
    "can i start a business without a degree",
-   "can i start a business on h1b",
-   "can i start a business with 50k"
+   "can i start a business with 50k",
+   "can i start a business at 16"
   ],
   "small business ai": [
    "how to start a small airbnb business",
@@ -1062,13 +1060,13 @@
    "best automated investing app",
    "best automated training plan fc26",
    "best automatic litter box",
-   "best automated vacuum",
    "best automated investing",
+   "best automated vacuum",
    "best automated ai investing app",
-   "best automatic espresso machine",
    "best automatic cat litter box",
+   "best automatic espresso machine",
    "best automated lawn mower",
-   "best automated trading app",
+   "best automated ai trading platform",
    "why is automated testing important",
    "why is automate to sequence greyed out",
    "why is automation important",
@@ -1096,11 +1094,11 @@
    "how to cloud stream on ps portal",
    "how to cloud game xbox on phone",
    "how to cloud play on xbox",
-   "how to cloud stream on ps5",
    "how to clouds form",
+   "how to cloud stream on ps5",
    "how to cloud play xbox on phone",
-   "how to cloud seed",
    "how to cloud game",
+   "how to cloud seed",
    "how do i cloud game on my phone",
    "how do i cloud game on xbox",
    "how do i cloud stream on ps portal",
@@ -1124,8 +1122,8 @@
    "best cloud storage",
    "best cloud couch",
    "best cloud storage for photos",
-   "best cloud storage for personal use",
    "best cloud gaming service",
+   "best cloud storage for personal use",
    "best cloud couch dupe",
    "best cloud storage for photos and videos",
    "best cloud islands pokopia",
@@ -1135,12 +1133,12 @@
    "why is cloud in kingdom hearts",
    "why is cloudflare blocking me",
    "why is cloud gaming not working",
-   "why is cloud and willis calling me",
    "why is cloud in final fantasy resonance",
    "why is cloudflare not working",
    "why is cloud seeding bad",
-   "why is cloudflare stock down today",
+   "why is cloud and willis calling me",
    "why is cloudy today",
+   "why is cloud so strong",
    "can i cloud game on my phone",
    "can i cloud play 2k27",
    "can i cloud play minecraft",
@@ -1154,9 +1152,9 @@
   ],
   "data center": [
    "how to data centers use water",
-   "how to data centers make money",
    "how to data center travel ffxiv",
    "how to data centers work",
+   "how to data centers make money",
    "how to data centers consume water",
    "how to data centers pollute water",
    "how to data centers affect water",
@@ -1189,10 +1187,10 @@
    "best data center for ffxiv",
    "best data center stocks to buy now",
    "best data center reits",
-   "best data center companies to work for",
    "best data centers to invest in",
-   "best data center energy stocks",
+   "best data center companies to work for",
    "best data center certifications",
+   "best data center stocks to invest in",
    "why is data center bad",
    "why is data centers using water bad",
    "why is data center water dirty",
@@ -1245,8 +1243,8 @@
    "best cybersecurity programs",
    "best cybersecurity schools",
    "best cybersecurity stocks to buy now",
-   "best cybersecurity colleges",
    "best cybersecurity podcasts",
+   "best cybersecurity colleges",
    "best cybersecurity masters programs",
    "why is cybersecurity important",
    "why is cybersecurity important in today's digital world",
@@ -1268,6 +1266,757 @@
    "can i do cybersecurity from.home",
    "can i learn cybersecurity for free",
    "can i work cybersecurity remotely"
+  ]
+ },
+ "instagram": {
+  "account": {
+   "followers_count": 122,
+   "media_count": 38,
+   "id": "39034032119578763"
+  },
+  "posts": [
+   {
+    "timestamp": "2026-10-25T12:17:04+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/De6r_7PlZwQ/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Zero to One by Peter Thiel, part 3: why the last mover wins, the power",
+    "reach": 4,
+    "saved": 0,
+    "shares": 0,
+    "views": 9,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-24T12:04:16+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/De4FvfUFAmT/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Zero to One by Peter Thiel, part 2: why competition is for losers, and",
+    "reach": 5,
+    "saved": 0,
+    "shares": 0,
+    "views": 11,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-24T11:04:14+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/De3-y3aAu1V/",
+    "like_count": 0,
+    "comments_count": 0,
+    "caption": "Your \"stable\" coin can go to zero. It happened to UST in days. 📉\n\nHow ",
+    "reach": 128,
+    "saved": 1,
+    "shares": 0,
+    "views": 145,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 20929,
+    "ig_reels_video_view_total_time": 2762671
+   },
+   {
+    "timestamp": "2026-10-24T07:04:50+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/De3jeHCkbis/",
+    "like_count": 0,
+    "comments_count": 0,
+    "caption": "Where to keep your seed phrase, and where it should never be. 🔑\n\nScree",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "views": 5,
+    "total_interactions": 0
+   },
+   {
+    "timestamp": "2026-10-23T12:06:27+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/De1hMV0IH5v/",
+    "like_count": 0,
+    "comments_count": 0,
+    "caption": "Zero to One by Peter Thiel, explained like a chat: why copying is the ",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "views": 6,
+    "total_interactions": 0
+   },
+   {
+    "timestamp": "2026-10-23T11:05:42+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/De1aLHpDEmh/",
+    "like_count": 22,
+    "comments_count": 0,
+    "caption": "Address poisoning explained: the crypto scam that needs zero clicks. 🔑",
+    "reach": 1312,
+    "saved": 23,
+    "shares": 11,
+    "views": 1548,
+    "total_interactions": 58,
+    "ig_reels_avg_watch_time": 16390,
+    "ig_reels_video_view_total_time": 22472042
+   },
+   {
+    "timestamp": "2026-10-23T07:04:18+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/De0-oFsFqag/",
+    "like_count": 0,
+    "comments_count": 0,
+    "caption": "How to stop ChatGPT, Claude and Gemini from training on your chats. 🧠\n",
+    "reach": 4,
+    "saved": 0,
+    "shares": 0,
+    "views": 16,
+    "total_interactions": 0
+   },
+   {
+    "timestamp": "2026-10-22T11:04:06+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/Dey1Ne-jSg9/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Pig butchering scam explained: it starts with a \"wrong number\" text an",
+    "reach": 33,
+    "saved": 2,
+    "shares": 0,
+    "views": 38,
+    "total_interactions": 3,
+    "ig_reels_avg_watch_time": 7642,
+    "ig_reels_video_view_total_time": 267470
+   },
+   {
+    "timestamp": "2026-10-22T07:03:44+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DeyZwSTlRmr/",
+    "like_count": 0,
+    "comments_count": 0,
+    "caption": "How to see which apps used your microphone and camera, on iPhone and A",
+    "reach": 8,
+    "saved": 0,
+    "shares": 0,
+    "views": 21,
+    "total_interactions": 0
+   },
+   {
+    "timestamp": "2026-10-21T11:03:47+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DewQXFsj6-d/",
+    "like_count": 3,
+    "comments_count": 0,
+    "caption": "Wallet drainers explained: you can lose all your crypto without ever s",
+    "reach": 11,
+    "saved": 1,
+    "shares": 1,
+    "views": 15,
+    "total_interactions": 5,
+    "ig_reels_avg_watch_time": 20291,
+    "ig_reels_video_view_total_time": 243495
+   },
+   {
+    "timestamp": "2026-10-21T07:04:53+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Dev1F9QlnwN/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "How to check and revoke token approvals in your crypto wallet. One cli",
+    "reach": 6,
+    "saved": 0,
+    "shares": 0,
+    "views": 16,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-20T20:34:59+0000",
+    "media_type": "IMAGE",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DeutAhDiVSI/",
+    "like_count": 1,
+    "comments_count": 1,
+    "caption": "Do you know one signature can empty your crypto wallet? ✍️\n\nNo passwor",
+    "reach": 6,
+    "saved": 0,
+    "shares": 0,
+    "views": 9,
+    "total_interactions": 2
+   },
+   {
+    "timestamp": "2026-10-20T18:16:39+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DeudG0TDm8L/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Every 4 years, Bitcoin cuts its own money printing in half. ⏳\n\nThe Bit",
+    "reach": 6,
+    "saved": 0,
+    "shares": 0,
+    "views": 7,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 3245,
+    "ig_reels_video_view_total_time": 29208
+   },
+   {
+    "timestamp": "2026-10-20T18:04:15+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Deubwh4GPVO/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Learn cybersecurity from zero. Free. Starting tonight. 🔐\n\nThe 4-step f",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "views": 7,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-20T18:01:51+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DeubaDaEjjk/",
+    "like_count": 3,
+    "comments_count": 0,
+    "caption": "Paid on Friday. Broke by Wednesday. Sound familiar? 💸\n\nKobo's Money St",
+    "reach": 20,
+    "saved": 0,
+    "shares": 0,
+    "views": 30,
+    "total_interactions": 3,
+    "ig_reels_avg_watch_time": 3549,
+    "ig_reels_video_view_total_time": 81635
+   },
+   {
+    "timestamp": "2026-10-18T20:39:48+0000",
+    "media_type": "IMAGE",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Depj93CgYv8/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Do you know you can start learning cybersecurity this week, free, with",
+    "reach": 6,
+    "saved": 0,
+    "shares": 0,
+    "views": 6,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-18T18:05:32+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DepSULDGVdm/",
+    "like_count": 0,
+    "comments_count": 0,
+    "caption": "You can build an app by just describing it. Here's the catch. 🛠️\n\nVibe",
+    "reach": 6,
+    "saved": 0,
+    "shares": 0,
+    "views": 12,
+    "total_interactions": 0
+   },
+   {
+    "timestamp": "2026-10-18T12:11:40+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Deop0RjmwEE/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Your $1 stablecoin earns interest. Just not for you. 💸\n\nHow USDT and U",
+    "reach": 5,
+    "saved": 0,
+    "shares": 0,
+    "views": 17,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-18T07:03:23+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DeoGiNpG7YS/",
+    "like_count": 1,
+    "comments_count": 1,
+    "caption": "Stop re-explaining your business to ChatGPT. Give it a home. 🏠\n\nChatGP",
+    "reach": 6,
+    "saved": 0,
+    "shares": 0,
+    "views": 11,
+    "total_interactions": 2
+   },
+   {
+    "timestamp": "2026-10-17T21:01:49+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DenBnnliAh8/",
+    "like_count": 4,
+    "comments_count": 0,
+    "caption": "\"Put in ₦100,000, get ₦200,000 in 30 days.\" 🚩\n\nKobo's Money Story, fin",
+    "reach": 17,
+    "saved": 0,
+    "shares": 0,
+    "views": 21,
+    "total_interactions": 4,
+    "ig_reels_avg_watch_time": 3067,
+    "ig_reels_video_view_total_time": 61347
+   },
+   {
+    "timestamp": "2026-10-17T20:02:21+0000",
+    "media_type": "IMAGE",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Dem64nkDwtA/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Do you know why ChatGPT keeps forgetting your business? 🫙\n\nTomorrow at",
+    "reach": 5,
+    "saved": 0,
+    "shares": 0,
+    "views": 17,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-17T19:01:14+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/Demz2uUCsfC/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "How to start a business with $0. 💸\n\nThe No. 1 reason startups die isn'",
+    "reach": 7,
+    "saved": 0,
+    "shares": 0,
+    "views": 12,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 9501,
+    "ig_reels_video_view_total_time": 76009
+   },
+   {
+    "timestamp": "2026-10-17T18:03:16+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DemtQqSIL1d/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "How many apps can read your Gmail right now? 👀\n\nThe 2-minute check, th",
+    "reach": 5,
+    "saved": 0,
+    "shares": 0,
+    "views": 11,
+    "total_interactions": 2
+   },
+   {
+    "timestamp": "2026-10-17T16:32:03+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DemiyeVm7EQ/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "This viral selfie was FAKE. Made with AI. Posted by a verified account",
+    "reach": 11,
+    "saved": 0,
+    "shares": 0,
+    "views": 15,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 3896,
+    "ig_reels_video_view_total_time": 50658
+   },
+   {
+    "timestamp": "2026-10-17T14:02:33+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DemRpv8gZ4x/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "How does a small chin-chin business become a giant? 🏭\n\nKobo's Money St",
+    "reach": 10,
+    "saved": 0,
+    "shares": 0,
+    "views": 13,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 8083,
+    "ig_reels_video_view_total_time": 88917
+   },
+   {
+    "timestamp": "2026-10-17T12:04:59+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DemEQkmoH7Q/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Can your phone mine Bitcoin? Here's the math. 📱⛏️\n\n37 billion years, a",
+    "reach": 4,
+    "saved": 0,
+    "shares": 0,
+    "views": 9,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-17T11:01:56+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/Del9Ahbj-Wj/",
+    "like_count": 3,
+    "comments_count": 0,
+    "caption": "1 in 3 new startups now has just ONE founder. 🤯\n\nAI is doing the co-fo",
+    "reach": 19,
+    "saved": 0,
+    "shares": 0,
+    "views": 22,
+    "total_interactions": 4,
+    "ig_reels_avg_watch_time": 5690,
+    "ig_reels_video_view_total_time": 119495
+   },
+   {
+    "timestamp": "2026-10-17T09:02:14+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DelvReTEy0-/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "FTX customers got paid back 118%... and still lost about 75%. 😳\n\nIs it",
+    "reach": 38,
+    "saved": 0,
+    "shares": 0,
+    "views": 47,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 6639,
+    "ig_reels_video_view_total_time": 278840
+   },
+   {
+    "timestamp": "2026-10-17T07:49:04+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Delm-RFltjV/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "5 jobs you can hand off this weekend. For free. ⏳\n\nBookings, WhatsApp ",
+    "reach": 11,
+    "saved": 0,
+    "shares": 0,
+    "views": 27,
+    "total_interactions": 3
+   },
+   {
+    "timestamp": "2026-10-16T21:01:57+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/Dekc3yHCOf5/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "$90M+ drained from wallets people bought to stay SAFE. 😳\n\nA hidden chi",
+    "reach": 11,
+    "saved": 0,
+    "shares": 0,
+    "views": 18,
+    "total_interactions": 2,
+    "ig_reels_avg_watch_time": 9640,
+    "ig_reels_video_view_total_time": 134962
+   },
+   {
+    "timestamp": "2026-10-16T20:02:41+0000",
+    "media_type": "IMAGE",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DekWIHQCcxp/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Do you know your business is stuck because you're doing work a free to",
+    "reach": 6,
+    "saved": 0,
+    "shares": 0,
+    "views": 16,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-16T19:06:27+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DekPslnHd5i/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "Build your first AI agent tonight. Free. No code. 🤖\n\n4 steps with Goog",
+    "reach": 5,
+    "saved": 0,
+    "shares": 0,
+    "views": 11,
+    "total_interactions": 2
+   },
+   {
+    "timestamp": "2026-10-16T19:03:56+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DekPVa-CmjY/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "This $117 memory kit now costs $439. Your next phone is next. 📱🔥\n\nAI d",
+    "reach": 18,
+    "saved": 0,
+    "shares": 0,
+    "views": 20,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 7526,
+    "ig_reels_video_view_total_time": 150524
+   },
+   {
+    "timestamp": "2026-10-16T16:32:25+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/Dej9_87GTEc/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "Your grandpa's mango tree knew something about money 🥭\n\nKobo's Money S",
+    "reach": 18,
+    "saved": 0,
+    "shares": 0,
+    "views": 19,
+    "total_interactions": 2,
+    "ig_reels_avg_watch_time": 2065,
+    "ig_reels_video_view_total_time": 41305
+   },
+   {
+    "timestamp": "2026-10-16T14:02:11+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DejsziFCRBp/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "Is it safe to tell ChatGPT your secrets? 🤐\n\nSamsung found out the hard",
+    "reach": 13,
+    "saved": 0,
+    "shares": 0,
+    "views": 18,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 10119,
+    "ig_reels_video_view_total_time": 141666
+   },
+   {
+    "timestamp": "2026-10-16T12:02:57+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DejfOzrkbZq/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "Your WhatsApp can now reply to customers while you sleep 😴📲\n\nMeta Busi",
+    "reach": 4,
+    "saved": 0,
+    "shares": 0,
+    "views": 7,
+    "total_interactions": 2
+   },
+   {
+    "timestamp": "2026-10-16T11:02:22+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DejYOpyAoGR/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "OpenAI PAUSED training its most powerful AI. Twice. 🚨\n\nThousands of te",
+    "reach": 10,
+    "saved": 0,
+    "shares": 0,
+    "views": 13,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 6610,
+    "ig_reels_video_view_total_time": 79326
+   },
+   {
+    "timestamp": "2026-10-16T09:01:55+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DejKe6GIC5W/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "The US just moved $1B+ of seized bitcoin. About to dump? 👀\n\nHere's wha",
+    "reach": 21,
+    "saved": 0,
+    "shares": 0,
+    "views": 24,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 2944,
+    "ig_reels_video_view_total_time": 70677
+   },
+   {
+    "timestamp": "2026-10-16T07:14:20+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Dei-NBDFpDI/",
+    "like_count": 4,
+    "comments_count": 0,
+    "caption": "Does every ChatGPT chat drink a bottle of water? 💧\n\nThe real numbers a",
+    "reach": 9,
+    "saved": 0,
+    "shares": 0,
+    "views": 18,
+    "total_interactions": 4
+   },
+   {
+    "timestamp": "2026-10-15T18:02:59+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DehjousmZsT/",
+    "like_count": 3,
+    "comments_count": 0,
+    "caption": "Stop typing \"write my CV\" into AI 🙅🏾‍♂️\n\nHere's the 4-step way to use ",
+    "reach": 12,
+    "saved": 1,
+    "shares": 0,
+    "views": 26,
+    "total_interactions": 4
+   },
+   {
+    "timestamp": "2026-10-15T12:03:20+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Deg6ehMG2mZ/",
+    "like_count": 1,
+    "comments_count": 2,
+    "caption": "Which crypto wallet should you use? 🔐\n\nCustodial vs self-custody, hot ",
+    "reach": 9,
+    "saved": 0,
+    "shares": 0,
+    "views": 14,
+    "total_interactions": 3
+   },
+   {
+    "timestamp": "2026-10-15T07:34:06+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/DegbEiItAMW/",
+    "like_count": 9,
+    "comments_count": 1,
+    "caption": "#abuja #nitda #speaker #financialliteracy #blockchain",
+    "reach": 26,
+    "saved": 0,
+    "shares": 0,
+    "views": 39,
+    "total_interactions": 10,
+    "ig_reels_avg_watch_time": 13578,
+    "ig_reels_video_view_total_time": 488843
+   },
+   {
+    "timestamp": "2026-10-15T07:03:19+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DegYJVYmzMc/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "0.1% hotter than expected, and Bitcoin dropped $1,000 in minutes 📉\n\nSw",
+    "reach": 10,
+    "saved": 0,
+    "shares": 0,
+    "views": 20,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-15T02:23:00+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/Def4Bs_DDRS/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "Your savings might be melting… and you can't even see it 🧊\n\nPart 2 of ",
+    "reach": 10,
+    "saved": 0,
+    "shares": 0,
+    "views": 12,
+    "total_interactions": 2,
+    "ig_reels_avg_watch_time": 8614,
+    "ig_reels_video_view_total_time": 129217
+   },
+   {
+    "timestamp": "2026-10-15T02:19:21+0000",
+    "media_type": "VIDEO",
+    "media_product_type": "REELS",
+    "permalink": "https://www.instagram.com/reel/Def3lK-DaNw/",
+    "like_count": 3,
+    "comments_count": 1,
+    "caption": "Two friends. Same salary. One habit made all the difference 💡\n\nPart 1 ",
+    "reach": 10,
+    "saved": 0,
+    "shares": 0,
+    "views": 11,
+    "total_interactions": 5,
+    "ig_reels_avg_watch_time": 11666,
+    "ig_reels_video_view_total_time": 139999
+   },
+   {
+    "timestamp": "2026-10-15T01:48:08+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Def0E1mjJ5G/",
+    "like_count": 2,
+    "comments_count": 0,
+    "caption": "I don't post 3 times a day. My robot does 🤖\n\nI built my own posting ro",
+    "reach": 11,
+    "saved": 0,
+    "shares": 0,
+    "views": 31,
+    "total_interactions": 2
+   },
+   {
+    "timestamp": "2026-10-15T01:43:05+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/Defzf8fmnEG/",
+    "like_count": 1,
+    "comments_count": 1,
+    "caption": "How to buy your first crypto without getting scammed 🔒\n\nMy 5-step safe",
+    "reach": 8,
+    "saved": 0,
+    "shares": 0,
+    "views": 21,
+    "total_interactions": 2
+   },
+   {
+    "timestamp": "2026-10-13T18:03:57+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DecaKProGa4/",
+    "like_count": 3,
+    "comments_count": 0,
+    "caption": "Most products never launch. And it's not because the idea is bad 👇\n\nSw",
+    "reach": 9,
+    "saved": 0,
+    "shares": 0,
+    "views": 27,
+    "total_interactions": 3
+   },
+   {
+    "timestamp": "2026-10-13T12:25:35+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DebzcRvFI0m/",
+    "like_count": 1,
+    "comments_count": 0,
+    "caption": "ChatGPT isn't magic. It's 3 simple steps 🤯\n\nSwipe to see how AI chatbo",
+    "reach": 7,
+    "saved": 0,
+    "shares": 0,
+    "views": 17,
+    "total_interactions": 1
+   },
+   {
+    "timestamp": "2026-10-13T07:08:26+0000",
+    "media_type": "CAROUSEL_ALBUM",
+    "media_product_type": "FEED",
+    "permalink": "https://www.instagram.com/p/DebPJF_mxTn/",
+    "like_count": 6,
+    "comments_count": 0,
+    "caption": "Tomorrow, one US number could move crypto more than any crypto headlin",
+    "reach": 15,
+    "saved": 0,
+    "shares": 0,
+    "views": 36,
+    "total_interactions": 7
+   }
   ]
  }
 }

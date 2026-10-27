@@ -27,7 +27,7 @@ Evidence: address poisoning Reel = 1,410 views, 1,182 reach, 19 saves, 9 shares,
 - **Length 30–45 s** for new scripts (one idea). End on "send this to someone who…" — shares drove the breakout.
 - **Double down on winners within 48 h:** a Part 2 / follow-up Reel on the same topic, the winner shared to stories, Roland pins it and replies to every comment.
 - **Explainer order from 25 Oct (Roland: "continue with this pattern"):** alternate PROTECT explainers with EARN/AI Reels; history topics last. Use the audio bank in this order regardless of the old Notion dates (move the rows to match): ex14 SIM swap, ex20 fake giveaway, ex17 quishing (QR scams), ex09 voice clone, ex18 rug pull, ex10 Arup deepfake, ex15 passkeys, ex07 gas fees, ex06 Mt Gox, ex08 ETF, ex19 inflation, ex11 hallucination, ex12 LLM, ex13 CrowdStrike, ex16 business. Each one: personal-stake hook overlay + "send this to someone who…" caption.
-- **Carousels:** max 2 a week on Instagram (save-worthy checklists only, people-photo cover). The daily 0800 slot becomes a Reel or carousel depending on the week's plan; never more than 1 carousel a day.
+- **Carousels:** max 2 a week on Instagram (save-worthy checklists only, ABSTRACT Figma cover). The daily 0800 slot becomes a Reel or carousel depending on the week's plan; never more than 1 carousel a day.
 
 ## LinkedIn rules (Roland, 21 Oct 2026: "go with your recommended fix... one daily, 5 a week")
 Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split every golden hour; posts read as generic explainers, not a founder.
@@ -49,6 +49,7 @@ Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split e
 - Not on YouTube (crypto only). Lessons are paraphrased; at most one short attributed quote per post.
 
 ## Formats (15 Oct 2026)
+- **ABSTRACT COVERS ONLY (Roland, 27 Oct 2026: "return to abstract designs")** on Instagram, LinkedIn and stories. No people photos anywhere.
 - **Cover image:** every post opens with a generated realistic-abstract image that makes people stop ("what is that?"): odd objects, odd materials, dramatic light, linked to the topic. Generate it with Figma (`mcp__Figma__generate_image`, planKey `team::1302716308970441796`, 1080×1350, prompt ends "no text, no logos, no people"), then run the `fetch-images` workflow with `[{"url": ..., "path": "assets/gen/<name>.jpg"}]` and `git pull`. Never use Pinterest or other people's images. Figma credits are limited: 3 images a night, reuse them for stories. (17 Oct: `generate_image` now needs a `fileKey`; make one with `create_new_file`, then `download_assets` for the raw image URL and pass it to `fetch-images` with `gh api .../fetch-images.yml/dispatches -f "inputs[items]=..."`, because this machine can't reach figma.com directly. Credits reset at 00:00 UTC; if they run out, never build the day on Canva thumbnails. Generate the images first so the queue is never left waiting on them.)
 - **Hook overlay:** `studio/cover.py` → `cover(img, hook, out, kicker=...)`. Hook 4–10 words with one ==highlight==.
 - **Instagram:** carousel = cover + Chat Bubbles slides (`ig_chat.carousel(..., offset=1)`), 5–7 slides after the cover. The chat slides do the teaching (people won't read long captions), so the full lesson lives in the bubbles. Captions stay short: hook, one line of payoff, 📌 save / 📤 send, 3–5 hashtags.

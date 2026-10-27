@@ -70,7 +70,18 @@ class InstagramClient:
             if not tok:
                 raise InstagramError("Instagram not connected yet: add the INSTAGRAM_TOKEN secret")
             self.token = tok["access_token"]
-            me = self._req("get", "me", params={"fields": "user_id,username"})
+            try:
+                me = self._req("get", "me", params={"fields": "user_id,username"})
+            except InstagramError as e:
+                # The saved refreshed copy can die (password change, Meta security reset). Fall back to the
+                # INSTAGRAM_TOKEN secret Roland updates, and drop the dead copy so the daily refresh re-saves it.
+                env = os.environ.get("INSTAGRAM_TOKEN")
+                if "190" not in str(e) or not env or env == self.token:
+                    raise
+                self.token = env
+                me = self._req("get", "me", params={"fields": "user_id,username"})
+                if FILE.exists():
+                    FILE.unlink()
             self.user_id = me.get("user_id") or me["id"]
             self.username = me.get("username")
 

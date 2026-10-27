@@ -1,10 +1,11 @@
 """python studio/post_video.py <json under repo> <key> [nostory] [ytonly]: Reel + LinkedIn + IG story (auto-split under 60 s) + YouTube Short, prints links."""
-import json, re, subprocess, sys, time
+import json, os, re, subprocess, sys, time
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 R = "repos/RolandDivine/autopilot"
-def sh(*a): return subprocess.run(a, check=True, capture_output=True, text=True, cwd="/home/claude/autopilot").stdout
+def sh(*a): return subprocess.run(a, check=True, capture_output=True, text=True, cwd=ROOT).stdout
 sh("git", "pull", "-q")
 f, key = sys.argv[1], sys.argv[2]
-d = json.load(open(f"/home/claude/autopilot/{f}"))[key]
+d = json.load(open(os.path.join(ROOT, f)))[key]
 def now(): return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() - 5))
 def run(wf, fields):
     t = now()
@@ -42,7 +43,7 @@ if d.get("linkedin", False):  # LinkedIn = 1 post a day, Mon-Fri, from the day s
 def story_parts(video):
     """Instagram story videos must be 60 s or less (Roland, 20 Oct 2026: split, don't skip).
     Longer videos are cut at the quietest pause nearest each 55 s mark and committed to assets/reels/stories/."""
-    root = "/home/claude/autopilot"
+    root = ROOT
     dur = float(sh("ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", video))
     if dur <= 59.5:
         return [video]

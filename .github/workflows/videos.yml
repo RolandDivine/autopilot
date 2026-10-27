@@ -1,0 +1,38 @@
+name: videos
+
+# Posts the day's videos (queue/vo/posts-<date>.json) on time, without a Claude session. See scripts/video_runner.py.
+on:
+  schedule:
+    - cron: "25 6-21 * * *"
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "UTC date (default today)"
+        required: false
+      force:
+        description: "Post due-or-not entries now (any value)"
+        required: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: videos
+  cancel-in-progress: false
+
+jobs:
+  videos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
+      - run: |
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+      - run: python3 scripts/video_runner.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DAY: ${{ inputs.day }}
+          FORCE: ${{ inputs.force }}

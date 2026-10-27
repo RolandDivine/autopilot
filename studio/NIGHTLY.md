@@ -83,11 +83,15 @@ Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split e
 5. **Check:** build contact sheets and look at every slide and story. Fix any overflow, clipped text or wrong counter.
 6. **Slots:** `dayN.py` writes `queue/<tomorrow>/{0800,1300,1900,2100}.json` and `stories.json`. LinkedIn and Instagram both on in all three slots. Instagram caption: 3–5 hashtags and a 📌 save / 📤 send line. Lint all slots and stories (`autopilot.lint.lint_stories(folder)`), fix every FAIL. Commit "Day N queue" and push. Confirm the review issue opened.
 7. **Tell Roland (one SendUserMessage, the only routine message of the day; also add tomorrow's rows to the Notion Content Calendar):** the three titles and times, the search demand behind each topic, yesterday's Instagram numbers, the story times, and the review issue link. Send the three covers with SendUserFile. Also ask him one short question that would make a good story (something that really happened to him with AI, crypto or building). When he answers, add it to `studio/story_bank.md` (the repo is public, so only add what he's happy to post).
-8. **YouTube (21 Oct 2026):** do NOT book a Daily Market Read run any more. Follow the weekly loop in `studio/YOUTUBE.md`: on Saturdays book a Sunday 09:01 UTC run for the weekly market video; keep the week's long-form on track (script Mon, voice + render by Thu, publish Thu 16:00 UTC).
-   Then: call send_later at 18:10 UTC the next day with the message:
-   "Nightly build: follow /home/claude/autopilot/studio/NIGHTLY.md (clone RolandDivine/autopilot first if it's missing)."
-   Don't skip this step: it is what keeps the nightly run going.
-9. **Book tomorrow's posting runs** (GitHub's own timer runs hours late): call send_later at 07:01, 08:01, 10:01, 12:01, 13:01, 16:01, 18:01 and 20:01 UTC the next day, each asking to dispatch the post workflow (`gh api -X POST repos/RolandDivine/autopilot/actions/workflows/post.yml/dispatches -f ref=main -F 'inputs[dry_run]=false'`), wait for it, and check `log/posted.jsonl`. After each run, update the post's row in the Notion Content Calendar (Status + links). Only message Roland if something failed.
+8. **YouTube (21 Oct 2026):** no daily Market Read. Follow the weekly loop in `studio/YOUTUBE.md` (long-form: script Mon, voice + render by Thu, publish Thu).
+9. **Posting runs need NO Claude session (27 Oct 2026, after a usage-limit outage froze everything for 3 days):**
+   - GitHub posts the slot files and stories on its own (`post.yml` runs every hour 06–22 UTC) and posts the day's videos on time
+     (`videos.yml` runs hourly, reads `queue/vo/posts-<date>.json`; each entry may set `"at": "HH:MM"` UTC, defaults ex* 11:00, kobo* 17:00, liclip* 07:00).
+   - **Never book send_later posting or video runs again.** They woke a huge conversation 8–10 times a day and burned Roland's usage.
+   - This nightly build runs as its own fresh scheduled session (one a day). It also **reconciles yesterday**: read `log/posted.jsonl` and
+     `log/videos.jsonl`, set each Notion row to Posted (with links) or Failed, and mention failures in the evening message.
+10. **Stay 2 days ahead:** if the queue for tomorrow AND the day after doesn't exist, build both tonight (videos rendered, slots, stories).
+    A missed night must never leave a day empty.
 
 ## Music (Roland's request, 13 Oct 2026)
 The Instagram API can't attach music to carousels (only to Reels, and only with Facebook Login), so Roland adds it in the app after each post goes out.
@@ -130,4 +134,4 @@ Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key
   - Kobo part N: add `duo.CARDS[N]` in `studio/money2.py` (5–8 cards timed from `assets/vo/koboNN.json`), preview with `python3 studio/money2.py N 3 20 40 60`, look at the frames, then render `python3 studio/money2.py N`.
   - Explainer exNN: add a `*_spec()` to `studio/explainers.py` (cards anchored on words with `at()`, one generated vertical background image in assets/gen), preview, look, render.
   - Write `queue/vo/posts-<date>.json` (video, title, youtube true only for crypto, playlist, reel_caption, li_text) like `posts-2026-10-21.json`, commit the mp4s, set both Notion rows to Scheduled.
-  - Book send_later at 11:01 UTC (explainer) and 17:01 UTC (Kobo): `python3 studio/post_video.py queue/vo/posts-<date>.json <key>`, then update the Notion row. post_video.py also posts the video to Instagram Stories by default, cut into parts of 60 s or less at natural pauses (Roland, 20 Oct 2026: always do this, every video).
+  - Don't book runs: the `videos` workflow posts them at 11:00 / 17:00 UTC (or the entry's "at"). Next night, reconcile `log/videos.jsonl` into Notion. post_video.py also posts the video to Instagram Stories by default, cut into parts of 60 s or less at natural pauses (Roland, 20 Oct 2026: always do this, every video).

@@ -1,6 +1,6 @@
 """Day 14 · Wed 28 Oct 2026. Run from studio/:  python days/day14.py
 08:00 Instagram: how to spot a fake bank credit alert (Nigeria). Abstract Figma cover (Roland, 27 Oct: back to abstract covers).
-08:00 LinkedIn: Klærus story (Roland, 27 Oct: storytelling, Klærus leads). Hook rides the trending prediction-market news
+08:00 LinkedIn (abstract cover, Roland 27 Oct): Klærus story (Roland, 27 Oct: storytelling, Klærus leads). Hook rides the trending prediction-market news
       (US midterms 3 Nov; Google Finance now shows Kalshi/Polymarket odds). Facts only from /areas/klaerus.md. No pitch.
 12:00 Reel (videos.yml): address poisoning part 2. 18:00 Kobo part 11 (stories).
 21:00 story = simple call to action, not a teaser.
@@ -99,7 +99,7 @@ def build():
     media = ["instagram/alert-0.jpg"] + [f"instagram/{Path(p).name}" for p in rest]
     alt = ["Abstract image: a glass phone whose green bank notification is peeling off like a sticker. Text: That credit alert might be fake. Check this first."] + \
           ["Chat: " + " ".join(re.sub(r"[*=]", "", t).replace("\n", ", ") for _, t in s) for s in slides]
-    cover(GEN / "people-trader-night.png", li_hook, MEDIA / "klaerus-cover.jpg", kicker="Building Klærus", handle="Roland Divine", swipe=False)
+    cover(GEN / "arrow-hourglass.png", li_hook, MEDIA / "klaerus-cover.jpg", kicker="Building Klærus", handle="Roland Divine", swipe=False)
     (Q / "0800.json").write_text(json.dumps({
         "title": "How to: spot a fake bank credit alert + Klærus story", "kind": "lesson", "x": {"enabled": False},
         "linkedin": {"enabled": True, "text": li, "media": "media/klaerus-cover.jpg"},

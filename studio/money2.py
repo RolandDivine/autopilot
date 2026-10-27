@@ -22,7 +22,7 @@ duo.SOLO = True
 duo.TURNS = {n: [(0.0, "K")] for n in range(6, 16)}
 duo.FIX = {r"\bCobo\b": "Kobo", r"\bKubo\b": "Kobo", r"\bKubo's": "Kobo's"}
 GEN = ROOT / "assets" / "gen"
-duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg", 10: GEN / "kobo-bg-phone.jpg"}
+duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg", 10: GEN / "kobo-bg-phone.jpg", 11: GEN / "kobo-bg-phone.jpg"}
 duo.CARDS = {
     6: [(4.9, 12.8, "💸", "Paid Friday, broke Wednesday", "Where does the money go?"),
         (13.3, 17.6, "🧾", "Small things add up", "Snacks · data · rides · little transfers"),
@@ -63,6 +63,13 @@ duo.CARDS = {
          (54.4, 63.0, "🙅🏾", "Never type it into a website", "No real support agent will ever ask"),
          (63.0, 70.1, "⚖️", "Not your keys, not your coins", "Lose your keys, lose your coins"),
          (70.1, 74.0, "⏭️", "Next: the digital dollar", "Follow so you don't miss it")],
+    11: [(1.7, 12.6, "🌍", "Paid from abroad", "Slow transfers, big fees"),
+         (12.6, 25.1, "💵", "A stablecoin", "A token built to stay at $1, backed by reserves"),
+         (25.1, 30.6, "⚡", "Paid in minutes", "No Bitcoin-style swings"),
+         (30.6, 44.9, "⚠️", "Stable is not risk-free", "Reserves can fail. It has slipped below $1 before"),
+         (44.9, 57.0, "📋", "Femi's rules", "Big regulated coins · check cash-out fees · don't park it on an exchange"),
+         (57.0, 63.0, "🧰", "A tool for moving money", "Not a savings account"),
+         (63.0, 69.0, "⏭️", "Next: all at once, or monthly?", "Follow so you don't miss it")],
 }
 
 

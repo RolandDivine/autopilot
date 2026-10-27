@@ -189,7 +189,33 @@ def terra_spec():
     return viral.std("ex05-terra", timeline)
 
 
-SPECS = {"ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def poison2_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "twin-keys.jpg")]
+        addr = "<div class='sm' style='margin-top:18px;font-family:monospace;font-size:54px'>{}</div>"
+        cards = [
+            {"kind": "html", "a": -1, "b": 4.6,
+             "html": "<div class='kick'>Address poisoning · part 2</div><div class='mid'>Before you paste<br><span class='red'>that address…</span></div>"},
+            {"kind": "html", "a": 4.6, "b": 11.0,
+             "html": "<div class='kick'>The trick</div><div class='mid'>Same start. Same end.<br><span class='red'>Fake middle.</span></div>"
+                     + addr.format("<span class='yel'>0x7a3f</span><span class='red'>…08bb12</span><span class='yel'>d2f9</span>")},
+            {"kind": "html", "a": 11.0, "b": 15.2,
+             "html": "<div class='mid'>One copy and paste.<br><span class='red'>Gone forever.</span></div>"},
+            {"kind": "checks", "a": 15.2, "b": 41.5, "kick": "3 checks", "title": "Before you send",
+             "items": [{"t": "Never copy from history. Use your address book or their QR", "d": 2.4},
+                       {"t": "Check the MIDDLE, not just the ends", "d": 12.8},
+                       {"t": "Big amount? Small test first", "d": 20.9}]},
+            {"kind": "html", "a": 41.5, "b": 49.2,
+             "html": "<div class='kick'>Warning sign</div><div class='mid'>A <span class='red'>$0 transfer</span><br>you never made?</div>"
+                     "<div class='sm' style='margin-top:16px'>You've been marked. Ignore it. Never copy that address.</div>"},
+            {"kind": "html", "a": 49.2, "b": dur + 1, "html": FOLLOW.format("Send this to whoever handles your crypto payments.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex21-poison2", timeline)
+
+
+SPECS = {"ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

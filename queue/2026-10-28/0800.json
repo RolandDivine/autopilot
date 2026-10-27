@@ -1,0 +1,39 @@
+{
+ "title": "How to: spot a fake bank credit alert + Klærus story",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Prediction markets are everywhere this week.\n\nWith the US midterms on 3 November, odds from Kalshi and Polymarket now show up inside Google Finance. Millions of people are reading probabilities instead of opinions.\n\nIt made me think about a problem I've lived with for years.\n\nI've often been right about where a market was going, and wrong about when. Right on direction, wrong on timing. In trading, that can cost as much as being wrong.\n\nI wasn't alone. In my trading community of about 200 people, the complaint was the same: we read direction well, and timing punished us.\n\nWhen I started trading on Polymarket, something clicked. Elections and events get a price between 0 and 100. A probability. Everyone can see what the crowd believes.\n\nBut short-term price direction, the thing traders argue about every single day, had no clean probability scale.\n\nThat gap is why I'm building Klærus.\n\nHonest update: the launch is taking longer than I wanted. I'd rather get it right than get it fast. And I'm looking for people who want to help with marketing, distribution and social.\n\nSo, a question for traders and builders:\nWhen you've been wrong in a market, was it the direction or the timing?\n\nTell me in the comments. And if you'd like to help build Klærus, send me a message.",
+  "media": "media/klaerus-cover.jpg"
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "How to spot a fake bank credit alert (Nigeria) 🚨\n\nAn SMS or a receipt screenshot is not money. Here's the 30-second check every seller and P2P trader should do before releasing goods or crypto. Swipe →\n\n💬 Comment: have you ever received a fake alert?\n📌 Save it · 📤 Send it to a friend who sells online\n🔔 Follow @defi_ring_master\nEducation, not financial advice.\n\n#fakealert #nigeria #scamawareness #onlinebusiness",
+  "media": [
+   "instagram/alert-0.jpg",
+   "instagram/alert-1.jpg",
+   "instagram/alert-2.jpg",
+   "instagram/alert-3.jpg",
+   "instagram/alert-4.jpg",
+   "instagram/alert-5.jpg",
+   "instagram/alert-6.jpg",
+   "instagram/alert-7.jpg",
+   "instagram/alert-8.jpg"
+  ],
+  "music": "Earth, Wind & Fire – September",
+  "alt": [
+   "Abstract image: a glass phone whose green bank notification is peeling off like a sticker. Text: That credit alert might be fake. Check this first.",
+   "Chat: Roland, a buyer just sent me a credit alert. Can I release the goods? 🤔 Not yet 🙏🏾 An SMS or a screenshot is not money. Only your account balance is.",
+   "Chat: But the alert has my bank's name on it 😅 Sender names on SMS can be faked. Fake alert apps and edited receipts look exactly like the real thing.",
+   "Chat: How to check in 30 seconds ✅ Open your bank app (or dial your bank's USSD code yourself). Look at your actual balance and transaction history. Not the SMS.",
+   "Chat: Red flags 🚩 \"I've sent it, check your phone\" + pressure to hurry A receipt screenshot instead of money, A \"mistaken transfer\" they want you to refund fast",
+   "Chat: What if they say they sent too much and want the extra back? Classic trick. Confirm the money in your balance first. If it's real, let your bank handle the reversal.",
+   "Chat: Simple rule for sellers 🛍️ No balance, no goods. Same rule for crypto P2P: release only after the money shows in your account.",
+   "Chat: Your turn 👇 Have you (or someone you know) ever received a fake alert? Tell me what happened. Your story could save someone. 💬",
+   "Chat: 📌 Save this · 📤 Send it to a friend who sells online Follow @defi_ring_master and turn on 🔔 to join a community learning money safety together. Education, not financial advice."
+  ]
+ }
+}

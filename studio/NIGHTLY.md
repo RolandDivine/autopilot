@@ -72,6 +72,7 @@ Supersedes earlier LinkedIn cadence lines. Why: 4-6 LinkedIn posts a day split e
 - The nightly build sends ONE evening message: tomorrow's plan (titles + times), today's results in one line, and the Notion link.
 
 ## Steps
+0. **Fresh-session setup (each nightly is a new session):** if `/home/claude/fonts/node_modules/@fontsource` is missing, run `mkdir -p /home/claude/fonts && cd /home/claude/fonts && npm i -s @fontsource/plus-jakarta-sans @fontsource/archivo-black @fontsource/dm-serif-display @fontsource/caveat @fontsource/instrument-serif @fontsource/space-grotesk @fontsource/bricolage-grotesque`; `pip install --break-system-packages -r requirements.txt soundfile numpy pillow playwright cryptography` if imports fail. Load studio/STORY_GUIDE.md before writing anything.
 1. **Repo:** if `/home/claude/autopilot` is missing, call add_repo (RolandDivine/autopilot, push), clone it there, and call register_repo_root. Run `git pull`.
 2. **Tomorrow:** N = (tomorrow − 2026-10-12) + 1. If `queue/<tomorrow>/` already has 3 slot files, skip to step 7. After Day 150 (10 Mar 2027), tell Roland the plan has ended and stop.
 3. **Research (do this before writing anything):**

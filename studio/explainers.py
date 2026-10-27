@@ -215,7 +215,34 @@ def poison2_spec():
     return viral.std("ex21-poison2", timeline)
 
 
-SPECS = {"ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def simswap_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "circuit-lock.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 8.4,
+             "html": "<div class='kick'>Crypto · scams</div><div class='mid'>One phone call can take<br><span class='red'>your bank, email and crypto.</span></div>"},
+            {"kind": "html", "a": 8.4, "b": 11.9,
+             "html": "<div class='kick'>It's called</div><div class='mid'><span class='red'>A SIM swap</span></div>"},
+            {"kind": "checks", "a": 11.9, "b": 38.4, "kick": "How it works", "title": "The scammer",
+             "items": [{"t": "Collects your name, birthday, address", "d": .1},
+                       {"t": "Calls your network pretending to be you", "d": 7.0},
+                       {"t": "Your number moves to their SIM", "d": 13.6},
+                       {"t": "Every SMS login code now goes to them", "d": 19.2}]},
+            {"kind": "checks", "a": 38.4, "b": 54.9, "kick": "Protect yourself", "title": "Do this today",
+             "items": [{"t": "Ask your network for a PIN / port-out lock", "d": 1.9},
+                       {"t": "Switch SMS codes to an authenticator app or passkey", "d": 6.3},
+                       {"t": "Birthday + phone number off public profiles", "d": 12.3}]},
+            {"kind": "html", "a": 54.9, "b": 62.4,
+             "html": "<div class='kick'>Warning sign</div><div class='mid'>\"No service\"<br><span class='red'>for no reason?</span></div>"
+                     "<div class='sm' style='margin-top:16px'>Call your network right away from another phone.</div>"},
+            {"kind": "html", "a": 62.4, "b": dur + 1, "html": FOLLOW.format("Send this to someone who still uses SMS codes.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex14-simswap", timeline)
+
+
+SPECS = {"ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

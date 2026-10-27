@@ -128,6 +128,8 @@ Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key
 - **Voice (Roland, 17 Oct 2026, final):** ElevenLabs "Oluwadamilare" `VzScgb5Pi0A6lafMNQpm`, the voice in the FTX and hardware-wallet videos, for every new video on every platform. Don't switch voices or ask again.
 - Playlists: Daily Market Read, How To: Crypto Apps & Tools, Trade Like an Institution, Crypto Terms Explained, Crypto Safety. Manage the channel with `youtube-admin` (never delete; set private instead).
 
+- **VOICE FOR INSTAGRAM REELS (Roland, 27 Oct 2026): the American Fish ELITE voice, the one from the viral address-poisoning Reel.** Use the voiced bank in assets/vo (ex*.mp3) first. Never voice an Instagram Reel with ElevenLabs Oluwadamilare. New Reel scripts need Fish ELITE (via fish.audio in the built-in browser, see below); if that isn't possible, use a banked explainer instead. Oluwadamilare is for YouTube long-form only. assets/vo/ex21-poison2.mp3 (Oluwadamilare) is NOT to be posted; re-voice that script in Fish ELITE.
+
 ## Audio bank (voiced 18 Oct 2026, before Fish plan ends 22 Oct)
 - 30 Fish ELITE voiceovers in assets/vo/: kobo06–kobo15 (Kobo S2) + ex01–ex20 explainers. Each has an alt take (<name>-b.mp3) and Whisper word timings (<name>.json). Index: queue/vo/index.json.
 - 5 ElevenLabs how-to voiceovers: assets/vo/howto-*.mp3 (scripts in queue/howto/).

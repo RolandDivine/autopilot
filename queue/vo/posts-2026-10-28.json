@@ -10,16 +10,6 @@
   "li_text": "",
   "at": "17:00"
  },
- "ex21": {
-  "video": "assets/reels/ex21-poison2.mp4",
-  "title": "Address poisoning: 3 checks before you paste a crypto address",
-  "youtube": true,
-  "playlist": "Crypto Safety",
-  "linkedin": false,
-  "reel_caption": "Before you paste that crypto address, do these 3 checks. 🔍\n\nPart 2 of address poisoning: never copy from your history, check the middle of the address, and send a small test first. Plus the $0 transfer that means you've been marked.\n\n📤 Send this to whoever handles your crypto payments\n📌 Save it for later\n\nEducation, not financial advice.\n\n#crypto #addresspoisoning #cryptoscam #nigeria",
-  "li_text": "",
-  "at": "11:00"
- },
  "kobo11": {
   "video": "assets/reels/kobo-money-part-11-hook.mp4",
   "title": "Kobo's Money Story, Part 11: What is a stablecoin?",
@@ -30,5 +20,15 @@
   "reel_caption": "Kobo's Money Story, Part 11: stablecoins, a tool for moving money, not a savings account. 💵\n\n#crypto #stablecoin #personalfinance",
   "li_text": "",
   "at": "17:00"
+ },
+ "ex14": {
+  "video": "assets/reels/ex14-simswap-hook.mp4",
+  "title": "SIM swap: how one phone call can empty your bank and crypto",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "SIM swap explained: one phone call to your network can take over your bank, email and crypto. 📵\n\nHow scammers move your number to their SIM, and 3 things to do today: a PIN/port-out lock, authenticator app instead of SMS codes, and your birthday off public profiles.\n\n📤 Send this to someone who still uses SMS codes\n📌 Save it for later\n\nEducation, not financial advice.\n\n#simswap #crypto #cryptoscam #nigeria",
+  "li_text": "",
+  "at": "11:00"
  }
 }

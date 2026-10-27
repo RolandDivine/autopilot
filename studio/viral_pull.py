@@ -13,10 +13,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REPO = "repos/RolandDivine/autopilot/actions/workflows"
-BR = Path("/tmp/claude-0/-home-claude/7bf7680f-a27b-5721-8432-9f712c0cf377/scratchpad/ka/r")
+BR = Path.home() / ".cache" / "autopilot-audio"  # clone of the kobo-audio-2 branch (made on first use)
 
 
 def sh(*a, cwd=ROOT):
+    if cwd == BR and not BR.exists():
+        subprocess.run(["git", "clone", "-q", "-b", "kobo-audio-2", "https://github.com/RolandDivine/autopilot.git", str(BR)], check=True)
     return subprocess.run(a, cwd=cwd, check=True, capture_output=True, text=True).stdout
 
 

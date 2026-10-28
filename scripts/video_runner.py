@@ -14,8 +14,15 @@ DEFAULT = {"ex": "11:00", "kobo": "17:00", "liclip": "07:00"}
 
 
 def main():
+    # Roland, 28 Oct 2026: "don't skip anything". GitHub can drop scheduled runs for hours, so a video that is late
+    # still posts, and yesterday's file is checked too (a video missed before midnight UTC posts the next morning).
     now = dt.datetime.now(dt.timezone.utc)
-    day = os.environ.get("DAY") or now.date().isoformat()
+    days = [os.environ["DAY"]] if os.environ.get("DAY") else [(now - dt.timedelta(days=1)).date().isoformat(), now.date().isoformat()]
+    for day in days:
+        run_day(day, now)
+
+
+def run_day(day, now):
     f = os.path.join(ROOT, "queue", "vo", f"posts-{day}.json")
     if not os.path.exists(f):
         print(f"no videos for {day}")

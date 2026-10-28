@@ -46,8 +46,9 @@ def test_due_window(q):
     q("2026-10-13", "1300", slot_json())
     assert queue.due_slots(at_lagos("2026-10-13", "1259")) == []
     assert len(queue.due_slots(at_lagos("2026-10-13", "1300"))) == 1
-    assert len(queue.due_slots(at_lagos("2026-10-13", "1529"))) == 1   # late GitHub run still posts
-    assert queue.due_slots(at_lagos("2026-10-13", "1531")) == []      # too late: don't post stale
+    assert len(queue.due_slots(at_lagos("2026-10-13", "2300"))) == 1   # late GitHub run still posts (Roland: never skip)
+    assert len(queue.due_slots(at_lagos("2026-10-14", "1259"))) == 1   # even the next morning, within 24 h
+    assert queue.due_slots(at_lagos("2026-10-14", "1301")) == []      # after 24 h it's left for a human
 
 
 def test_overnight_slot_seen_after_midnight(q):
@@ -165,7 +166,9 @@ def test_stories_due_and_skip(q, capsys, monkeypatch):
     (p.parent / "stories.json").write_text(json.dumps([{"at": "0900", "media": "stories/s0900.jpg"}]))
     post.run_stories(dry_run=True, now_utc=at_lagos("2026-10-13", "0915"))
     assert "[dry-run] Instagram story" in capsys.readouterr().out
-    post.run_stories(dry_run=True, now_utc=at_lagos("2026-10-13", "1100"))  # outside 90 min window
+    post.run_stories(dry_run=True, now_utc=at_lagos("2026-10-13", "2200"))  # late run still posts it
+    assert "[dry-run] Instagram story" in capsys.readouterr().out
+    post.run_stories(dry_run=True, now_utc=at_lagos("2026-10-14", "0901"))  # after 24 h: left alone
     assert "story" not in capsys.readouterr().out
     assert ("stories", None) in control.parse(["skip stories"])["skip"]
     assert lint.lint_stories(p.parent) == []

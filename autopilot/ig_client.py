@@ -103,12 +103,14 @@ class InstagramClient:
         raise InstagramError(f"container {container_id} not ready after {tries * 4} seconds")
 
     def _publish(self, creation_id):
-        """media_publish, retrying while Instagram says the media is not ready yet (code 9007)."""
+        """media_publish, retrying while Instagram says the media is not ready yet (code 9007) or a transient error
+        (HTTP 500 / "is_transient": true). Retrying the same container can't create a duplicate post."""
         for attempt in range(8):
             try:
                 return self._req("post", f"{self.user_id}/media_publish", data={"creation_id": creation_id})["id"]
             except InstagramError as e:
-                if "9007" not in str(e) and "not ready" not in str(e) or attempt == 7:
+                retry = "9007" in str(e) or "not ready" in str(e) or '"is_transient":true' in str(e) or "HTTP 500" in str(e)
+                if not retry or attempt == 7:
                     raise
                 time.sleep(5 + attempt * 5)
 

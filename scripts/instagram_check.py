@@ -20,6 +20,7 @@ def show(title, fn):
     except Exception as e:
         print(f"::warning title={title} unavailable::{str(e)[:300]}")
 
+show("recent media", lambda: c._req("get", f"{c.user_id}/media", params={"fields": "id,timestamp,media_type,permalink,caption", "limit": 6}).get("data"))
 show("profile", lambda: c._req("get", "me", params={"fields": "username,name,account_type,biography,website,followers_count,follows_count,media_count,profile_picture_url"}))
 for m, extra in [("reach,views,accounts_engaged,total_interactions,profile_links_taps,follows_and_unfollows", {"metric_type": "total_value"}),
                  ("reach", {"breakdown": "media_product_type", "metric_type": "total_value"}),

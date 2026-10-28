@@ -22,7 +22,7 @@ duo.SOLO = True
 duo.TURNS = {n: [(0.0, "K")] for n in range(6, 16)}
 duo.FIX = {r"\bCobo\b": "Kobo", r"\bKubo\b": "Kobo", r"\bKubo's": "Kobo's"}
 GEN = ROOT / "assets" / "gen"
-duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg", 10: GEN / "kobo-bg-phone.jpg", 11: GEN / "kobo-bg-phone.jpg"}
+duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg", 10: GEN / "kobo-bg-phone.jpg", 11: GEN / "kobo-bg-phone.jpg", 12: GEN / "kobo-bg-phone.jpg", 13: GEN / "kobo-bg-market.jpg", 14: GEN / "kobo-bg-mango.jpg"}
 duo.CARDS = {
     6: [(4.9, 12.8, "💸", "Paid Friday, broke Wednesday", "Where does the money go?"),
         (13.3, 17.6, "🧾", "Small things add up", "Snacks · data · rides · little transfers"),
@@ -70,6 +70,25 @@ duo.CARDS = {
          (44.9, 57.0, "📋", "Femi's rules", "Big regulated coins · check cash-out fees · don't park it on an exchange"),
          (57.0, 63.0, "🧰", "A tool for moving money", "Not a savings account"),
          (63.0, 69.0, "⏭️", "Next: all at once, or monthly?", "Follow so you don't miss it")],
+    12: [(1.9, 6.9, "💵", "$600 to invest", "All of it today?"),
+         (6.9, 17.6, "⏳", "Tunde times the market", "Waits for the perfect dip... never buys"),
+         (17.6, 32.1, "📅", "Ada: $100 every month", "Same day, for six months"),
+         (32.1, 43.5, "⚖️", "Dollar-cost averaging", "No promise of profit. Less guessing"),
+         (43.5, 54.3, "📋", "Two rules", "Money you won't need for years · things you understand"),
+         (54.3, 58.2, "⏱️", "Time in the market", "Usually beats timing the market"),
+         (58.2, 63.6, "⏭️", "Next: eggs in one basket", "Follow so you don't miss it")],
+    13: [(1.8, 12.1, "📉", "All savings in one coin", "Down 90% in a month"),
+         (12.1, 25.4, "🧺", "Ada spreads it out", "Savings · a fund · a small crypto slice"),
+         (25.4, 40.2, "↔️", "Diversification", "Different things move differently"),
+         (40.2, 52.1, "❓", "3 questions before you invest", "How much could I lose? What moves the same? OK at zero?"),
+         (52.1, 59.0, "🎯", "Not rich overnight", "It keeps you in the game"),
+         (59.0, 65.1, "⏭️", "Next: a second income", "Follow so you don't miss it")],
+    14: [(1.8, 9.0, "💼", "One income, one point of failure", "Ada wants a second stream"),
+         (9.0, 28.6, "🛠️", "Start with what you know", "Bookkeeping · lunch packs · design templates"),
+         (28.6, 40.4, "🚫", "A skill or product, not a dream", "No 'make millions' courses, no joining fees"),
+         (40.4, 53.8, "📋", "Kobo's tips", "Start small · payment upfront · own account · set aside tax"),
+         (53.8, 60.0, "🏦", "When it grows", "Save 20% first"),
+         (60.0, 65.9, "⏭️", "Next: the season finale", "The new scams. Follow so you don't miss it")],
 }
 
 

@@ -4,6 +4,13 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 
 > **Read `studio/STORY_GUIDE.md` first (Roland, 24 Oct 2026).** Every piece is designed with ABC (Act, Believe, Care) and delivered with STORY (Stage, Tension, Opportunity, Resolution, Yes), selling the audience's real desire. Run its checklist before anything ships.
 
+## STATUS (28 Oct 2026, 02:00 Lagos): Wed 28 – Sat 31 Oct are fully built and pushed
+Do NOT rebuild or overwrite queue/2026-10-28..31 or queue/vo/posts-2026-10-28..31.json (built by studio/days/day14.py and
+studio/days/week44.py). Tonight's job: check those days posted (log/videos.jsonl, Instagram/LinkedIn), reconcile Notion, then
+build Sun 1 Nov + Mon 2 Nov. Reels left in the Fish ELITE bank (American voice) for the 12:00 slot, in order: ex18 rug pull,
+ex10 Arup deepfake, ex15 passkeys, ex02/ex03 already posted; then history topics (ex06, ex07, ex08, ex13), AI (ex11, ex12),
+ex16 business, ex19 inflation, howto-* clips. Kobo stories at 18:00: kobo15 (season finale) on Sun 1 Nov, then Kobo is done.
+
 ## Content direction (Roland, 15 Oct 2026: full rebuild after a week of near-zero reach)
 Old approach is retired: no curriculum lessons, no basic explainers (what is a wallet, how to use a wallet), no daily news card, no terminal-style PDFs on LinkedIn. Those got 2–31 reach per post.
 - **Topics come from tonight's search demand, nothing else.** Categories: AI, crypto, business, tech infrastructure (data centers, cloud, chips, cybersecurity). Audience is worldwide English speakers.
@@ -15,7 +22,7 @@ Old approach is retired: no curriculum lessons, no basic explainers (what is a w
 - **Two lanes on Instagram only:** crypto safety & money, and AI tools. Off-lane topics (small-business how-tos, Google Maps, careers) go to LinkedIn only.
 - **Per day on Instagram: 1 carousel + 1 Reel + 3–4 stories.** The 0800 slot is the Instagram carousel; set `instagram.enabled = false` on 1300 and 1900 (they stay on LinkedIn). The 9 PM "Do you know…?" teaser is a **story only** (2100.json has Instagram off; keep s2100 in stories.json).
 - **Videos:** one Reel a day on Instagram (the explainer, or Kobo on days with no explainer). The second video gets `"instagram_reel": false` in posts-<date>.json: it still goes to LinkedIn, Stories (auto-split) and YouTube if crypto.
-- **First 3 seconds:** every Reel opens on its hook, never on "Hey, Kobo here". After rendering, run `python3 studio/hookcut.py <in.mp4> <in>-hook.mp4 <seconds where the first real sentence starts> "Hook line|line two" [y 0.40–0.62 to avoid cards]` and post the -hook file.
+- **First seconds = ONE clean text hook (upgraded 28 Oct 2026):** every Reel opens on its hook, never on "Hey, Kobo here". After rendering, run `python3 studio/hookcut.py <in.mp4> <in>-hook.mp4 <seconds where the first real sentence starts> "Hook line|payoff line"` and post the -hook file. For the first 2 s the frame is blurred so only the hook shows (white line + yellow payoff line, auto-sized). ≤7 words. Write 3 versions per Reel in `queue/hooks.json` (style tags: stake, mistake, number, myth, warning, curiosity, nigeria), cut the strongest, and make each `reel_caption` start with that entry's `caption_start`. Rotate styles; the Sunday research file's `hook_scoreboard` ranks styles by average watch time: after 3–4 weeks, drop the weak styles.
 - **Search-first captions:** the first sentence starts with the words people search ("How to revoke token approvals…", "Bitcoin halving explained:"), then the hook. 3–5 hashtags.
 - **Alt text:** every Instagram image gets alt text (`instagram.alt` = one line per image: what it shows + the slide's words). ig_client sends it and falls back if Instagram rejects it.
 - **Real Roland beats everything:** his voice-note stories (no camera needed) become Reels with captions; build one whenever he sends a recording.

@@ -40,6 +40,14 @@ def boxes(*bs):
     return "<div class='row'>" + "".join(f"<div class='box2'><b>{t}</b><span>{d}</span></div>" for t, d in bs) + "</div>"
 
 
+def rehook(nxt, why=""):
+    """Re-hook card (Roland, 28 Oct 2026 hooks research): show it every 2-3 minutes, right BEFORE a section starts.
+    Most mid-video drop-off happens between sections; a tease of what's next gives people a reason to stay.
+    e.g. rehook("The mistake that cost one person <span class='red'>$6.5M</span>", "in the next 60 seconds")"""
+    return (f"<div class='kick'>Up next</div><div class='big' style='font-size:96px;letter-spacing:-2px'>{nxt}</div>"
+            + (f"<div class='mid' style='margin-top:22px;font-size:56px'>{why}</div>" if why else ""))
+
+
 def revoke_spec():
     A = ROOT / "assets" / "viral" / "howto-revoke"
 

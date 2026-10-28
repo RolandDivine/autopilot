@@ -98,6 +98,7 @@ def instagram():
         row = {k: m.get(k) for k in ("timestamp", "media_type", "media_product_type", "permalink",
                                      "like_count", "comments_count")}
         row["caption"] = (m.get("caption") or "")[:70]
+        row["full_caption"] = (m.get("caption") or "")[:120]
         metrics = "reach,saved,shares,views,total_interactions"
         try:
             ins = c._req("get", f"{m['id']}/insights", params={"metric": metrics})["data"]
@@ -118,7 +119,28 @@ def instagram():
         return {"posts": rows}
 
 
-for name, fn in [("trends", trends), ("reddit", reddit), ("hn", hn), ("questions", questions), ("instagram", instagram)]:
+def hook_scoreboard():
+    """Rank hook styles by Reels average watch time (queue/hooks.json <-> Instagram captions)."""
+    bank = json.loads((ROOT / "queue" / "hooks.json").read_text())["reels"]
+    posts = (out.get("instagram") or {}).get("posts", [])
+    rows, by_style = [], {}
+    for key, h in bank.items():
+        p = next((p for p in posts if p.get("media_product_type") == "REELS"
+                  and (p.get("full_caption") or "").startswith(h["caption_start"])), None)
+        if not p or p.get("ig_reels_avg_watch_time") is None:
+            continue
+        w = p["ig_reels_avg_watch_time"] / 1000
+        style = h["used"]["style"]
+        rows.append({"key": key, "hook": h["used"]["text"], "style": style, "avg_watch_s": round(w, 1),
+                     "views": p.get("views"), "shares": p.get("shares"), "saved": p.get("saved")})
+        by_style.setdefault(style, []).append(w)
+    rows.sort(key=lambda r: -r["avg_watch_s"])
+    styles = sorted(({"style": k, "reels": len(v), "avg_watch_s": round(sum(v) / len(v), 1)} for k, v in by_style.items()),
+                    key=lambda r: -r["avg_watch_s"])
+    return {"styles": styles, "reels": rows}
+
+
+for name, fn in [("trends", trends), ("reddit", reddit), ("hn", hn), ("questions", questions), ("instagram", instagram), ("hook_scoreboard", hook_scoreboard)]:
     safe(name, fn)
 
 path = ROOT / "research" / f"{out['date']}.json"

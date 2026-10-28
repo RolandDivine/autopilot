@@ -242,7 +242,85 @@ def simswap_spec():
     return viral.std("ex14-simswap", timeline)
 
 
-SPECS = {"ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def giveaway_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "coin-siphon.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 13.7,
+             "html": "<div class='kick'>Crypto · scams</div><div class='mid'>\"Send 1 Bitcoin,<br><span class='red'>get 2 back.\"</span></div>"
+                     "<div class='sm' style='margin-top:16px'>A famous tech boss, live on YouTube.</div>"},
+            {"kind": "html", "a": 13.7, "b": 17.5,
+             "html": "<div class='mid'>It's fake.<br><span class='red'>Every single time.</span></div>"},
+            {"kind": "checks", "a": 17.5, "b": 32.3, "kick": "How it works", "title": "The fake livestream",
+             "items": [{"t": "Hijacked YouTube channels", "d": .8}, {"t": "Old interviews or AI deepfakes", "d": 2.5},
+                       {"t": "A QR code + wallet address", "d": 6.7}, {"t": "Bots in chat: \"it worked!\"", "d": 10.0}]},
+            {"kind": "html", "a": 32.3, "b": 42.8,
+             "html": "<div class='mid'>No company or celebrity<br>will <span class='red'>double your crypto.</span></div>"
+                     "<div class='sm' style='margin-top:16px'>Once you send it, it's gone. Crypto can't be reversed.</div>"},
+            {"kind": "checks", "a": 42.8, "b": 57.8, "kick": "Spot it fast", "title": "Check",
+             "items": [{"t": "Was the channel renamed recently?", "d": 1.1}, {"t": "Is it their official channel?", "d": 4.2},
+                       {"t": "\"Multiply your money\" = the scam", "d": 7.6}, {"t": "Report the stream", "d": 13.4}]},
+            {"kind": "html", "a": 57.8, "b": 64.6,
+             "html": "<div class='mid'>Too good to be true?<br><span class='yel'>It is.</span></div>"},
+            {"kind": "html", "a": 64.6, "b": dur + 1, "html": FOLLOW.format("Send this to someone who watches crypto livestreams.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex20-fakegiveaway", timeline)
+
+
+def quishing_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "qr-sticker.png")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 9.7,
+             "html": "<div class='kick'>Scams · QR codes</div><div class='mid'>You scan to pay.<br><span class='red'>Whose code is it?</span></div>"},
+            {"kind": "html", "a": 9.7, "b": 13.8,
+             "html": "<div class='kick'>It's called</div><div class='mid'><span class='red'>Quishing</span></div><div class='sm' style='margin-top:16px'>QR code phishing</div>"},
+            {"kind": "html", "a": 13.8, "b": 23.5,
+             "html": "<div class='mid'>A fake code opens a page<br>that <span class='red'>looks real.</span></div>"
+                     "<div class='sm' style='margin-top:16px'>Parking, bank, delivery. Then it asks for your card or login.</div>"},
+            {"kind": "html", "a": 23.5, "b": 35.9,
+             "html": "<div class='kick'>Also by email</div><div class='mid'>\"Account locked.<br><span class='red'>Scan to fix it.\"</span></div>"
+                     "<div class='sm' style='margin-top:16px'>It's an image, so some email filters miss the link.</div>"},
+            {"kind": "checks", "a": 35.9, "b": 58.2, "kick": "Stay safe", "title": "Before you scan",
+             "items": [{"t": "Look for a sticker on top", "d": 1.7}, {"t": "Read the web address first", "d": 5.7},
+                       {"t": "Pay in the official app instead", "d": 12.1}, {"t": "Never log in from an email QR", "d": 16.9}]},
+            {"kind": "html", "a": 58.2, "b": 62.3,
+             "html": "<div class='mid'>A QR code is just a link.<br><span class='yel'>Treat it like one.</span></div>"},
+            {"kind": "html", "a": 62.3, "b": dur + 1, "html": FOLLOW.format("Send this to someone who scans everything.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex17-quishing", timeline)
+
+
+def voiceclone_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "phone-glow.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 9.5,
+             "html": "<div class='kick'>Scams · AI</div><div class='mid'>Your brother calls, crying.<br><span class='red'>He needs money now.</span></div>"},
+            {"kind": "html", "a": 9.5, "b": 18.5,
+             "html": "<div class='mid'><span class='red'>It isn't him.</span><br>AI copied his voice.</div>"
+                     "<div class='sm' style='margin-top:16px'>A few seconds of audio from social media is enough.</div>"},
+            {"kind": "checks", "a": 18.5, "b": 33.6, "kick": "The script", "title": "Every time",
+             "items": [{"t": "Someone you trust", "d": 2.8}, {"t": "Urgency", "d": 7.4},
+                       {"t": "Secrecy: \"don't tell mom\"", "d": 9.3}, {"t": "Strange payment: crypto, gift cards", "d": 11.6}]},
+            {"kind": "checks", "a": 33.6, "b": 48.6, "kick": "How to beat it", "title": "Do this",
+             "items": [{"t": "Agree a family code word", "d": 1.3}, {"t": "Hang up. Call back on their real number", "d": 5.1},
+                       {"t": "Ask what only they would know", "d": 11.2}]},
+            {"kind": "html", "a": 48.6, "b": 58.1,
+             "html": "<div class='mid'>A familiar voice is<br><span class='red'>no longer proof.</span></div>"
+                     "<div class='sm' style='margin-top:16px'>Slow down. Verify. Then act.</div>"},
+            {"kind": "html", "a": 58.1, "b": dur + 1, "html": FOLLOW.format("Share this with your family.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex09-voiceclone", timeline)
+
+
+SPECS = {"ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

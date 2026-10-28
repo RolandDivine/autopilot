@@ -1,0 +1,15 @@
+{
+ "x": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "I built a system that posts my content for me. Then the data humbled me.\n\nIn one week it published 19 LinkedIn posts. Total: 1,040 impressions. Zero comments.\n\nIn the same stretch, one short Instagram video about a crypto scam got 1,548 views, 23 saves and 11 shares.\n\nSame person. Same system. Very different results.\n\nHere's what building Autopilot taught me:\n\n1. Volume is not a strategy. Nineteen average posts lost to one useful one.\n\n2. The first line decides everything. The video that worked put the viewer's risk in the first sentence. The ones that flopped opened with a greeting, and people swiped away in about 3 seconds.\n\n3. Automation should multiply judgement, not replace it. A machine can post every hour. It can't decide what deserves to be posted.\n\nSo I changed the system. One LinkedIn post a day. Stories, not announcements. If a post doesn't solve a real problem, it doesn't ship.\n\nBuilders, a question:\nWhat's one thing you automated that made the result worse?\n\nIf you're building content systems too and want to compare notes, send me a message.",
+  "media": "media/li-cover.jpg"
+ },
+ "instagram": {
+  "enabled": false
+ },
+ "title": "LinkedIn: Building Autopilot",
+ "kind": "story"
+}

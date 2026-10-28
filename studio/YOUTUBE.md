@@ -26,7 +26,11 @@ ever is a 2024 long-form wallet-safety how-to (158 views). Search-driven long-fo
    search suggestions/vidIQ when available; prefer "how to …" phrasing with a clear outcome.
 2. **Research:** every number from a named, recent source (put it on screen and in the description).
 3. **Script** `queue/youtube/<slug>.txt`, 6-10 minutes (≈1,000-1,500 words):
-   - 0:00-0:20 hook: the surprising fact + what they'll be able to do by the end. No greeting first.
+   - 0:00-0:30 hook in three 10-second beats (Roland, 28 Oct hooks research): (1) prove the title with one real example
+     or sourced stat card, the opening text matching the thumbnail promise word for word; (2) why it matters to the viewer;
+     (3) a one-line roadmap ("3 checks, 7 minutes"). No greeting, no channel intro.
+   - every 2-3 minutes, a re-hook line + `longform.rehook()` card right before the next section ("Next: the mistake that
+     cost one person $6.5M"). Put the best moment about two-thirds of the way in, not at the end.
    - one line of who's talking + "Education, not financial advice".
    - 4-6 chapters, each starting with the line "Chapter one." etc. (anchors for visuals and captions).
    - one-breath summary, then tease the next video and "checklist pinned in the comments".

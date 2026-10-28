@@ -109,10 +109,26 @@ class InstagramClient:
             try:
                 return self._req("post", f"{self.user_id}/media_publish", data={"creation_id": creation_id})["id"]
             except InstagramError as e:
+                if self._published(creation_id):
+                    # Instagram sometimes answers HTTP 500 but publishes anyway (28 Oct 2026); never post twice.
+                    return self._latest_id() or f"published:{creation_id}"
                 retry = "9007" in str(e) or "not ready" in str(e) or '"is_transient":true' in str(e) or "HTTP 500" in str(e)
                 if not retry or attempt == 7:
                     raise
                 time.sleep(5 + attempt * 5)
+
+    def _published(self, creation_id):
+        try:
+            return self._req("get", creation_id, params={"fields": "status_code"}).get("status_code") == "PUBLISHED"
+        except Exception:
+            return False
+
+    def _latest_id(self):
+        try:
+            data = self._req("get", f"{self.user_id}/media", params={"fields": "id", "limit": 1}).get("data") or []
+            return data[0]["id"] if data else None
+        except Exception:
+            return None
 
     def publish_story(self, image_url):
         """One image story (disappears after 24h; add it to a highlight in the app). Returns media_id."""

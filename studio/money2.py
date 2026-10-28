@@ -22,7 +22,7 @@ duo.SOLO = True
 duo.TURNS = {n: [(0.0, "K")] for n in range(6, 16)}
 duo.FIX = {r"\bCobo\b": "Kobo", r"\bKubo\b": "Kobo", r"\bKubo's": "Kobo's"}
 GEN = ROOT / "assets" / "gen"
-duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg", 10: GEN / "kobo-bg-phone.jpg", 11: GEN / "kobo-bg-phone.jpg", 12: GEN / "kobo-bg-phone.jpg", 13: GEN / "kobo-bg-market.jpg", 14: GEN / "kobo-bg-mango.jpg"}
+duo.BG = {6: GEN / "kobo-bg-phone.jpg", 7: GEN / "kobo-bg-phone.jpg", 8: GEN / "kobo-bg-market.jpg", 9: GEN / "kobo-bg-mango.jpg", 10: GEN / "kobo-bg-phone.jpg", 11: GEN / "kobo-bg-phone.jpg", 12: GEN / "kobo-bg-phone.jpg", 13: GEN / "kobo-bg-market.jpg", 14: GEN / "kobo-bg-mango.jpg", 15: GEN / "kobo-bg-phone.jpg"}
 duo.CARDS = {
     6: [(4.9, 12.8, "💸", "Paid Friday, broke Wednesday", "Where does the money go?"),
         (13.3, 17.6, "🧾", "Small things add up", "Snacks · data · rides · little transfers"),
@@ -89,6 +89,15 @@ duo.CARDS = {
          (40.4, 53.8, "📋", "Kobo's tips", "Start small · payment upfront · own account · set aside tax"),
          (53.8, 60.0, "🏦", "When it grows", "Save 20% first"),
          (60.0, 65.9, "⏭️", "Next: the season finale", "The new scams. Follow so you don't miss it")],
+    15: [(1.8, 6.7, "🎬", "Season finale", "The scams have changed"),
+         (6.7, 16.9, "💬", "Scam 1: the friendly stranger", "A 'wrong number' chat becomes weeks of talking"),
+         (16.9, 22.4, "🚫", "Profits you can never withdraw", "The crypto app is fake"),
+         (22.4, 34.7, "🛠️", "Scam 2: fake support", "Asks for your seed phrase or your screen. Real support never does"),
+         (34.7, 43.1, "📞", "Scam 3: the voice of family", "An AI-cloned voice, crying, asking for money"),
+         (43.1, 52.6, "🐢", "One defense: slow down", "Hang up. Call back on a number you already know"),
+         (52.6, 56.4, "🙅🏾", "Never send money", "To someone you've only met online"),
+         (56.4, 62.4, "🎓", "That's Season 2", "Budget it · protect it · grow it · keep learning"),
+         (62.4, 66.0, "📤", "Share this", "With someone who needs it")],
 }
 
 

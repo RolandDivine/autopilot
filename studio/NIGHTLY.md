@@ -4,12 +4,14 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 
 > **Read `studio/STORY_GUIDE.md` first (Roland, 24 Oct 2026).** Every piece is designed with ABC (Act, Believe, Care) and delivered with STORY (Stage, Tension, Opportunity, Resolution, Yes), selling the audience's real desire. Run its checklist before anything ships.
 
-## STATUS (28 Oct 2026, 02:00 Lagos): Wed 28 – Sat 31 Oct are fully built and pushed
-Do NOT rebuild or overwrite queue/2026-10-28..31 or queue/vo/posts-2026-10-28..31.json (built by studio/days/day14.py and
-studio/days/week44.py). Tonight's job: check those days posted (log/videos.jsonl, Instagram/LinkedIn), reconcile Notion, then
-build Sun 1 Nov + Mon 2 Nov. Reels left in the Fish ELITE bank (American voice) for the 12:00 slot, in order: ex18 rug pull,
-ex10 Arup deepfake, ex15 passkeys, ex02/ex03 already posted; then history topics (ex06, ex07, ex08, ex13), AI (ex11, ex12),
-ex16 business, ex19 inflation, howto-* clips. Kobo stories at 18:00: kobo15 (season finale) on Sun 1 Nov, then Kobo is done.
+## STATUS (28 Oct 2026, 19:40 Lagos nightly): Wed 28 Oct – Mon 2 Nov are fully built and pushed
+Do NOT rebuild queue/2026-10-29..2026-11-02 or queue/vo/posts-2026-10-29..2026-11-02.json (built by studio/days/week44.py and
+studio/days/week45.py). Next nightly: reconcile, then build Tue 3 Nov (+ Wed 4). Reels left in the Fish ELITE bank for the 12:00 slot,
+in order: ex15 passkeys, ex07 gas fees, ex06 Mt Gox, ex08 ETF, ex19 inflation, ex11 hallucination, ex12 LLM, ex13 CrowdStrike,
+ex16 business, howto-* clips. Kobo Season 2 is finished (kobo15 on Sun 1 Nov), so the 18:00 video slot is free from Mon 2 Nov.
+Carousels: Tue 3 Nov can be the LinkedIn PDF day (reuse a week-45 Instagram carousel; none built yet). Known risk: GitHub skipped
+every scheduled run 01:19–12:48 UTC on 28 Oct, so the 08:00 slot and 09/11/17 stories were missed (asked Roland whether to widen
+slot_grace_minutes). If videos.jsonl shows a video missing hours after its "at", dispatch videos.yml once.
 
 ## Content direction (Roland, 15 Oct 2026: full rebuild after a week of near-zero reach)
 Old approach is retired: no curriculum lessons, no basic explainers (what is a wallet, how to use a wallet), no daily news card, no terminal-style PDFs on LinkedIn. Those got 2–31 reach per post.

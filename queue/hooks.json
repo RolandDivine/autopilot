@@ -1,32 +1,208 @@
 {
  "_readme": "Hook bank (Roland, 28 Oct 2026). Every Reel/Short gets 3 hook versions tagged by style; 'used' is the one cut into the video with studio/hookcut.py. 'caption_start' = first 40 chars of the reel caption, so scripts/research.py can match Instagram posts and rank styles by average watch time (research/<date>.json -> hook_scoreboard). Styles: stake, mistake, number, myth, warning, curiosity, nigeria. Rules: 7 words or fewer, the voice says the same promise, the video pays it off.",
- "styles": ["stake", "mistake", "number", "myth", "warning", "curiosity", "nigeria"],
+ "styles": [
+  "stake",
+  "mistake",
+  "number",
+  "myth",
+  "warning",
+  "curiosity",
+  "nigeria"
+ ],
  "reels": {
-  "ex04": {"date": "2026-10-23", "caption_start": "Address poisoning explained: the crypto ", "used": {"text": "A scam that needs zero clicks", "style": "curiosity"}},
-  "ex05": {"date": "2026-10-24", "caption_start": "Your \"stable\" coin can go to zero. It ha", "used": {"text": "A $1 coin fell to almost zero", "style": "stake"}},
-  "ex14": {"date": "2026-10-28", "caption_start": "SIM swap explained: one phone call to yo",
-           "used": {"text": "One phone call | can empty your bank", "style": "stake"},
-           "variants": [{"text": "Your SIM card | is the target", "style": "warning"}, {"text": "Lost signal? | Read this", "style": "warning"}]},
-  "kobo11": {"date": "2026-10-28", "caption_start": "Kobo's Money Story, Part 11: stablecoins",
-             "used": {"text": "Paid in dollars | in minutes", "style": "curiosity"},
-             "variants": [{"text": "Stablecoins are not savings", "style": "myth"}]},
-  "ex20": {"date": "2026-10-29", "caption_start": "Fake crypto giveaway livestreams explain",
-           "used": {"text": "Send 1 Bitcoin, | get 2 back?", "style": "curiosity"},
-           "variants": [{"text": "Nobody doubles | your crypto", "style": "myth"}, {"text": "This livestream | is a scam", "style": "warning"}]},
-  "kobo12": {"date": "2026-10-29", "caption_start": "Kobo's Money Story, Part 12: a little ev",
-             "used": {"text": "Buy all at once | or every month?", "style": "curiosity"},
-             "variants": [{"text": "Stop waiting | for the perfect dip", "style": "mistake"}]},
-  "ex17": {"date": "2026-10-30", "caption_start": "QR code scams (quishing) explained: one ",
-           "used": {"text": "Don't scan | that QR code yet", "style": "mistake"},
-           "variants": [{"text": "A QR code | is just a link", "style": "myth"}, {"text": "Check for a sticker | on top", "style": "warning"}]},
-  "kobo13": {"date": "2026-10-30", "caption_start": "Kobo's Money Story, Part 13: don't put a",
-             "used": {"text": "All your savings | in one coin?", "style": "stake"},
-             "variants": [{"text": "Down 90% | in one month", "style": "number"}]},
-  "ex09": {"date": "2026-10-31", "caption_start": "AI voice clone scams explained: a few se",
-           "used": {"text": "That's not | your brother calling", "style": "stake"},
-           "variants": [{"text": "AI copied his voice | in seconds", "style": "curiosity"}, {"text": "Set a family | code word today", "style": "nigeria"}]},
-  "kobo14": {"date": "2026-10-31", "caption_start": "Kobo's Money Story, Part 14: a second in",
-             "used": {"text": "One income is | one point of failure", "style": "warning"},
-             "variants": [{"text": "Start a second income | next to your job", "style": "number"}]}
+  "ex04": {
+   "date": "2026-10-23",
+   "caption_start": "Address poisoning explained: the crypto ",
+   "used": {
+    "text": "A scam that needs zero clicks",
+    "style": "curiosity"
+   }
+  },
+  "ex05": {
+   "date": "2026-10-24",
+   "caption_start": "Your \"stable\" coin can go to zero. It ha",
+   "used": {
+    "text": "A $1 coin fell to almost zero",
+    "style": "stake"
+   }
+  },
+  "ex14": {
+   "date": "2026-10-28",
+   "caption_start": "SIM swap explained: one phone call to yo",
+   "used": {
+    "text": "One phone call | can empty your bank",
+    "style": "stake"
+   },
+   "variants": [
+    {
+     "text": "Your SIM card | is the target",
+     "style": "warning"
+    },
+    {
+     "text": "Lost signal? | Read this",
+     "style": "warning"
+    }
+   ]
+  },
+  "kobo11": {
+   "date": "2026-10-28",
+   "caption_start": "Kobo's Money Story, Part 11: stablecoins",
+   "used": {
+    "text": "Paid in dollars | in minutes",
+    "style": "curiosity"
+   },
+   "variants": [
+    {
+     "text": "Stablecoins are not savings",
+     "style": "myth"
+    }
+   ]
+  },
+  "ex20": {
+   "date": "2026-10-29",
+   "caption_start": "Fake crypto giveaway livestreams explain",
+   "used": {
+    "text": "Send 1 Bitcoin, | get 2 back?",
+    "style": "curiosity"
+   },
+   "variants": [
+    {
+     "text": "Nobody doubles | your crypto",
+     "style": "myth"
+    },
+    {
+     "text": "This livestream | is a scam",
+     "style": "warning"
+    }
+   ]
+  },
+  "kobo12": {
+   "date": "2026-10-29",
+   "caption_start": "Kobo's Money Story, Part 12: a little ev",
+   "used": {
+    "text": "Buy all at once | or every month?",
+    "style": "curiosity"
+   },
+   "variants": [
+    {
+     "text": "Stop waiting | for the perfect dip",
+     "style": "mistake"
+    }
+   ]
+  },
+  "ex17": {
+   "date": "2026-10-30",
+   "caption_start": "QR code scams (quishing) explained: one ",
+   "used": {
+    "text": "Don't scan | that QR code yet",
+    "style": "mistake"
+   },
+   "variants": [
+    {
+     "text": "A QR code | is just a link",
+     "style": "myth"
+    },
+    {
+     "text": "Check for a sticker | on top",
+     "style": "warning"
+    }
+   ]
+  },
+  "kobo13": {
+   "date": "2026-10-30",
+   "caption_start": "Kobo's Money Story, Part 13: don't put a",
+   "used": {
+    "text": "All your savings | in one coin?",
+    "style": "stake"
+   },
+   "variants": [
+    {
+     "text": "Down 90% | in one month",
+     "style": "number"
+    }
+   ]
+  },
+  "ex09": {
+   "date": "2026-10-31",
+   "caption_start": "AI voice clone scams explained: a few se",
+   "used": {
+    "text": "That's not | your brother calling",
+    "style": "stake"
+   },
+   "variants": [
+    {
+     "text": "AI copied his voice | in seconds",
+     "style": "curiosity"
+    },
+    {
+     "text": "Set a family | code word today",
+     "style": "nigeria"
+    }
+   ]
+  },
+  "kobo14": {
+   "date": "2026-10-31",
+   "caption_start": "Kobo's Money Story, Part 14: a second in",
+   "used": {
+    "text": "One income is | one point of failure",
+    "style": "warning"
+   },
+   "variants": [
+    {
+     "text": "Start a second income | next to your job",
+     "style": "number"
+    }
+   ]
+  },
+  "ex18": {
+   "date": "2026-11-01",
+   "caption_start": "Rug pull and honeypot crypto scams expla",
+   "used": {
+    "text": "You can buy it | but never sell",
+    "style": "curiosity"
+   },
+   "variants": [
+    {
+     "text": "This coin goes | to zero in minutes",
+     "style": "warning"
+    },
+    {
+     "text": "Group chat pump? | It's a trap",
+     "style": "mistake"
+    }
+   ]
+  },
+  "kobo15": {
+   "date": "2026-11-01",
+   "caption_start": "Kobo's Money Story, Part 15: 3 scams hit",
+   "used": {
+    "text": "3 scams | aimed at your phone",
+    "style": "number"
+   },
+   "variants": [
+    {
+     "text": "Slow down. | It beats every scam",
+     "style": "myth"
+    }
+   ]
+  },
+  "ex10": {
+   "date": "2026-11-02",
+   "caption_start": "Deepfake video call scam explained: ever",
+   "used": {
+    "text": "Your boss on video | might be fake",
+    "style": "stake"
+   },
+   "variants": [
+    {
+     "text": "$25 million lost | on one video call",
+     "style": "number"
+    },
+    {
+     "text": "Everyone on this call | was fake",
+     "style": "curiosity"
+    }
+   ]
+  }
  }
 }

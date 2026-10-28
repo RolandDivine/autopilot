@@ -1,0 +1,16 @@
+{
+ "title": "LinkedIn: Building Autopilot",
+ "kind": "story",
+ "x": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Your scheduled job will not always run on schedule.\n\nMine didn't. Here's what happened, and what I'd tell any builder who relies on one.\n\nMy content system, Autopilot, publishes my posts for me. Until last week, publishing ran inside AI chat sessions. Then I hit a usage limit and everything froze for three days. Nothing went out.\n\nSo I moved publishing to GitHub Actions: a scheduled job every hour, no chat session needed.\n\nThe next day, Wednesday, GitHub's scheduler went quiet for almost 12 hours. My 8 AM post never went out. No error. No alert. Just silence.\n\nWhat it taught me:\n\n→ A schedule is a request, not a promise. GitHub's own docs say scheduled runs can be delayed under heavy load, and some can be dropped.\n\n→ \"Nothing failed\" is not the same as \"it worked\". Check that the post exists, not just that the job didn't crash.\n\n→ Every single point of failure is a promise to your audience you might not keep.\n\nThe mistake I'd avoid: building the clever part first and the boring safety net last.\n\nBuilders, a question:\nWhat do you use to make sure scheduled jobs actually run, and how do you find out when they don't?",
+  "media": "media/li-cover.jpg",
+  "first_comment": "Source: GitHub Docs, \"Events that trigger workflows\" → schedule: scheduled runs can be delayed during periods of high load, and some queued jobs may be dropped. https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule"
+ }
+}

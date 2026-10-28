@@ -320,7 +320,64 @@ def voiceclone_spec():
     return viral.std("ex09-voiceclone", timeline)
 
 
-SPECS = {"ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def rugpull_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "coin-collapse.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 10.6,
+             "html": "<div class='kick'>Crypto · scams</div><div class='mid'>A new coin is flying.<br><span class='red'>Then you try to sell.</span></div>"},
+            {"kind": "html", "a": 10.6, "b": 20.0,
+             "html": "<div class='kick'>It's called</div><div class='mid'><span class='red'>A honeypot</span></div>"
+                     "<div class='sm' style='margin-top:16px'>The code lets you buy, but blocks you from selling. Only the creator cashes out.</div>"},
+            {"kind": "checks", "a": 20.0, "b": 34.2, "kick": "A rug pull", "title": "The team",
+             "items": [{"t": "Builds hype", "d": 2.8}, {"t": "Collects your money", "d": 3.7},
+                       {"t": "Pulls the cash out of the pool", "d": 5.0}, {"t": "Or dumps its huge share", "d": 7.4},
+                       {"t": "Price: zero in minutes", "d": 10.9}]},
+            {"kind": "checks", "a": 34.2, "b": 45.7, "kick": "Warning signs", "title": "Red flags",
+             "items": [{"t": "Anonymous team", "d": 1.3}, {"t": "A few wallets hold most of the supply", "d": 2.7},
+                       {"t": "Liquidity not locked", "d": 5.9}, {"t": "Pressure to buy now", "d": 8.1}]},
+            {"kind": "checks", "a": 45.7, "b": 55.5, "kick": "Before you buy", "title": "Check",
+             "items": [{"t": "Run it through a free token scanner", "d": 2.0}, {"t": "Look at the holders on a block explorer", "d": 4.2},
+                       {"t": "Search the name + \"scam\"", "d": 7.0}]},
+            {"kind": "html", "a": 55.5, "b": 60.3,
+             "html": "<div class='mid'>Only buying because<br>it's going up?<br><span class='yel'>Step back.</span></div>"},
+            {"kind": "html", "a": 60.3, "b": dur + 1, "html": FOLLOW.format("Send this to the friend in the crypto group chat.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex18-rugpull", timeline)
+
+
+def arup_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "twin-keys.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 11.0,
+             "html": "<div class='kick'>Hong Kong · early 2024</div><div class='mid'>A video call with the CFO<br><span class='red'>and colleagues.</span></div>"},
+            {"kind": "html", "a": 11.0, "b": 18.4,
+             "html": "<div class='mid'>They looked real.<br>They sounded real.</div>"
+                     "<div class='sm' style='margin-top:16px'>Then: urgent, confidential transfers.</div>"},
+            {"kind": "html", "a": 18.4, "b": 25.8,
+             "html": "<div class='kick'>The worker sent</div><div class='mid'><span class='red'>HK$200 million</span></div>"
+                     "<div class='sm' style='margin-top:16px'>About US$25 million</div>"},
+            {"kind": "html", "a": 25.8, "b": 34.4,
+             "html": "<div class='mid'>Everyone else on the call<br>was <span class='red'>a deepfake.</span></div>"
+                     "<div class='sm' style='margin-top:16px'>The company: Arup, the global engineering firm.</div>"},
+            {"kind": "html", "a": 34.4, "b": 41.0,
+             "html": "<div class='mid'><span class='red'>15 transfers</span><br>before anyone checked.</div>"},
+            {"kind": "checks", "a": 41.0, "b": 52.5, "kick": "The fix", "title": "Big or unusual payment?",
+             "items": [{"t": "Second check, different channel", "d": 1.6}, {"t": "Call back on a known number", "d": 7.2},
+                       {"t": "Get a second approver", "d": 9.4}]},
+            {"kind": "html", "a": 52.5, "b": 60.9,
+             "html": "<div class='mid'>Seeing is no longer believing.<br><span class='yel'>Process beats instinct.</span></div>"},
+            {"kind": "html", "a": 60.9, "b": dur + 1, "html": FOLLOW.format("Send this to someone who approves payments.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex10-arup", timeline)
+
+
+SPECS = {"ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

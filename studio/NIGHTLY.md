@@ -9,9 +9,10 @@ Do NOT rebuild queue/2026-10-29..2026-11-02 or queue/vo/posts-2026-10-29..2026-1
 studio/days/week45.py). Next nightly: reconcile, then build Tue 3 Nov (+ Wed 4). Reels left in the Fish ELITE bank for the 12:00 slot,
 in order: ex15 passkeys, ex07 gas fees, ex06 Mt Gox, ex08 ETF, ex19 inflation, ex11 hallucination, ex12 LLM, ex13 CrowdStrike,
 ex16 business, howto-* clips. Kobo Season 2 is finished (kobo15 on Sun 1 Nov), so the 18:00 video slot is free from Mon 2 Nov.
-Carousels: Tue 3 Nov can be the LinkedIn PDF day (reuse a week-45 Instagram carousel; none built yet). Known risk: GitHub skipped
-every scheduled run 01:19–12:48 UTC on 28 Oct, so the 08:00 slot and 09/11/17 stories were missed (asked Roland whether to widen
-slot_grace_minutes). If videos.jsonl shows a video missing hours after its "at", dispatch videos.yml once.
+Carousels: Tue 3 Nov can be the LinkedIn PDF day (reuse a week-45 Instagram carousel; none built yet). **Never skip (Roland, 28 Oct 2026: "don't skip anything... push as much as possible"):** slots and stories now post up to
+24 h late (config slot_grace_minutes / story_grace_minutes = 1440) and videos.yml also retries yesterday's file. Every nightly:
+if anything due today is still missing from log/posted.jsonl or log/videos.jsonl, dispatch post.yml (dry_run false) or
+videos.yml right away. Instagram can answer HTTP 500 and still publish: check recent media before re-posting.
 
 ## Content direction (Roland, 15 Oct 2026: full rebuild after a week of near-zero reach)
 Old approach is retired: no curriculum lessons, no basic explainers (what is a wallet, how to use a wallet), no daily news card, no terminal-style PDFs on LinkedIn. Those got 2–31 reach per post.

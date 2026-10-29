@@ -4,6 +4,11 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 
 > **Read `studio/STORY_GUIDE.md` first (Roland, 24 Oct 2026).** Every piece is designed with ABC (Act, Believe, Care) and delivered with STORY (Stage, Tension, Opportunity, Resolution, Yes), selling the audience's real desire. Run its checklist before anything ships.
 
+## POSTING CHANGE (Roland, 29 Oct 2026: "Stop letting GitHub do that")
+GitHub cron is OFF for post.yml and videos.yml (commit 4aca114). Posting runs are now send_later reminders in Roland's main
+Claude session (07, 08, 10, 11, 13, 16, 17, 20 UTC; the Sat 31 Oct 20:00 run books the next 3 days). The nightly build does NOT
+book, cancel or edit those reminders; it only reconciles the logs and reports any gap. Step 9 below is out of date on this point.
+
 ## STATUS (28 Oct 2026, 19:40 Lagos nightly): Wed 28 Oct – Mon 2 Nov are fully built and pushed
 Do NOT rebuild queue/2026-10-29..2026-11-02 or queue/vo/posts-2026-10-29..2026-11-02.json (built by studio/days/week44.py and
 studio/days/week45.py). Next nightly: reconcile, then build Tue 3 Nov (+ Wed 4). Reels left in the Fish ELITE bank for the 12:00 slot,

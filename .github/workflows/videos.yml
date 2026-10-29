@@ -2,8 +2,8 @@ name: videos
 
 # Posts the day's videos (queue/vo/posts-<date>.json) on time, without a Claude session. See scripts/video_runner.py.
 on:
-  schedule:
-    - cron: "25 6-21 * * *"
+  # Roland, 29 Oct 2026: "Stop letting GitHub do that". No GitHub timer: the Claude session dispatches this at each slot
+  # time (dry_run=false). GitHub only executes.
   workflow_dispatch:
     inputs:
       day:

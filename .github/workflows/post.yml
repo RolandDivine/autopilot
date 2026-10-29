@@ -1,16 +1,8 @@
 name: post
 
 on:
-  schedule:
-    # Lagos is UTC+1. Main runs at 8 AM / 1 PM / 7 PM Lagos, plus sweeps in case GitHub starts a run late or one fails.
-    - cron: "2 7 * * *"
-    - cron: "2 12 * * *"
-    - cron: "2 18 * * *"
-    - cron: "40 7,8,12,13,18,19 * * *"
-    # hourly pass (Lagos 7 AM to 11 PM) for Instagram stories
-    - cron: "15 6-22 * * *"
-    # extra passes every 10 minutes around each slot, because GitHub sometimes starts scheduled runs late or skips them
-    - cron: "*/10 7,8,12,13,18,19 * * *"
+  # Roland, 29 Oct 2026: "Stop letting GitHub do that". No GitHub timer: the Claude session dispatches this at each slot
+  # time (dry_run=false). GitHub only executes.
   workflow_dispatch:
     inputs:
       dry_run:

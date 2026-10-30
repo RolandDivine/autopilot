@@ -44,7 +44,7 @@ def grain_png(path):
 
 # ---------------------------------------------------------------- sample: 37.0-58.45 s of Roland's recording
 SAMPLE = {
-    "audio": "/home/claude/money_audio/roland-binance-enh.wav",
+    "audio": "/home/claude/money_audio/roland-binance-iso.wav",
     "t0": 36.95, "t1": 58.55,
     "label": "THE $6B BINANCE HACK",
     "scenes": [

@@ -90,24 +90,6 @@
     }
    ]
   },
-  "ex17": {
-   "date": "2026-10-30",
-   "caption_start": "QR code scams (quishing) explained: one ",
-   "used": {
-    "text": "Don't scan | that QR code yet",
-    "style": "mistake"
-   },
-   "variants": [
-    {
-     "text": "A QR code | is just a link",
-     "style": "myth"
-    },
-    {
-     "text": "Check for a sticker | on top",
-     "style": "warning"
-    }
-   ]
-  },
   "kobo13": {
    "date": "2026-10-30",
    "caption_start": "Kobo's Money Story, Part 13: don't put a",
@@ -201,6 +183,48 @@
     {
      "text": "Everyone on this call | was fake",
      "style": "curiosity"
+    }
+   ]
+  },
+  "ex30": {
+   "date": "2026-10-30",
+   "caption_start": "Binance hack explained: around $6 billio",
+   "used": {
+    "text": "Binance just lost | ~$6 billion",
+    "style": "stake"
+   },
+   "variants": [
+    {
+     "text": "Is your money | still safe?",
+     "style": "warning"
+    }
+   ]
+  },
+  "ex31": {
+   "date": "2026-10-30",
+   "caption_start": "After the Binance hack, the fake \"refund",
+   "used": {
+    "text": "Binance was hacked. | Scammers are next",
+    "style": "warning"
+   },
+   "variants": [
+    {
+     "text": "Don't click | that refund link",
+     "style": "mistake"
+    }
+   ]
+  },
+  "ex32": {
+   "date": "2026-10-30",
+   "caption_start": "Exchange or your own wallet: which is sa",
+   "used": {
+    "text": "Exchange or | your own wallet?",
+    "style": "curiosity"
+   },
+   "variants": [
+    {
+     "text": "Who holds | your keys?",
+     "style": "myth"
     }
    ]
   }

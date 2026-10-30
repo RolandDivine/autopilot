@@ -7,7 +7,8 @@
   "linkedin": false,
   "reel_caption": "QR code scams (quishing) explained: one fake sticker can send you to a fake payment or login page. 📵\n\nHow it works, why some email filters miss it, and 4 checks before you scan.\n\n📤 Send this to someone who scans everything\n📌 Save it for later\n\n#qrcode #scamawareness #cybersecurity #nigeria",
   "li_text": "",
-  "at": "11:00"
+  "at": "11:00",
+  "skip": true
  },
  "kobo13": {
   "video": "assets/reels/kobo-money-part-13-hook.mp4",
@@ -17,6 +18,36 @@
   "instagram_reel": false,
   "linkedin": false,
   "reel_caption": "Kobo's Money Story, Part 13: don't put all your eggs in one basket. 🧺\n\n#personalfinance #investing #crypto",
+  "li_text": "",
+  "at": "17:00"
+ },
+ "ex30": {
+  "video": "assets/reels/ex30-binance1-hook.mp4",
+  "title": "Binance hacked: ~$6 billion hit. Is your money safe?",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "Binance hack explained: around $6 billion hit in the biggest crypto hack ever. 🚨\n\nWhat happened, whether user funds are safe, and what to do right now (and what NOT to click).\n\n📤 Send this to someone who keeps everything on one exchange\n📌 Save it\n\nEducation, not financial advice.\n\n#binance #crypto #cryptonews #nigeria",
+  "li_text": "",
+  "at": "08:00"
+ },
+ "ex31": {
+  "video": "assets/reels/ex31-binance2-hook.mp4",
+  "title": "After the Binance hack: the fake refund scams coming for you",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "After the Binance hack, the fake \"refund\" and \"verify your account\" messages start. 🚩\n\nThe rule: Binance won't DM you first, and no real agent asks for your password, 2FA code or seed phrase.\n\n📤 Send this to anyone with money on Binance\n📌 Save it\n\n#binance #cryptoscam #crypto #nigeria",
+  "li_text": "",
+  "at": "13:00"
+ },
+ "ex32": {
+  "video": "assets/reels/ex32-binance3-hook.mp4",
+  "title": "Exchange or your own wallet: which is safer after the Binance hack?",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "Exchange or your own wallet: which is safer after the Binance hack? 🔑\n\nWho holds the keys, why DeFi isn't automatically safer, and the simple split that protects your savings.\n\n📤 Send this to a friend who keeps everything on one app\n📌 Save it\n\nEducation, not financial advice.\n\n#binance #crypto #selfcustody #nigeria",
   "li_text": "",
   "at": "17:00"
  }

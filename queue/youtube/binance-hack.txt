@@ -1,0 +1,73 @@
+Six billion dollars. Gone from the world's biggest crypto exchange in one night. And here's the part nobody is telling you: the attackers didn't break Binance's code. They got one key.
+
+If you have money on any exchange, this affects you. In the next few minutes, you'll understand exactly what happened, whether your money is safe, and the five things I'd do today to protect your crypto.
+
+I'm Roland Divine. I build DeFi products and I audit smart contracts. This is education, not financial advice.
+
+Chapter one. What happened.
+
+On the twenty-ninth of October, money started leaving Binance's wallets. Fast. Within hours, Binance confirmed it had been hacked. The total impact is estimated at around six billion dollars. That makes it the biggest crypto hack in history. The previous record, Bybit in twenty twenty-five, was about one and a half billion. This is roughly four times bigger.
+
+Investigators suspect a North Korea-linked hacking group. Bitcoin fell, BNB fell, and more than a billion dollars in leveraged trades were liquidated.
+
+But before you panic, stay with me, because the next part matters more than the headline.
+
+Chapter two. How one key moved billions.
+
+Every exchange keeps two kinds of wallets. Cold wallets are offline, like a vault. Hot wallets are online, so the exchange can pay out withdrawals quickly. Hot wallets are convenient. They're also the target.
+
+According to early reports, the attackers got hold of the signing key to one of Binance's hot wallets. Then they used a newer Ethereum feature that lets a wallet hand its control over to a piece of software. They turned the wallet into what's called a sweeper. Anything that landed in it was quietly forwarded to their own address.
+
+No genius code exploit. No bug in a smart contract. One key.
+
+And that's the lesson for anyone who builds in crypto: your security is only as strong as your key management. You can audit every line of code, but if one key controls the vault, that key is the whole game.
+
+Chapter three. Is your money safe?
+
+Here's what we know right now. Binance says user funds are safe and that it will cover the losses. It has an emergency fund, called SAFU, built for moments like this. Deposits and withdrawals were paused while it locks things down and works with investigators.
+
+There's also something interesting. Tether and Circle, the companies behind USDT and USDC, froze more than two point four billion dollars of the stolen stablecoins within hours. That's good news for the victims. But think about what it means. A small number of companies can freeze crypto. Keep that in mind, because we'll come back to it.
+
+So, if your money is on Binance: don't panic-sell at the bottom, and don't make any big moves based on rumours. Wait for official updates inside the Binance app.
+
+And now, the part that could actually cost you money. Stay with me for this one.
+
+Chapter four. The scam wave.
+
+After every big hack, a second attack begins. And this one targets you, not the exchange.
+
+You'll see messages like these. "Binance compensation: claim your refund." "Your account is at risk. Verify now." "Move your funds to this safe wallet." Some will look exactly like Binance. Some will come from accounts with thousands of followers.
+
+All fake.
+
+Here's the rule. Binance will not DM you first. No real support agent will ever ask for your password, your two-factor code, or your seed phrase. Real updates come inside the official app, or on a website you type in yourself. Never through a link someone sent you.
+
+If a message makes you rush, stop. Urgency is the scam.
+
+Chapter five. Exchange, your own wallet, or DeFi?
+
+Everyone's asking the same question: where is my crypto actually safe?
+
+On an exchange, the exchange holds your keys. It's easy, and a big exchange can cover losses. But if it's hacked, or it freezes withdrawals, you wait. You're trusting their security team.
+
+In your own wallet, you hold the keys. Nobody can freeze it. But nobody can rescue it either. Lose your seed phrase, and it's gone. You are the security team.
+
+And DeFi isn't automatically safer. Smart contracts get hacked too. I audit them for a living, and I can tell you: code risk is real.
+
+So the answer isn't one place. It's a split.
+
+Chapter six. Your five-step checklist.
+
+One. Keep only what you actively trade on an exchange.
+
+Two. Move long-term savings to a wallet you control. For bigger amounts, a hardware wallet, bought only from the official store, never from a reseller.
+
+Three. Write your seed phrase on paper. Never a screenshot, never the cloud, never a chat.
+
+Four. Turn on two-factor authentication with an authenticator app, not SMS.
+
+Five. Ignore every refund, compensation or verification link. Go straight to the official app.
+
+So here's the whole thing in one breath. Binance lost around six billion dollars because attackers got one key to one hot wallet. Binance says user funds are safe, and billions have been frozen. The next danger is the scam wave aimed at you. And the real protection is simple: don't keep everything in one place, and guard your keys like cash.
+
+The checklist is pinned in the comments. Subscribe for crypto safety, explained straight. And send this to someone who keeps everything on one exchange.

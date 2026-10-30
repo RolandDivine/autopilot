@@ -377,7 +377,58 @@ def arup_spec():
     return viral.std("ex10-arup", timeline)
 
 
-SPECS = {"ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def binance1_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "black-cube.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 9.9, "html": "<div class='kick'>Crypto · breaking</div><div class='mid'>Binance just lost<br><span class='red'>~$6 billion.</span></div><div class='sm' style='margin-top:16px'>Being called the biggest crypto hack ever.</div>"},
+            {"kind": "html", "a": 9.9, "b": 17.5, "html": "<div class='kick'>What happened</div><div class='mid'>Hackers got the key<br>to a <span class='red'>hot wallet</span></div><div class='sm' style='margin-top:16px'>The online wallet that pays out withdrawals.</div>"},
+            {"kind": "html", "a": 17.5, "b": 25.4, "html": "<div class='kick'>With that key</div><div class='mid'>Funds quietly sent<br>to <span class='red'>their addresses</span></div><div class='sm' style='margin-top:16px'>North Korea-linked hackers are suspected.</div>"},
+            {"kind": "html", "a": 25.4, "b": 34.7, "html": "<div class='kick'>Binance says</div><div class='mid'><span class='yel'>User funds are safe</span></div><div class='sm' style='margin-top:16px'>It says it will cover the losses. Tether and Circle froze over $2B.</div>"},
+            {"kind": "html", "a": 34.7, "b": 37.5, "html": "<div class='mid'>Deposits and withdrawals:<br><span class='red'>paused</span></div>"},
+            {"kind": "checks", "a": 37.5, "b": 45.9, "kick": "What to do", "title": "Right now", "items": [{"t": "Don't panic-sell", "d": 1.8}, {"t": "Don't click \"refund\" or \"verify\" links", "d": 3.5}]},
+            {"kind": "html", "a": 45.9, "b": 51.9, "html": "<div class='mid'>On an exchange: <span class='red'>a promise.</span><br>In your wallet: <span class='yel'>yours.</span></div>"},
+            {"kind": "html", "a": 51.9, "b": dur + 1, "html": FOLLOW.format("Send this to someone who keeps everything on one exchange.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex30-binance1", timeline)
+
+
+def binance2_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "glass-keys.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 3.9, "html": "<div class='kick'>Crypto · scams</div><div class='mid'>Binance was hacked.<br><span class='red'>Now scammers want you.</span></div>"},
+            {"kind": "checks", "a": 3.9, "b": 15.6, "kick": "Fake messages", "title": "Coming to your DMs", "items": [{"t": "\"Binance compensation: claim your refund\"", "d": 3.4}, {"t": "\"Your account is at risk. Verify now\"", "d": 6.0}, {"t": "\"Move funds to this safe wallet\"", "d": 9.3}]},
+            {"kind": "html", "a": 15.6, "b": 16.8, "html": "<div class='mid'><span class='red'>All fake.</span></div>"},
+            {"kind": "checks", "a": 16.8, "b": 25.7, "kick": "The rule", "title": "Remember", "items": [{"t": "Binance won't DM you first", "d": 1.2}, {"t": "No agent asks for your password, 2FA or seed phrase", "d": 3.2}]},
+            {"kind": "html", "a": 25.7, "b": 33.7, "html": "<div class='mid'>Updates come in the<br><span class='yel'>official app</span></div><div class='sm' style='margin-top:16px'>Or a site you type in yourself. Never a link someone sent you.</div>"},
+            {"kind": "html", "a": 33.7, "b": 38.1, "html": "<div class='mid'>Rushing you?<br><span class='red'>Urgency is the scam.</span></div>"},
+            {"kind": "html", "a": 38.1, "b": dur + 1, "html": FOLLOW.format("Send this to anyone with money on Binance.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex31-binance2", timeline)
+
+
+def binance3_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "twin-keys.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 6.6, "html": "<div class='kick'>Crypto · safety</div><div class='mid'>Exchange or<br><span class='yel'>your own wallet?</span></div><div class='sm' style='margin-top:16px'>After the Binance hack, everyone's asking.</div>"},
+            {"kind": "html", "a": 6.6, "b": 17.4, "html": "<div class='kick'>On an exchange</div><div class='mid'><span class='yel'>They</span> hold the keys</div><div class='sm' style='margin-top:16px'>Easy, and big exchanges can cover losses. Hacked or frozen? You wait.</div>"},
+            {"kind": "html", "a": 17.4, "b": 27.7, "html": "<div class='kick'>In your own wallet</div><div class='mid'><span class='yel'>You</span> hold the keys</div><div class='sm' style='margin-top:16px'>Nobody can freeze it. Nobody can rescue it. Lose the seed phrase, it's gone.</div>"},
+            {"kind": "html", "a": 27.7, "b": 34.0, "html": "<div class='kick'>And DeFi?</div><div class='mid'><span class='red'>Smart contracts<br>get hacked too.</span></div>"},
+            {"kind": "checks", "a": 34.0, "b": 48.7, "kick": "The smart move", "title": "Split it", "items": [{"t": "Trading money on the exchange", "d": 2.0}, {"t": "Savings in a wallet you control", "d": 4.6}, {"t": "Hardware wallet from the official store", "d": 7.6}, {"t": "Seed phrase on paper, never online", "d": 11.2}]},
+            {"kind": "html", "a": 48.7, "b": dur + 1, "html": FOLLOW.format("Send this to a friend who keeps everything on one app.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex32-binance3", timeline)
+
+
+SPECS = {"ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

@@ -1,0 +1,24 @@
+Binance didn't lose billions to a bug in its code. It lost them to one key.
+
+Overnight, Binance suffered what's being called the biggest crypto hack in history, with around $6 billion impacted. North Korea-linked hackers are suspected.
+
+As someone who audits smart contracts, here's the part that should keep every builder up at night.
+
+Early reports say the attackers got the signing key to one of Binance's hot wallets. Then they used an Ethereum feature called EIP-7702 to turn that wallet into a "sweeper", quietly forwarding funds to their own address.
+
+No exotic exploit. One key.
+
+Three lessons:
+
+1. Your security is only as strong as your key management. Audited code doesn't help if one key controls the vault.
+
+2. "Decentralised" is a spectrum. Tether and Circle froze more than $2.4 billion of the stolen stablecoins within hours. Good for the victims. Also a reminder of who really holds the switch.
+
+3. Users carry the risk either way. On an exchange, you trust their security team. In your own wallet, you are the security team.
+
+Binance says user funds are safe and it will cover the losses. Deposits and withdrawals are paused while it investigates.
+
+For builders: how many single keys can move money in your system today?
+For everyone else: where is your crypto right now, and who holds the key?
+
+Education, not financial advice.

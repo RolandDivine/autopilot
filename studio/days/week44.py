@@ -152,11 +152,12 @@ def build(day, d):
         slot.update({"title": f"LinkedIn: {kicker}", "kind": "story"})
     if d.get("ig"):
         IG.mkdir(parents=True, exist_ok=True)
-        cover(GEN / "job-envelope.png", JOB_HOOK, IG / "job-0.jpg", kicker="Money · safety")
-        rest = carousel(JOB_SLIDES, "Money · safety", IG, "job", offset=1)
-        media = ["instagram/job-0.jpg"] + [f"instagram/{Path(p).name}" for p in rest]
-        alt = ["Abstract image: a golden envelope hanging from a fishing line in the dark. Text: Paying for a job? It's not a job."] + \
-              ["Chat: " + " ".join(re.sub(r"[*=]", "", t).replace("\n", ", ") for _, t in s) for s in JOB_SLIDES]
+        # Roland, 30 Oct: chat-first carousels got ~2x the views of designed covers, so the first slide is the chat itself
+        for old in IG.glob("job-*.jpg"):
+            old.unlink()
+        rest = carousel(JOB_SLIDES, "Money · safety", IG, "job", offset=0)
+        media = [f"instagram/{Path(p).name}" for p in rest]
+        alt = ["Chat: " + " ".join(re.sub(r"[*=]", "", t).replace("\n", ", ") for _, t in s) for s in JOB_SLIDES]
         slot["instagram"] = {"enabled": True, "caption": JOB_CAP, "media": media, "music": "Sade – Smooth Operator", "alt": alt}
         slot.update({"title": "How to: spot a fake job offer (Nigeria)", "kind": "lesson"})
     (Q / "0800.json").write_text(json.dumps(slot, indent=1, ensure_ascii=False))
@@ -170,4 +171,5 @@ def build(day, d):
 
 if __name__ == "__main__":
     for day, d in DAYS.items():
-        build(day, d)
+        if len(sys.argv) < 2 or day in sys.argv[1:]:
+            build(day, d)

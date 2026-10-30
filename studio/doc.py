@@ -176,24 +176,28 @@ def sfx(spec, out, dur):
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-filter_complex",
                     f"sine=f=55:d={dur}[a];sine=f=82.4:d={dur}[b];[a][b]amix=2,tremolo=f=0.25:d=0.4,volume=0.16,"
                     f"afade=t=in:d=1.5,afade=t=out:st={dur - 2}:d=2", "-ar", "48000", str(tmp / "drone.wav")], check=True)
-    # mix events in batches (ffmpeg input limits): build each kind as one track with adelay copies
-    tracks = [str(tmp / "drone.wav")]
-    for k in gen:
-        times = [at for kk, at in auto_sfx(spec) if kk == k]
-        if not times:
-            continue
-        parts = ";".join(f"[0:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=mono,adelay={int(a*1000)}|{int(a*1000)}[x{j}]"
-                         for j, a in enumerate(times))
-        mix = "".join(f"[x{j}]" for j in range(len(times)))
-        trk = tmp / f"trk_{k}.wav"
-        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(tmp / f"{k}.wav"), "-filter_complex",
-                        f"{parts};{mix}amix=inputs={len(times)}:normalize=0,apad,atrim=0:{dur}[o]", "-map", "[o]",
-                        "-ar", "48000", "-ac", "1", str(trk)], check=True)
-        tracks.append(str(trk))
-    ins = sum([["-i", x] for x in tracks], [])
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", *ins, "-filter_complex",
-                    "".join(f"[{j}:a]" for j in range(len(tracks))) + f"amix=inputs={len(tracks)}:normalize=0,atrim=0:{dur}[o]",
-                    "-map", "[o]", "-ar", "48000", "-ac", "1", str(out)], check=True)
+    # mix events directly in numpy (an ffmpeg amix of dozens of delayed copies is extremely slow)
+    import numpy as np
+    SR = 48000
+
+    def load(p):
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(p), "-ar", str(SR), "-ac", "1", "-f", "f32le",
+                        str(p) + ".raw"], check=True)
+        return np.fromfile(str(p) + ".raw", dtype=np.float32)
+
+    n = int(dur * SR)
+    mix = np.zeros(n, np.float32)
+    d = load(tmp / "drone.wav")[:n]
+    mix[:len(d)] = d * 0.5
+    cache = {k: load(tmp / f"{k}.wav") for k in gen}
+    for k, at in auto_sfx(spec):
+        snd, i = cache[k], int(at * SR)
+        if i < n:
+            j = min(n, i + len(snd))
+            mix[i:j] += snd[:j - i]
+    mix.tofile(str(tmp / "mix.raw"))
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", str(tmp / "mix.raw"),
+                    str(out)], check=True)
 
 
 def render(spec, out, preview=None):

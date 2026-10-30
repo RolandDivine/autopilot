@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CSS = face("Jakarta", "plus-jakarta-sans", (800,))
 
 THUMBS = {
+    "binance": {"img": ROOT / "assets/gen/black-cube.jpg", "l1": "$6 BILLION", "l2": "ONE KEY", "tag": "BINANCE HACK"},
     "revoke": {"img": ROOT / "assets/viral/howto-revoke/drain.png", "l1": "REVOKE", "l2": "THIS NOW", "tag": "UNLIMITED"},
 }
 

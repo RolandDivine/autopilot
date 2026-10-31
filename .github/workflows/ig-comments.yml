@@ -1,0 +1,27 @@
+name: ig-comments
+
+# Lists recent Instagram comments; with comment_id + text, posts a reply.
+on:
+  workflow_dispatch:
+    inputs:
+      comment_id: {description: "comment to reply to (blank = list)", required: false, default: ""}
+      text: {description: "reply text", required: false, default: ""}
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - run: python scripts/ig_comments.py "$CID" "$TXT"
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          CID: ${{ inputs.comment_id }}
+          TXT: ${{ inputs.text }}

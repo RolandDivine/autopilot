@@ -1,0 +1,39 @@
+{
+ "title": "How to: check for the fake Claude Code extension (Cursor)",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": true,
+  "caption": "Is Cursor's Claude Code extension safe? Check your computer for this one key 🔑\n\nA fake version sat in Cursor's marketplace for about 11 hours and tried to open a secret door into your machine. The 1-minute check and what to do if you find it. Swipe →\n\n💬 Comment: do you check the publisher before you install?\n📌 Save it · 📤 Send it to a friend who codes with AI\n🔔 Follow @defi_ring_master\n\n#cybersecurity #aitools #cursor #coding #developers",
+  "media": [
+   "instagram/ext-1.jpg",
+   "instagram/ext-2.jpg",
+   "instagram/ext-3.jpg",
+   "instagram/ext-4.jpg",
+   "instagram/ext-5.jpg",
+   "instagram/ext-6.jpg",
+   "instagram/ext-7.jpg",
+   "instagram/ext-8.jpg"
+  ],
+  "music": "Anita Baker – Sweet Love",
+  "alt": [
+   "Chat: Roland, I code with AI in Cursor. Someone said an extension there had a backdoor? 😳 True. On 29 Oct, fake versions of the \"Claude Code\" extension sat in Cursor's marketplace for about 11 hours. Versions 2.1.312 and 2.1.313. Not made by Anthropic.",
+   "Chat: What it did 🚪 Sent the attacker your username, computer name, Git email and IP address. Then tried to add a hidden SSH key: a secret door into your computer.",
+   "Chat: I'll just uninstall it then 👍🏾 Not enough. It dropped its own scripts that keep retrying the connection every 60 seconds. Cursor says uninstalling may not remove it.",
+   "Chat: How to check in 1 minute ✅ Look in your SSH authorized_keys file for a key named svc-telemetry. Cursor's notice has a one-line check for Mac and Windows. No key  not affected.",
+   "Chat: Found it? 🚨 Run Cursor's clean-up script from the notice. If unsure, rebuild the machine. From a clean device, change your passwords, tokens and API keys.",
+   "Chat: The lesson for every AI tool 🧠 A famous name in a marketplace is not proof it's real. Every extension can run code on your machine. Install fewer. Check the publisher.",
+   "Chat: Your turn 👇 Do you check an extension's publisher before you install it? Be honest. Yes, no, or \"I do now\" 💬",
+   "Chat: 📌 Save this · 📤 Send it to a friend who codes with AI Follow @defi_ring_master and turn on 🔔 to join a community learning AI and money safety together. Source: Cursor security notice, 29 Oct 2026."
+  ]
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "If you code with AI in Cursor, check your computer for one key today.\n\nOn 29 October, fake versions of the \"Claude Code\" extension sat in Cursor's marketplace for about 11 hours. Not made by Anthropic. Versions 2.1.312 and 2.1.313.\n\nWhat they did:\n\n→ Sent the attacker your username, computer name, Git email and IP address.\n→ Tried to add a hidden SSH key, a back door into your machine.\n→ Installed scripts that retry that connection every 60 seconds. Cursor says uninstalling the extension may not remove them.\n\nThe 1-minute check: look in your SSH authorized_keys file for a key named svc-telemetry. Cursor's notice has a one-line command for Mac and Windows. Found it? Run Cursor's clean-up script, then rotate your passwords, tokens and API keys from a clean device.\n\nTo Cursor's credit, they pulled it the same day, rebuilt the marketplace and published the indicators.\n\nHere's what I'd do as a builder: treat every extension like a new hire with the keys to your laptop. Fewer of them, a known publisher, and a reason for each one. A famous name in a marketplace is not proof it's real.\n\nThe guide is in the PDF. Save it for your team.\n\nA question for developers:\nHow many extensions are installed in your editor right now, and could you name who publishes each one?",
+  "media": "media/fake-extension.pdf",
+  "media_title": "Fake Claude Code extension: the 1-minute check",
+  "first_comment": "Source: Cursor, \"Security notice: malicious version of Anthropic.claude-code (2.1.312 and 2.1.313)\", 29 Oct 2026 (updated 30 Oct): https://cursor.com/blog/claude-code-extension-security-notice"
+ }
+}

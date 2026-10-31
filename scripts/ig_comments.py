@@ -19,7 +19,9 @@ for m in media:
         continue
     cap = (m.get("caption") or "").split("\n")[0][:70]
     print(f"\n=== {m['timestamp']} {m['permalink']} | {cap}")
-    cs = c._req("get", f"{m['id']}/comments", params={"fields": "id,text,username,timestamp,replies{id,text,username,timestamp}", "limit": 50}).get("data", [])
+    raw = c._req("get", f"{m['id']}/comments", params={"fields": "id,text,username,timestamp,like_count,hidden,replies{id,text,username,timestamp}", "limit": 50})
+    cs = raw.get("data", [])
+    print(f"  count={m.get('comments_count')} returned={len(cs)} raw={str(raw)[:600]}")
     for x in cs:
         print(f"  [{x['id']}] {x['timestamp']} @{x.get('username')}: {x.get('text')}")
         for y in (x.get("replies") or {}).get("data", []):

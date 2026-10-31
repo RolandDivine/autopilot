@@ -13,6 +13,10 @@ if len(sys.argv) >= 3 and sys.argv[1] and sys.argv[2]:
     r = c._req("post", f"{sys.argv[1]}/replies", data={"message": sys.argv[2]})
     print("::notice title=replied::", r)
     sys.exit(0)
+if len(sys.argv) >= 2 and sys.argv[1] == "media":
+    for m in c._req("get", f"{c.user_id}/media", params={"fields": "caption,permalink,timestamp", "limit": 12}).get("data", []):
+        print("MEDIA", m["timestamp"], m["permalink"], (m.get("caption") or "").split("\n")[0][:60], "|", "Part 14 of 15" in (m.get("caption") or ""))
+    sys.exit(0)
 media = c._req("get", f"{c.user_id}/media", params={"fields": "id,caption,permalink,timestamp,comments_count", "limit": 15}).get("data", [])
 for m in media:
     if not m.get("comments_count"):

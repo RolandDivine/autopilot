@@ -33,7 +33,8 @@ def run_day(day, now):
         for line in open(log):
             try:
                 r = json.loads(line)
-                if r.get("ok"):
+                # once Instagram has it, never re-post the video (1 Nov: a YouTube failure re-posted a Reel twice)
+                if r.get("ok") or "instagram-publish.yml', 'success'" in r.get("out", ""):
                     done.add((r["date"], r["key"]))
             except Exception:
                 pass

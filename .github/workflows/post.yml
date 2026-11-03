@@ -1,8 +1,12 @@
 name: post
 
 on:
-  # Roland, 29 Oct 2026: "Stop letting GitHub do that". No GitHub timer: the Claude session dispatches this at each slot
-  # time (dry_run=false). GitHub only executes.
+  # Roland, 3 Nov 2026: back on GitHub's timer, built so a late or dropped tick never matters.
+  # Every 5 minutes, 06:03-21:58 UTC (7 AM-11 PM Lagos), at off-peak minutes (never :00, GitHub's busiest).
+  # Each run posts only what is due and not yet in log/posted.jsonl, so extra runs are harmless and a dropped one
+  # is covered 5 minutes later. An external timer (cron-job.org, see studio/NIGHTLY.md) can also dispatch it.
+  schedule:
+    - cron: "3-58/5 6-21 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

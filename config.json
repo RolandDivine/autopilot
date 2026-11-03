@@ -53,6 +53,6 @@
   "instagram_max_chars": 2200,
   "instagram_max_hashtags": 5,
   "instagram_autopost": true,
-  "story_grace_minutes": 1440,
+  "story_grace_minutes": 180,
   "youtube_client_id": "698449796283-9voqlkmf1jnh9tgev59fmdaiq11228l1.apps.googleusercontent.com"
 }

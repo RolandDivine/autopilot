@@ -5,7 +5,7 @@ Platforms: LinkedIn (RolandDivine2) and Instagram (@defi_ring_master) both post 
 > **Read `studio/STORY_GUIDE.md` first (Roland, 24 Oct 2026).** Every piece is designed with ABC (Act, Believe, Care) and delivered with STORY (Stage, Tension, Opportunity, Resolution, Yes), selling the audience's real desire. Run its checklist before anything ships.
 
 ## POSTING (Roland, 3 Nov 2026: back on GitHub's timer, Claude out of the loop)
-post.yml and videos.yml run on GitHub cron every 5 minutes, 06:00-22:00 UTC, at off-peak minutes. Each run posts only what is due
+clock.yml (a self-renewing Action, ~5h40m per run, restarted hourly by cron if the chain breaks) dispatches post.yml and videos.yml every 5 minutes, exactly on time; their own GitHub cron is a backup. post.yml and videos.yml run, 06:00-22:00 UTC, at off-peak minutes. Each run posts only what is due
 and not yet logged, so a late or dropped GitHub tick is covered by the next one. overdue.yml (hourly) opens an "action-needed" issue
 if anything is >40 min late. No Claude session triggers or watches posting any more (that cost far too many tokens). The nightly
 build does NOT dispatch post.yml/videos.yml except to post something it built for a time that has already passed.

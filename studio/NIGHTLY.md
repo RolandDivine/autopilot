@@ -154,3 +154,6 @@ Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key
   - Explainer exNN: add a `*_spec()` to `studio/explainers.py` (cards anchored on words with `at()`, one generated vertical background image in assets/gen), preview, look, render.
   - Write `queue/vo/posts-<date>.json` (video, title, youtube true only for crypto, playlist, reel_caption, li_text) like `posts-2026-10-21.json`, commit the mp4s, set both Notion rows to Scheduled.
   - Don't book runs: the `videos` workflow posts them at 11:00 / 17:00 UTC (or the entry's "at"). Next night, reconcile `log/videos.jsonl` into Notion. post_video.py also posts the video to Instagram Stories by default, cut into parts of 60 s or less at natural pauses (Roland, 20 Oct 2026: always do this, every video).
+
+## MANUAL CATCH-UP POSTS (3 Nov lesson)
+The runner re-posts any slot still within slot_grace_minutes (24h) that has no line in log/posted.jsonl. If you ever post a slot by hand (instagram-publish / linkedin-publish), append its line to log/posted.jsonl FIRST, in the same commit, or the next run posts it a second time.

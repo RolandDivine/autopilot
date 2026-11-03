@@ -1,0 +1,41 @@
+name: clock
+
+# Roland, 3 Nov 2026: posts must go out on time. GitHub's own cron is unreliable (late by hours or dropped), so this
+# workflow is the clock. One run stays alive ~5h40m and every 5 minutes (06:00-22:00 UTC) dispatches post.yml and
+# videos.yml, then starts its own successor before it ends. Both runners skip anything already posted, so extra
+# dispatches are harmless. The hourly cron below only restarts the clock if the chain ever breaks.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "11 * * * *"
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - name: Run the clock
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ME: ${{ github.run_id }}
+        run: |
+          others=$(gh api "repos/$REPO/actions/workflows/clock.yml/runs?status=in_progress" \
+            -q "[.workflow_runs[] | select(.id != $ME)] | length")
+          if [ "$others" -gt 0 ]; then echo "another clock is running; exiting"; exit 0; fi
+          end=$(( $(date +%s) + 340*60 ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            h=$(date -u +%-H); m=$(date -u +%-M)
+            if [ "$h" -ge 6 ] && [ "$h" -le 21 ] && [ $((m % 5)) -eq 0 ]; then
+              echo "tick $(date -u +%H:%M)"
+              gh api -X POST "repos/$REPO/actions/workflows/post.yml/dispatches" -f ref=main -F "inputs[dry_run]=false" || true
+              gh api -X POST "repos/$REPO/actions/workflows/videos.yml/dispatches" -f ref=main || true
+              sleep 60
+            fi
+            sleep 20
+          done
+          gh api -X POST "repos/$REPO/actions/workflows/clock.yml/dispatches" -f ref=main && echo "successor started"

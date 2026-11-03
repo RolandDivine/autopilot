@@ -11,6 +11,8 @@ if anything is >40 min late. No Claude session triggers or watches posting any m
 build does NOT dispatch post.yml/videos.yml except to post something it built for a time that has already passed.
 Token rules: keep the nightly run short. Build, check, commit, push, then stop. Don't read images unless you have to. Don't poll in loops. No chat messages unless something needs Roland.
 
+## STATUS (3 Nov 2026 nightly): Wed 4 + Thu 5 Nov built (studio/days/week45c.py). Next: build Fri 6 + Sat 7. Week 45 already has its 2 IG carousels (Tue, Wed). Reel bank next: ex06 Mt Gox, ex08 ETF, ex19, ex11, ex12, ex13, ex16; cut each to 30-40 s with `studio/splice.py` before rendering.
+
 ## STATUS (28 Oct 2026, 19:40 Lagos nightly): Wed 28 Oct – Mon 2 Nov are fully built and pushed
 Do NOT rebuild queue/2026-10-29..2026-11-02 or queue/vo/posts-2026-10-29..2026-11-02.json (built by studio/days/week44.py and
 studio/days/week45.py). Next nightly: reconcile, then build Tue 3 Nov (+ Wed 4). Reels left in the Fish ELITE bank for the 12:00 slot,

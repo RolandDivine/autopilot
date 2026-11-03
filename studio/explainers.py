@@ -428,7 +428,37 @@ def binance3_spec():
     return viral.std("ex32-binance3", timeline)
 
 
-SPECS = {"ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def passkeys_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "twin-keys.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 5.1, "html": "<div class='kick'>AI era · safety</div><div class='mid'>Never type a<br><span class='yel'>password again</span></div>"},
+            {"kind": "html", "a": 5.1, "b": 15.0, "html": "<div class='kick'>A passkey</div><div class='mid'>A login that lives<br><span class='yel'>on your device</span></div><div class='sm' style='margin-top:16px'>You unlock it with your fingerprint, face or screen lock.</div>"},
+            {"kind": "checks", "a": 15.0, "b": 29.5, "kick": "Why it's safer", "title": "Nothing to steal", "items": [{"t": "No password to leak", "d": 1.5}, {"t": "Fake sites can't trick you into typing it", "d": 4.4}, {"t": "Works only on the real site", "d": 8.0}, {"t": "Stops most phishing", "d": 12.2}]},
+            {"kind": "checks", "a": 29.5, "b": 34.5, "kick": "Tonight", "title": "Turn it on", "items": [{"t": "Google or Apple account → Security", "d": 0.3}, {"t": "Create a passkey", "d": 3.0}]},
+            {"kind": "html", "a": 34.5, "b": dur + 1, "html": FOLLOW.format("Send this to someone who reuses one password everywhere.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex15-passkeys-cut", timeline)
+
+
+def gasfees_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "coin-siphon.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 5.5, "html": "<div class='kick'>Crypto · money</div><div class='mid'>Cents or<br><span class='red'>many dollars?</span></div><div class='sm' style='margin-top:16px'>The same transfer can cost very different fees.</div>"},
+            {"kind": "html", "a": 5.5, "b": 8.2, "html": "<div class='kick'>The fee is called</div><div class='mid'><span class='yel'>Gas</span></div>"},
+            {"kind": "html", "a": 8.2, "b": 19.2, "html": "<div class='kick'>Like a busy road</div><div class='mid'>Hype or a crash?<br><span class='red'>Fees rise</span></div><div class='sm' style='margin-top:16px'>Block space is limited, so people bid to get in first.</div>"},
+            {"kind": "checks", "a": 19.2, "b": 36.9, "kick": "Pay less", "title": "3 tips", "items": [{"t": "Check the fee before you confirm", "d": 0.2}, {"t": "Not urgent? Wait for a quieter time", "d": 3.5}, {"t": "Use layer 2: Arbitrum, Base, Optimism", "d": 8.0}]},
+            {"kind": "html", "a": 36.9, "b": dur + 1, "html": FOLLOW.format("Send this to a friend who overpaid on fees.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex07-gasfees-cut", timeline)
+
+
+SPECS = {"ex15-passkeys-cut": passkeys_spec, "ex07-gasfees-cut": gasfees_spec, "ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

@@ -1,0 +1,16 @@
+{
+ "title": "LinkedIn: passkeys, the password you never type",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "The safest password is the one you never type.\n\nMost account takeovers still start with a typed password: phished, leaked or reused. Passkeys remove the thing being stolen.\n\nHow a passkey works:\n\n→ It's a login stored on your phone or laptop. You unlock it with your fingerprint, face or screen lock.\n→ The site gets proof it's you, not a password. A data leak has nothing reusable to spill.\n→ It only works on the real site it was made for, so a perfect fake login page gets nothing.\n\nThat last point is why the FIDO Alliance calls passkeys phishing-resistant. Google made them the default option for personal Google Accounts in October 2023, and Apple, Microsoft and many banks and apps support them.\n\nThe catch nobody mentions: your phone becomes the key. Keep a strong screen lock, and keep your account recovery options up to date before you need them.\n\nHere's what I'd do tonight: open your Google or Apple account security settings, create a passkey, then turn one on for your email first. Your email resets every other password you own.\n\nA question for you:\nWhich account would hurt most if someone got into it tomorrow, and does it have a passkey yet?",
+  "media": "media/li-cover.jpg",
+  "first_comment": "Sources: FIDO Alliance, \"Passkeys\": https://fidoalliance.org/passkeys/ · Google, \"Passkeys are now the default for Google Accounts\" (Oct 2023): https://blog.google/technology/safety-security/passkeys-default-google-accounts/"
+ }
+}

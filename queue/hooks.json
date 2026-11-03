@@ -227,6 +227,42 @@
      "style": "myth"
     }
    ]
+  },
+  "ex15": {
+   "date": "2026-11-04",
+   "caption_start": "How to set up a passkey: never type a password again",
+   "used": {
+    "text": "Passwords get phished | Passkeys don't",
+    "style": "myth"
+   },
+   "variants": [
+    {
+     "text": "Your password leaks | Passkeys don't",
+     "style": "warning"
+    },
+    {
+     "text": "Delete your password | tonight",
+     "style": "curiosity"
+    }
+   ]
+  },
+  "ex07": {
+   "date": "2026-11-05",
+   "caption_start": "Crypto gas fees explained: stop overpaying",
+   "used": {
+    "text": "Stop overpaying | crypto fees",
+    "style": "mistake"
+   },
+   "variants": [
+    {
+     "text": "Cents or $20? | Same transfer",
+     "style": "number"
+    },
+    {
+     "text": "Your wallet fee | is too high",
+     "style": "stake"
+    }
+   ]
   }
  }
 }

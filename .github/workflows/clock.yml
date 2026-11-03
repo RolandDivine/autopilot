@@ -24,8 +24,13 @@ jobs:
           REPO: ${{ github.repository }}
           ME: ${{ github.run_id }}
         run: |
-          others=$(gh api "repos/$REPO/actions/workflows/clock.yml/runs?status=in_progress" \
-            -q "[.workflow_runs[] | select(.id != $ME)] | length")
+          # a predecessor that just started us finishes within seconds; a long-running clock means we're a duplicate
+          for i in 1 2 3 4 5 6 7 8; do
+            others=$(gh api "repos/$REPO/actions/workflows/clock.yml/runs?status=in_progress" \
+              -q "[.workflow_runs[] | select(.id != $ME)] | length")
+            [ "$others" -eq 0 ] && break
+            sleep 15
+          done
           if [ "$others" -gt 0 ]; then echo "another clock is running; exiting"; exit 0; fi
           end=$(( $(date +%s) + 340*60 ))
           while [ "$(date +%s)" -lt "$end" ]; do

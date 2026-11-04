@@ -11,6 +11,8 @@ if anything is >40 min late. No Claude session triggers or watches posting any m
 build does NOT dispatch post.yml/videos.yml except to post something it built for a time that has already passed.
 Token rules: keep the nightly run short. Build, check, commit, push, then stop. Don't read images unless you have to. Don't poll in loops. No chat messages unless something needs Roland.
 
+## STATUS (4 Nov 2026 nightly): Fri 6 + Sat 7 Nov built (studio/days/week45d.py): Fri LinkedIn Paystack/Moniepoint (IG off), ex06 Mt Gox + ex08 ETF Reels (40/38 s), stories both days. Sat has no slot file (no LinkedIn on weekends, IG carousel cap) — only stories + Reel. Next: Sun 8 + Mon 9 (week 46: 2 new IG carousels allowed). Reel bank next: ex19, ex11, ex12, ex13, ex16. video_runner now pushes a claim line before posting (ex15 was double-posted on 4 Nov by two overlapping runs).
+
 ## STATUS (3 Nov 2026 nightly): Wed 4 + Thu 5 Nov built (studio/days/week45c.py). Next: build Fri 6 + Sat 7. Week 45 already has its 2 IG carousels (Tue, Wed). Reel bank next: ex06 Mt Gox, ex08 ETF, ex19, ex11, ex12, ex13, ex16; cut each to 30-40 s with `studio/splice.py` before rendering.
 
 ## STATUS (28 Oct 2026, 19:40 Lagos nightly): Wed 28 Oct – Mon 2 Nov are fully built and pushed

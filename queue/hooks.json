@@ -263,6 +263,42 @@
      "style": "stake"
     }
    ]
+  },
+  "ex06": {
+   "date": "2026-11-06",
+   "caption_start": "Crypto exchange is not a vault: the Mt. ",
+   "used": {
+    "text": "Your exchange | is not a vault",
+    "style": "myth"
+   },
+   "variants": [
+    {
+     "text": "850,000 BTC | gone",
+     "style": "number"
+    },
+    {
+     "text": "Your coins | aren't yours",
+     "style": "stake"
+    }
+   ]
+  },
+  "ex08": {
+   "date": "2026-11-07",
+   "caption_start": "Bitcoin ETF explained: you get the price",
+   "used": {
+    "text": "Bitcoin ETF? | You don't hold keys",
+    "style": "curiosity"
+   },
+   "variants": [
+    {
+     "text": "Bitcoin ETF | the catch",
+     "style": "warning"
+    },
+    {
+     "text": "Price yes | coins no",
+     "style": "myth"
+    }
+   ]
   }
  }
 }

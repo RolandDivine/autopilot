@@ -1,0 +1,16 @@
+{
+ "title": "LinkedIn: Paystack and Moniepoint, the 5- and 9-year overnight successes",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "Paystack took five years to become an \"overnight\" success. Moniepoint took nine.\n\nIf you're two years into building something and it still feels small, read this before you quit.\n\nPaystack started in 2015. In October 2020, Stripe bought it, in a deal reported at over $200 million.\n\nMoniepoint also started in 2015, as TeamApt, building banking software for other companies. In October 2024 it raised $110 million and was valued at over $1 billion.\n\nFrom the outside, both looked sudden. From the inside, it was years of work most people never saw.\n\nWhat I take from it as a builder:\n\n→ Consistency beats intensity. Five years of showing up beats five brilliant weeks.\n→ Boring problems pay. Payments, POS, business banking. Real pain, real customers.\n→ Build together. Neither company was built by one person. Find the people you can build with for a decade.\n\nNigeria doesn't lack talent. What separates the winners is staying in the game long enough for the compounding to show.\n\nA question for builders reading this:\nWhat's one thing you've kept doing for more than a year, even when nobody was watching?",
+  "media": "media/li-cover.jpg",
+  "first_comment": "Sources: Stripe, \"Paystack joins Stripe\" (Oct 2020): https://stripe.com/newsroom/news/paystack-joins-stripe · Nairametrics, \"Moniepoint valued at $1 billion\" (Oct 2024): https://nairametrics.com/2024/10/29/moniepoint-valued-at-1-billion-as-google-others-invest-110-million"
+ }
+}

@@ -458,7 +458,40 @@ def gasfees_spec():
     return viral.std("ex07-gasfees-cut", timeline)
 
 
-SPECS = {"ex15-passkeys-cut": passkeys_spec, "ex07-gasfees-cut": gasfees_spec, "ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def mtgox_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "glass-house.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 4.6, "html": "<div class='kick'>Crypto · safety</div><div class='mid'>An exchange is<br><span class='red'>not a vault</span></div>"},
+            {"kind": "html", "a": 4.6, "b": 13.5, "html": "<div class='kick'>Before FTX</div><div class='mid'>Mt. Gox<br><span class='red'>Feb 2014: withdrawals stop</span></div><div class='sm' style='margin-top:16px'>Then bankruptcy. It was the biggest Bitcoin exchange in the world.</div>"},
+            {"kind": "html", "a": 13.5, "b": 20.3, "html": "<div class='kick'>Missing</div><div class='mid'><span class='red'>~850,000 BTC</span></div><div class='sm' style='margin-top:16px'>Lost to hacks that went on for years.</div>"},
+            {"kind": "html", "a": 20.3, "b": 25.7, "html": "<div class='kick'>Customers waited</div><div class='mid'><span class='yel'>A decade</span></div><div class='sm' style='margin-top:16px'>Repayments only started in 2024.</div>"},
+            {"kind": "html", "a": 25.7, "b": 30.1, "html": "<div class='kick'>What went wrong</div><div class='mid'>The exchange<br><span class='yel'>held the keys</span></div>"},
+            {"kind": "checks", "a": 30.1, "b": 37.0, "kick": "Holding long-term?", "title": "Do this", "items": [{"t": "Learn self-custody", "d": 2.0}, {"t": "Seed phrase on paper, never online", "d": 4.4}]},
+            {"kind": "html", "a": 37.0, "b": dur + 1, "html": FOLLOW.format("Send this to a friend who keeps all their crypto on one app.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex06-mtgox-cut", timeline)
+
+
+def etf_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "black-cube.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 8.3, "html": "<div class='kick'>Crypto · money</div><div class='mid'>Bitcoin ETF<br><span class='yel'>a fund, like a share</span></div><div class='sm' style='margin-top:16px'>A spot ETF holds real Bitcoin.</div>"},
+            {"kind": "html", "a": 8.3, "b": 13.7, "html": "<div class='kick'>You get</div><div class='mid'>The price<br><span class='red'>not the coins</span></div>"},
+            {"kind": "checks", "a": 13.7, "b": 24.3, "kick": "The trade-offs", "title": "The catch", "items": [{"t": "A yearly fee", "d": 1.4}, {"t": "Trades only in market hours", "d": 3.1}, {"t": "No keys: you can't send it", "d": 6.0}]},
+            {"kind": "html", "a": 24.3, "b": 30.8, "html": "<div class='kick'>ETF or self-custody?</div><div class='mid'><span class='yel'>Simplicity</span><br>or <span class='yel'>control</span></div>"},
+            {"kind": "html", "a": 30.8, "b": 37.0, "html": "<div class='kick'>Either way</div><div class='mid'>A wrapper<br><span class='red'>doesn't remove the risk</span></div><div class='sm' style='margin-top:16px'>Education, not financial advice.</div>"},
+            {"kind": "html", "a": 37.0, "b": dur + 1, "html": FOLLOW.format("Send this to a friend asking how to buy Bitcoin.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex08-etf-cut", timeline)
+
+
+SPECS = {"ex06-mtgox-cut": mtgox_spec, "ex08-etf-cut": etf_spec, "ex15-passkeys-cut": passkeys_spec, "ex07-gasfees-cut": gasfees_spec, "ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

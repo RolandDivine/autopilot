@@ -22,22 +22,41 @@ def main():
         run_day(day, now)
 
 
+def load_done(log, now):
+    """(date, key) pairs already on Instagram, or claimed by a run in the last 45 minutes."""
+    done = set()
+    if not os.path.exists(log):
+        return done
+    for line in open(log):
+        try:
+            r = json.loads(line)
+            # once Instagram has it, never re-post the video (1 Nov: a YouTube failure re-posted a Reel twice)
+            if r.get("ok") or "instagram-publish.yml', 'success'" in r.get("out", ""):
+                done.add((r["date"], r["key"]))
+            elif r.get("claim") and now - dt.datetime.fromisoformat(r["at"]) < dt.timedelta(minutes=45):
+                done.add((r["date"], r["key"]))
+        except Exception:
+            pass
+    return done
+
+
+def push_log(log, msg):
+    subprocess.run(["git", "add", log], cwd=ROOT)
+    subprocess.run(["git", "commit", "-qm", msg], cwd=ROOT)
+    for _ in range(4):
+        if subprocess.run(["git", "push", "-q"], cwd=ROOT).returncode == 0:
+            return True
+        subprocess.run(["git", "pull", "-q", "--rebase"], cwd=ROOT)
+    return False
+
+
 def run_day(day, now):
     f = os.path.join(ROOT, "queue", "vo", f"posts-{day}.json")
     if not os.path.exists(f):
         print(f"no videos for {day}")
         return
     log = os.path.join(ROOT, "log", "videos.jsonl")
-    done = set()
-    if os.path.exists(log):
-        for line in open(log):
-            try:
-                r = json.loads(line)
-                # once Instagram has it, never re-post the video (1 Nov: a YouTube failure re-posted a Reel twice)
-                if r.get("ok") or "instagram-publish.yml', 'success'" in r.get("out", ""):
-                    done.add((r["date"], r["key"]))
-            except Exception:
-                pass
+    done = load_done(log, now)
     entries = json.load(open(f))
     for key, d in entries.items():
         if d.get("skip") or (day, key) in done:
@@ -47,6 +66,17 @@ def run_day(day, now):
             continue
         h, m = map(int, at.split(":"))
         if now < dt.datetime.fromisoformat(day).replace(hour=h, minute=m, tzinfo=dt.timezone.utc) and not os.environ.get("FORCE"):
+            continue
+        # 4 Nov 2026: two overlapping runs both posted ex15. Re-read the latest log and push a claim line
+        # BEFORE publishing; a fresh claim (<45 min) from another run means skip.
+        subprocess.run(["git", "pull", "-q", "--rebase"], cwd=ROOT)
+        if (day, key) in load_done(log, now):
+            print(f"{key}: already posted or claimed by another run, skipping")
+            continue
+        with open(log, "a") as fh:
+            fh.write(json.dumps({"date": day, "key": key, "at": now.isoformat(), "claim": True}) + "\n")
+        if not push_log(log, f"video {day} {key}: claim"):
+            print(f"{key}: could not push claim, will retry next tick")
             continue
         args = [sys.executable, os.path.join(ROOT, "studio", "post_video.py"), f"queue/vo/posts-{day}.json", key]
         if key.startswith("liclip"):
@@ -58,9 +88,7 @@ def run_day(day, now):
         subprocess.run(["git", "pull", "-q", "--rebase"], cwd=ROOT)
         with open(log, "a") as fh:
             fh.write(json.dumps({"date": day, "key": key, "at": now.isoformat(), "ok": ok, "out": out[-1500:]}) + "\n")
-        subprocess.run(["git", "add", log], cwd=ROOT)
-        subprocess.run(["git", "commit", "-qm", f"video {day} {key}: {'posted' if ok else 'failed'}"], cwd=ROOT)
-        subprocess.run(["git", "push", "-q"], cwd=ROOT)
+        push_log(log, f"video {day} {key}: {'posted' if ok else 'failed'}")
 
 
 if __name__ == "__main__":

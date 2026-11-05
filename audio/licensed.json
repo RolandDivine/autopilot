@@ -1,0 +1,454 @@
+[
+{
+"start": 0.0,
+"end": 2.84,
+"text": "Nigeria is one of the world's biggest crypto markets.",
+"words": [
+[
+0.0,
+0.44,
+" Nigeria"
+],
+[
+0.44,
+0.82,
+" is"
+],
+[
+0.82,
+0.98,
+" one"
+],
+[
+0.98,
+1.12,
+" of"
+],
+[
+1.12,
+1.22,
+" the"
+],
+[
+1.22,
+1.64,
+" world's"
+],
+[
+1.64,
+1.9,
+" biggest"
+],
+[
+1.9,
+2.32,
+" crypto"
+],
+[
+2.32,
+2.84,
+" markets."
+]
+]
+},
+{
+"start": 3.42,
+"end": 5.94,
+"text": "Number of fully licensed exchanges there, zero.",
+"words": [
+[
+3.42,
+3.44,
+" Number"
+],
+[
+3.44,
+3.66,
+" of"
+],
+[
+3.66,
+4.02,
+" fully"
+],
+[
+4.02,
+4.42,
+" licensed"
+],
+[
+4.42,
+4.82,
+" exchanges"
+],
+[
+4.82,
+5.28,
+" there,"
+],
+[
+5.62,
+5.94,
+" zero."
+]
+]
+},
+{
+"start": 6.44,
+"end": 7.64,
+"text": "And it isn't only Nigeria.",
+"words": [
+[
+6.44,
+6.54,
+" And"
+],
+[
+6.54,
+6.62,
+" it"
+],
+[
+6.62,
+6.86,
+" isn't"
+],
+[
+6.86,
+7.2,
+" only"
+],
+[
+7.2,
+7.64,
+" Nigeria."
+]
+]
+},
+{
+"start": 8.26,
+"end": 11.02,
+"text": "Adoption moves faster than the rules, almost everywhere.",
+"words": [
+[
+8.26,
+8.54,
+" Adoption"
+],
+[
+8.54,
+8.82,
+" moves"
+],
+[
+8.82,
+9.18,
+" faster"
+],
+[
+9.18,
+9.48,
+" than"
+],
+[
+9.48,
+9.6,
+" the"
+],
+[
+9.6,
+9.92,
+" rules,"
+],
+[
+10.2,
+10.44,
+" almost"
+],
+[
+10.44,
+11.02,
+" everywhere."
+]
+]
+},
+{
+"start": 11.5,
+"end": 13.56,
+"text": "If your exchange isn't licensed where you live,",
+"words": [
+[
+11.5,
+11.64,
+" If"
+],
+[
+11.64,
+11.8,
+" your"
+],
+[
+11.8,
+12.14,
+" exchange"
+],
+[
+12.14,
+12.56,
+" isn't"
+],
+[
+12.56,
+12.9,
+" licensed"
+],
+[
+12.9,
+13.12,
+" where"
+],
+[
+13.12,
+13.32,
+" you"
+],
+[
+13.32,
+13.56,
+" live,"
+]
+]
+},
+{
+"start": 13.98,
+"end": 16.38,
+"text": "there may be no regulator to call when things go wrong.",
+"words": [
+[
+13.98,
+14.06,
+" there"
+],
+[
+14.06,
+14.2,
+" may"
+],
+[
+14.2,
+14.34,
+" be"
+],
+[
+14.34,
+14.54,
+" no"
+],
+[
+14.54,
+14.98,
+" regulator"
+],
+[
+14.98,
+15.2,
+" to"
+],
+[
+15.2,
+15.44,
+" call"
+],
+[
+15.44,
+15.62,
+" when"
+],
+[
+15.62,
+15.86,
+" things"
+],
+[
+15.86,
+16.06,
+" go"
+],
+[
+16.06,
+16.38,
+" wrong."
+]
+]
+},
+{
+"start": 17.04,
+"end": 18.62,
+"text": "Check three things before you deposit.",
+"words": [
+[
+17.04,
+17.14,
+" Check"
+],
+[
+17.14,
+17.5,
+" three"
+],
+[
+17.5,
+17.86,
+" things"
+],
+[
+17.86,
+18.16,
+" before"
+],
+[
+18.16,
+18.3,
+" you"
+],
+[
+18.3,
+18.62,
+" deposit."
+]
+]
+},
+{
+"start": 19.2,
+"end": 20.48,
+"text": "Is it licensed in your country?",
+"words": [
+[
+19.2,
+19.3,
+" Is"
+],
+[
+19.3,
+19.44,
+" it"
+],
+[
+19.44,
+19.78,
+" licensed"
+],
+[
+19.78,
+20.0,
+" in"
+],
+[
+20.0,
+20.14,
+" your"
+],
+[
+20.14,
+20.48,
+" country?"
+]
+]
+},
+{
+"start": 21.1,
+"end": 21.94,
+"text": "Who holds the keys?",
+"words": [
+[
+21.1,
+21.26,
+" Who"
+],
+[
+21.26,
+21.5,
+" holds"
+],
+[
+21.5,
+21.72,
+" the"
+],
+[
+21.72,
+21.94,
+" keys?"
+]
+]
+},
+{
+"start": 22.46,
+"end": 23.6,
+"text": "Can you withdraw and attest?",
+"words": [
+[
+22.46,
+22.56,
+" Can"
+],
+[
+22.56,
+22.68,
+" you"
+],
+[
+22.68,
+23.04,
+" withdraw"
+],
+[
+23.04,
+23.24,
+" and"
+],
+[
+23.24,
+23.6,
+" attest?"
+]
+]
+},
+{
+"start": 24.14,
+"end": 25.62,
+"text": "Save this before your next deposit.",
+"words": [
+[
+24.14,
+24.3,
+" Save"
+],
+[
+24.3,
+24.54,
+" this"
+],
+[
+24.54,
+24.82,
+" before"
+],
+[
+24.82,
+25.0,
+" your"
+],
+[
+25.0,
+25.22,
+" next"
+],
+[
+25.22,
+25.62,
+" deposit."
+]
+]
+}
+]

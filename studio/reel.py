@@ -78,6 +78,32 @@ B.pyramid=()=>{const {s,c}=base();const P=[];const rows=5;
    P.forEach(m=>{const k=ease(clamp(u*2.4-(4-m.userData.r)*.12));m.scale.setScalar(Math.max(.001,k));});
    coins.forEach((m,i)=>{const ph=(u*1.6+i/40)%1;const ang=i*2.4;const rad=(1-ph)*1.5;
      m.position.set(Math.cos(ang)*rad,.2+ph*2.7,Math.sin(ang)*rad);m.rotation.set(ph*9,i,0);m.visible=u>.2;});}};};
+B.vault=()=>{const {s,c}=base();const v=new T.Mesh(new T.BoxGeometry(3,3,3),mat(0x3a3d44,{metalness:.95,roughness:.28}));v.position.y=1.5;v.rotation.y=-.5;s.add(v);
+ const door=new T.Mesh(new T.CylinderGeometry(1,1,.25,64),mat(0x2c2f36,{metalness:1,roughness:.25}));door.rotation.x=Math.PI/2;door.position.set(0,0,1.55);v.add(door);
+ const ring=new T.Mesh(new T.TorusGeometry(1,.06,16,80),glow(0xffd60a,1.4));ring.position.set(0,0,1.68);v.add(ring);
+ const cs=[];for(let i=0;i<50;i++){const m=new T.Mesh(new T.CylinderGeometry(.24,.24,.05,32),mat(0xf3ba2f,{metalness:1,roughness:.2,emissive:0x4a3000}));s.add(m);cs.push([m,Math.random()*Math.PI*1.2-.2,1.8+Math.random()*2.6,Math.random()]);}
+ return {s,c,update:(u)=>{c.position.set(Math.sin(.4+u*.4)*11,7,Math.cos(.4+u*.4)*11);c.lookAt(0,.8,0);door.rotation.y=-ease(clamp(u*1.5))*1.6;
+   cs.forEach(([m,a,d,r])=>{const k=ease(clamp(u*1.6-r*.5));m.position.set(Math.cos(a)*d*k-.4,.05+Math.max(0,(1-k))*1.5,Math.sin(a)*d*k+1.2);m.rotation.set(r*6,r*3,k*4);m.visible=k>0;});}};};
+B.wallet3d=()=>{const {s,c}=base();const w=new T.Mesh(new T.BoxGeometry(1.6,.35,2.6),mat(0x16181d,{metalness:.6,roughness:.35}));w.position.y=.6;s.add(w);
+ const scr=new T.Mesh(new T.BoxGeometry(1.1,.05,1.3),glow(0x2fd27a,.9));scr.position.set(0,.8,-.3);s.add(scr);
+ const b1=new T.Mesh(new T.CylinderGeometry(.16,.16,.08,32),mat(0xc9a227));b1.position.set(-.35,.8,.75);s.add(b1);const b2=b1.clone();b2.position.x=.35;s.add(b2);
+ const sh=new T.Mesh(new T.TorusGeometry(2.4,.04,16,120),glow(0x2fd27a,1.2));sh.rotation.x=Math.PI/2;sh.position.y=.6;s.add(sh);
+ return {s,c,update:(u)=>{c.position.set(Math.sin(u*1.2)*7,5.5,Math.cos(u*1.2)*7);c.lookAt(0,.4,0);w.position.y=.6+Math.sin(u*6)*.08;scr.position.y=w.position.y+.2;sh.scale.setScalar(.6+ease(clamp(u*2))*.6);}};};
+B.ice=()=>{const {s,c}=base();const ice=new T.Mesh(new T.BoxGeometry(2.4,2.4,2.4),new T.MeshPhysicalMaterial({color:0xcfefff,metalness:0,roughness:.12,transmission:.9,thickness:1.5,transparent:true,opacity:.55}));ice.position.y=1.2;s.add(ice);
+ const coin=new T.Mesh(new T.CylinderGeometry(.75,.75,.14,64),glow(0x26a17b,.9));coin.rotation.x=Math.PI/2;coin.position.y=1.2;s.add(coin);
+ const bl=new T.PointLight(0x88ccff,40,12);bl.position.set(-2,3,-2);s.add(bl);
+ return {s,c,update:(u)=>{c.position.set(Math.sin(.5+u*.7)*8,4.5,Math.cos(.5+u*.7)*8);c.lookAt(0,1.1,0);const k=ease(clamp(u*2.2));ice.scale.setScalar(Math.max(.001,k));coin.rotation.z=u*2;}};};
+B.quantum=()=>{const {s,c}=base();const g=new T.Group();s.add(g);for(let i=0;i<5;i++){const p=new T.Mesh(new T.CylinderGeometry(1.5-i*.22,1.5-i*.22,.08,64),mat(0xd4a64a,{metalness:1,roughness:.18}));p.position.y=4.2-i*.8;g.add(p);
+  for(let j=0;j<6;j++){const t=new T.Mesh(new T.CylinderGeometry(.03,.03,.8,8),mat(0xb87333));const a=j/6*Math.PI*2;t.position.set(Math.cos(a)*(1.1-i*.2),3.8-i*.8,Math.sin(a)*(1.1-i*.2));g.add(t);}}
+ const core=new T.Mesh(new T.SphereGeometry(.25,32,16),glow(0x4da3ff,2));core.position.y=.6;g.add(core);
+ return {s,c,update:(u)=>{c.position.set(Math.sin(u*.9)*9,3.2,Math.cos(u*.9)*9);c.lookAt(0,2.2,0);core.material.emissiveIntensity=1.5+Math.sin(u*20);}};};
+B.nodes=()=>{const {s,c}=base();const N=[];for(let i=0;i<26;i++){const m=new T.Mesh(new T.SphereGeometry(.16,24,12),i==0?glow(0xffd60a,1.6):glow(0x5ec8b8,.8));
+  const r=i==0?0:1.2+Math.random()*2.4,a=Math.random()*Math.PI*2,h=i==0?1.6:.4+Math.random()*2.6;m.position.set(Math.cos(a)*r,h,Math.sin(a)*r);s.add(m);N.push(m);}
+ const L=[];N.slice(1).forEach((m,i)=>{const g=new T.BufferGeometry().setFromPoints([N[0].position,m.position]);const l=new T.Line(g,new T.LineBasicMaterial({color:0x5ec8b8,transparent:true,opacity:.5}));s.add(l);L.push([l,i]);});
+ return {s,c,update:(u)=>{c.position.set(Math.sin(u*1.1)*8,4.5,Math.cos(u*1.1)*8);c.lookAt(0,1.4,0);
+   N.forEach((m,i)=>m.scale.setScalar(Math.max(.001,ease(clamp(u*3-i*.06)))));L.forEach(([l,i])=>l.visible=u*3-i*.06>.5);}};};
+B.towers2=()=>{const {s,c}=base();const H=[.6,.9,1.3,6];const Ms=H.map((h,i)=>{const m=new T.Mesh(new T.BoxGeometry(.9,1,.9),i==3?glow(0xffd60a,.7):mat(0x8a8f99,{metalness:.6,roughness:.4}));m.position.set(-2.4+i*1.6,0,0);s.add(m);return m;});
+ return {s,c,update:(u)=>{c.position.set(1,4.6,14);c.lookAt(0,2,0);Ms.forEach((m,i)=>{const k=ease(clamp(u*2-i*.25));m.scale.y=Math.max(.001,H[i]*k);m.position.y=m.scale.y/2;});}};};
 const built={};
 // ---------- SVG / layers ----------
 const layers=document.getElementById('layers');
@@ -163,7 +189,14 @@ def mix_audio(spec, dur):
 
 
 def render(name, preview=None):
-    spec = importlib.import_module(f"reels.{name}").SPEC
+    from reels.series import REELS
+    if name in REELS:
+        from reels.kit import build
+        tr = json.load(open(ROOT / "assets" / "vo" / f"{name}.json"))
+        words = [w for seg in tr for w in seg["words"]]
+        spec = build(REELS[name], words, f"assets/vo/{name}.mp3")
+    else:
+        spec = importlib.import_module(f"reels.{name}").SPEC
     WORK.mkdir(parents=True, exist_ok=True)
     srv_root = WORK / "site"
     if srv_root.exists():

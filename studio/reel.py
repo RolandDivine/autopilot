@@ -133,7 +133,7 @@ def mix_audio(spec, dur):
     tmp.mkdir(parents=True, exist_ok=True)
 
     def load(path):
-        raw = str(path) + ".raw"
+        raw = str(tmp / (Path(path).name + ".raw"))
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(path), "-ar", str(SR), "-ac", "1", "-f", "f32le", raw], check=True)
         return np.fromfile(raw, dtype=np.float32)
 

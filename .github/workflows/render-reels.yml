@@ -24,6 +24,9 @@ jobs:
       matrix: ${{ steps.m.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: studio
       - id: m
         run: |
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
@@ -33,7 +36,9 @@ jobs:
           want = os.environ["NAMES"].split()
           pre = os.environ["PREFIX"]
           if want == ["missing"]:
-              want = [n for n in REELS if not os.path.exists(f"assets/reels/{pre}{n}.mp4")]
+              import subprocess
+              have = set(subprocess.run(["git", "ls-tree", "-r", "--name-only", "HEAD", "assets/reels"], capture_output=True, text=True).stdout.split())
+              want = [n for n in REELS if f"assets/reels/{pre}{n}.mp4" not in have]
           print("matrix=" + json.dumps(want))
           PY
         env:
@@ -44,7 +49,7 @@ jobs:
     needs: plan
     if: needs.plan.outputs.matrix != '[]'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     strategy:
       fail-fast: false
       max-parallel: 20
@@ -52,6 +57,10 @@ jobs:
         name: ${{ fromJson(needs.plan.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            studio
+            assets/vo
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -78,6 +87,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: studio
       - uses: actions/download-artifact@v4
         with:
           path: art
@@ -87,5 +99,5 @@ jobs:
           mkdir -p assets/reels && cp art/*.mp4 assets/reels/ 2>/dev/null || true
           git config user.name "autopilot"
           git config user.email "autopilot@users.noreply.github.com"
-          git add assets/reels
-          git diff --cached --quiet || (git commit -m "render-reels: $(ls art | wc -l) Reels" && git pull --rebase && git push)
+          git add --sparse assets/reels
+          git diff --cached --quiet || (git commit -m "render-reels: $(ls art | wc -l) Reels" && git pull --rebase --no-edit && git push)

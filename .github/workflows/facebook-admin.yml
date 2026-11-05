@@ -1,0 +1,26 @@
+name: facebook-admin
+
+# Change the Facebook Page (About, photos, name...). See scripts/fb_admin.py for the ops.
+on:
+  workflow_dispatch:
+    inputs:
+      ops:
+        description: 'JSON list, e.g. [{"op":"show"}]'
+        required: true
+        type: string
+
+jobs:
+  admin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - env:
+          OPS: ${{ inputs.ops }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+        run: python scripts/fb_admin.py

@@ -26,7 +26,7 @@ jobs:
           import os, requests
           from requests_oauthlib import OAuth1
           a = OAuth1(*(os.environ[k].strip() for k in ("X_API_KEY","X_API_SECRET","X_ACCESS_TOKEN","X_ACCESS_SECRET")))
-          r = requests.get("https://api.x.com/2/users/me", auth=a, timeout=30)
+          r = requests.get("https://api.x.com/2/users/me?user.fields=public_metrics", auth=a, timeout=30)
           print("HTTP", r.status_code, r.text[:400])
           print("access level:", r.headers.get("x-access-level"))
           if r.ok: print("::notice::X connected as @" + r.json()["data"]["username"])

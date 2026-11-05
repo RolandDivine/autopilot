@@ -67,7 +67,8 @@ ICONS = {
 
 def icon(name, label, c=Y):
     paths = ICONS[name]
-    svg = "<svg>" + "".join(ln(p, .1 + i * .25, .6, c if i == 0 else (c if len(paths) < 3 else c), 7) for i, p in enumerate(paths)) + "</svg>"
+    svg = ("<svg><g transform='translate(540 760) scale(1.35) translate(-540 -760)'>"
+           + "".join(ln(p, .1 + i * .25, .6, c, 6) for i, p in enumerate(paths)) + "</g></svg>")
     return svg + (lab(540, 1040, label, .5, c) if label else "")
 
 
@@ -163,6 +164,31 @@ def align(sentences, words):
     return out
 
 
+NUMW = set("zero one two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion percent point".split())
+STOP = set("the a an and or but so to of in on for with is are was were it its it's that this you your my i we they he she be by at as from not no can will just than then there their our".split())
+
+
+def keywords(text, vis):
+    """Highlight numbers, words echoed by the on-screen visual, else the strongest word near the end."""
+    ws = text.split()
+    shown = ""
+    if vis:
+        shown = " ".join(str(x) for x in vis[1:] if isinstance(x, str)).lower()
+    keys = []
+    for i, w in enumerate(ws):
+        n = norm(w)
+        if not n:
+            continue
+        if n in NUMW or n.replace("-", "").isdigit() or any(ch.isdigit() for ch in n) or w.isupper() and len(n) > 1:
+            keys.append(i)
+        elif n not in STOP and len(n) > 3 and n in norm(shown) and len(keys) < 3:
+            keys.append(i)
+    if not keys:
+        cand = [i for i, w in enumerate(ws) if norm(w) not in STOP and len(norm(w)) > 4]
+        keys = cand[-1:] if cand else []
+    return keys
+
+
 def build(reel, transcript_words, audio, dur_tail=2.6):
     """reel = {"beats": [(sentence, visual or None, key_word_indexes, color)], "sfx": [...]}"""
     sents = [b[0] for b in reel["beats"]]
@@ -171,7 +197,7 @@ def build(reel, transcript_words, audio, dur_tail=2.6):
     phrases, scenes = [], []
     for i, (b, ts) in enumerate(zip(reel["beats"], times)):
         text, vis = b[0], b[1]
-        key = list(b[2]) if len(b) > 2 else []
+        key = keywords(text, vis)
         col = b[3] if len(b) > 3 else Y
         nxt = times[i + 1][0] if i + 1 < len(times) else end_audio + .3
         phrases.append({"a": ts[0], "b": nxt - .05, "key": key, "color": col,

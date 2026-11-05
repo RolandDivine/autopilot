@@ -82,7 +82,7 @@ B.vault=()=>{const {s,c}=base();const v=new T.Mesh(new T.BoxGeometry(3,3,3),mat(
  const door=new T.Mesh(new T.CylinderGeometry(1,1,.25,64),mat(0x2c2f36,{metalness:1,roughness:.25}));door.rotation.x=Math.PI/2;door.position.set(0,0,1.55);v.add(door);
  const ring=new T.Mesh(new T.TorusGeometry(1,.06,16,80),glow(0xffd60a,1.4));ring.position.set(0,0,1.68);v.add(ring);
  const cs=[];for(let i=0;i<50;i++){const m=new T.Mesh(new T.CylinderGeometry(.24,.24,.05,32),mat(0xf3ba2f,{metalness:1,roughness:.2,emissive:0x4a3000}));s.add(m);cs.push([m,Math.random()*Math.PI*1.2-.2,1.8+Math.random()*2.6,Math.random()]);}
- return {s,c,update:(u)=>{c.position.set(Math.sin(.4+u*.4)*11,7,Math.cos(.4+u*.4)*11);c.lookAt(0,.8,0);door.rotation.y=-ease(clamp(u*1.5))*1.6;
+ return {s,c,update:(u)=>{c.position.set(Math.sin(.4+u*.4)*15,8.5,Math.cos(.4+u*.4)*15);c.lookAt(0,.3,0);door.rotation.y=-ease(clamp(u*1.5))*1.6;
    cs.forEach(([m,a,d,r])=>{const k=ease(clamp(u*1.6-r*.5));m.position.set(Math.cos(a)*d*k-.4,.05+Math.max(0,(1-k))*1.5,Math.sin(a)*d*k+1.2);m.rotation.set(r*6,r*3,k*4);m.visible=k>0;});}};};
 B.wallet3d=()=>{const {s,c}=base();const w=new T.Mesh(new T.BoxGeometry(1.6,.35,2.6),mat(0x16181d,{metalness:.6,roughness:.35}));w.position.y=.6;s.add(w);
  const scr=new T.Mesh(new T.BoxGeometry(1.1,.05,1.3),glow(0x2fd27a,.9));scr.position.set(0,.8,-.3);s.add(scr);
@@ -92,7 +92,7 @@ B.wallet3d=()=>{const {s,c}=base();const w=new T.Mesh(new T.BoxGeometry(1.6,.35,
 B.ice=()=>{const {s,c}=base();const ice=new T.Mesh(new T.BoxGeometry(2.4,2.4,2.4),new T.MeshPhysicalMaterial({color:0xcfefff,metalness:0,roughness:.12,transmission:.9,thickness:1.5,transparent:true,opacity:.55}));ice.position.y=1.2;s.add(ice);
  const coin=new T.Mesh(new T.CylinderGeometry(.75,.75,.14,64),glow(0x26a17b,.9));coin.rotation.x=Math.PI/2;coin.position.y=1.2;s.add(coin);
  const bl=new T.PointLight(0x88ccff,40,12);bl.position.set(-2,3,-2);s.add(bl);
- return {s,c,update:(u)=>{c.position.set(Math.sin(.5+u*.7)*8,4.5,Math.cos(.5+u*.7)*8);c.lookAt(0,1.1,0);const k=ease(clamp(u*2.2));ice.scale.setScalar(Math.max(.001,k));coin.rotation.z=u*2;}};};
+ return {s,c,update:(u)=>{c.position.set(Math.sin(.5+u*.7)*12,5.5,Math.cos(.5+u*.7)*12);c.lookAt(0,.6,0);const k=ease(clamp(u*2.2));ice.scale.setScalar(Math.max(.001,k));coin.rotation.z=u*2;}};};
 B.quantum=()=>{const {s,c}=base();const g=new T.Group();s.add(g);for(let i=0;i<5;i++){const p=new T.Mesh(new T.CylinderGeometry(1.5-i*.22,1.5-i*.22,.08,64),mat(0xd4a64a,{metalness:1,roughness:.18}));p.position.y=4.2-i*.8;g.add(p);
   for(let j=0;j<6;j++){const t=new T.Mesh(new T.CylinderGeometry(.03,.03,.8,8),mat(0xb87333));const a=j/6*Math.PI*2;t.position.set(Math.cos(a)*(1.1-i*.2),3.8-i*.8,Math.sin(a)*(1.1-i*.2));g.add(t);}}
  const core=new T.Mesh(new T.SphereGeometry(.25,32,16),glow(0x4da3ff,2));core.position.y=.6;g.add(core);
@@ -190,7 +190,9 @@ def mix_audio(spec, dur):
 
 def render(name, preview=None):
     from reels.series import REELS
-    if name in REELS:
+    if name.endswith(".json"):
+        spec = json.load(open(name)); name = Path(name).stem
+    elif name in REELS:
         from reels.kit import build
         tr = json.load(open(ROOT / "assets" / "vo" / f"{name}.json"))
         words = [w for seg in tr for w in seg["words"]]

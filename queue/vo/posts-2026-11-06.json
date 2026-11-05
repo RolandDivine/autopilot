@@ -8,5 +8,38 @@
   "reel_caption": "Crypto exchange is not a vault: the Mt. Gox lesson. 🏦\n\nIn 2014 the biggest Bitcoin exchange stopped withdrawals. About 850,000 BTC were missing and customers waited a decade for repayments. They didn't hold their own keys.\n\nHolding long-term? Learn self-custody and keep your seed phrase on paper, never online.\n\n📤 Send this to a friend who keeps all their crypto on one app\n📌 Save it for later\n\nEducation, not financial advice.\n\n#crypto #bitcoin #cryptosafety #selfcustody",
   "li_text": "",
   "at": "11:00"
+ },
+ "trend-refund": {
+  "video": "assets/reels/trend-refund.mp4",
+  "title": "Your phone buzzes. Binance compensation, claim your refund",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "Your phone buzzes. Binance compensation, claim your refund.\n\n✅ Support never DMs first\n✅ Never share your seed phrase\n✅ Open the app yourself\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "li_text": "",
+  "at": "07:00",
+  "facebook": true
+ },
+ "trend-aibot": {
+  "video": "assets/reels/aibot.mp4",
+  "title": "3% a day sounds small. It's actually $48 million",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "3% a day sounds small. It's actually $48 million.\n\n✅ Guaranteed daily profit? Walk away\n✅ Paid to recruit friends? Walk away\n✅ Not registered with a regulator? Walk away\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "li_text": "",
+  "at": "13:00",
+  "facebook": true
+ },
+ "trend-freeze": {
+  "video": "assets/reels/trend-freeze.mp4",
+  "title": "This is one point seven seven billion dollars of USDT",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "This is one point seven seven billion dollars of USDT.\n\n✅ Stablecoin: steady, but freezable\n✅ Bitcoin: unfreezable, unrescuable\n✅ Know your trade-off\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "li_text": "",
+  "at": "19:00",
+  "facebook": true
  }
 }

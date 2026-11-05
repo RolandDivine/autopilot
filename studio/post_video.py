@@ -73,6 +73,9 @@ def story_parts(video):
     sh("git", "pull", "-q", "--rebase")
     sh("git", "push", "-q")
     return out
+if d.get("facebook"):  # Roland, 5 Nov 2026: trend Reels also go to the Facebook Page
+    print(run("facebook-admin.yml", {"ops": json.dumps([{"op": "video", "path": d["video"], "title": d["title"][:90],
+        "description": re.sub(r"\n?🔔.*", "", d["reel_caption"]).strip()}])}))
 if "nostory" not in sys.argv:  # stories are on by default (Roland, 20 Oct 2026)
     print(run("instagram-publish.yml", {"kind": "stories", "paths": " ".join(story_parts(d["video"]))}))
 print(yt())

@@ -1,12 +1,35 @@
 {
- "trend-refund": {
-  "video": "assets/reels/trend-refund.mp4",
-  "title": "Your phone buzzes. Binance compensation, claim your refund",
+ "trend-funding": {
+  "video": "assets/reels/trend-funding.mp4",
+  "title": "Africa's startups raised over two billion dollars this year. So why can't most founders ra",
   "youtube": true,
-  "playlist": "Crypto Safety",
+  "playlist": "",
   "linkedin": false,
-  "reel_caption": "Your phone buzzes. Binance compensation, claim your refund.\n\n✅ Support never DMs first\n✅ Never share your seed phrase\n✅ Open the app yourself\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "reel_caption": "Africa's startups raised over two billion dollars this year. So why can't most founders raise?\n\n✅ Apply for grants\n✅ Build lean with AI\n✅ Get paying customers early\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#startups #business #founders #money",
   "li_text": "",
-  "at": "11:00"
+  "at": "07:00",
+  "facebook": true
+ },
+ "trend-deepfakevote": {
+  "video": "assets/reels/trend-deepfakevote.mp4",
+  "title": "The next elections will be the first fought with cheap, convincing deepfakes",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "The next elections will be the first fought with cheap, convincing deepfakes.\n\n✅ Who posted it first?\n✅ Lips and breathing natural?\n✅ Real outlets reporting it?\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#AI #artificialintelligence #tech #scamawareness",
+  "li_text": "",
+  "at": "13:00",
+  "facebook": true
+ },
+ "trend-aijobs": {
+  "video": "assets/reels/trend-aijobs.mp4",
+  "title": "Eighty-seven thousand jobs cut in America in five months, and companies blamed AI",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "Eighty-seven thousand jobs cut in America in five months, and companies blamed AI.\n\n✅ Master one AI tool\n✅ Automate the boring parts\n✅ Grow judgement and trust\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#AI #artificialintelligence #tech #scamawareness",
+  "li_text": "",
+  "at": "19:00",
+  "facebook": true
  }
 }

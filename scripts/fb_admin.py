@@ -1,6 +1,7 @@
 """Facebook Page admin. OPS env = JSON list of ops; each op's result is printed, failures don't stop the rest.
 
   {"op": "show"}                                       current Page details
+  {"op": "video", "path": "...mp4", "description": "...", "title": "..."}  post a video to the Page
   {"op": "info", "about": "...", "description": "...", "website": "..."}
   {"op": "picture", "path": "assets/facebook/profile.jpg"}
   {"op": "cover", "path": "assets/facebook/cover.jpg"}
@@ -33,6 +34,10 @@ def run(c, o):
             except FacebookError as e:
                 out[k] = f"FAILED {e}"
         return out
+    if op == "video":  # {"op":"video","path":"assets/reels/x.mp4","description":"...","title":"..."}
+        r = c.post_video(url(o["path"]), o.get("description", ""), o.get("title"))
+        print(f"::notice title=facebook video::{r}")
+        return r
     if op == "picture":
         return c._req("POST", f"{c.page_id}/picture", data={"picture": url(o["path"])})
     if op == "cover":

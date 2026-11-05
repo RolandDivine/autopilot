@@ -1,12 +1,35 @@
 {
- "trend-selfcustody": {
-  "video": "assets/reels/trend-selfcustody.mp4",
-  "title": "Four point seven billion dollars left one exchange in two days",
+ "trend-kobo-grants": {
+  "video": "assets/reels/trend-kobo-grants.mp4",
+  "title": "Hey, Kobo here. My friend Ada just got funding for her startup",
   "youtube": true,
-  "playlist": "Crypto Safety",
+  "playlist": "",
   "linkedin": false,
-  "reel_caption": "Four point seven billion dollars left one exchange in two days.\n\n✅ Trading money: exchange\n✅ Savings: your own wallet\n✅ Seed phrase: on paper, offline\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "reel_caption": "Hey, Kobo here. My friend Ada just got funding for her startup.\n\n✅ One-page summary\n✅ Your numbers\n✅ A short video\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#personalfinance #money #kobosmoneystory #sidehustle",
   "li_text": "",
-  "at": "11:00"
+  "at": "07:00",
+  "facebook": true
+ },
+ "trend-creative": {
+  "video": "assets/reels/trend-creative.mp4",
+  "title": "Canva just launched its own AI image model",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "Canva just launched its own AI image model.\n\n✅ AI for drafts\n✅ Add your own idea\n✅ Never copy a brand\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#AI #artificialintelligence #tech #scamawareness",
+  "li_text": "",
+  "at": "13:00",
+  "facebook": true
+ },
+ "trend-optout": {
+  "video": "assets/reels/trend-optout.mp4",
+  "title": "Your photos, posts, and videos might be training AI right now",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "Your photos, posts, and videos might be training AI right now.\n\n✅ Turn on opt-out settings\n✅ Watermark your best work\n✅ Keep originals as proof\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#AI #artificialintelligence #tech #scamawareness",
+  "li_text": "",
+  "at": "19:00",
+  "facebook": true
  }
 }

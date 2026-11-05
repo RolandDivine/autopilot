@@ -1,12 +1,35 @@
 {
- "trend-agents": {
-  "video": "assets/reels/trend-agents.mp4",
-  "title": "This October, AI stopped just answering questions. It started doing things",
-  "youtube": false,
-  "playlist": "",
+ "trend-quantum": {
+  "video": "assets/reels/trend-quantum.mp4",
+  "title": "Six point two six million bitcoin have a weakness most holders don't know about",
+  "youtube": true,
+  "playlist": "Crypto Safety",
   "linkedin": false,
-  "reel_caption": "This October, AI stopped just answering questions. It started doing things.\n\n✅ One clear job\n✅ Never unlimited money\n✅ Big actions need your OK\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#AI #artificialintelligence #tech #scamawareness",
+  "reel_caption": "Six point two six million bitcoin have a weakness most holders don't know about.\n\n✅ Don't panic-sell\n✅ Don't reuse addresses\n✅ Upgrade early\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
   "li_text": "",
-  "at": "11:00"
+  "at": "07:00",
+  "facebook": true
+ },
+ "trend-clarity": {
+  "video": "assets/reels/trend-clarity.mp4",
+  "title": "Forty-nine to fifty",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "Forty-nine to fifty.\n\n✅ Use regulated platforms\n✅ Self-custody long-term coins\n✅ Watch the rules change\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "li_text": "",
+  "at": "13:00",
+  "facebook": true
+ },
+ "trend-adoption": {
+  "video": "assets/reels/trend-adoption.mp4",
+  "title": "Over ninety-two billion dollars of crypto moved into Nigeria in a single year",
+  "youtube": true,
+  "playlist": "Crypto Safety",
+  "linkedin": false,
+  "reel_caption": "Over ninety-two billion dollars of crypto moved into Nigeria in a single year.\n\n✅ It solves real problems\n✅ Scams follow adoption\n✅ Learn before you invest\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "li_text": "",
+  "at": "19:00",
+  "facebook": true
  }
 }

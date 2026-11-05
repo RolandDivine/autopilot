@@ -184,5 +184,6 @@ Reels use studio/reel.py (line-art + 3D, 30fps). Specs live in studio/reels/<nam
 ## AUDIENCE (Roland, 5 Nov 2026): GLOBAL, not Nigeria-only
 Write and explain everything for a global audience: amounts in US dollars, no assumed local context, and examples anyone can follow. Nigeria/Africa stories are still welcome as stories, but explain them for outsiders. Say "your country's regulator" rather than only "the SEC".
 
-## TREND REEL SERIES (5 Nov 2026): 8 Nov – 7 Dec 2026, one Reel a day at 11:00 UTC
-The 30 trend Reels (assets/reels/trend-*.mp4 and aibot.mp4) are already queued in queue/vo/posts-<date>.json as `trend-*` entries. On those days, do NOT add another Instagram Reel. Build only stories, LinkedIn and carousels around that day's topic. Specs: studio/reels/series.py. To render more: dispatch the render-reels workflow (parallel, GitHub).
+## TREND REEL SERIES (Roland, 5 Nov 2026): 3 a day, plus the normal daily Reel
+The 30 trend Reels post at 07:00, 13:00 and 19:00 UTC from 6 to 15 Nov (fedfear went out on 5 Nov at 22:15). Each goes to Instagram Reels and Stories, YouTube Shorts (all of them, not only crypto) and the Facebook Page (`"facebook": true` → facebook-admin video op). The entries live in queue/vo/posts-<date>.json as `trend-*`.
+Follow the trend: if the news makes one of them timely (for example, a Bitcoin dump makes trend-fedfear timely), move it to the next slot and update its caption with today's verified number.

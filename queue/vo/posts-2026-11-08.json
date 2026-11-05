@@ -1,12 +1,35 @@
 {
- "trend-aibot": {
-  "video": "assets/reels/aibot.mp4",
-  "title": "3% a day sounds small. It's actually $48 million",
+ "trend-agents": {
+  "video": "assets/reels/trend-agents.mp4",
+  "title": "This October, AI stopped just answering questions. It started doing things",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "This October, AI stopped just answering questions. It started doing things.\n\n✅ One clear job\n✅ Never unlimited money\n✅ Big actions need your OK\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#AI #artificialintelligence #tech #scamawareness",
+  "li_text": "",
+  "at": "07:00",
+  "facebook": true
+ },
+ "trend-extension": {
+  "video": "assets/reels/trend-extension.mp4",
+  "title": "For eleven hours, a fake AI coding extension sat in an official marketplace",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "For eleven hours, a fake AI coding extension sat in an official marketplace.\n\n✅ Check the publisher\n✅ Least access possible\n✅ Review connected apps\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#AI #artificialintelligence #tech #scamawareness",
+  "li_text": "",
+  "at": "13:00",
+  "facebook": true
+ },
+ "trend-licensed": {
+  "video": "assets/reels/trend-licensed.mp4",
+  "title": "Nigeria is one of the world's biggest crypto markets",
   "youtube": true,
   "playlist": "Crypto Safety",
   "linkedin": false,
-  "reel_caption": "3% a day sounds small. It's actually $48 million.\n\n✅ Guaranteed daily profit? Walk away\n✅ Paid to recruit friends? Walk away\n✅ Not registered with a regulator? Walk away\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "reel_caption": "Nigeria is one of the world's biggest crypto markets.\n\n✅ Licensed in your country?\n✅ Who holds the keys?\n✅ Test a small withdrawal\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
   "li_text": "",
-  "at": "11:00"
+  "at": "19:00",
+  "facebook": true
  }
 }

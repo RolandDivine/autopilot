@@ -1,12 +1,35 @@
 {
- "trend-solofounder": {
-  "video": "assets/reels/trend-solofounder.mp4",
-  "title": "One founder. A team of AI agents. Content every single day",
-  "youtube": false,
+ "trend-vcmap": {
+  "video": "assets/reels/trend-vcmap.mp4",
+  "title": "In August, about eighty percent of Africa's startup money went to one country",
+  "youtube": true,
   "playlist": "",
   "linkedin": false,
-  "reel_caption": "One founder. A team of AI agents. Content every single day.\n\n✅ You decide what matters\n✅ Agents do the repetitive work\n✅ You review what ships\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#startups #business #founders #money",
+  "reel_caption": "In August, about eighty percent of Africa's startup money went to one country.\n\n✅ Track deals at your stage\n✅ Talk to founders who raised\n✅ Traction before pitching\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#startups #business #founders #money",
   "li_text": "",
-  "at": "11:00"
+  "at": "07:00",
+  "facebook": true
+ },
+ "trend-kobo-inflation": {
+  "video": "assets/reels/trend-kobo-inflation.mp4",
+  "title": "Hey, Kobo here. The news says inflation is falling. So why are prices still high",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "Hey, Kobo here. The news says inflation is falling. So why are prices still high?\n\n✅ Track your spending\n✅ Review your prices\n✅ Savings that beat inflation\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#personalfinance #money #kobosmoneystory #sidehustle",
+  "li_text": "",
+  "at": "13:00",
+  "facebook": true
+ },
+ "trend-assetfinance": {
+  "video": "assets/reels/trend-assetfinance.mp4",
+  "title": "One startup raised two hundred and fifty million dollars to finance cars for drivers",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "One startup raised two hundred and fifty million dollars to finance cars for drivers.\n\n✅ Finance assets that earn\n✅ Income must cover payments\n✅ Keep a safety buffer\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#startups #business #founders #money",
+  "li_text": "",
+  "at": "19:00",
+  "facebook": true
  }
 }

@@ -1,12 +1,24 @@
 {
- "trend-hackyear": {
-  "video": "assets/reels/trend-hackyear.mp4",
-  "title": "Nine point two billion dollars stolen from crypto this year",
+ "trend-exits": {
+  "video": "assets/reels/trend-exits.mp4",
+  "title": "Ninety-five million dollars. That's what one company paid to buy a startup this year",
   "youtube": true,
-  "playlist": "Crypto Safety",
+  "playlist": "",
   "linkedin": false,
-  "reel_caption": "Nine point two billion dollars stolen from crypto this year.\n\n✅ Type the URL yourself\n✅ Hardware wallet for savings\n✅ Never blind-sign\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#crypto #cryptosafety #scamawareness #bitcoin",
+  "reel_caption": "Ninety-five million dollars. That's what one company paid to buy a startup this year.\n\n✅ Keep clean records\n✅ Own your technology\n✅ Lasting customers\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#startups #business #founders #money",
   "li_text": "",
-  "at": "11:00"
+  "at": "07:00",
+  "facebook": true
+ },
+ "trend-kobo-japa": {
+  "video": "assets/reels/trend-kobo-japa.mp4",
+  "title": "Hey, Kobo here. My cousin is moving abroad. My best friend is staying to build",
+  "youtube": true,
+  "playlist": "",
+  "linkedin": false,
+  "reel_caption": "Hey, Kobo here. My cousin is moving abroad. My best friend is staying to build.\n\n✅ A skill the world pays for\n✅ Save in a strong currency\n✅ Network everywhere\n\n📌 Save this · 📤 Send it to someone who needs it\n🔔 Follow @defi_ring_master for more\n\n#personalfinance #money #kobosmoneystory #sidehustle",
+  "li_text": "",
+  "at": "13:00",
+  "facebook": true
  }
 }

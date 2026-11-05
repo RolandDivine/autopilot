@@ -137,31 +137,39 @@ def norm(s):
 
 
 def align(sentences, words):
-    """Map each script word to a start time by relative character position against the transcript words."""
+    """Anchor script words to transcript words that match exactly (in order); interpolate the rest."""
     tw = [(w[0], norm(w[2])) for w in words if norm(w[2])]
-    tpos, acc = [], 0
-    for t, w in tw:
-        tpos.append((acc, t))
-        acc += len(w)
-    total_t = max(acc, 1)
-    sw = [[w for w in s.split()] for s in sentences]
-    total_s = max(sum(len(norm(w)) for s in sw for w in s), 1)
-    out, acc = [], 0
-    for s in sw:
-        times = []
-        for w in s:
-            r = acc / total_s * total_t
-            # nearest transcript word at or before this relative position
-            t = tpos[0][1]
-            for p, tt in tpos:
-                if p <= r + 0.5:
-                    t = tt
-                else:
-                    break
-            times.append(round(t, 2))
-            acc += len(norm(w))
-        out.append(times)
-    return out
+    flat = [w for s in sentences for w in s.split()]
+    sn = [norm(w) for w in flat]
+    times = [None] * len(flat)
+    j = 0
+    for i, w in enumerate(sn):
+        if not w:
+            continue
+        for k in range(j, min(j + 8, len(tw))):
+            if tw[k][1] == w:
+                times[i] = tw[k][0]
+                j = k + 1
+                break
+    # interpolate gaps
+    last_t, last_i = 0.0, -1
+    known = [(i, t) for i, t in enumerate(times) if t is not None] + [(len(flat), words[-1][1])]
+    out_t = [0.0] * len(flat)
+    ki = 0
+    prev_i, prev_t = -1, 0.0
+    for i_k, t_k in known:
+        for i in range(prev_i + 1, i_k):
+            frac = (i - prev_i) / (i_k - prev_i)
+            out_t[i] = round(prev_t + (t_k - prev_t) * frac, 2)
+        if i_k < len(flat):
+            out_t[i_k] = round(t_k, 2)
+        prev_i, prev_t = i_k, t_k
+    res, p = [], 0
+    for s in sentences:
+        n = len(s.split())
+        res.append(out_t[p:p + n])
+        p += n
+    return res
 
 
 NUMW = set("zero one two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion percent point".split())

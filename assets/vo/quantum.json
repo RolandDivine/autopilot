@@ -1,0 +1,427 @@
+[
+{
+"start": 0.0,
+"end": 4.2,
+"text": "6.26 million Bitcoin have a weakness most holders don't know about.",
+"words": [
+[
+0.0,
+0.34,
+" 6"
+],
+[
+0.34,
+1.0,
+".26"
+],
+[
+1.0,
+1.36,
+" million"
+],
+[
+1.36,
+1.94,
+" Bitcoin"
+],
+[
+1.94,
+2.26,
+" have"
+],
+[
+2.26,
+2.4,
+" a"
+],
+[
+2.4,
+2.62,
+" weakness"
+],
+[
+2.62,
+2.98,
+" most"
+],
+[
+2.98,
+3.34,
+" holders"
+],
+[
+3.34,
+3.68,
+" don't"
+],
+[
+3.68,
+3.9,
+" know"
+],
+[
+3.9,
+4.2,
+" about."
+]
+]
+},
+{
+"start": 4.6,
+"end": 6.96,
+"text": "Their public keys are already visible on the blockchain.",
+"words": [
+[
+4.6,
+4.7,
+" Their"
+],
+[
+4.7,
+5.02,
+" public"
+],
+[
+5.02,
+5.26,
+" keys"
+],
+[
+5.26,
+5.48,
+" are"
+],
+[
+5.48,
+5.88,
+" already"
+],
+[
+5.88,
+6.22,
+" visible"
+],
+[
+6.22,
+6.5,
+" on"
+],
+[
+6.5,
+6.62,
+" the"
+],
+[
+6.62,
+6.96,
+" blockchain."
+]
+]
+},
+{
+"start": 7.54,
+"end": 10.62,
+"text": "Today, nobody can work backwards from that to your private key.",
+"words": [
+[
+7.54,
+7.82,
+" Today,"
+],
+[
+8.2,
+8.36,
+" nobody"
+],
+[
+8.36,
+8.62,
+" can"
+],
+[
+8.62,
+8.82,
+" work"
+],
+[
+8.82,
+9.14,
+" backwards"
+],
+[
+9.14,
+9.4,
+" from"
+],
+[
+9.4,
+9.66,
+" that"
+],
+[
+9.66,
+9.88,
+" to"
+],
+[
+9.88,
+10.04,
+" your"
+],
+[
+10.04,
+10.36,
+" private"
+],
+[
+10.36,
+10.62,
+" key."
+]
+]
+},
+{
+"start": 11.0,
+"end": 13.56,
+"text": "A powerful enough quantum computer in theory could.",
+"words": [
+[
+11.0,
+11.14,
+" A"
+],
+[
+11.14,
+11.44,
+" powerful"
+],
+[
+11.44,
+11.86,
+" enough"
+],
+[
+11.86,
+12.22,
+" quantum"
+],
+[
+12.22,
+12.7,
+" computer"
+],
+[
+12.7,
+12.94,
+" in"
+],
+[
+12.94,
+13.22,
+" theory"
+],
+[
+13.22,
+13.56,
+" could."
+]
+]
+},
+{
+"start": 14.0,
+"end": 16.82,
+"text": "That machine doesn't exist yet, but the planning has started.",
+"words": [
+[
+14.0,
+14.3,
+" That"
+],
+[
+14.3,
+14.6,
+" machine"
+],
+[
+14.6,
+14.92,
+" doesn't"
+],
+[
+14.92,
+15.2,
+" exist"
+],
+[
+15.2,
+15.46,
+" yet,"
+],
+[
+15.64,
+15.76,
+" but"
+],
+[
+15.76,
+15.88,
+" the"
+],
+[
+15.88,
+16.2,
+" planning"
+],
+[
+16.2,
+16.4,
+" has"
+],
+[
+16.4,
+16.82,
+" started."
+]
+]
+},
+{
+"start": 17.32,
+"end": 18.24,
+"text": "Don't panic sell.",
+"words": [
+[
+17.32,
+17.58,
+" Don't"
+],
+[
+17.58,
+17.86,
+" panic"
+],
+[
+17.86,
+18.24,
+" sell."
+]
+]
+},
+{
+"start": 18.68,
+"end": 19.62,
+"text": "Don't reuse addresses.",
+"words": [
+[
+18.68,
+18.92,
+" Don't"
+],
+[
+18.92,
+19.16,
+" reuse"
+],
+[
+19.16,
+19.62,
+" addresses."
+]
+]
+},
+{
+"start": 20.08,
+"end": 22.52,
+"text": "And when Bitcoin ships an upgrade, move early.",
+"words": [
+[
+20.08,
+20.18,
+" And"
+],
+[
+20.18,
+20.36,
+" when"
+],
+[
+20.36,
+20.74,
+" Bitcoin"
+],
+[
+20.74,
+21.02,
+" ships"
+],
+[
+21.02,
+21.2,
+" an"
+],
+[
+21.2,
+21.6,
+" upgrade,"
+],
+[
+21.94,
+22.08,
+" move"
+],
+[
+22.08,
+22.52,
+" early."
+]
+]
+},
+{
+"start": 22.52,
+"end": 24.14,
+"text": "Save this and comment.",
+"words": [
+[
+22.52,
+23.16,
+" Save"
+],
+[
+23.16,
+23.42,
+" this"
+],
+[
+23.42,
+23.74,
+" and"
+],
+[
+23.74,
+24.14,
+" comment."
+]
+]
+},
+{
+"start": 24.64,
+"end": 25.34,
+"text": "Worried or not.",
+"words": [
+[
+24.64,
+24.86,
+" Worried"
+],
+[
+24.86,
+25.02,
+" or"
+],
+[
+25.02,
+25.34,
+" not."
+]
+]
+}
+]

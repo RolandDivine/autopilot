@@ -73,6 +73,7 @@ jobs:
           FONT_DIR: /home/runner/deps/node_modules/@fontsource
           REEL_WORK: /tmp/reel
         run: |
+          mkdir -p assets/reels
           python studio/reel.py "${{ matrix.name }}"
           mkdir -p out && mv "assets/reels/${{ matrix.name }}.mp4" "out/${{ inputs.prefix }}${{ matrix.name }}.mp4"
       - uses: actions/upload-artifact@v4

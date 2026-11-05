@@ -10,8 +10,9 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 STUDIO = ROOT / "studio"
-WORK = Path("/tmp/claude-0/-home-claude/7bf7680f-a27b-5721-8432-9f712c0cf377/scratchpad/reel")
-THREE = Path("/home/claude/styles/node_modules/three")
+import os
+WORK = Path(os.environ.get("REEL_WORK", "/tmp/claude-0/-home-claude/7bf7680f-a27b-5721-8432-9f712c0cf377/scratchpad/reel"))
+THREE = Path(os.environ.get("THREE_DIR", "/home/claude/styles/node_modules/three"))
 FPS, W, H = 30, 1080, 1920
 
 PAGE = r"""<!doctype html><html><head><meta charset=utf-8>

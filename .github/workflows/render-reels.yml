@@ -1,0 +1,91 @@
+name: render-reels
+
+# Renders series Reels in parallel (one runner per Reel) and commits the MP4s.
+# names: space-separated Reel names from studio/reels/series.py, or "missing" for every trend-<name>.mp4 not yet in the repo.
+on:
+  workflow_dispatch:
+    inputs:
+      names:
+        description: "Reel names, or 'missing'"
+        required: true
+        default: missing
+      prefix:
+        description: "Output file prefix"
+        required: false
+        default: trend-
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, sys
+          sys.path.insert(0, "studio")
+          from reels.series import REELS
+          want = os.environ["NAMES"].split()
+          pre = os.environ["PREFIX"]
+          if want == ["missing"]:
+              want = [n for n in REELS if not os.path.exists(f"assets/reels/{pre}{n}.mp4")]
+          print("matrix=" + json.dumps(want))
+          PY
+        env:
+          NAMES: ${{ inputs.names }}
+          PREFIX: ${{ inputs.prefix }}
+
+  render:
+    needs: plan
+    if: needs.plan.outputs.matrix != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        name: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
+      - run: pip install -q playwright==1.48.0 numpy pillow && python -m playwright install --with-deps chromium
+      - run: mkdir -p ~/deps && cd ~/deps && npm i -s three@0.160.0 @fontsource/plus-jakarta-sans @fontsource/space-grotesk
+      - name: Render
+        env:
+          THREE_DIR: /home/runner/deps/node_modules/three
+          FONT_DIR: /home/runner/deps/node_modules/@fontsource
+          REEL_WORK: /tmp/reel
+        run: |
+          python studio/reel.py "${{ matrix.name }}"
+          mkdir -p out && mv "assets/reels/${{ matrix.name }}.mp4" "out/${{ inputs.prefix }}${{ matrix.name }}.mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reel-${{ matrix.name }}
+          path: out/*.mp4
+          retention-days: 3
+
+  collect:
+    needs: render
+    if: always() && needs.render.result != 'skipped'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: art
+          pattern: reel-*
+          merge-multiple: true
+      - run: |
+          mkdir -p assets/reels && cp art/*.mp4 assets/reels/ 2>/dev/null || true
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add assets/reels
+          git diff --cached --quiet || (git commit -m "render-reels: $(ls art | wc -l) Reels" && git pull --rebase && git push)

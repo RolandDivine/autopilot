@@ -5,7 +5,8 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 
-FONTS = Path("/home/claude/fonts/node_modules/@fontsource")
+import os
+FONTS = Path(os.environ.get("FONT_DIR", "/home/claude/fonts/node_modules/@fontsource"))
 OUT = Path("/tmp/claude-test/igopts")
 HANDLE = "@defi_ring_master"
 NAME = "Roland Divine"

@@ -173,7 +173,7 @@ Use "imagine / here's how it could go" framing; never present an invented story 
 Generate on fish.audio in the built-in browser with Roland's app credits, model **S2.1 Pro** (Drama 3 shows "Model unavailable").
 - **AI and crypto Reels:** Documentary Narrator, `3df6f0a0b0f349dbb0f9425e50c36a5b`.
 - **Business Reels:** Laura (Fish Official), `e3cd384158934cc9a01029cd7d278634`.
-- **Kobo, storytelling, and "would you use my app?" posts:** Jasper (Nigerian accent), `c8a6088d637e45819724d64ce1295869`.
+- **Kobo, storytelling, and "would you use my app?" posts:** Documentary Narrator too (Roland, 5 Nov: Jasper sounded bad, so don't use him).
 - **ElevenLabs:** don't use it until Roland subscribes again (0 credits).
 
 How to download: open `/app/text-to-speech/?modelId=<id>&text=<urlencoded script>` and click Generate (it makes 2 takes). The task JSON's `result` field is `https://platform.r2.fish.audio/tasks/<date>/<id>.mp3`, and the sandbox can curl it directly.

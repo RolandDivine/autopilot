@@ -1,5 +1,5 @@
 """Trend series (Nov 2026): 29 Reels for a GLOBAL audience. Voices (Roland, 5 Nov):
-DOC = Documentary Narrator (AI, crypto), LAURA = business, JASPER = Kobo stories.
+DOC = Documentary Narrator (AI, crypto AND Kobo stories, Roland 5 Nov), LAURA = business. Jasper is no longer used.
 Each beat: (sentence, visual-or-None, key word indexes, key colour). Facts are from the Nov 2026 trends report.
 The ending teaches something (a rule or checklist), then asks for a save or comment.
 """
@@ -235,8 +235,8 @@ REELS = {
     ("Keep clean records, own your technology, and build customer relationships that last.", ("list", ["Keep clean records", "Own your technology", "Lasting customers"]), [], GRN),
     ("Comment EXIT for my founder checklist.", ("cta", "COMMENT EXIT", "Founder exit checklist"), [1], Y),
 ]},
-# ---------------- KOBO (Jasper) ----------------
-"kobo-grants": {"voice": JASPER, "beats": [
+# ---------------- KOBO (Documentary Narrator) ----------------
+"kobo-grants": {"voice": DOC, "beats": [
     ("Hey, Kobo here. My friend Ada just got funding for her startup.", ("icon", "person", "Kobo's Money Story · S3", Y), [7]),
     ("Not from an investor. From a grant.", ("stamp", "A GRANT", GRN), [5, 6], GRN),
     ("A grant is money you don't pay back, and you don't give away part of your company.", ("icon", "coin", "No payback · no equity", GRN), [4, 5, 6, 7]),
@@ -245,7 +245,7 @@ REELS = {
     ("Keep a one-page summary, your numbers, and a short video ready, then apply widely.", ("list", ["One-page summary", "Your numbers", "A short video"]), [], GRN),
     ("Comment GRANT and I'll send you open opportunities.", ("cta", "COMMENT GRANT", "Kobo's grant list"), [1], Y),
 ]},
-"kobo-hustle": {"voice": JASPER, "beats": [
+"kobo-hustle": {"voice": DOC, "beats": [
     ("Hey, Kobo here. One salary is one point of failure.", ("icon", "person", "Kobo's Money Story · S3", Y), [5, 6, 7, 8]),
     ("So people everywhere are building a second income next to their job.", ("curve", "up", "Second income", GRN), [7, 8]),
     ("The ones that work best sell a skill, not a promise.", ("icon", "brush", "Sell a skill", Y), [7, 8]),
@@ -254,7 +254,7 @@ REELS = {
     ("Start small, charge for real value, and save part of everything you earn.", ("list", ["Start small", "Charge for real value", "Save part of every payment"]), [], GRN),
     ("Comment HUSTLE for Kobo's starter ideas.", ("cta", "COMMENT HUSTLE", "Kobo's side-hustle starters"), [1], Y),
 ]},
-"kobo-inflation": {"voice": JASPER, "beats": [
+"kobo-inflation": {"voice": DOC, "beats": [
     ("Hey, Kobo here. The news says inflation is falling. So why are prices still high?", ("icon", "person", "Kobo's Money Story · S3", Y), [5, 6, 13, 14]),
     ("Because falling inflation means prices are rising slower. Not that they're going down.", ("curve", "up", "Prices still rising, just slower", RED), [6, 7, 8, 12, 13], RED),
     ("In Nigeria, inflation dropped to about fourteen and a half percent in September.", ("stamp", "14.6%", Y, "Nigeria inflation · Sep 2026"), []),
@@ -263,7 +263,7 @@ REELS = {
     ("Track your spending, raise your prices if you sell, and keep savings where they earn above inflation.", ("list", ["Track your spending", "Review your prices", "Savings that beat inflation"]), [], GRN),
     ("Save this, and follow Kobo's Money Story.", ("cta", "SAVE THIS", "Kobo's Money Story"), [0], GRN),
 ]},
-"kobo-japa": {"voice": JASPER, "beats": [
+"kobo-japa": {"voice": DOC, "beats": [
     ("Hey, Kobo here. My cousin is moving abroad. My best friend is staying to build.", ("icon", "plane", "Kobo's Money Story · S3", Y), [5, 6, 12, 13]),
     ("Who's making the right choice?", ("icon", "question", "", Y), [3, 4]),
     ("Moving can mean safety, stronger money, and new opportunities.", ("icon", "globe", "Moving abroad", BLUE), [3, 4, 6, 7]),

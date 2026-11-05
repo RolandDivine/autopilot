@@ -1,0 +1,427 @@
+[
+{
+"start": 0.0,
+"end": 6.24,
+"text": "Hey, Kubo here. My cousin is moving abroad. My best friend is staying to build. Who's making",
+"words": [
+[
+0.0,
+0.34,
+" Hey,"
+],
+[
+0.62,
+0.82,
+" Kubo"
+],
+[
+0.82,
+1.1,
+" here."
+],
+[
+1.48,
+1.56,
+" My"
+],
+[
+1.56,
+1.82,
+" cousin"
+],
+[
+1.82,
+2.3,
+" is"
+],
+[
+2.3,
+2.6,
+" moving"
+],
+[
+2.6,
+3.06,
+" abroad."
+],
+[
+3.44,
+3.58,
+" My"
+],
+[
+3.58,
+3.84,
+" best"
+],
+[
+3.84,
+4.12,
+" friend"
+],
+[
+4.12,
+4.52,
+" is"
+],
+[
+4.52,
+4.74,
+" staying"
+],
+[
+4.74,
+4.94,
+" to"
+],
+[
+4.94,
+5.24,
+" build."
+],
+[
+5.78,
+6.08,
+" Who's"
+],
+[
+6.08,
+6.24,
+" making"
+]
+]
+},
+{
+"start": 6.24,
+"end": 12.4,
+"text": "the right choice? Moving can mean safety, stronger money, and new opportunities. Staying can mean",
+"words": [
+[
+6.24,
+6.48,
+" the"
+],
+[
+6.48,
+6.68,
+" right"
+],
+[
+6.68,
+7.06,
+" choice?"
+],
+[
+7.52,
+7.74,
+" Moving"
+],
+[
+7.74,
+8.0,
+" can"
+],
+[
+8.0,
+8.2,
+" mean"
+],
+[
+8.2,
+8.62,
+" safety,"
+],
+[
+8.92,
+9.14,
+" stronger"
+],
+[
+9.14,
+9.52,
+" money,"
+],
+[
+9.88,
+10.0,
+" and"
+],
+[
+10.0,
+10.28,
+" new"
+],
+[
+10.28,
+10.92,
+" opportunities."
+],
+[
+11.82,
+11.92,
+" Staying"
+],
+[
+11.92,
+12.16,
+" can"
+],
+[
+12.16,
+12.4,
+" mean"
+]
+]
+},
+{
+"start": 12.4,
+"end": 18.38,
+"text": "lower costs, the home advantage, and problems worth solving. The truth. The internet lets you do",
+"words": [
+[
+12.4,
+12.68,
+" lower"
+],
+[
+12.68,
+13.12,
+" costs,"
+],
+[
+13.4,
+13.48,
+" the"
+],
+[
+13.48,
+13.68,
+" home"
+],
+[
+13.68,
+14.18,
+" advantage,"
+],
+[
+14.54,
+14.7,
+" and"
+],
+[
+14.7,
+15.1,
+" problems"
+],
+[
+15.1,
+15.4,
+" worth"
+],
+[
+15.4,
+15.9,
+" solving."
+],
+[
+16.16,
+16.32,
+" The"
+],
+[
+16.32,
+16.62,
+" truth."
+],
+[
+17.18,
+17.28,
+" The"
+],
+[
+17.28,
+17.56,
+" internet"
+],
+[
+17.56,
+17.94,
+" lets"
+],
+[
+17.94,
+18.16,
+" you"
+],
+[
+18.16,
+18.38,
+" do"
+]
+]
+},
+{
+"start": 18.38,
+"end": 24.4,
+"text": "both. Earn globally, build locally, whatever you choose. Build a skill the world pays for,",
+"words": [
+[
+18.38,
+18.7,
+" both."
+],
+[
+19.42,
+19.48,
+" Earn"
+],
+[
+19.48,
+19.94,
+" globally,"
+],
+[
+20.14,
+20.44,
+" build"
+],
+[
+20.44,
+20.98,
+" locally,"
+],
+[
+21.18,
+21.4,
+" whatever"
+],
+[
+21.4,
+21.74,
+" you"
+],
+[
+21.74,
+22.18,
+" choose."
+],
+[
+22.54,
+22.8,
+" Build"
+],
+[
+22.8,
+22.96,
+" a"
+],
+[
+22.96,
+23.24,
+" skill"
+],
+[
+23.24,
+23.46,
+" the"
+],
+[
+23.46,
+23.68,
+" world"
+],
+[
+23.68,
+23.98,
+" pays"
+],
+[
+23.98,
+24.4,
+" for,"
+]
+]
+},
+{
+"start": 24.4,
+"end": 30.4,
+"text": "saving a strong currency, and keep your network everywhere. Comment. Are you moving or building?",
+"words": [
+[
+24.4,
+24.84,
+" saving"
+],
+[
+24.84,
+25.02,
+" a"
+],
+[
+25.02,
+25.3,
+" strong"
+],
+[
+25.3,
+25.84,
+" currency,"
+],
+[
+26.4,
+26.48,
+" and"
+],
+[
+26.48,
+26.68,
+" keep"
+],
+[
+26.68,
+26.88,
+" your"
+],
+[
+26.88,
+27.26,
+" network"
+],
+[
+27.26,
+27.88,
+" everywhere."
+],
+[
+28.38,
+28.6,
+" Comment."
+],
+[
+29.0,
+29.14,
+" Are"
+],
+[
+29.14,
+29.26,
+" you"
+],
+[
+29.26,
+29.58,
+" moving"
+],
+[
+29.58,
+30.08,
+" or"
+],
+[
+30.08,
+30.4,
+" building?"
+]
+]
+}
+]

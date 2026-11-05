@@ -1,0 +1,442 @@
+[
+{
+"start": 0.0,
+"end": 6.52,
+"text": "Hi Cobo here. The news says inflation is falling so why are prices still high? Because falling",
+"words": [
+[
+0.0,
+0.32,
+" Hi"
+],
+[
+0.32,
+0.64,
+" Cobo"
+],
+[
+0.64,
+0.98,
+" here."
+],
+[
+1.38,
+1.5,
+" The"
+],
+[
+1.5,
+1.78,
+" news"
+],
+[
+1.78,
+2.1,
+" says"
+],
+[
+2.1,
+2.52,
+" inflation"
+],
+[
+2.52,
+2.86,
+" is"
+],
+[
+2.86,
+3.26,
+" falling"
+],
+[
+3.26,
+3.98,
+" so"
+],
+[
+3.98,
+4.2,
+" why"
+],
+[
+4.2,
+4.38,
+" are"
+],
+[
+4.38,
+4.62,
+" prices"
+],
+[
+4.62,
+4.96,
+" still"
+],
+[
+4.96,
+5.34,
+" high?"
+],
+[
+5.9,
+6.14,
+" Because"
+],
+[
+6.14,
+6.52,
+" falling"
+]
+]
+},
+{
+"start": 6.52,
+"end": 12.5,
+"text": "inflation means prices are rising slower not that they're going down. In Nigeria inflation dropped",
+"words": [
+[
+6.52,
+6.92,
+" inflation"
+],
+[
+6.92,
+7.36,
+" means"
+],
+[
+7.36,
+7.78,
+" prices"
+],
+[
+7.78,
+8.04,
+" are"
+],
+[
+8.04,
+8.36,
+" rising"
+],
+[
+8.36,
+8.88,
+" slower"
+],
+[
+8.88,
+9.48,
+" not"
+],
+[
+9.48,
+9.7,
+" that"
+],
+[
+9.7,
+9.98,
+" they're"
+],
+[
+9.98,
+10.06,
+" going"
+],
+[
+10.06,
+10.52,
+" down."
+],
+[
+11.06,
+11.18,
+" In"
+],
+[
+11.18,
+11.54,
+" Nigeria"
+],
+[
+11.54,
+12.1,
+" inflation"
+],
+[
+12.1,
+12.5,
+" dropped"
+]
+]
+},
+{
+"start": 12.5,
+"end": 19.78,
+"text": "to about 14.5% in September. That still means things cost more every month. So your money still",
+"words": [
+[
+12.5,
+12.72,
+" to"
+],
+[
+12.72,
+13.02,
+" about"
+],
+[
+13.02,
+13.54,
+" 14"
+],
+[
+13.54,
+13.92,
+".5"
+],
+[
+13.92,
+14.32,
+"%"
+],
+[
+14.32,
+14.66,
+" in"
+],
+[
+14.66,
+15.12,
+" September."
+],
+[
+15.62,
+15.9,
+" That"
+],
+[
+15.9,
+16.3,
+" still"
+],
+[
+16.3,
+16.66,
+" means"
+],
+[
+16.66,
+17.04,
+" things"
+],
+[
+17.04,
+17.3,
+" cost"
+],
+[
+17.3,
+17.6,
+" more"
+],
+[
+17.6,
+17.84,
+" every"
+],
+[
+17.84,
+18.2,
+" month."
+],
+[
+18.9,
+19.12,
+" So"
+],
+[
+19.12,
+19.28,
+" your"
+],
+[
+19.28,
+19.46,
+" money"
+],
+[
+19.46,
+19.78,
+" still"
+]
+]
+},
+{
+"start": 19.78,
+"end": 24.76,
+"text": "needs to grow faster than prices. Track your spending, raise your prices if you sell and",
+"words": [
+[
+19.78,
+20.02,
+" needs"
+],
+[
+20.02,
+20.2,
+" to"
+],
+[
+20.2,
+20.44,
+" grow"
+],
+[
+20.44,
+20.7,
+" faster"
+],
+[
+20.7,
+20.98,
+" than"
+],
+[
+20.98,
+21.42,
+" prices."
+],
+[
+22.06,
+22.12,
+" Track"
+],
+[
+22.12,
+22.28,
+" your"
+],
+[
+22.28,
+22.66,
+" spending,"
+],
+[
+22.92,
+23.08,
+" raise"
+],
+[
+23.08,
+23.26,
+" your"
+],
+[
+23.26,
+23.56,
+" prices"
+],
+[
+23.56,
+23.8,
+" if"
+],
+[
+23.8,
+23.96,
+" you"
+],
+[
+23.96,
+24.28,
+" sell"
+],
+[
+24.28,
+24.76,
+" and"
+]
+]
+},
+{
+"start": 24.76,
+"end": 29.54,
+"text": "keep savings where they earn above inflation. Save this and follow Cobo's money story.",
+"words": [
+[
+24.76,
+24.96,
+" keep"
+],
+[
+24.96,
+25.36,
+" savings"
+],
+[
+25.36,
+25.64,
+" where"
+],
+[
+25.64,
+25.8,
+" they"
+],
+[
+25.8,
+26.04,
+" earn"
+],
+[
+26.04,
+26.34,
+" above"
+],
+[
+26.34,
+26.82,
+" inflation."
+],
+[
+27.5,
+27.58,
+" Save"
+],
+[
+27.58,
+27.88,
+" this"
+],
+[
+27.88,
+28.32,
+" and"
+],
+[
+28.32,
+28.56,
+" follow"
+],
+[
+28.56,
+29.02,
+" Cobo's"
+],
+[
+29.02,
+29.2,
+" money"
+],
+[
+29.2,
+29.54,
+" story."
+]
+]
+}
+]

@@ -1,0 +1,430 @@
+[
+{
+"start": 0.0,
+"end": 3.52,
+"text": "A company that moves money with stablecoins just raised $40 million.",
+"words": [
+[
+0.0,
+0.32,
+" A"
+],
+[
+0.32,
+0.48,
+" company"
+],
+[
+0.48,
+0.74,
+" that"
+],
+[
+0.74,
+0.98,
+" moves"
+],
+[
+0.98,
+1.22,
+" money"
+],
+[
+1.22,
+1.46,
+" with"
+],
+[
+1.46,
+2.02,
+" stablecoins"
+],
+[
+2.02,
+2.54,
+" just"
+],
+[
+2.54,
+2.92,
+" raised"
+],
+[
+2.92,
+3.26,
+" $40"
+],
+[
+3.26,
+3.52,
+" million."
+]
+]
+},
+{
+"start": 4.34,
+"end": 6.6,
+"text": "And banks are starting to explore stablecoins too.",
+"words": [
+[
+4.34,
+4.72,
+" And"
+],
+[
+4.72,
+4.94,
+" banks"
+],
+[
+4.94,
+5.12,
+" are"
+],
+[
+5.12,
+5.32,
+" starting"
+],
+[
+5.32,
+5.5,
+" to"
+],
+[
+5.5,
+5.82,
+" explore"
+],
+[
+5.82,
+6.3,
+" stablecoins"
+],
+[
+6.3,
+6.6,
+" too."
+]
+]
+},
+{
+"start": 7.32,
+"end": 7.5,
+"text": "Why?",
+"words": [
+[
+7.32,
+7.5,
+" Why?"
+]
+]
+},
+{
+"start": 7.98,
+"end": 10.72,
+"text": "Because sending money across borders is still slow and expensive.",
+"words": [
+[
+7.98,
+8.06,
+" Because"
+],
+[
+8.06,
+8.36,
+" sending"
+],
+[
+8.36,
+8.66,
+" money"
+],
+[
+8.66,
+8.96,
+" across"
+],
+[
+8.96,
+9.34,
+" borders"
+],
+[
+9.34,
+9.56,
+" is"
+],
+[
+9.56,
+9.78,
+" still"
+],
+[
+9.78,
+10.14,
+" slow"
+],
+[
+10.14,
+10.28,
+" and"
+],
+[
+10.28,
+10.72,
+" expensive."
+]
+]
+},
+{
+"start": 11.36,
+"end": 14.18,
+"text": "Stablecoins can move value in minutes at lower cost.",
+"words": [
+[
+11.36,
+11.68,
+" Stablecoins"
+],
+[
+11.68,
+11.92,
+" can"
+],
+[
+11.92,
+12.16,
+" move"
+],
+[
+12.16,
+12.5,
+" value"
+],
+[
+12.5,
+12.8,
+" in"
+],
+[
+12.8,
+13.18,
+" minutes"
+],
+[
+13.18,
+13.62,
+" at"
+],
+[
+13.62,
+13.86,
+" lower"
+],
+[
+13.86,
+14.18,
+" cost."
+]
+]
+},
+{
+"start": 15.06,
+"end": 18.32,
+"text": "That's why fintech founders are building on crypto rails, quietly.",
+"words": [
+[
+15.06,
+15.34,
+" That's"
+],
+[
+15.34,
+15.5,
+" why"
+],
+[
+15.5,
+15.88,
+" fintech"
+],
+[
+15.88,
+16.18,
+" founders"
+],
+[
+16.18,
+16.46,
+" are"
+],
+[
+16.46,
+16.74,
+" building"
+],
+[
+16.74,
+16.98,
+" on"
+],
+[
+16.98,
+17.26,
+" crypto"
+],
+[
+17.26,
+17.64,
+" rails,"
+],
+[
+17.94,
+18.32,
+" quietly."
+]
+]
+},
+{
+"start": 19.0,
+"end": 23.62,
+"text": "If you're building, solve a real payment pain, follow the rules, and keep it simple for",
+"words": [
+[
+19.0,
+19.16,
+" If"
+],
+[
+19.16,
+19.3,
+" you're"
+],
+[
+19.3,
+19.6,
+" building,"
+],
+[
+19.9,
+20.18,
+" solve"
+],
+[
+20.18,
+20.4,
+" a"
+],
+[
+20.4,
+20.6,
+" real"
+],
+[
+20.6,
+20.94,
+" payment"
+],
+[
+20.94,
+21.32,
+" pain,"
+],
+[
+21.58,
+21.92,
+" follow"
+],
+[
+21.92,
+22.1,
+" the"
+],
+[
+22.1,
+22.36,
+" rules,"
+],
+[
+22.66,
+22.8,
+" and"
+],
+[
+22.8,
+23.0,
+" keep"
+],
+[
+23.0,
+23.18,
+" it"
+],
+[
+23.18,
+23.42,
+" simple"
+],
+[
+23.42,
+23.62,
+" for"
+]
+]
+},
+{
+"start": 23.62,
+"end": 23.96,
+"text": "users.",
+"words": [
+[
+23.62,
+23.96,
+" users."
+]
+]
+},
+{
+"start": 23.96,
+"end": 26.0,
+"text": "Follow for the business side of crypto.",
+"words": [
+[
+23.96,
+24.62,
+" Follow"
+],
+[
+24.62,
+24.92,
+" for"
+],
+[
+24.92,
+25.08,
+" the"
+],
+[
+25.08,
+25.34,
+" business"
+],
+[
+25.34,
+25.64,
+" side"
+],
+[
+25.64,
+25.78,
+" of"
+],
+[
+25.78,
+26.0,
+" crypto."
+]
+]
+}
+]

@@ -14,7 +14,8 @@ import time
 import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from autopilot import ROOT  # noqa: E402
+from autopilot import ROOT, load_config  # noqa: E402
+from autopilot.fb_caption import fb_caption, first_line  # noqa: E402
 from autopilot.fb_client import GRAPH, FacebookClient, FacebookError  # noqa: E402
 from autopilot.ig_client import InstagramClient  # noqa: E402
 
@@ -109,9 +110,55 @@ def publish(ig, fb):
     print(f"::notice::posted {n}, failed {bad}, skipped {len(done)} already done")
 
 
+def record(rec):
+    rec["at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    with DONE.open("a") as f:
+        f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+
+def sync(ig, fb):
+    """Daily flow: copy every new Instagram feed post / Reel (newer than facebook_sync_since) to the Page."""
+    since = load_config().get("facebook_sync_since", "2026-11-05T11:05:00+0000")
+    done = {json.loads(l)["ig_id"] for l in DONE.read_text().splitlines()} if DONE.exists() else set()
+    recent = ig._req("get", f"{ig.user_id}/media", params={
+        "fields": "id,caption,media_type,timestamp", "limit": 25}).get("data", [])
+    recent.sort(key=lambda m: m["timestamp"])
+    # Instagram sometimes ends up with the same post twice; Facebook gets it once.
+    seen = {first_line(m.get("caption")) for m in recent if m["id"] in done}
+    new = [m for m in recent if m["timestamp"] > since and m["id"] not in done]
+    n = 0
+    for m in new:
+        head = first_line(m.get("caption"))
+        if head and head in seen:
+            record({"ig_id": m["id"], "kind": "skipped", "reason": "duplicate of an Instagram post already copied"})
+            print(f"SKIP duplicate {m['id']}: {head[:60]}")
+            continue
+        caption = fb_caption(m.get("caption"), m["media_type"])
+        try:
+            kind, media = media_urls(ig, m["id"])
+        except KeyError:  # Instagram withholds the file (e.g. licensed music): nothing to copy
+            record({"ig_id": m["id"], "kind": "skipped", "reason": "Instagram gives no media file"})
+            print(f"::warning::Instagram post {m['id']} has no downloadable file; upload it to Facebook by hand")
+            continue
+        try:
+            if kind in ("video", "reels"):
+                res = post_reel(fb, media[0][1], caption)
+            else:
+                res = fb.post_photos([u for t, u in media if t == "IMAGE"], caption)
+        except Exception as e:  # noqa: BLE001  (retried on the next run)
+            print(f"::warning::Facebook copy of {m['id']} failed: {e}")
+            continue
+        record({"ig_id": m["id"], "kind": kind, "fb": res, "first_line": head})
+        seen.add(head)
+        n += 1
+        print(f"OK {m['id']} {kind} -> {res}")
+        time.sleep(20)
+    print(f"::notice::Facebook: {n} new post(s) copied" if n else "nothing new for Facebook")
+
+
 def main():
     ig, fb = InstagramClient(), FacebookClient()
-    (export if os.environ.get("MODE") == "export" else publish)(ig, fb)
+    {"export": export, "sync": sync}.get(os.environ.get("MODE"), publish)(ig, fb)
 
 
 if __name__ == "__main__":

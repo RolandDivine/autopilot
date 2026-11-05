@@ -62,7 +62,11 @@ def post_reel(fb, video_url, caption):
     fb._req("POST", f"{fb.page_id}/video_reels", data={
         "upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED", "description": caption})
     for _ in range(40):  # wait until Facebook has processed and published it
-        st = fb._req("GET", vid, params={"fields": "status,post_id,permalink_url"})
+        try:
+            st = fb._req("GET", vid, params={"fields": "status,post_id,permalink_url"})
+        except FacebookError:  # Facebook sometimes can't read a Reel for a moment after publishing
+            time.sleep(8)
+            continue
         phase = st.get("status", {}).get("video_status")
         if phase == "ready" and st.get("status", {}).get("publishing_phase", {}).get("status") != "in_progress":
             return {"id": st.get("post_id") or vid, "video_id": vid, "url": st.get("permalink_url")}

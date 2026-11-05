@@ -50,8 +50,13 @@ def media_urls(ig, ig_id):
 def post_reel(fb, video_url, caption):
     start = fb._req("POST", f"{fb.page_id}/video_reels", data={"upload_phase": "start"})
     vid = start["video_id"]
-    r = requests.post(f"https://rupload.facebook.com/video-upload/v24.0/{vid}", timeout=300,
-                      headers={"Authorization": f"OAuth {fb.token}", "file_url": video_url})
+    # Facebook can't fetch Instagram's CDN links, so download here and upload the bytes.
+    dl = requests.get(video_url, timeout=300)
+    if not dl.ok:
+        raise FacebookError(f"download from Instagram failed: HTTP {dl.status_code}")
+    r = requests.post(f"https://rupload.facebook.com/video-upload/v24.0/{vid}", timeout=600, data=dl.content,
+                      headers={"Authorization": f"OAuth {fb.token}", "offset": "0",
+                               "file_size": str(len(dl.content))})
     if not r.ok:
         raise FacebookError(f"reel upload failed: HTTP {r.status_code} {r.text[:300]}")
     fb._req("POST", f"{fb.page_id}/video_reels", data={

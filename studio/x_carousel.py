@@ -1,6 +1,6 @@
 """X (Twitter) post-style carousel: one narrator, story format. 1080x1350 slides.
 python studio/x_carousel.py  -> assets/x-carousel/<name>-N.jpg"""
-import html, re, sys
+import base64, html, re, sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -16,11 +16,13 @@ CSS = """*{margin:0;padding:0;box-sizing:border-box}
 body{width:1080px;height:1350px;background:#000;color:#e7e9ea;font-family:-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;display:flex;align-items:center}
 .card{width:100%;padding:0 84px}
 .top{display:flex;align-items:center;gap:22px;margin-bottom:38px}
-.av{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#e0218a,#7c3aed);display:flex;align-items:center;justify-content:center;font:800 38px sans-serif;color:#fff}
+.av{width:96px;height:96px;border-radius:50%;background:#333 center/cover}
 .nm{font-weight:800;font-size:36px;color:#fff}.hd{font-size:30px;color:#71767b;margin-top:4px}
 .tx{font-size:50px;line-height:1.36;letter-spacing:-.3px;color:#e7e9ea}
 .tx b{color:#fff}.hl{color:#1d9bf0;font-weight:700}
 .ft{margin-top:46px;padding-top:26px;border-top:1px solid #2f3336;display:flex;justify-content:space-between;font-size:28px;color:#71767b}"""
+
+AV = base64.b64encode((ROOT / "assets" / "brand" / "avatar.jpg").read_bytes()).decode()
 
 def render(name, slides, author=("Roland Divine", "@defi_ring_master", "RD")):
     out = []
@@ -28,7 +30,7 @@ def render(name, slides, author=("Roland Divine", "@defi_ring_master", "RD")):
         b = p.chromium.launch(); pg = b.new_page(viewport={"width": 1080, "height": 1350})
         for i, s in enumerate(slides, 1):
             more = "Swipe →" if i < len(slides) else "Save · Share"
-            h = (f"<html><head><style>{CSS}</style></head><body><div class=card><div class=top><div class=av>{author[2]}</div>"
+            h = (f"<html><head><style>{CSS}</style></head><body><div class=card><div class=top><div class=av style='background-image:url(data:image/jpeg;base64,{AV})'></div>"
                  f"<div><div class=nm>{author[0]}</div><div class=hd>{author[1]}</div></div></div>"
                  f"<div class=tx>{fmt(s)}</div><div class=ft><span>{i}/{len(slides)}</span><span>{more}</span></div></div></body></html>")
             pg.set_content(h); pg.wait_for_timeout(150)

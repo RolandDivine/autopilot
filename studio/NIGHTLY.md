@@ -163,3 +163,8 @@ Posting a video (Roland, 16 Oct 2026): `python3 studio/post_video.py <json> <key
 
 ## MANUAL CATCH-UP POSTS (3 Nov lesson)
 The runner re-posts any slot still within slot_grace_minutes (24h) that has no line in log/posted.jsonl. If you ever post a slot by hand (instagram-publish / linkedin-publish), append its line to log/posted.jsonl FIRST, in the same commit, or the next run posts it a second time.
+
+## CAROUSEL STYLE (Roland, 5 Nov 2026): X-style story carousels replace chat/WhatsApp style
+Use studio/x_carousel.py: dark X-post cards, Roland's photo (assets/brand/avatar.jpg), ONE narrator telling a story.
+Arc: moment hook ("It's 2 a.m....") → setup → tension → turn (name the trick) → cost → lesson → 3–4 practical rules → comment question + save/share.
+Use "imagine / here's how it could go" framing; never present an invented story as something that really happened.

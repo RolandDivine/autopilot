@@ -44,9 +44,9 @@ First comment: Source: McAfee's warning on Binance hack scams (30 Oct 2026).
 ## 2. AI trading bots: image li3.jpg
 3% a day sounds small.
 
-It's actually ₦4.8 billion.
+It's actually $48 million.
 
-Put ₦100,000 into an "AI trading bot" promising 3% daily. Compound it for one year and you'd have about ₦4.8 billion.
+Put $1,000 into an "AI trading bot" promising 3% daily. Compound it for one year and you'd have about $48 million.
 
 The best hedge funds on earth are happy with 15–20% a year.
 
@@ -65,11 +65,11 @@ I build trading technology, and here is the honest truth: no algorithm guarantee
 The 10-second test:
 1. Guaranteed daily profit? Walk away.
 2. Paid more to bring friends? Walk away.
-3. Not registered with the SEC? Walk away.
+3. Not registered with your country's financial regulator? Walk away.
 
 Has anyone pitched you an "AI bot" this year? Tell me what it promised.
 
-#AI #crypto #Nigeria
+#AI #crypto #scamawareness
 
 ---
 ## 3. USDT freezes: image li4.jpg

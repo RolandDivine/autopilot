@@ -61,17 +61,15 @@ First comment: Source: CertiK October 2026 figures via ForkLog.
 
 ---
 ## 8. Nigeria's licensing reality: image li8.jpg
-How many crypto exchanges are fully licensed by Nigeria's SEC right now?
+Nigeria is one of the biggest crypto markets in the world.
 
-Zero.
+Number of fully licensed crypto exchanges there: zero.
 
 On 29 October, the SEC confirmed that no crypto operator has completed full registration yet.
 
 Its draft rules propose ₦2 billion in minimum capital for exchanges.
 
-Meanwhile Nigeria is one of the biggest crypto markets in the world.
-
-So millions of Nigerians use platforms that are, at best, "in the process".
+So millions of people use platforms that are, at best, "in the process".
 
 What that means for you:
 → If something goes wrong, there's no Nigerian regulator you can easily escalate to.
@@ -80,7 +78,9 @@ What that means for you:
 
 And one more thing creators should know: under SEC rules, promoting crypto platforms to Nigerians requires approval first. Penalties start at ₦10 million.
 
-Should Nigeria move faster on licensing, or get it right slowly?
+It's a lesson for every fast-growing market, not just Nigeria: adoption moves faster than rules.
+
+Where you live, is your crypto exchange fully licensed? Do you actually know?
 
 #Nigeria #crypto #regulation
 

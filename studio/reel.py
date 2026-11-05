@@ -117,6 +117,51 @@ window.ready=1;
 </script></body></html>"""
 
 
+SFX = {
+    "whoosh": "anoisesrc=color=pink:d=0.5:a=0.5,bandpass=f=2000:w=1800,afade=t=in:d=0.25,afade=t=out:st=0.25:d=0.25,volume=0.35",
+    "impact": "sine=f=46:d=0.9,volume=1.5,afade=t=out:st=0.05:d=0.85",
+    "ticks": "aevalsrc=0.16*sin(2*PI*2600*t)*lt(mod(t\\,0.085)\\,0.01):d=3.0:s=48000,afade=t=out:st=2.6:d=0.4",
+    "pop": "sine=f=880:d=0.12,afade=t=out:d=0.12,volume=0.5",
+}
+
+
+def mix_audio(spec, dur):
+    """Voice + light sound design (whoosh on each cut, plus the spec's own hits) + a soft bed, mixed in numpy."""
+    import numpy as np
+    SR = 48000
+    tmp = WORK / "sfx"
+    tmp.mkdir(parents=True, exist_ok=True)
+
+    def load(path):
+        raw = str(path) + ".raw"
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(path), "-ar", str(SR), "-ac", "1", "-f", "f32le", raw], check=True)
+        return np.fromfile(raw, dtype=np.float32)
+
+    for k, f in SFX.items():
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi", "-i", f, str(tmp / f"{k}.wav")], check=True)
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi", "-i",
+                    f"sine=f=55:d={dur},volume=0.05,tremolo=f=0.2:d=0.5,afade=t=in:d=1,afade=t=out:st={dur-1.5}:d=1.5",
+                    "-ar", str(SR), str(tmp / "bed.wav")], check=True)
+    n = int(dur * SR)
+    mix = np.zeros(n, np.float32)
+    v = load(ROOT / spec["audio"])[:n]
+    mix[:len(v)] += v
+    b = load(tmp / "bed.wav")[:n]
+    mix[:len(b)] += b
+    cache = {k: load(tmp / f"{k}.wav") for k in SFX}
+    events = [("whoosh", max(0, sc["a"] - 0.2)) for sc in spec["scenes"][1:]] + [tuple(e) for e in spec.get("sfx", [])]
+    for k, at in events:
+        snd, i = cache[k], int(at * SR)
+        if i < n:
+            j = min(n, i + len(snd))
+            mix[i:j] += snd[:j - i]
+    mix = np.clip(mix / max(1.0, float(np.abs(mix).max()) / 0.95), -1, 1).astype(np.float32)
+    mix.tofile(str(tmp / "mix.raw"))
+    out = tmp / "mix.wav"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", str(tmp / "mix.raw"), str(out)], check=True)
+    return out
+
+
 def render(name, preview=None):
     spec = importlib.import_module(f"reels.{name}").SPEC
     WORK.mkdir(parents=True, exist_ok=True)
@@ -152,10 +197,10 @@ def render(name, preview=None):
     if preview:
         return frames
     out = ROOT / "assets" / "reels" / f"{name}.mp4"
-    audio = spec.get("audio")
+    audio = mix_audio(spec, dur) if spec.get("audio") else None
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-framerate", str(FPS), "-i", str(frames / "f%05d.jpg")]
     if audio:
-        cmd += ["-i", str(ROOT / audio), "-c:a", "aac", "-b:a", "160k", "-shortest"]
+        cmd += ["-i", str(audio), "-c:a", "aac", "-b:a", "192k", "-t", str(dur)]
     cmd += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "19", "-preset", "medium", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True)
     return out

@@ -178,3 +178,6 @@ Generate on fish.audio in the built-in browser with Roland's app credits, model 
 
 How to download: open `/app/text-to-speech/?modelId=<id>&text=<urlencoded script>` and click Generate (it makes 2 takes). The task JSON's `result` field is `https://platform.r2.fish.audio/tasks/<date>/<id>.mp3`, and the sandbox can curl it directly.
 Reels use studio/reel.py (line-art + 3D, 30fps). Specs live in studio/reels/<name>.py.
+
+## AUDIENCE (Roland, 5 Nov 2026): GLOBAL, not Nigeria-only
+Write and explain everything for a global audience: amounts in US dollars, no assumed local context, and examples anyone can follow. Nigeria/Africa stories are still welcome as stories, but explain them for outsiders. Say "your country's regulator" rather than only "the SEC".

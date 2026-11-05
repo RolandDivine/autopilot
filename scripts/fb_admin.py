@@ -38,6 +38,9 @@ def run(c, o):
     if op == "cover":
         photo = c._req("POST", f"{c.page_id}/photos", data={"url": url(o["path"]), "published": "false"})
         return c._req("POST", c.page_id, data={"cover": photo["id"], "no_feed_story": "true"})
+    if op == "reels":
+        d = c._req("GET", f"{c.page_id}/video_reels", params={"fields": "id,description,created_time,status", "limit": 100})
+        return [(v["id"], v.get("created_time"), (v.get("description") or "")[:60], v.get("status", {}).get("video_status")) for v in d.get("data", [])]
     if op == "name":
         return c._req("POST", c.page_id, data={"name": o["name"]})
     raise ValueError(f"unknown op {op}")
@@ -48,7 +51,7 @@ def main():
     bad = 0
     for o in json.loads(os.environ["OPS"]):
         try:
-            print(f"[{o['op']}] OK", json.dumps(run(c, o))[:600])
+            print(f"[{o['op']}] OK", json.dumps(run(c, o), ensure_ascii=False)[:12000])
         except Exception as e:  # noqa: BLE001
             bad += 1
             print(f"[{o['op']}] FAILED {e}")

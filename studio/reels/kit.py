@@ -69,7 +69,7 @@ def icon(name, label, c=Y):
     paths = ICONS[name]
     svg = ("<svg><g transform='translate(540 760) scale(1.35) translate(-540 -760)'>"
            + "".join(ln(p, .1 + i * .25, .6, c, 6) for i, p in enumerate(paths)) + "</g></svg>")
-    return svg + (lab(540, 1040, label, .5, c) if label else "")
+    return svg + (lab(540, 1120, label, .5, c) if label else "")
 
 
 def count(v0, v1, pre="", suf="", label="", c=GRN, exp=False, d=2.2):

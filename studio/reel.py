@@ -78,11 +78,11 @@ B.pyramid=()=>{const {s,c}=base();const P=[];const rows=5;
    P.forEach(m=>{const k=ease(clamp(u*2.4-(4-m.userData.r)*.12));m.scale.setScalar(Math.max(.001,k));});
    coins.forEach((m,i)=>{const ph=(u*1.6+i/40)%1;const ang=i*2.4;const rad=(1-ph)*1.5;
      m.position.set(Math.cos(ang)*rad,.2+ph*2.7,Math.sin(ang)*rad);m.rotation.set(ph*9,i,0);m.visible=u>.2;});}};};
-B.vault=()=>{const {s,c}=base();const v=new T.Mesh(new T.BoxGeometry(3,3,3),mat(0x3a3d44,{metalness:.95,roughness:.28}));v.position.y=1.5;v.rotation.y=-.5;s.add(v);
- const door=new T.Mesh(new T.CylinderGeometry(1,1,.25,64),mat(0x2c2f36,{metalness:1,roughness:.25}));door.rotation.x=Math.PI/2;door.position.set(0,0,1.55);v.add(door);
- const ring=new T.Mesh(new T.TorusGeometry(1,.06,16,80),glow(0xffd60a,1.4));ring.position.set(0,0,1.68);v.add(ring);
+B.vault=()=>{const {s,c}=base();const v=new T.Mesh(new T.BoxGeometry(2.2,2.2,2.2),mat(0x3a3d44,{metalness:.95,roughness:.28}));v.position.y=1.1;v.rotation.y=-.5;s.add(v);
+ const door=new T.Mesh(new T.CylinderGeometry(1,1,.25,64),mat(0x2c2f36,{metalness:1,roughness:.25}));door.rotation.x=Math.PI/2;door.position.set(0,0,1.15);door.scale.setScalar(.75);v.add(door);
+ const ring=new T.Mesh(new T.TorusGeometry(1,.06,16,80),glow(0xffd60a,1.4));ring.position.set(0,0,1.26);ring.scale.setScalar(.75);v.add(ring);
  const cs=[];for(let i=0;i<50;i++){const m=new T.Mesh(new T.CylinderGeometry(.24,.24,.05,32),mat(0xf3ba2f,{metalness:1,roughness:.2,emissive:0x4a3000}));s.add(m);cs.push([m,Math.random()*Math.PI*1.2-.2,1.8+Math.random()*2.6,Math.random()]);}
- return {s,c,update:(u)=>{c.position.set(Math.sin(.4+u*.4)*15,8.5,Math.cos(.4+u*.4)*15);c.lookAt(0,.3,0);door.rotation.y=-ease(clamp(u*1.5))*1.6;
+ return {s,c,update:(u)=>{c.position.set(Math.sin(.4+u*.4)*13,6.5,Math.cos(.4+u*.4)*13);c.lookAt(0,.6,0);door.rotation.y=-ease(clamp(u*1.5))*1.6;
    cs.forEach(([m,a,d,r])=>{const k=ease(clamp(u*1.6-r*.5));m.position.set(Math.cos(a)*d*k-.4,.05+Math.max(0,(1-k))*1.5,Math.sin(a)*d*k+1.2);m.rotation.set(r*6,r*3,k*4);m.visible=k>0;});}};};
 B.wallet3d=()=>{const {s,c}=base();const w=new T.Mesh(new T.BoxGeometry(1.6,.35,2.6),mat(0x16181d,{metalness:.6,roughness:.35}));w.position.y=.6;s.add(w);
  const scr=new T.Mesh(new T.BoxGeometry(1.1,.05,1.3),glow(0x2fd27a,.9));scr.position.set(0,.8,-.3);s.add(scr);

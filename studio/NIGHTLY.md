@@ -181,3 +181,6 @@ Reels use studio/reel.py (line-art + 3D, 30fps). Specs live in studio/reels/<nam
 
 ## AUDIENCE (Roland, 5 Nov 2026): GLOBAL, not Nigeria-only
 Write and explain everything for a global audience: amounts in US dollars, no assumed local context, and examples anyone can follow. Nigeria/Africa stories are still welcome as stories, but explain them for outsiders. Say "your country's regulator" rather than only "the SEC".
+
+## TREND REEL SERIES (5 Nov 2026): 8 Nov – 7 Dec 2026, one Reel a day at 11:00 UTC
+The 30 trend Reels (assets/reels/trend-*.mp4 and aibot.mp4) are already queued in queue/vo/posts-<date>.json as `trend-*` entries. On those days, do NOT add another Instagram Reel. Build only stories, LinkedIn and carousels around that day's topic. Specs: studio/reels/series.py. To render more: dispatch the render-reels workflow (parallel, GitHub).

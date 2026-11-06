@@ -300,5 +300,23 @@
     }
    ]
   }
+ },
+ "ex19": {
+  "date": "2026-11-08",
+  "caption_start": "Inflation explained: your money can shrink",
+  "used": {
+   "text": "Your money is shrinking | without you spending",
+   "style": "stake"
+  },
+  "variants": [
+   {
+    "text": "10% inflation | $1,000 → $1,100",
+    "style": "number"
+   },
+   {
+    "text": "Cash savings | the quiet loss",
+    "style": "warning"
+   }
+  ]
  }
 }

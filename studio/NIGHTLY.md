@@ -11,6 +11,8 @@ if anything is >40 min late. No Claude session triggers or watches posting any m
 build does NOT dispatch post.yml/videos.yml except to post something it built for a time that has already passed.
 Token rules: keep the nightly run short. Build, check, commit, push, then stop. Don't read images unless you have to. Don't poll in loops. No chat messages unless something needs Roland.
 
+## STATUS (6 Nov 2026 nightly): Sun 8 built (studio/days/week46a.py): stories + new ex19 inflation Reel (36 s, 10:00 UTC). ex08 moved to 10:00 UTC on Sat 7 (3 h from trend Reels). Next: Mon 9 + Tue 10 (week 46: LinkedIn Mon–Fri, 2 IG carousels allowed). Reel bank next: ex11, ex12, ex13, ex16. Most trend Reels are 24–30 s (under the 30 s floor). trump-swan (6 Nov 01:00) logged ok:false: story, Facebook and YouTube posted; the Reel result is unclear.
+
 ## STATUS (4 Nov 2026 nightly): Fri 6 + Sat 7 Nov built (studio/days/week45d.py): Fri LinkedIn Paystack/Moniepoint (IG off), ex06 Mt Gox + ex08 ETF Reels (40/38 s), stories both days. Sat has no slot file (no LinkedIn on weekends, IG carousel cap) — only stories + Reel. Next: Sun 8 + Mon 9 (week 46: 2 new IG carousels allowed). Reel bank next: ex19, ex11, ex12, ex13, ex16. video_runner now pushes a claim line before posting (ex15 was double-posted on 4 Nov by two overlapping runs).
 
 ## STATUS (5 Nov 2026 nightly): Fri 6 + Sat 7 already built (week45d.py); nothing built tonight. Next: Sun 8 stories (no slots on weekends' LinkedIn) + Mon 9 slots/stories. Trend Reels queued 8 Nov–7 Dec; trend-aibot (8 Nov) is 27 s, under the 30 s floor. 4 Nov ex15 Reel posted twice (11:06 + 11:11 UTC) before the claim lock.

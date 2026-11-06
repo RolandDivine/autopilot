@@ -491,7 +491,22 @@ def etf_spec():
     return viral.std("ex08-etf-cut", timeline)
 
 
-SPECS = {"ex06-mtgox-cut": mtgox_spec, "ex08-etf-cut": etf_spec, "ex15-passkeys-cut": passkeys_spec, "ex07-gasfees-cut": gasfees_spec, "ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def inflation_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "jar-notes.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 5.2, "html": "<div class='kick'>Money · basics</div><div class='mid'>Your money<br><span class='red'>can shrink</span></div><div class='sm' style='margin-top:16px'>Without you spending a cent.</div>"},
+            {"kind": "html", "a": 5.2, "b": 13.3, "html": "<div class='kick'>That's inflation</div><div class='mid'>10% a year<br><span class='yel'>$1,000 → $1,100</span></div><div class='sm' style='margin-top:16px'>Same thing, higher price.</div>"},
+            {"kind": "html", "a": 13.3, "b": 17.3, "html": "<div class='kick'>Your savings</div><div class='mid'>Same money<br><span class='red'>buys less</span></div>"},
+            {"kind": "checks", "a": 17.3, "b": 36.0, "kick": "What you can do", "title": "Do this", "items": [{"t": "Know your country's inflation rate", "d": 1.0}, {"t": "Don't park long-term savings in cash", "d": 5.4}, {"t": "Savings that pay interest, ideally above inflation", "d": 10.2}, {"t": "Build skills that raise your income", "d": 15.2}]},
+            {"kind": "html", "a": 36.0, "b": dur + 1, "html": FOLLOW.format("Send this to a friend saving in cash.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex19-inflation-cut", timeline)
+
+
+SPECS = {"ex19-inflation-cut": inflation_spec, "ex06-mtgox-cut": mtgox_spec, "ex08-etf-cut": etf_spec, "ex15-passkeys-cut": passkeys_spec, "ex07-gasfees-cut": gasfees_spec, "ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

@@ -1,0 +1,20 @@
+{
+  "_note": "Roland, 7 Nov 2026: comment or DM a keyword -> automatic DM. Edit the texts here; scripts/ig_keywords.py sends them. Instagram allows ONE private reply per comment (max 1000 chars), so 'dm' must stay under 1000 characters.",
+  "keywords": {
+    "PLAN": {
+      "video": "How do people make millions from a financial collapse? (5-step crash plan)",
+      "dm": "Hey {name}! Here's my 5-step crash plan 👇\n\n1️⃣ Weak currency → digital dollars. Only fully backed stablecoins, in your own offline wallet, not on an exchange. Know the risk: issuers can freeze tokens.\n2️⃣ Cash ready. A few months of expenses untouched, plus cash to buy when others are forced to sell.\n3️⃣ Everyday essentials. Food, household goods, healthcare. Staples rose 24% in the 2000–02 crash.\n4️⃣ AI shovels, only when cheap. Power, chips, robots. They fell 12% in one day on 5 Nov. Never buy in a panic.\n5️⃣ Crypto: small slice, long term. Billion-dollar families keep ~1%.\n\nThe split framework: 25% stocks · 25% bonds · 25% gold · 25% cash. It fell ~3% in 2008 while stocks fell ~49%.\n\nBiggest rule: don't panic-sell. People who stayed in 2008 were up 50% by 2011.\n\nMy opinion, not financial advice. Want my crash watch list too? Reply SIGNALS.",
+      "comment_replies": ["Sent! Check your DMs 📩", "Just sent you the plan 📩", "In your DMs now 🔐", "Sent, check your inbox 📬"]
+    },
+    "SIGNALS": {
+      "video": "Are we closer to the next financial collapse? (warning dashboard)",
+      "dm": "Hey {name}! Here's my crash watch list 👇\n\nThese are the signals that turned past sell-offs (2000, 2008, 2020) into real crashes. I check them weekly:\n\n1️⃣ Junk-bond spreads: the extra interest risky companies pay over US government bonds. A fast jump = credit breaking. (Search \"ICE BofA US High Yield spread\" on FRED.)\n2️⃣ The US dollar: a sudden dollar spike = everyone rushing to cash. (DXY index.)\n3️⃣ Jobless claims: US layoffs data, every Thursday. A steady rise = the economy cracking.\n\n📅 Date I'm watching: 30 Nov, when Trump Media's $1B debt can come due.\n\nRight now: 5 of 15 warning lights on. Jobs, banks and the dollar are still calm.\n\nMy opinion, not financial advice. Want my 5-step crash plan too? Reply PLAN.",
+      "comment_replies": ["Sent! Check your DMs 📩", "Watch list sent 📩", "In your DMs now 🚨", "Sent, check your inbox 📬"]
+    },
+    "SWAN": {
+      "video": "Trump's company moved $343M of Bitcoin (black swan)",
+      "dm": "Hey {name}! Here's my market-crash checklist 🦢\n\n☐ No borrowed money (no leverage). Forced selling is what wipes people out.\n☐ Don't sell on a headline. Check: was it a transfer or a sale?\n☐ Emergency fund outside crypto.\n☐ Only hold what you could watch drop 50%.\n☐ Don't keep your savings on one exchange.\n\nWant more? Reply PLAN for my 5-step crash plan, or SIGNALS for the 3 warning signs I watch every week.\n\nMy opinion, not financial advice.",
+      "comment_replies": ["Sent! Check your DMs 📩", "Checklist sent 🦢", "In your DMs now 📩"]
+    }
+  }
+}

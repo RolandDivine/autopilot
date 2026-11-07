@@ -35,6 +35,11 @@ jobs:
           end=$(( $(date +%s) + 340*60 ))
           while [ "$(date +%s)" -lt "$end" ]; do
             h=$(date -u +%-H); m=$(date -u +%-M)
+            # Roland, 7 Nov 2026: keyword auto-replies (PLAN / SIGNALS / SWAN) every 10 minutes, day and night
+            if [ $((m % 10)) -eq 2 ] && [ "${kw:-}" != "$h:$m" ]; then
+              kw="$h:$m"
+              gh api -X POST "repos/$REPO/actions/workflows/ig-keywords.yml/dispatches" -f ref=main || true
+            fi
             if [ "$h" -ge 6 ] && [ "$h" -le 21 ] && [ $((m % 5)) -eq 0 ]; then
               echo "tick $(date -u +%H:%M)"
               gh api -X POST "repos/$REPO/actions/workflows/post.yml/dispatches" -f ref=main -F "inputs[dry_run]=false" || true

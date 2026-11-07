@@ -1,0 +1,15 @@
+{
+ "title": "LinkedIn: Autopilot double-posted a Reel, and the claim-line fix",
+ "kind": "lesson",
+ "x": {
+  "enabled": false
+ },
+ "instagram": {
+  "enabled": false
+ },
+ "linkedin": {
+  "enabled": true,
+  "text": "My posting robot published the same video twice. Five minutes apart.\n\nIf you automate anything that touches customers, this bug is waiting for you too.\n\nI run Autopilot, a system that posts my Reels, carousels and LinkedIn posts on a timer from GitHub. No human presses \"post\".\n\nOn 4 November, two runs started close together. Both checked the log. Both saw the Reel hadn't gone out yet. Both posted it. 11:06 and 11:11 UTC.\n\nNothing crashed. Every check passed. The bug lived in the gap between \"check\" and \"do\".\n\nThe fix was small:\n\n→ Before posting, a run writes a \"claim\" line to the log and pushes it.\n→ Any other run sees the claim and backs off.\n→ Only then does the post go out, and the result gets logged.\n\nThe lesson I'd pass on to anyone building automation:\n\n\"Did this already happen?\" is not enough. You need \"I'm doing this now, everyone else stand back.\"\n\nPayments teams call it idempotency. Same idea for a payout, an email blast or an order: running it twice must never do it twice.\n\nA question for builders:\nWhat's the most expensive thing your system has ever done twice?",
+  "media": "media/li-cover.jpg"
+ }
+}

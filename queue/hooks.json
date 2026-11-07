@@ -318,5 +318,41 @@
     "style": "warning"
    }
   ]
+ },
+ "ex11": {
+  "date": "2026-11-09",
+  "caption_start": "ChatGPT can sound sure",
+  "used": {
+   "text": "ChatGPT lied | to these lawyers",
+   "style": "stake"
+  },
+  "variants": [
+   {
+    "text": "Fake cases | $5,000 fine",
+    "style": "number"
+   },
+   {
+    "text": "Sounds sure | totally wrong",
+    "style": "myth"
+   }
+  ]
+ },
+ "ex12": {
+  "date": "2026-11-10",
+  "caption_start": "How does ChatGPT work?",
+  "used": {
+   "text": "ChatGPT is | guessing your answer",
+   "style": "curiosity"
+  },
+  "variants": [
+   {
+    "text": "No database | just guesses",
+    "style": "myth"
+   },
+   {
+    "text": "Likely | is not true",
+    "style": "mistake"
+   }
+  ]
  }
 }

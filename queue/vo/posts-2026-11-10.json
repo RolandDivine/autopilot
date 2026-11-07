@@ -31,5 +31,14 @@
   "li_text": "",
   "at": "19:00",
   "facebook": true
+ },
+ "ex12": {
+  "video": "assets/reels/ex12-llm-cut-hook.mp4",
+  "title": "How ChatGPT works: it predicts the next word",
+  "youtube": false,
+  "linkedin": false,
+  "reel_caption": "How does ChatGPT work? It plays a very advanced guessing game. 🎲\n\nIt doesn't search a database of answers. It predicts the next small piece of text (a token), thousands of times, very fast. That's why it predicts what sounds likely, not what is checked true. Use it like a brilliant intern: fast and helpful, but you sign off on the work.\n\n📤 Send this to a friend who uses ChatGPT every day\n📌 Save it for later\n\n#chatgpt #howaiworks #aitools #artificialintelligence",
+  "li_text": "",
+  "at": "10:00"
  }
 }

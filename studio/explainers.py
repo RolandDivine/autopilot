@@ -506,7 +506,38 @@ def inflation_spec():
     return viral.std("ex19-inflation-cut", timeline)
 
 
-SPECS = {"ex19-inflation-cut": inflation_spec, "ex06-mtgox-cut": mtgox_spec, "ex08-etf-cut": etf_spec, "ex15-passkeys-cut": passkeys_spec, "ex07-gasfees-cut": gasfees_spec, "ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
+def hallucination_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "glass-dome-brain.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 4.3, "html": "<div class='kick'>AI · check this</div><div class='mid'>Sounds sure.<br><span class='red'>Totally wrong.</span></div>"},
+            {"kind": "html", "a": 4.3, "b": 13.8, "html": "<div class='kick'>New York, 2023</div><div class='mid'>Lawyers filed<br><span class='yel'>ChatGPT's cases</span></div><div class='sm' style='margin-top:16px'>Mata v. Avianca</div>"},
+            {"kind": "html", "a": 13.8, "b": 20.2, "html": "<div class='kick'>The catch</div><div class='mid'>The cases<br><span class='red'>didn't exist</span></div><div class='sm' style='margin-top:16px'>Fine: $5,000</div>"},
+            {"kind": "checks", "a": 20.2, "b": 31.3, "kick": "Before you trust it", "title": "Check this", "items": [{"t": "Facts, names, numbers", "d": 0.4}, {"t": "Laws and medical advice", "d": 3.0}, {"t": "Ask for sources", "d": 7.4}, {"t": "Open them yourself", "d": 9.4}]},
+            {"kind": "html", "a": 31.3, "b": dur + 1, "html": FOLLOW.format("Send this to a friend who trusts ChatGPT blindly.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex11-hallucination-cut", timeline)
+
+
+def llm_spec():
+    def timeline(at, dur):
+        bgs = [(-1, dur + 1, GEN / "typewriter-app.jpg")]
+        cards = [
+            {"kind": "html", "a": -1, "b": 5.7, "html": "<div class='kick'>AI · how it works</div><div class='mid'>ChatGPT is<br><span class='yel'>guessing</span></div><div class='sm' style='margin-top:16px'>A very advanced guessing game.</div>"},
+            {"kind": "html", "a": 5.7, "b": 9.6, "html": "<div class='kick'>Not a search</div><div class='mid'>No database<br><span class='red'>of answers</span></div>"},
+            {"kind": "html", "a": 9.6, "b": 19.5, "html": "<div class='kick'>What it does</div><div class='mid'>Next token,<br><span class='yel'>next, next…</span></div><div class='sm' style='margin-top:16px'>Thousands of times, very fast.</div>"},
+            {"kind": "html", "a": 19.5, "b": 26.4, "html": "<div class='kick'>Why it's wrong sometimes</div><div class='mid'>Likely<br><span class='red'>≠ true</span></div>"},
+            {"kind": "checks", "a": 26.4, "b": 38.6, "kick": "How to use it", "title": "Your rules", "items": [{"t": "Let it search or read your files", "d": 0.3}, {"t": "Still check what matters", "d": 4.2}, {"t": "Treat it like a brilliant intern", "d": 6.8}, {"t": "You sign off on the work", "d": 10.4}]},
+            {"kind": "html", "a": 38.6, "b": dur + 1, "html": FOLLOW.format("Send this to a friend who uses ChatGPT daily.")},
+        ]
+        return bgs, cards
+
+    return viral.std("ex12-llm-cut", timeline)
+
+
+SPECS = {"ex11-hallucination-cut": hallucination_spec, "ex12-llm-cut": llm_spec, "ex19-inflation-cut": inflation_spec, "ex06-mtgox-cut": mtgox_spec, "ex08-etf-cut": etf_spec, "ex15-passkeys-cut": passkeys_spec, "ex07-gasfees-cut": gasfees_spec, "ex30-binance1": binance1_spec, "ex31-binance2": binance2_spec, "ex32-binance3": binance3_spec, "ex18-rugpull": rugpull_spec, "ex10-arup": arup_spec, "ex20-fakegiveaway": giveaway_spec, "ex17-quishing": quishing_spec, "ex09-voiceclone": voiceclone_spec, "ex14-simswap": simswap_spec, "ex21-poison2": poison2_spec, "ex05-terra": terra_spec, "ex04-addresspoisoning": poison_spec, "ex01-halving": halving_spec, "ex02-drainers": drainers_spec, "ex03-pigbutchering": pig_spec}
 
 if __name__ == "__main__":
     name = sys.argv[1]

@@ -130,12 +130,12 @@ def scene_html(key, T):
         tn = T("naira")
         return (ttl(225, "Step", "one", c=GRN) + tracker(0, T("freeze") + .2)
                 + txt(540, 490, "WEAK MONEY → DIGITAL DOLLARS", T("weak"), 46, WHITE)
-                + "<svg>" + ln("M180 620 C380 640 520 700 640 800 S820 900 900 920", tn - .3, 1.4, RED, 8) + "</svg>"
-                + lab(220, 590, "₦380 = $1 (2021)", tn - .2, GREY) + lab(820, 950, "₦1,500 = $1 (2026)", tn + .8, RED)
-                + stamp(680, "−75% VS USD", T("three") + .2, RED, 64)
-                + chip(300, 1040, "OFFLINE WALLET ✓", T("offline,") - .1, GRN)
-                + chip(780, 1040, "$6.3B HACK", T("hack.") - .4, RED, True)
-                + f"<div class=sm data-in='{T('freeze') - .3:.2f}' style='left:540px;top:1150px;opacity:0;color:{AMB}'>⚠ Issuers can still freeze stablecoins</div>")
+                + "<svg>" + ln("M200 620 C380 630 520 660 620 710 S800 760 880 770", tn - .3, 1.4, RED, 8) + "</svg>"
+                + lab(260, 580, "₦380 = $1 (2021)", tn - .2, GREY) + lab(800, 800, "₦1,500 = $1 (2026)", tn + .8, RED)
+                + stamp(850, "−75% VS USD", T("three") + .2, RED, 64)
+                + chip(300, 980, "OFFLINE WALLET ✓", T("offline,") - .1, GRN)
+                + chip(780, 980, "$6.3B HACK", T("hack.") - .4, RED, True)
+                + f"<div class=sm data-in='{T('freeze') - .3:.2f}' style='left:540px;top:1100px;opacity:0;color:{AMB}'>⚠ Issuers can still freeze stablecoins</div>")
     if key == "s2":
         bars = "".join(ln(f"M{380 + i * 0} {1000 - i * 50} h320", T("cash") + i * .12, .3, GRN, 36) for i in range(6))
         return (ttl(225, "Step", "two", c=GRN) + tracker(1, T("sell.") - .3)
@@ -169,17 +169,17 @@ def scene_html(key, T):
             return (f"<div data-in='{at:.2f}' style='position:absolute;left:{x}px;top:420px;width:420px;padding:26px 30px;border:3px solid #3a3a42;"
                     f"border-radius:26px;background:#111116;opacity:0'><div style='font:800 44px Jakarta;color:{GOLD}'>{title}</div>{r}</div>")
         small = [("Stocks", "25%", WHITE), ("Bonds", "25%", WHITE), ("Gold", "25%", GOLD), ("Cash*", "25%", GRN)]
-        big = [("Stocks + private", "~70%", WHITE), ("Bonds", "~14%", WHITE), ("Cash", "9%", GRN), ("Gold", "2–3%", GOLD), ("Crypto", "~1%", AMB)]
+        big = [("Stocks/private", "~70%", WHITE), ("Bonds", "~14%", WHITE), ("Cash", "9%", GRN), ("Gold", "2–3%", GOLD), ("Crypto", "~1%", AMB)]
         return (pill(240, .05) + col(80, "$50K saver", small, T("crash-tested") - .2) + col(560, "$50M family", big, T("quarter") + .3)
                 + stamp(900, "2008: −3%", T("three") - .1, GRN, 84) + chip(540, 1020, "STOCKS −49%", T("half.") - .1, RED, True)
-                + "<div class=sm data-in='.6' style='left:540px;top:1150px;opacity:0'>*Roland's version: digital dollars · Published frameworks, not advice</div>")
+                + "<div data-in='.6' style='position:absolute;left:0;right:0;top:1150px;text-align:center;font:500 26px Jakarta;color:#8b8b93;opacity:0'>*Roland's version: digital dollars · Published frameworks, not advice</div>")
     if key == "stay":
         return (ttl(240, "Sold vs", "stayed", .05, GRN)
-                + "<svg>" + ln("M360 1060 V1020", T("two") - .2, .4, "#55555e", 160) + ln("M720 1060 V560", T("fifty.") - .3, .8, GRN, 160) + "</svg>"
-                + lab(360, 1090, "SOLD IN 2008", T("panic") , GREY) + lab(720, 1090, "STAYED", T("stayed?"), GRN)
-                + stamp(900, "+2%", T("two"), "#9a9aa3", 90).replace("left:540px", "left:360px")
-                + stamp(470, "+50%", T("fifty."), GRN, 110).replace("left:540px", "left:720px")
-                + "<div class=sm data-in='.4' style='left:540px;top:1160px;opacity:0'>Fidelity, 7.1M 401(k) accounts, 2008→2011</div>")
+                + "<svg>" + ln("M360 1000 V960", T("two") - .2, .4, "#55555e", 160) + ln("M720 1000 V560", T("fifty.") - .3, .8, GRN, 160) + "</svg>"
+                + lab(360, 1040, "SOLD IN 2008", T("panic") , GREY) + lab(720, 1040, "STAYED", T("stayed?"), GRN)
+                + stamp(800, "+2%", T("two"), "#9a9aa3", 90).replace("left:540px", "left:360px")
+                + stamp(420, "+50%", T("fifty."), GRN, 110).replace("left:540px", "left:720px")
+                + "<div class=sm data-in='.4' style='left:540px;top:1110px;opacity:0'>Fidelity, 7.1M 401(k) accounts, 2008→2011</div>")
     if key == "cta":
         return (plan_card(260, True, .1, .2)
                 + f"<div class=pill data-in='{T('PLAN') - .2:.2f}' data-pulse='{T('PLAN') + .3:.2f}' style='top:1000px;opacity:0'>COMMENT “PLAN”</div>"

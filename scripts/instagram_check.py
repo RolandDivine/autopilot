@@ -27,3 +27,22 @@ for m, extra in [("reach,views,accounts_engaged,total_interactions,profile_links
                  ("reach", {"breakdown": "follow_type", "metric_type": "total_value"})]:
     show(f"insights {m} {extra.get('breakdown','')}".strip(), lambda m=m, extra=extra: c._req("get", f"{c.user_id}/insights", params={"metric": m, "period": "day", "since": os.environ.get("SINCE") or (dt.date.today() - dt.timedelta(days=7)).isoformat(), "until": os.environ.get("UNTIL") or dt.date.today().isoformat(), **extra}).get("data"))
 show("audience country", lambda: c._req("get", f"{c.user_id}/insights", params={"metric": "follower_demographics", "period": "lifetime", "metric_type": "total_value", "breakdown": "country"}).get("data"))
+
+def top_reels():
+    """Roland, 7 Nov 2026: rank recent Reels by views (to pick what to repost on TikTok)."""
+    media = c._req("get", f"{c.user_id}/media", params={"fields": "id,timestamp,media_product_type,permalink,caption", "limit": 60}).get("data", [])
+    rows = []
+    for m in media:
+        if m.get("media_product_type") != "REELS":
+            continue
+        try:
+            ins = c._req("get", f"{m['id']}/insights", params={"metric": "views,reach,saved,shares,ig_reels_avg_watch_time"}).get("data", [])
+            v = {i["name"]: i["values"][0]["value"] for i in ins}
+        except Exception as e:  # noqa: BLE001
+            v = {"err": str(e)[:80]}
+        rows.append((v.get("views", 0), m["timestamp"][:10], (m.get("caption") or "")[:60].replace("\n", " "), v, m["permalink"]))
+    for r in sorted(rows, key=lambda r: -(r[0] or 0)):
+        print("REEL", json.dumps(r, ensure_ascii=False))
+
+if os.environ.get("TOP"):
+    top_reels()

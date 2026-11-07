@@ -10,9 +10,17 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            autopilot
+            secrets
+            config.json
+            requirements.txt
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -21,4 +29,5 @@ jobs:
       - run: python scripts/instagram_check.py
         env:
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          TOP: "1"
           LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}

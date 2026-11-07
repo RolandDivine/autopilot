@@ -2,7 +2,7 @@
 {
 "start": 0.0,
 "end": 4.32,
-"text": "Trump's company just moved $343 million dollars of Bitcoin to an exchange.",
+"text": "Trump's company just moved 343 million dollars of Bitcoin to an exchange.",
 "words": [
 [
 0.0,
@@ -26,21 +26,21 @@
 ],
 [
 1.16,
-2.02,
-" $343"
+2.0,
+" 343"
 ],
 [
-2.02,
-2.56,
+2.0,
+2.58,
 " million"
 ],
 [
-2.56,
-3.08,
+2.58,
+3.02,
 " dollars"
 ],
 [
-3.08,
+3.02,
 3.22,
 " of"
 ],
@@ -67,12 +67,12 @@
 ]
 },
 {
-"start": 4.78,
-"end": 7.8,
-"text": "The same day, Bitcoin dumped to about $76,000.",
+"start": 4.8,
+"end": 7.84,
+"text": "The same day, Bitcoin dumped to about 76,000.",
 "words": [
 [
-4.78,
+4.8,
 4.88,
 " The"
 ],
@@ -93,11 +93,11 @@
 ],
 [
 5.9,
-6.2,
+6.22,
 " dumped"
 ],
 [
-6.2,
+6.22,
 6.44,
 " to"
 ],
@@ -108,23 +108,23 @@
 ],
 [
 6.66,
-7.26,
-" $76"
+7.18,
+" 76"
 ],
 [
-7.26,
-7.8,
+7.18,
+7.84,
 ",000."
 ]
 ]
 },
 {
-"start": 8.14,
+"start": 8.24,
 "end": 10.42,
 "text": "But Trump isn't the black swan I'm worried about.",
 "words": [
 [
-8.14,
+8.24,
 8.44,
 " But"
 ],
@@ -140,11 +140,11 @@
 ],
 [
 9.04,
-9.18,
+9.16,
 " the"
 ],
 [
-9.18,
+9.16,
 9.38,
 " black"
 ],
@@ -209,11 +209,11 @@
 ],
 [
 12.82,
-12.98,
+13.0,
 " to"
 ],
 [
-12.98,
+13.0,
 13.1,
 " an"
 ],
@@ -308,23 +308,23 @@
 "words": [
 [
 17.58,
-17.7,
+17.72,
 " Not"
 ],
 [
-17.7,
+17.72,
 18.0,
 " yet."
 ]
 ]
 },
 {
-"start": 18.44,
+"start": 18.42,
 "end": 19.06,
 "text": "Here's the twist.",
 "words": [
 [
-18.44,
+18.42,
 18.64,
 " Here's"
 ],
@@ -342,8 +342,8 @@
 },
 {
 "start": 19.58,
-"end": 23.52,
-"text": "Those coins came from wallets tagged as collateral for a billion dollar debt that can come",
+"end": 25.16,
+"text": "Those coins came from wallets tagged as collateral for a billion dollar debt that can come due on November 30th.",
 "words": [
 [
 19.58,
@@ -382,11 +382,11 @@
 ],
 [
 21.32,
-21.68,
+21.7,
 " collateral"
 ],
 [
-21.68,
+21.7,
 22.0,
 " for"
 ],
@@ -424,14 +424,7 @@
 23.34,
 23.52,
 " come"
-]
-]
-},
-{
-"start": 23.52,
-"end": 25.2,
-"text": "due on November 30th.",
-"words": [
+],
 [
 23.52,
 23.76,
@@ -449,7 +442,7 @@
 ],
 [
 24.24,
-25.2,
+25.16,
 " 30th."
 ]
 ]
@@ -476,41 +469,41 @@
 ],
 [
 25.82,
-25.96,
+25.94,
 " a"
 ],
 [
-25.96,
+25.94,
 26.18,
 " billion"
 ],
 [
 26.18,
-26.54,
+26.52,
 " dollars"
 ],
 [
-26.54,
+26.52,
 26.76,
 " of"
 ],
 [
 26.76,
-27.04,
+27.02,
 " trades"
 ],
 [
-27.04,
+27.02,
 27.24,
 " were"
 ],
 [
 27.24,
-27.6,
+27.58,
 " forced"
 ],
 [
-27.6,
+27.58,
 28.08,
 " closed."
 ]
@@ -553,23 +546,23 @@
 ],
 [
 30.08,
-30.36,
+30.38,
 " wiped"
 ],
 [
-30.36,
+30.38,
 30.74,
 " out."
 ]
 ]
 },
 {
-"start": 31.18,
+"start": 31.16,
 "end": 34.48,
 "text": "A black swan is the event nobody sees coming that changes everything.",
 "words": [
 [
-31.18,
+31.16,
 31.28,
 " A"
 ],
@@ -673,26 +666,26 @@
 ]
 },
 {
-"start": 37.06,
-"end": 37.48,
+"start": 37.04,
+"end": 37.5,
 "text": "My view.",
 "words": [
 [
-37.06,
+37.04,
 37.24,
 " My"
 ],
 [
 37.24,
-37.48,
+37.5,
 " view."
 ]
 ]
 },
 {
 "start": 37.9,
-"end": 40.92,
-"text": "When stocks and crypto fall together, the danger isn't the drop.",
+"end": 42.72,
+"text": "When stocks and crypto fall together, the danger isn't the drop, it's being forced to sell at the bottom.",
 "words": [
 [
 37.9,
@@ -725,17 +718,17 @@
 " together,"
 ],
 [
-39.72,
+39.7,
 39.82,
 " the"
 ],
 [
 39.82,
-40.08,
+40.1,
 " danger"
 ],
 [
-40.08,
+40.1,
 40.46,
 " isn't"
 ],
@@ -746,28 +739,21 @@
 ],
 [
 40.62,
-40.92,
-" drop."
-]
-]
-},
-{
-"start": 41.16,
-"end": 42.74,
-"text": "It's being forced to sell at the bottom.",
-"words": [
-[
-41.16,
-41.3,
-" It's"
+40.9,
+" drop,"
 ],
 [
-41.3,
-41.44,
+41.14,
+41.32,
+" it's"
+],
+[
+41.32,
+41.46,
 " being"
 ],
 [
-41.44,
+41.46,
 41.76,
 " forced"
 ],
@@ -793,14 +779,14 @@
 ],
 [
 42.42,
-42.74,
+42.72,
 " bottom."
 ]
 ]
 },
 {
 "start": 43.1,
-"end": 45.42,
+"end": 45.4,
 "text": "So before the next swan, run this checklist.",
 "words": [
 [
@@ -829,7 +815,7 @@
 " swan,"
 ],
 [
-44.68,
+44.66,
 44.78,
 " run"
 ],
@@ -840,14 +826,14 @@
 ],
 [
 45.0,
-45.42,
+45.4,
 " checklist."
 ]
 ]
 },
 {
 "start": 45.98,
-"end": 46.64,
+"end": 46.66,
 "text": "Screenshot it.",
 "words": [
 [
@@ -857,18 +843,18 @@
 ],
 [
 46.32,
-46.64,
+46.66,
 " it."
 ]
 ]
 },
 {
-"start": 47.02,
+"start": 47.0,
 "end": 50.08,
 "text": "Comment swan and I'll send you my full market crash checklist.",
 "words": [
 [
-47.02,
+47.0,
 47.26,
 " Comment"
 ],
@@ -926,7 +912,7 @@
 },
 {
 "start": 50.48,
-"end": 51.46,
+"end": 51.48,
 "text": "Not financial advice.",
 "words": [
 [
@@ -936,12 +922,12 @@
 ],
 [
 50.66,
-51.12,
+51.1,
 " financial"
 ],
 [
-51.12,
-51.46,
+51.1,
+51.48,
 " advice."
 ]
 ]

@@ -11,11 +11,11 @@
 ],
 [
 0.22,
-0.34,
+0.32,
 " how"
 ],
 [
-0.34,
+0.32,
 0.38,
 " to"
 ],
@@ -41,11 +41,11 @@
 ],
 [
 1.12,
-1.38,
+1.4,
 " good"
 ],
 [
-1.38,
+1.4,
 1.6,
 " it"
 ],
@@ -77,12 +77,12 @@
 ]
 },
 {
-"start": 4.1,
-"end": 7.96,
-"text": "This is called the triple hook method, and if you do this right, it will hypnotize a viewer",
+"start": 4.08,
+"end": 5.66,
+"text": "This is called the triple hook method.",
 "words": [
 [
-4.1,
+4.08,
 4.16,
 " This"
 ],
@@ -114,12 +114,19 @@
 [
 5.32,
 5.66,
-" method,"
-],
+" method."
+]
+]
+},
+{
+"start": 5.78,
+"end": 9.92,
+"text": "And if you do this right, it will hypnotize a viewer such that they physically cannot",
+"words": [
 [
 5.78,
 5.86,
-" and"
+" And"
 ],
 [
 5.86,
@@ -147,7 +154,7 @@
 " right,"
 ],
 [
-6.66,
+6.64,
 6.72,
 " it"
 ],
@@ -170,14 +177,7 @@
 7.74,
 7.96,
 " viewer"
-]
-]
-},
-{
-"start": 7.96,
-"end": 10.56,
-"text": "such that they physically cannot scroll away.",
-"words": [
+],
 [
 7.96,
 8.36,
@@ -202,7 +202,14 @@
 9.34,
 9.92,
 " cannot"
-],
+]
+]
+},
+{
+"start": 9.92,
+"end": 10.56,
+"text": "scroll away.",
+"words": [
 [
 9.92,
 10.24,
@@ -216,22 +223,27 @@
 ]
 },
 {
-"start": 10.9,
-"end": 15.58,
-"text": "Step one is the context, and this is the basic step but so many people still get this wrong.",
+"start": 10.8,
+"end": 12.28,
+"text": "Alright, step one is the context.",
 "words": [
 [
-10.9,
-11.04,
-" Step"
+10.8,
+10.8,
+" Alright,"
 ],
 [
-11.04,
-11.34,
+11.02,
+11.06,
+" step"
+],
+[
+11.06,
+11.36,
 " one"
 ],
 [
-11.34,
+11.36,
 11.72,
 " is"
 ],
@@ -243,12 +255,19 @@
 [
 11.88,
 12.28,
-" context,"
-],
+" context."
+]
+]
+},
+{
+"start": 12.62,
+"end": 15.56,
+"text": "And this is the basic step, but so many people still get this wrong.",
+"words": [
 [
-12.64,
+12.62,
 12.68,
-" and"
+" And"
 ],
 [
 12.68,
@@ -273,10 +292,10 @@
 [
 13.42,
 13.76,
-" step"
+" step,"
 ],
 [
-13.76,
+13.82,
 13.92,
 " but"
 ],
@@ -312,33 +331,33 @@
 ],
 [
 15.24,
-15.58,
+15.56,
 " wrong."
 ]
 ]
 },
 {
-"start": 15.84,
+"start": 15.86,
 "end": 19.68,
 "text": "Viewers only watch content where they have a vested interest in the topic.",
 "words": [
 [
-15.84,
-16.1,
+15.86,
+16.08,
 " Viewers"
 ],
 [
-16.1,
+16.08,
 16.4,
 " only"
 ],
 [
 16.4,
-16.78,
+16.76,
 " watch"
 ],
 [
-16.78,
+16.76,
 17.24,
 " content"
 ],
@@ -359,11 +378,11 @@
 ],
 [
 17.76,
-17.96,
+17.9,
 " a"
 ],
 [
-17.96,
+17.9,
 18.32,
 " vested"
 ],
@@ -390,22 +409,22 @@
 ]
 },
 {
-"start": 19.94,
+"start": 19.92,
 "end": 23.8,
 "text": "So the first line of your hook must establish context on what the video is going to be",
 "words": [
 [
-19.94,
+19.92,
 20.0,
 " So"
 ],
 [
 20.0,
-20.16,
+20.14,
 " the"
 ],
 [
-20.16,
+20.14,
 20.38,
 " first"
 ],
@@ -416,11 +435,11 @@
 ],
 [
 20.62,
-20.74,
+20.72,
 " of"
 ],
 [
-20.74,
+20.72,
 20.84,
 " your"
 ],
@@ -431,11 +450,11 @@
 ],
 [
 21.04,
-21.3,
+21.32,
 " must"
 ],
 [
-21.3,
+21.32,
 21.84,
 " establish"
 ],
@@ -461,11 +480,11 @@
 ],
 [
 23.08,
-23.3,
+23.32,
 " video"
 ],
 [
-23.3,
+23.32,
 23.52,
 " is"
 ],
@@ -488,20 +507,20 @@
 },
 {
 "start": 23.8,
-"end": 24.04,
+"end": 24.02,
 "text": "about.",
 "words": [
 [
 23.8,
-24.04,
+24.02,
 " about."
 ]
 ]
 },
 {
 "start": 24.22,
-"end": 29.88,
-"text": "You can say it in the audio, show it in the visuals, write it in the text or caption",
+"end": 25.44,
+"text": "You can say it in the audio.",
 "words": [
 [
 24.22,
@@ -525,26 +544,33 @@
 ],
 [
 24.82,
-24.96,
+24.94,
 " in"
 ],
 [
-24.96,
+24.94,
 25.08,
 " the"
 ],
 [
 25.08,
 25.44,
-" audio,"
+" audio."
+]
+]
+},
+{
+"start": 25.44,
+"end": 31.1,
+"text": "Show it in the visuals, write it in the text or caption, ideally all three.",
+"words": [
+[
+25.44,
+25.72,
+" Show"
 ],
 [
-25.5,
-27.12,
-" show"
-],
-[
-27.12,
+25.72,
 27.52,
 " it"
 ],
@@ -570,11 +596,11 @@
 ],
 [
 28.56,
-28.72,
+28.74,
 " it"
 ],
 [
-28.72,
+28.74,
 28.88,
 " in"
 ],
@@ -590,53 +616,53 @@
 ],
 [
 29.28,
-29.52,
+29.5,
 " or"
 ],
 [
-29.52,
-29.88,
-" caption"
-]
-]
-},
-{
-"start": 29.88,
-"end": 33.34,
-"text": "ideally all three, but the context must be established immediately.",
-"words": [
+29.5,
+29.9,
+" caption,"
+],
 [
-29.88,
-30.46,
+30.26,
+30.5,
 " ideally"
 ],
 [
-30.46,
+30.5,
 30.78,
 " all"
 ],
 [
 30.78,
 31.1,
-" three,"
+" three."
+]
+]
+},
+{
+"start": 31.28,
+"end": 33.32,
+"text": "But the context must be established immediately.",
+"words": [
+[
+31.28,
+31.34,
+" But"
 ],
 [
-31.24,
-31.36,
-" but"
-],
-[
-31.36,
+31.34,
 31.5,
 " the"
 ],
 [
 31.5,
-31.9,
+31.88,
 " context"
 ],
 [
-31.9,
+31.88,
 32.18,
 " must"
 ],
@@ -647,19 +673,19 @@
 ],
 [
 32.4,
-32.86,
+32.88,
 " established"
 ],
 [
-32.86,
-33.34,
+32.88,
+33.32,
 " immediately."
 ]
 ]
 },
 {
 "start": 33.64,
-"end": 38.16,
+"end": 38.14,
 "text": "We have data that shows even delaying the context to the back half of the first sentence",
 "words": [
 [
@@ -684,21 +710,21 @@
 ],
 [
 34.36,
-34.6,
+34.58,
 " shows"
 ],
 [
-34.6,
-35.0,
+34.58,
+34.98,
 " even"
 ],
 [
-35.0,
-35.34,
+34.98,
+35.36,
 " delaying"
 ],
 [
-35.34,
+35.36,
 35.58,
 " the"
 ],
@@ -724,38 +750,38 @@
 ],
 [
 36.62,
-36.92,
+36.9,
 " half"
 ],
 [
-36.92,
-37.26,
+36.9,
+37.24,
 " of"
 ],
 [
-37.26,
+37.24,
 37.46,
 " the"
 ],
 [
 37.46,
-37.68,
+37.66,
 " first"
 ],
 [
-37.68,
-38.16,
+37.66,
+38.14,
 " sentence"
 ]
 ]
 },
 {
-"start": 38.16,
+"start": 38.14,
 "end": 39.98,
 "text": "increases the skip rate dramatically.",
 "words": [
 [
-38.16,
+38.14,
 38.66,
 " increases"
 ],
@@ -771,23 +797,23 @@
 ],
 [
 39.18,
-39.46,
+39.48,
 " rate"
 ],
 [
-39.46,
+39.48,
 39.98,
 " dramatically."
 ]
 ]
 },
 {
-"start": 40.34,
+"start": 40.36,
 "end": 43.92,
 "text": "So priority number one is to set immediate context as soon as possible.",
 "words": [
 [
-40.34,
+40.36,
 40.42,
 " So"
 ],
@@ -808,11 +834,11 @@
 ],
 [
 41.26,
-41.44,
+41.42,
 " is"
 ],
 [
-41.44,
+41.42,
 41.58,
 " to"
 ],
@@ -823,11 +849,11 @@
 ],
 [
 41.9,
-42.4,
+42.38,
 " immediate"
 ],
 [
-42.4,
+42.38,
 42.96,
 " context"
 ],
@@ -838,11 +864,11 @@
 ],
 [
 43.22,
-43.36,
+43.38,
 " soon"
 ],
 [
-43.36,
+43.38,
 43.54,
 " as"
 ],
@@ -880,11 +906,11 @@
 ],
 [
 44.78,
-44.88,
+44.86,
 " the"
 ],
 [
-44.88,
+44.86,
 45.12,
 " triple"
 ],
@@ -895,26 +921,26 @@
 ],
 [
 45.32,
-45.54,
+45.52,
 " is"
 ],
 [
-45.54,
+45.52,
 45.74,
 " where"
 ],
 [
 45.74,
-46.0,
+45.98,
 " most"
 ],
 [
-46.0,
-46.26,
+45.98,
+46.24,
 " people"
 ],
 [
-46.26,
+46.24,
 46.48,
 " mess"
 ],
@@ -926,12 +952,12 @@
 ]
 },
 {
-"start": 46.78,
-"end": 47.96,
+"start": 46.76,
+"end": 47.98,
 "text": "This is called the lean.",
 "words": [
 [
-46.78,
+46.76,
 46.86,
 " This"
 ],
@@ -952,38 +978,38 @@
 ],
 [
 47.7,
-47.96,
+47.98,
 " lean."
 ]
 ]
 },
 {
-"start": 48.2,
-"end": 51.52,
+"start": 48.22,
+"end": 51.48,
 "text": "What you're trying to do is get someone curious in a certain direction.",
 "words": [
 [
-48.2,
+48.22,
 48.3,
 " What"
 ],
 [
 48.3,
-48.46,
+48.44,
 " you're"
 ],
 [
-48.46,
+48.44,
 48.6,
 " trying"
 ],
 [
 48.6,
-48.74,
+48.72,
 " to"
 ],
 [
-48.74,
+48.72,
 48.86,
 " do"
 ],
@@ -1004,43 +1030,43 @@
 ],
 [
 49.46,
-49.94,
+49.96,
 " curious"
 ],
 [
-49.94,
+49.96,
 50.48,
 " in"
 ],
 [
 50.48,
-50.74,
+50.76,
 " a"
 ],
 [
-50.74,
+50.76,
 51.04,
 " certain"
 ],
 [
 51.04,
-51.52,
+51.48,
 " direction."
 ]
 ]
 },
 {
-"start": 51.66,
+"start": 51.48,
 "end": 55.5,
 "text": "You want to make them lean in on the context to actively want to hear more.",
 "words": [
 [
-51.66,
-51.74,
+51.48,
+51.72,
 " You"
 ],
 [
-51.74,
+51.72,
 51.82,
 " want"
 ],
@@ -1076,16 +1102,16 @@
 ],
 [
 53.38,
-53.52,
+53.56,
 " the"
 ],
 [
-53.52,
-53.96,
+53.56,
+53.94,
 " context"
 ],
 [
-53.96,
+53.94,
 54.24,
 " to"
 ],
@@ -1096,11 +1122,11 @@
 ],
 [
 54.68,
-54.98,
+55.0,
 " want"
 ],
 [
-54.98,
+55.0,
 55.14,
 " to"
 ],
@@ -1117,12 +1143,12 @@
 ]
 },
 {
-"start": 55.7,
+"start": 55.76,
 "end": 58.28,
 "text": "Now you can make this lean in happen in a variety of ways.",
 "words": [
 [
-55.7,
+55.76,
 55.78,
 " Now"
 ],
@@ -1138,31 +1164,31 @@
 ],
 [
 55.98,
-56.14,
+56.12,
 " make"
 ],
 [
-56.14,
-56.34,
+56.12,
+56.36,
 " this"
 ],
 [
-56.34,
+56.36,
 56.62,
 " lean"
 ],
 [
 56.62,
-56.86,
+56.84,
 " in"
 ],
 [
-56.86,
-57.12,
+56.84,
+57.14,
 " happen"
 ],
 [
-57.12,
+57.14,
 57.46,
 " in"
 ],
@@ -1173,11 +1199,11 @@
 ],
 [
 57.54,
-57.78,
+57.8,
 " variety"
 ],
 [
-57.78,
+57.8,
 58.0,
 " of"
 ],
@@ -1189,12 +1215,12 @@
 ]
 },
 {
-"start": 58.28,
+"start": 58.5,
 "end": 63.84,
-"text": "You can give some proof or stat, validating the incoming claim, reference a specific pain",
+"text": "You can give some proof or stat validating the incoming claim, reference a specific pain",
 "words": [
 [
-58.28,
+58.5,
 58.58,
 " You"
 ],
@@ -1226,15 +1252,15 @@
 [
 60.14,
 60.56,
-" stat,"
+" stat"
 ],
 [
-60.76,
-61.26,
+60.56,
+61.24,
 " validating"
 ],
 [
-61.26,
+61.24,
 61.4,
 " the"
 ],
@@ -1249,22 +1275,22 @@
 " claim,"
 ],
 [
-62.56,
-62.74,
+62.46,
+62.76,
 " reference"
 ],
 [
-62.74,
+62.76,
 63.02,
 " a"
 ],
 [
 63.02,
-63.44,
+63.46,
 " specific"
 ],
 [
-63.44,
+63.46,
 63.84,
 " pain"
 ]
@@ -1272,26 +1298,26 @@
 },
 {
 "start": 63.84,
-"end": 68.48,
+"end": 68.52,
 "text": "point they have or a benefit they want, or share something interesting, shocking or unexpected.",
 "words": [
 [
 63.84,
-64.08,
+64.06,
 " point"
 ],
 [
-64.08,
-64.26,
+64.06,
+64.24,
 " they"
 ],
 [
-64.26,
-64.56,
+64.24,
+64.54,
 " have"
 ],
 [
-64.56,
+64.54,
 64.78,
 " or"
 ],
@@ -1317,22 +1343,22 @@
 ],
 [
 65.8,
-66.04,
+66.02,
 " or"
 ],
 [
-66.04,
-66.36,
+66.02,
+66.34,
 " share"
 ],
 [
-66.36,
+66.34,
 66.76,
 " something"
 ],
 [
 66.76,
-67.24,
+67.34,
 " interesting,"
 ],
 [
@@ -1347,18 +1373,18 @@
 ],
 [
 68.02,
-68.48,
+68.52,
 " unexpected."
 ]
 ]
 },
 {
-"start": 68.82,
+"start": 68.8,
 "end": 72.64,
 "text": "But regardless of what you pick, the viewer must lean in instead of opt out.",
 "words": [
 [
-68.82,
+68.8,
 68.9,
 " But"
 ],
@@ -1384,63 +1410,63 @@
 ],
 [
 69.64,
-69.82,
+69.84,
 " pick,"
 ],
 [
-70.04,
-70.04,
+70.0,
+70.02,
 " the"
 ],
 [
-70.04,
-70.24,
+70.02,
+70.22,
 " viewer"
 ],
 [
-70.24,
-70.52,
+70.22,
+70.5,
 " must"
 ],
 [
-70.52,
+70.5,
 70.88,
 " lean"
 ],
 [
 70.88,
-71.34,
+71.36,
 " in"
 ],
 [
-71.34,
+71.36,
 71.8,
 " instead"
 ],
 [
 71.8,
-72.08,
+72.04,
 " of"
 ],
 [
-72.08,
-72.28,
+72.04,
+72.3,
 " opt"
 ],
 [
-72.28,
+72.3,
 72.64,
 " out."
 ]
 ]
 },
 {
-"start": 72.88,
+"start": 72.86,
 "end": 76.94,
 "text": "So when you read back that first one to two sentences just on its own, is the context",
 "words": [
 [
-72.88,
+72.86,
 72.96,
 " So"
 ],
@@ -1515,12 +1541,12 @@
 " own,"
 ],
 [
-76.14,
-76.28,
+76.08,
+76.3,
 " is"
 ],
 [
-76.28,
+76.3,
 76.48,
 " the"
 ],
@@ -1533,21 +1559,21 @@
 },
 {
 "start": 76.94,
-"end": 81.96,
-"text": "immediately clear and is there some curiosity inducement that makes the viewer want to",
+"end": 82.1,
+"text": "immediately clear and is there some curiosity inducement that makes the viewer want to lean",
 "words": [
 [
 76.94,
-77.38,
+77.36,
 " immediately"
 ],
 [
-77.38,
-77.82,
+77.36,
+77.86,
 " clear"
 ],
 [
-77.82,
+77.86,
 78.12,
 " and"
 ],
@@ -1558,41 +1584,41 @@
 ],
 [
 78.34,
-78.5,
+78.54,
 " there"
 ],
 [
-78.5,
-78.88,
+78.54,
+78.9,
 " some"
 ],
 [
-78.88,
-79.48,
+78.9,
+79.5,
 " curiosity"
 ],
 [
-79.48,
-80.46,
+79.5,
+80.48,
 " inducement"
 ],
 [
-80.46,
+80.48,
 80.8,
 " that"
 ],
 [
 80.8,
-81.0,
+81.02,
 " makes"
 ],
 [
-81.0,
-81.2,
+81.02,
+81.22,
 " the"
 ],
 [
-81.2,
+81.22,
 81.44,
 " viewer"
 ],
@@ -1605,80 +1631,80 @@
 81.76,
 81.96,
 " to"
-]
-]
-},
-{
-"start": 81.96,
-"end": 82.64,
-"text": "lean in for more?",
-"words": [
+],
 [
 81.96,
 82.1,
 " lean"
-],
+]
+]
+},
+{
+"start": 82.1,
+"end": 82.66,
+"text": "in for more?",
+"words": [
 [
 82.1,
-82.24,
+82.26,
 " in"
 ],
 [
-82.24,
-82.44,
+82.26,
+82.46,
 " for"
 ],
 [
-82.44,
-82.64,
+82.46,
+82.66,
 " more?"
 ]
 ]
 },
 {
-"start": 82.78,
+"start": 82.8,
 "end": 84.24,
 "text": "It's called the context lean.",
 "words": [
 [
-82.78,
+82.8,
 82.94,
 " It's"
 ],
 [
 82.94,
-83.12,
+83.1,
 " called"
 ],
 [
-83.12,
+83.1,
 83.3,
 " the"
 ],
 [
 83.3,
-83.82,
+83.8,
 " context"
 ],
 [
-83.82,
+83.8,
 84.24,
 " lean."
 ]
 ]
 },
 {
-"start": 84.48,
-"end": 87.6,
+"start": 84.5,
+"end": 87.62,
 "text": "This is what opens the curiosity loop you hear everybody talk about.",
 "words": [
 [
-84.48,
-84.6,
+84.5,
+84.58,
 " This"
 ],
 [
-84.6,
+84.58,
 84.7,
 " is"
 ],
@@ -1689,21 +1715,21 @@
 ],
 [
 84.86,
-85.26,
+85.3,
 " opens"
 ],
 [
-85.26,
-85.46,
+85.3,
+85.5,
 " the"
 ],
 [
-85.46,
-85.9,
+85.5,
+85.92,
 " curiosity"
 ],
 [
-85.9,
+85.92,
 86.32,
 " loop"
 ],
@@ -1719,33 +1745,33 @@
 ],
 [
 86.72,
-87.0,
+87.04,
 " everybody"
 ],
 [
-87.0,
+87.04,
 87.36,
 " talk"
 ],
 [
 87.36,
-87.6,
+87.62,
 " about."
 ]
 ]
 },
 {
-"start": 87.6,
+"start": 87.8,
 "end": 90.34,
-"text": "Now, step three in the triple hook is really where the money's made.",
+"text": "Now step three in the triple hook is really where the money's made.",
 "words": [
 [
-87.6,
+87.8,
 87.88,
-" Now,"
+" Now"
 ],
 [
-87.98,
+87.88,
 88.08,
 " step"
 ],
@@ -1796,11 +1822,11 @@
 ],
 [
 89.86,
-90.14,
+90.16,
 " money's"
 ],
 [
-90.14,
+90.16,
 90.34,
 " made."
 ]
@@ -1808,7 +1834,7 @@
 },
 {
 "start": 90.48,
-"end": 92.36,
+"end": 92.38,
 "text": "Like one percent of people know how to do this.",
 "words": [
 [
@@ -1828,11 +1854,11 @@
 ],
 [
 91.16,
-91.26,
+91.28,
 " of"
 ],
 [
-91.26,
+91.28,
 91.5,
 " people"
 ],
@@ -1858,18 +1884,18 @@
 ],
 [
 92.16,
-92.36,
+92.38,
 " this."
 ]
 ]
 },
 {
-"start": 92.62,
+"start": 92.56,
 "end": 94.38,
 "text": "I call it the contrarian snapback.",
 "words": [
 [
-92.62,
+92.56,
 92.82,
 " I"
 ],
@@ -1885,28 +1911,28 @@
 ],
 [
 93.18,
-93.34,
+93.36,
 " the"
 ],
 [
-93.34,
-93.84,
+93.36,
+93.82,
 " contrarian"
 ],
 [
-93.84,
+93.82,
 94.38,
 " snapback."
 ]
 ]
 },
 {
-"start": 94.52,
-"end": 98.12,
-"text": "To catch a fish, you got to get the hook in its mouth, swimming one way and then yank",
+"start": 94.5,
+"end": 98.14,
+"text": "To catch a fish, you got to get the hook in its mouth swimming one way and then yank",
 "words": [
 [
-94.52,
+94.5,
 94.62,
 " To"
 ],
@@ -1926,7 +1952,7 @@
 " fish,"
 ],
 [
-95.32,
+95.28,
 95.34,
 " you"
 ],
@@ -1937,16 +1963,16 @@
 ],
 [
 95.46,
-95.56,
+95.54,
 " to"
 ],
 [
-95.56,
-95.62,
+95.54,
+95.64,
 " get"
 ],
 [
-95.62,
+95.64,
 95.8,
 " the"
 ],
@@ -1968,15 +1994,15 @@
 [
 96.32,
 96.58,
-" mouth,"
+" mouth"
 ],
 [
-96.6,
-96.9,
+96.58,
+96.88,
 " swimming"
 ],
 [
-96.9,
+96.88,
 97.16,
 " one"
 ],
@@ -1997,28 +2023,28 @@
 ],
 [
 97.74,
-98.12,
+98.14,
 " yank"
 ]
 ]
 },
 {
-"start": 98.12,
+"start": 98.14,
 "end": 99.62,
 "text": "the line going another direction.",
 "words": [
 [
-98.12,
+98.14,
 98.32,
 " the"
 ],
 [
 98.32,
-98.64,
+98.62,
 " line"
 ],
 [
-98.64,
+98.62,
 98.88,
 " going"
 ],
@@ -2041,11 +2067,11 @@
 "words": [
 [
 99.74,
-99.9,
+99.92,
 " Not"
 ],
 [
-99.9,
+99.92,
 100.02,
 " to"
 ],
@@ -2060,17 +2086,17 @@
 " morbid,"
 ],
 [
-100.5,
-100.66,
+100.48,
+100.68,
 " but"
 ],
 [
-100.66,
-101.08,
+100.68,
+101.06,
 " storytelling"
 ],
 [
-101.08,
+101.06,
 101.42,
 " works"
 ],
@@ -2097,52 +2123,52 @@
 ]
 },
 {
-"start": 102.5,
-"end": 107.12,
-"text": "The goal is to say something in the contrarian snapback that pulls the viewer away from",
+"start": 102.38,
+"end": 107.26,
+"text": "The goal is to say something in the contrarian snapback that pulls the viewer away from the",
 "words": [
 [
-102.5,
+102.38,
 102.58,
 " The"
 ],
 [
 102.58,
-102.82,
+102.8,
 " goal"
 ],
 [
-102.82,
-103.06,
+102.8,
+103.08,
 " is"
 ],
 [
-103.06,
-103.26,
+103.08,
+103.28,
 " to"
 ],
 [
-103.26,
-103.48,
+103.28,
+103.46,
 " say"
 ],
 [
-103.48,
-103.82,
+103.46,
+103.8,
 " something"
 ],
 [
-103.82,
+103.8,
 104.08,
 " in"
 ],
 [
 104.08,
-104.18,
+104.2,
 " the"
 ],
 [
-104.18,
+104.2,
 104.56,
 " contrarian"
 ],
@@ -2180,21 +2206,21 @@
 106.8,
 107.12,
 " from"
+],
+[
+107.12,
+107.26,
+" the"
 ]
 ]
 },
 {
-"start": 107.12,
+"start": 107.26,
 "end": 111.0,
-"text": "the direction they were leaning, essentially snapping the back down another path.",
+"text": "direction they were leaning, essentially snapping them back down another path.",
 "words": [
 [
-107.12,
-107.24,
-" the"
-],
-[
-107.24,
+107.26,
 107.6,
 " direction"
 ],
@@ -2205,12 +2231,12 @@
 ],
 [
 107.86,
-108.0,
+108.02,
 " were"
 ],
 [
-108.0,
-108.26,
+108.02,
+108.24,
 " leaning,"
 ],
 [
@@ -2225,63 +2251,63 @@
 ],
 [
 109.52,
-109.76,
-" the"
+109.78,
+" them"
 ],
 [
-109.76,
-110.06,
+109.78,
+110.1,
 " back"
 ],
 [
-110.06,
-110.36,
+110.1,
+110.38,
 " down"
 ],
 [
-110.36,
-110.62,
+110.38,
+110.66,
 " another"
 ],
 [
-110.62,
+110.66,
 111.0,
 " path."
 ]
 ]
 },
 {
-"start": 111.22,
-"end": 115.56,
-"text": "That triple combination of rapidly buying into the context, leaning in based on some",
+"start": 111.28,
+"end": 115.92,
+"text": "That triple combination of rapidly buying into the context, leaning in based on some curiosity",
 "words": [
 [
-111.22,
-111.4,
+111.28,
+111.38,
 " That"
 ],
 [
-111.4,
+111.38,
 111.6,
 " triple"
 ],
 [
 111.6,
-112.02,
+112.04,
 " combination"
 ],
 [
-112.02,
+112.04,
 112.4,
 " of"
 ],
 [
 112.4,
-112.82,
+112.84,
 " rapidly"
 ],
 [
-112.82,
+112.84,
 113.16,
 " buying"
 ],
@@ -2292,51 +2318,51 @@
 ],
 [
 113.36,
-113.5,
+113.52,
 " the"
 ],
 [
-113.5,
+113.52,
 113.96,
 " context,"
 ],
 [
-114.28,
+114.36,
 114.54,
 " leaning"
 ],
 [
 114.54,
-114.96,
+114.98,
 " in"
 ],
 [
-114.96,
+114.98,
 115.18,
 " based"
 ],
 [
 115.18,
-115.4,
+115.38,
 " on"
 ],
 [
-115.4,
-115.56,
+115.38,
+115.58,
 " some"
+],
+[
+115.58,
+115.92,
+" curiosity"
 ]
 ]
 },
 {
-"start": 115.56,
-"end": 119.5,
-"text": "curiosity and then getting snapback in another direction is the God to your hook",
+"start": 115.92,
+"end": 120.14,
+"text": "and then getting snapped back in another direction is the god tier hook formula that",
 "words": [
-[
-115.56,
-115.92,
-" curiosity"
-],
 [
 115.92,
 116.4,
@@ -2354,11 +2380,16 @@
 ],
 [
 116.7,
-117.38,
-" snapback"
+117.12,
+" snapped"
 ],
 [
-117.38,
+117.12,
+117.4,
+" back"
+],
+[
+117.4,
 117.5,
 " in"
 ],
@@ -2369,11 +2400,11 @@
 ],
 [
 117.7,
-118.16,
+118.14,
 " direction"
 ],
 [
-118.16,
+118.14,
 118.72,
 " is"
 ],
@@ -2384,75 +2415,70 @@
 ],
 [
 118.9,
-119.08,
-" God"
+119.1,
+" god"
 ],
 [
-119.08,
-119.24,
-" to"
+119.1,
+119.28,
+" tier"
 ],
 [
-119.24,
-119.36,
-" your"
-],
-[
-119.36,
+119.28,
 119.5,
 " hook"
+],
+[
+119.5,
+119.9,
+" formula"
+],
+[
+119.9,
+120.14,
+" that"
 ]
 ]
 },
 {
-"start": 119.5,
-"end": 121.28,
-"text": "formula that works every single time.",
+"start": 120.14,
+"end": 121.3,
+"text": "works every single time.",
 "words": [
 [
-119.5,
-119.92,
-" formula"
-],
-[
-119.92,
-120.12,
-" that"
-],
-[
-120.12,
-120.36,
+120.14,
+120.38,
 " works"
 ],
 [
-120.36,
+120.38,
 120.76,
 " every"
 ],
 [
 120.76,
-121.0,
+121.02,
 " single"
 ],
 [
-121.0,
-121.28,
+121.02,
+121.3,
 " time."
 ]
 ]
 },
 {
-"start": 121.5,
+"start": 121.42,
 "end": 124.78,
-"text": "Now, if you want to learn how to actually do this in practice with examples, I've",
+"text": "Now if you want to learn how to actually do this in practice with examples, I've",
 "words": [
 [
+121.42,
 121.5,
-121.5,
-" Now,"
+" Now"
 ],
 [
-121.56,
+121.5,
 121.64,
 " if"
 ],
@@ -2463,11 +2489,11 @@
 ],
 [
 121.76,
-121.84,
+121.86,
 " want"
 ],
 [
-121.84,
+121.86,
 121.94,
 " to"
 ],
@@ -2478,21 +2504,21 @@
 ],
 [
 122.06,
-122.22,
+122.24,
 " how"
 ],
 [
-122.22,
+122.24,
 122.36,
 " to"
 ],
 [
 122.36,
-122.7,
+122.68,
 " actually"
 ],
 [
-122.7,
+122.68,
 122.92,
 " do"
 ],
@@ -2503,26 +2529,26 @@
 ],
 [
 123.08,
-123.2,
+123.22,
 " in"
 ],
 [
-123.2,
-123.5,
+123.22,
+123.46,
 " practice"
 ],
 [
-123.5,
+123.46,
 123.82,
 " with"
 ],
 [
 123.82,
-124.32,
+124.3,
 " examples,"
 ],
 [
-124.66,
+124.6,
 124.78,
 " I've"
 ]
@@ -2530,41 +2556,41 @@
 },
 {
 "start": 124.78,
-"end": 127.16,
+"end": 127.14,
 "text": "linked a video where I explain it in more detail.",
 "words": [
 [
 124.78,
-124.98,
+124.96,
 " linked"
 ],
 [
-124.98,
+124.96,
 125.22,
 " a"
 ],
 [
 125.22,
-125.5,
+125.46,
 " video"
 ],
 [
-125.5,
-125.76,
+125.46,
+125.78,
 " where"
 ],
 [
-125.76,
+125.78,
 125.86,
 " I"
 ],
 [
 125.86,
-126.24,
+126.26,
 " explain"
 ],
 [
-126.24,
+126.26,
 126.44,
 " it"
 ],
@@ -2575,33 +2601,33 @@
 ],
 [
 126.62,
-126.78,
+126.8,
 " more"
 ],
 [
-126.78,
-127.16,
+126.8,
+127.14,
 " detail."
 ]
 ]
 },
 {
-"start": 127.32,
+"start": 127.3,
 "end": 130.74,
 "text": "Over 700,000 people have watched this and I'm telling you it's probably the best",
 "words": [
 [
-127.32,
+127.3,
 127.48,
 " Over"
 ],
 [
 127.48,
-127.92,
+127.88,
 " 700"
 ],
 [
-127.92,
+127.88,
 128.32,
 ",000"
 ],
@@ -2612,56 +2638,56 @@
 ],
 [
 128.54,
-128.72,
+128.7,
 " have"
 ],
 [
-128.72,
-128.94,
+128.7,
+128.96,
 " watched"
 ],
 [
-128.94,
+128.96,
 129.16,
 " this"
 ],
 [
 129.16,
-129.26,
+129.24,
 " and"
 ],
 [
-129.26,
+129.24,
 129.38,
 " I'm"
 ],
 [
 129.38,
-129.54,
+129.56,
 " telling"
 ],
 [
-129.54,
-129.8,
+129.56,
+129.78,
 " you"
 ],
 [
-129.8,
-130.02,
+129.78,
+130.04,
 " it's"
 ],
 [
-130.02,
+130.04,
 130.32,
 " probably"
 ],
 [
 130.32,
-130.54,
+130.56,
 " the"
 ],
 [
-130.54,
+130.56,
 130.74,
 " best"
 ]
@@ -2669,43 +2695,43 @@
 },
 {
 "start": 130.74,
-"end": 131.96,
-"text": "hook training on the Internet.",
+"end": 131.94,
+"text": "hook training on the internet.",
 "words": [
 [
 130.74,
-130.96,
+130.98,
 " hook"
 ],
 [
-130.96,
-131.28,
+130.98,
+131.26,
 " training"
 ],
 [
-131.28,
+131.26,
 131.58,
 " on"
 ],
 [
 131.58,
-131.74,
+131.76,
 " the"
 ],
 [
-131.74,
-131.96,
-" Internet."
+131.76,
+131.94,
+" internet."
 ]
 ]
 },
 {
-"start": 132.14,
-"end": 134.06,
+"start": 131.94,
+"end": 134.1,
 "text": "Comment hooks and I'll send it to you so you can watch it.",
 "words": [
 [
-132.14,
+131.94,
 132.3,
 " Comment"
 ],
@@ -2741,11 +2767,11 @@
 ],
 [
 133.2,
-133.32,
+133.36,
 " you"
 ],
 [
-133.32,
+133.36,
 133.44,
 " so"
 ],
@@ -2761,12 +2787,12 @@
 ],
 [
 133.64,
-133.84,
+133.86,
 " watch"
 ],
 [
-133.84,
-134.06,
+133.86,
+134.1,
 " it."
 ]
 ]

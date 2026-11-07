@@ -46,16 +46,16 @@
 ],
 [
 2.0,
-2.22,
+2.24,
 " than"
 ],
 [
-2.22,
-2.52,
+2.24,
+2.54,
 " anyone"
 ],
 [
-2.52,
+2.54,
 2.9,
 " wants"
 ],
@@ -73,7 +73,7 @@
 },
 {
 "start": 3.82,
-"end": 9.1,
+"end": 9.12,
 "text": "Before 2000, 2008, and 2020, the same warning lights came on first.",
 "words": [
 [
@@ -87,7 +87,7 @@
 " 2000,"
 ],
 [
-5.14,
+5.18,
 5.88,
 " 2008,"
 ],
@@ -133,15 +133,15 @@
 ],
 [
 8.76,
-9.1,
+9.12,
 " first."
 ]
 ]
 },
 {
 "start": 9.6,
-"end": 14.46,
-"text": "I checked everyone against today, five are on, and there's one date nobody's watching,",
+"end": 15.34,
+"text": "I checked everyone against today, five are on, and there's one date nobody's watching, light one.",
 "words": [
 [
 9.6,
@@ -169,7 +169,7 @@
 " today,"
 ],
 [
-11.6,
+11.58,
 11.82,
 " five"
 ],
@@ -184,7 +184,7 @@
 " on,"
 ],
 [
-12.62,
+12.6,
 12.86,
 " and"
 ],
@@ -212,16 +212,9 @@
 14.06,
 14.46,
 " watching,"
-]
-]
-},
-{
-"start": 14.96,
-"end": 15.34,
-"text": "light one.",
-"words": [
+],
 [
-14.96,
+14.94,
 15.0,
 " light"
 ],
@@ -234,8 +227,8 @@
 },
 {
 "start": 15.88,
-"end": 19.28,
-"text": "In 2000, the 10 biggest companies were a quarter of the market.",
+"end": 21.64,
+"text": "In 2000, the 10 biggest companies were a quarter of the market. Today, they're 40%.",
 "words": [
 [
 15.88,
@@ -244,7 +237,7 @@
 ],
 [
 16.02,
-16.5,
+16.48,
 " 2000,"
 ],
 [
@@ -264,11 +257,11 @@
 ],
 [
 17.62,
-18.02,
+18.0,
 " companies"
 ],
 [
-18.02,
+18.0,
 18.28,
 " were"
 ],
@@ -296,21 +289,14 @@
 18.98,
 19.28,
 " market."
-]
-]
-},
-{
-"start": 19.78,
-"end": 21.64,
-"text": "Today they're 40%.",
-"words": [
-[
-19.78,
-20.06,
-" Today"
 ],
 [
-20.06,
+19.78,
+20.08,
+" Today,"
+],
+[
+20.42,
 20.62,
 " they're"
 ],
@@ -323,8 +309,8 @@
 },
 {
 "start": 21.64,
-"end": 22.38,
-"text": "Light two.",
+"end": 26.68,
+"text": "Light two. Borrowed money. Traders owe nearly a record one and a half trillion dollars,",
 "words": [
 [
 21.64,
@@ -335,14 +321,7 @@
 21.98,
 22.38,
 " two."
-]
-]
-},
-{
-"start": 22.88,
-"end": 23.46,
-"text": "Borrowed money.",
-"words": [
+],
 [
 22.88,
 23.24,
@@ -352,16 +331,9 @@
 23.24,
 23.46,
 " money."
-]
-]
-},
-{
-"start": 24.0,
-"end": 27.76,
-"text": "Traders owe nearly a record one and a half trillion dollars, and it's starting to roll",
-"words": [
+],
 [
-24.0,
+23.98,
 24.22,
 " Traders"
 ],
@@ -412,53 +384,53 @@
 ],
 [
 26.18,
-26.7,
+26.68,
 " dollars,"
-],
+]
+]
+},
+{
+"start": 26.68,
+"end": 33.38,
+"text": "and it's starting to roll over just like before 2000 and 2007. Light three. The riskiest company's",
+"words": [
 [
-26.86,
+26.68,
 27.02,
 " and"
 ],
 [
 27.02,
-27.18,
+27.22,
 " it's"
 ],
 [
-27.18,
-27.4,
+27.22,
+27.42,
 " starting"
 ],
 [
-27.4,
+27.42,
 27.6,
 " to"
 ],
 [
 27.6,
-27.76,
+27.78,
 " roll"
-]
-]
-},
-{
-"start": 27.76,
-"end": 30.76,
-"text": "over just like before 2000 and 2007.",
-"words": [
+],
 [
-27.76,
-28.1,
+27.78,
+28.12,
 " over"
 ],
 [
-28.1,
-28.46,
+28.12,
+28.48,
 " just"
 ],
 [
-28.46,
+28.48,
 28.68,
 " like"
 ],
@@ -479,16 +451,9 @@
 ],
 [
 29.92,
-30.76,
+30.78,
 " 2007."
-]
-]
-},
-{
-"start": 31.38,
-"end": 31.78,
-"text": "Light three.",
-"words": [
+],
 [
 31.38,
 31.4,
@@ -498,16 +463,9 @@
 31.4,
 31.78,
 " three."
-]
-]
-},
-{
-"start": 32.28,
-"end": 34.22,
-"text": "The riskiest company's debt is cracking.",
-"words": [
+],
 [
-32.28,
+32.34,
 32.36,
 " The"
 ],
@@ -520,36 +478,36 @@
 32.9,
 33.38,
 " company's"
-],
+]
+]
+},
+{
+"start": 33.38,
+"end": 40.98,
+"text": "debt is cracking. That gap has only been this wide in 2000, 2008, 2016, and 2020. Light four.",
+"words": [
 [
 33.38,
-33.56,
+33.54,
 " debt"
 ],
 [
-33.56,
+33.54,
 33.8,
 " is"
 ],
 [
 33.8,
-34.22,
+34.24,
 " cracking."
-]
-]
-},
-{
-"start": 34.72,
-"end": 39.98,
-"text": "That gap has only been this wide in 2000, 2008, 2016, and 2020.",
-"words": [
+],
 [
-34.72,
-34.88,
+34.74,
+34.86,
 " That"
 ],
 [
-34.88,
+34.86,
 35.18,
 " gap"
 ],
@@ -570,11 +528,11 @@
 ],
 [
 35.82,
-36.04,
+36.02,
 " this"
 ],
 [
-36.04,
+36.02,
 36.32,
 " wide"
 ],
@@ -585,11 +543,11 @@
 ],
 [
 36.52,
-37.04,
+37.06,
 " 2000,"
 ],
 [
-37.38,
+37.44,
 38.06,
 " 2008,"
 ],
@@ -605,60 +563,53 @@
 ],
 [
 39.34,
-39.98,
+39.92,
 " 2020."
-]
-]
-},
-{
-"start": 40.5,
-"end": 40.96,
-"text": "Light four.",
-"words": [
+],
 [
-40.5,
-40.6,
+40.58,
+40.58,
 " Light"
 ],
 [
-40.6,
-40.96,
+40.58,
+40.98,
 " four."
 ]
 ]
 },
 {
-"start": 41.38,
-"end": 47.32,
-"text": "On November 5, chip stocks fell 12% in one day, the Nasdaq's worst day since March 2020.",
+"start": 41.4,
+"end": 47.38,
+"text": "On November 5th, chip stocks fell 12% in one day, the Nasdaq's worst day since March 2020.",
 "words": [
 [
-41.38,
+41.4,
 41.5,
 " On"
 ],
 [
 41.5,
-41.82,
+41.84,
 " November"
 ],
 [
-41.82,
-42.18,
-" 5,"
+41.84,
+42.6,
+" 5th,"
 ],
 [
-42.6,
+42.62,
 42.7,
 " chip"
 ],
 [
 42.7,
-42.96,
+42.98,
 " stocks"
 ],
 [
-42.96,
+42.98,
 43.26,
 " fell"
 ],
@@ -694,21 +645,21 @@
 ],
 [
 45.24,
-45.9,
+45.88,
 " Nasdaq's"
 ],
 [
-45.9,
+45.88,
 46.04,
 " worst"
 ],
 [
 46.04,
-46.32,
+46.3,
 " day"
 ],
 [
-46.32,
+46.3,
 46.52,
 " since"
 ],
@@ -719,18 +670,18 @@
 ],
 [
 46.8,
-47.32,
+47.38,
 " 2020."
 ]
 ]
 },
 {
-"start": 47.96,
-"end": 48.58,
-"text": "Light five.",
+"start": 47.98,
+"end": 53.3,
+"text": "Light five. Bitcoin is 40% off its high, and the big funds are pulling money out.",
 "words": [
 [
-47.96,
+47.98,
 48.14,
 " Light"
 ],
@@ -738,14 +689,7 @@
 48.14,
 48.58,
 " five."
-]
-]
-},
-{
-"start": 49.56,
-"end": 53.28,
-"text": "Bitcoin is 40% off its high, and the big funds are pulling money out.",
-"words": [
+],
 [
 49.56,
 49.56,
@@ -782,7 +726,7 @@
 " high,"
 ],
 [
-51.48,
+51.5,
 51.68,
 " and"
 ],
@@ -798,11 +742,11 @@
 ],
 [
 51.96,
-52.22,
+52.24,
 " funds"
 ],
 [
-52.22,
+52.24,
 52.42,
 " are"
 ],
@@ -813,33 +757,33 @@
 ],
 [
 52.66,
-52.94,
+52.92,
 " money"
 ],
 [
-52.94,
-53.28,
+52.92,
+53.3,
 " out."
 ]
 ]
 },
 {
-"start": 53.58,
-"end": 57.56,
-"text": "Then Democrats took both houses of Congress, and the market started pricing a threat to",
+"start": 53.3,
+"end": 58.32,
+"text": "Then Democrats took both houses of Congress, and the market started pricing a threat to the AI boom.",
 "words": [
 [
-53.58,
-53.76,
+53.3,
+53.74,
 " Then"
 ],
 [
-53.76,
-54.2,
+53.74,
+54.16,
 " Democrats"
 ],
 [
-54.2,
+54.16,
 54.48,
 " took"
 ],
@@ -864,7 +808,7 @@
 " Congress,"
 ],
 [
-55.74,
+55.88,
 55.94,
 " and"
 ],
@@ -875,65 +819,58 @@
 ],
 [
 56.06,
-56.26,
+56.28,
 " market"
 ],
 [
-56.26,
-56.62,
+56.28,
+56.6,
 " started"
 ],
 [
-56.62,
+56.6,
 57.0,
 " pricing"
 ],
 [
 57.0,
-57.2,
+57.18,
 " a"
 ],
 [
-57.2,
-57.38,
+57.18,
+57.4,
 " threat"
 ],
 [
-57.38,
+57.4,
 57.56,
 " to"
-]
-]
-},
-{
-"start": 57.56,
-"end": 58.32,
-"text": "the AI boom.",
-"words": [
+],
 [
 57.56,
-57.66,
+57.68,
 " the"
 ],
 [
-57.66,
-58.02,
+57.68,
+58.0,
 " AI"
 ],
 [
-58.02,
+58.0,
 58.32,
 " boom."
 ]
 ]
 },
 {
-"start": 58.94,
-"end": 59.8,
-"text": "But here's what's missing.",
+"start": 58.86,
+"end": 63.56,
+"text": "But here's what's missing. In every past crash, jobs broke, and a big lender failed.",
 "words": [
 [
-58.94,
+58.86,
 59.02,
 " But"
 ],
@@ -944,21 +881,14 @@
 ],
 [
 59.28,
-59.44,
+59.46,
 " what's"
 ],
 [
-59.44,
+59.46,
 59.8,
 " missing."
-]
-]
-},
-{
-"start": 60.32,
-"end": 63.56,
-"text": "In every past crash, jobs broke, and a big lender failed.",
-"words": [
+],
 [
 60.32,
 60.34,
@@ -971,26 +901,26 @@
 ],
 [
 60.66,
-60.96,
+60.94,
 " past"
 ],
 [
-60.96,
-61.36,
+60.94,
+61.3,
 " crash,"
 ],
 [
-61.68,
-61.86,
+61.7,
+61.84,
 " jobs"
 ],
 [
-61.86,
-62.26,
+61.84,
+62.22,
 " broke,"
 ],
 [
-62.56,
+62.52,
 62.62,
 " and"
 ],
@@ -1018,8 +948,8 @@
 },
 {
 "start": 64.04,
-"end": 65.3,
-"text": "Neither has happened, yet.",
+"end": 68.98,
+"text": "Neither has happened. Yet. My view, this looks more like 2000 than 2008,",
 "words": [
 [
 64.04,
@@ -1034,22 +964,15 @@
 [
 64.36,
 64.8,
-" happened,"
+" happened."
 ],
 [
-65.02,
+65.08,
 65.3,
-" yet."
-]
-]
-},
-{
-"start": 65.94,
-"end": 71.66,
-"text": "My view, this looks more like 2000 than 2008, and watch November 30th when Trump Media's",
-"words": [
+" Yet."
+],
 [
-65.94,
+65.96,
 66.14,
 " My"
 ],
@@ -1059,12 +982,12 @@
 " view,"
 ],
 [
-66.74,
-66.92,
+66.7,
+66.94,
 " this"
 ],
 [
-66.92,
+66.94,
 67.14,
 " looks"
 ],
@@ -1080,11 +1003,11 @@
 ],
 [
 67.52,
-68.02,
+68.0,
 " 2000"
 ],
 [
-68.02,
+68.0,
 68.28,
 " than"
 ],
@@ -1092,9 +1015,16 @@
 68.28,
 68.98,
 " 2008,"
-],
+]
+]
+},
+{
+"start": 69.22,
+"end": 73.22,
+"text": "and watch November 30th when Trump Media's billion-dollar debt can come due.",
+"words": [
 [
-69.28,
+69.22,
 69.46,
 " and"
 ],
@@ -1110,11 +1040,11 @@
 ],
 [
 70.02,
-70.8,
+70.78,
 " 30th"
 ],
 [
-70.8,
+70.78,
 70.96,
 " when"
 ],
@@ -1127,31 +1057,24 @@
 71.18,
 71.66,
 " Media's"
-]
-]
-},
-{
-"start": 71.66,
-"end": 73.22,
-"text": "billion dollar debt can come due.",
-"words": [
+],
 [
 71.66,
-71.92,
+71.94,
 " billion"
 ],
 [
-71.92,
+71.94,
 72.32,
-" dollar"
+"-dollar"
 ],
 [
 72.32,
-72.56,
+72.52,
 " debt"
 ],
 [
-72.56,
+72.52,
 72.74,
 " can"
 ],
@@ -1170,25 +1093,25 @@
 {
 "start": 73.86,
 "end": 76.4,
-"text": "Comment signals and I'll send you my crash watch list.",
+"text": "Comment, signals, and I'll send you my crash watch list.",
 "words": [
 [
 73.86,
 74.1,
-" Comment"
+" Comment,"
 ],
 [
-74.1,
+74.28,
 74.52,
-" signals"
+" signals,"
 ],
 [
-74.52,
-74.92,
+74.84,
+74.94,
 " and"
 ],
 [
-74.92,
+74.94,
 75.1,
 " I'll"
 ],

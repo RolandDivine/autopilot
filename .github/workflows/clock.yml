@@ -1,8 +1,8 @@
 name: clock
 
 # Roland, 3 Nov 2026: posts must go out on time. GitHub's own cron is unreliable (late by hours or dropped), so this
-# workflow is the clock. One run stays alive ~5h40m and every 5 minutes (06:00-22:00 UTC) dispatches post.yml and
-# videos.yml, then starts its own successor before it ends. Both runners skip anything already posted, so extra
+# workflow is the clock. One run stays alive ~5h40m and every 5 minutes dispatches videos.yml (all day) and post.yml
+# (06:00-22:00 UTC), then starts its own successor before it ends. Both runners skip anything already posted, so extra
 # dispatches are harmless. The hourly cron below only restarts the clock if the chain ever breaks.
 on:
   workflow_dispatch:
@@ -43,6 +43,11 @@ jobs:
             if [ "$h" -ge 6 ] && [ "$h" -le 21 ] && [ $((m % 5)) -eq 0 ]; then
               echo "tick $(date -u +%H:%M)"
               gh api -X POST "repos/$REPO/actions/workflows/post.yml/dispatches" -f ref=main -F "inputs[dry_run]=false" || true
+              gh api -X POST "repos/$REPO/actions/workflows/videos.yml/dispatches" -f ref=main || true
+              sleep 60
+            elif [ $((m % 5)) -eq 0 ]; then
+              # Roland, 7 Nov 2026: videos can be scheduled at night (e.g. 4am Lagos = 03:00 UTC), so check them around the clock
+              echo "night tick $(date -u +%H:%M)"
               gh api -X POST "repos/$REPO/actions/workflows/videos.yml/dispatches" -f ref=main || true
               sleep 60
             fi

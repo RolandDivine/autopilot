@@ -54,13 +54,19 @@ def main():
 
     if MODE == "check":
         for label, path, params in [
-            ("media", f"{c.user_id}/media", {"fields": "id,caption,comments_count", "limit": 3}),
+            ("media", f"{c.user_id}/media", {"fields": "id,comments_count", "limit": 15}),
             ("conversations", f"{c.user_id}/conversations", {"platform": "instagram", "limit": 3}),
         ]:
             try:
-                print(label, "OK", json.dumps(c._req("get", path, params=params))[:600])
+                d = c._req("get", path, params=params).get("data", [])  # never print raw responses: paging URLs carry the token
+                print(label, "OK", len(d), "items", [{k: v for k, v in x.items() if k in ("id", "comments_count")} for x in d])
+                if label == "media":
+                    for m in d:
+                        if m.get("comments_count"):
+                            cs = c._req("get", f"{m['id']}/comments", params={"fields": "id", "limit": 5}).get("data", [])
+                            print("  comments on", m["id"], "count", m["comments_count"], "returned", len(cs))
             except InstagramError as e:
-                print(label, "FAILED", e)
+                print(label, "FAILED", str(e).split("access_token")[0][:300])
         return
 
     # 1) comments on posts whose caption asks for a keyword
